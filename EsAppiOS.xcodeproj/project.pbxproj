@@ -1,0 +1,849 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 52;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		667C0C2B8EAE2F3D2EF24EBA /* Pods_EsAppiOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 29CF7B94345025EA7C5AFDB0 /* Pods_EsAppiOS.framework */; };
+		EF29F40C260E2B4700ABE46D /* Moya in Frameworks */ = {isa = PBXBuildFile; productRef = EF29F40B260E2B4700ABE46D /* Moya */; };
+		EF29F40E260E2B4700ABE46D /* RxMoya in Frameworks */ = {isa = PBXBuildFile; productRef = EF29F40D260E2B4700ABE46D /* RxMoya */; };
+		EF29F410260E2B4700ABE46D /* ReactiveMoya in Frameworks */ = {isa = PBXBuildFile; productRef = EF29F40F260E2B4700ABE46D /* ReactiveMoya */; };
+		EF29F41D260E2D0B00ABE46D /* Kanit-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EF29F41B260E2CFA00ABE46D /* Kanit-Light.ttf */; };
+		EF29F41E260E2D0B00ABE46D /* Kanit-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EF29F41A260E2CFA00ABE46D /* Kanit-Medium.ttf */; };
+		EF29F41F260E2D0B00ABE46D /* Kanit-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EF29F41C260E2CFA00ABE46D /* Kanit-Bold.ttf */; };
+		EF29F420260E2D0B00ABE46D /* Kanit-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EF29F419260E2CFA00ABE46D /* Kanit-Regular.ttf */; };
+		EF29F424260E2D4D00ABE46D /* APIProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF29F423260E2D4D00ABE46D /* APIProvider.swift */; };
+		EF29F429260E316200ABE46D /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF29F428260E316200ABE46D /* UIViewController+Extension.swift */; };
+		EF29F42D260E31C000ABE46D /* NVActivityIndicatorView in Frameworks */ = {isa = PBXBuildFile; productRef = EF29F42C260E31C000ABE46D /* NVActivityIndicatorView */; };
+		EF29F42F260E31C000ABE46D /* NVActivityIndicatorViewExtended in Frameworks */ = {isa = PBXBuildFile; productRef = EF29F42E260E31C000ABE46D /* NVActivityIndicatorViewExtended */; };
+		EF29F432260E32B200ABE46D /* UITextField+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF29F431260E32B200ABE46D /* UITextField+Extension.swift */; };
+		EF29F435260E35EA00ABE46D /* UIButton+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF29F434260E35EA00ABE46D /* UIButton+Extension.swift */; };
+		EF29F43C260E44DB00ABE46D /* SceneOpen.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF29F43B260E44DB00ABE46D /* SceneOpen.swift */; };
+		EF29F440260E456000ABE46D /* NavigationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF29F43F260E456000ABE46D /* NavigationManager.swift */; };
+		EF29F443260E576800ABE46D /* UIImageView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF29F442260E576800ABE46D /* UIImageView+Extension.swift */; };
+		EF29F44A260E622B00ABE46D /* RadioGroup in Frameworks */ = {isa = PBXBuildFile; productRef = EF29F449260E622B00ABE46D /* RadioGroup */; };
+		EF529454260D860800C3EF64 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF529453260D860800C3EF64 /* AppDelegate.swift */; };
+		EF52945D260D860800C3EF64 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EF52945C260D860800C3EF64 /* Assets.xcassets */; };
+		EF529460260D860800C3EF64 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF52945E260D860800C3EF64 /* LaunchScreen.storyboard */; };
+		EF52946D260D886D00C3EF64 /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF52946C260D886D00C3EF64 /* SplashViewController.swift */; };
+		EF529470260D887400C3EF64 /* Splash.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF52946F260D887400C3EF64 /* Splash.storyboard */; };
+		EF529474260D89E000C3EF64 /* Color.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EF529473260D89E000C3EF64 /* Color.xcassets */; };
+		EF52947B260D96BB00C3EF64 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF52947A260D96BB00C3EF64 /* Login.storyboard */; };
+		EF52947E260D96C500C3EF64 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF52947D260D96C500C3EF64 /* LoginViewController.swift */; };
+		EF529482260D97FF00C3EF64 /* Extension+Notification.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF529481260D97FF00C3EF64 /* Extension+Notification.swift */; };
+		EF529486260D992B00C3EF64 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF529485260D992B00C3EF64 /* MainViewController.swift */; };
+		EF52948A260D993200C3EF64 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF529489260D993200C3EF64 /* Main.storyboard */; };
+		EF7D56FB260EF918004EE94A /* UIFont+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF7D56FA260EF918004EE94A /* UIFont+Extension.swift */; };
+		EF7D56FE260EFD99004EE94A /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF7D56FD260EFD99004EE94A /* UIView+Extension.swift */; };
+		EF7D5703260F0E04004EE94A /* DataListSectionHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF7D5702260F0E04004EE94A /* DataListSectionHeader.swift */; };
+		EF7D5706260F0E13004EE94A /* DataListSectionHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = EF7D5705260F0E13004EE94A /* DataListSectionHeader.xib */; };
+		EF7D570E260F182A004EE94A /* DataListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF7D570D260F182A004EE94A /* DataListView.swift */; };
+		EF7D5716260F1847004EE94A /* DataListViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF7D5715260F1847004EE94A /* DataListViewCell.swift */; };
+		EF7D5719260F184E004EE94A /* DataListView.xib in Resources */ = {isa = PBXBuildFile; fileRef = EF7D5718260F184E004EE94A /* DataListView.xib */; };
+		EFED23D52612106000BD0CD7 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFED23D42612106000BD0CD7 /* LoginViewModel.swift */; };
+		EFED23D92612108C00BD0CD7 /* LoginRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFED23D82612108C00BD0CD7 /* LoginRepository.swift */; };
+		EFED23DE261210BC00BD0CD7 /* LoginUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFED23DD261210BC00BD0CD7 /* LoginUseCase.swift */; };
+		EFED23E7261211E200BD0CD7 /* LoginRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFED23E6261211E200BD0CD7 /* LoginRequest.swift */; };
+		EFED23EA2612127D00BD0CD7 /* LoginResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFED23E92612127D00BD0CD7 /* LoginResponse.swift */; };
+		EFED23ED2612145800BD0CD7 /* Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFED23EC2612145800BD0CD7 /* Helpers.swift */; };
+		EFED23F0261217FA00BD0CD7 /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFED23EF261217FA00BD0CD7 /* UIColor+Extension.swift */; };
+		EFED24082612352300BD0CD7 /* ProductRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFED24072612352300BD0CD7 /* ProductRequest.swift */; };
+		EFED240C2612352E00BD0CD7 /* ProductResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFED240B2612352E00BD0CD7 /* ProductResponse.swift */; };
+		EFED240F2612356B00BD0CD7 /* GetProductUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFED240E2612356B00BD0CD7 /* GetProductUseCase.swift */; };
+		EFED24122612359800BD0CD7 /* MainRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFED24112612359800BD0CD7 /* MainRepository.swift */; };
+		EFED2415261235A100BD0CD7 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFED2414261235A100BD0CD7 /* MainViewModel.swift */; };
+		EFED24182612461800BD0CD7 /* UserDefaults+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFED24172612461800BD0CD7 /* UserDefaults+Extension.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		13414C314681D4E64E22F4BB /* Pods-EsAppiOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EsAppiOS.debug.xcconfig"; path = "Target Support Files/Pods-EsAppiOS/Pods-EsAppiOS.debug.xcconfig"; sourceTree = "<group>"; };
+		29CF7B94345025EA7C5AFDB0 /* Pods_EsAppiOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EsAppiOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C3D71E7A6B69E9FC300AD523 /* Pods-EsAppiOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EsAppiOS.release.xcconfig"; path = "Target Support Files/Pods-EsAppiOS/Pods-EsAppiOS.release.xcconfig"; sourceTree = "<group>"; };
+		EF29F419260E2CFA00ABE46D /* Kanit-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Kanit-Regular.ttf"; sourceTree = "<group>"; };
+		EF29F41A260E2CFA00ABE46D /* Kanit-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Kanit-Medium.ttf"; sourceTree = "<group>"; };
+		EF29F41B260E2CFA00ABE46D /* Kanit-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Kanit-Light.ttf"; sourceTree = "<group>"; };
+		EF29F41C260E2CFA00ABE46D /* Kanit-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Kanit-Bold.ttf"; sourceTree = "<group>"; };
+		EF29F423260E2D4D00ABE46D /* APIProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIProvider.swift; sourceTree = "<group>"; };
+		EF29F428260E316200ABE46D /* UIViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
+		EF29F431260E32B200ABE46D /* UITextField+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+Extension.swift"; sourceTree = "<group>"; };
+		EF29F434260E35EA00ABE46D /* UIButton+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+Extension.swift"; sourceTree = "<group>"; };
+		EF29F43B260E44DB00ABE46D /* SceneOpen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneOpen.swift; sourceTree = "<group>"; };
+		EF29F43F260E456000ABE46D /* NavigationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationManager.swift; sourceTree = "<group>"; };
+		EF29F442260E576800ABE46D /* UIImageView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Extension.swift"; sourceTree = "<group>"; };
+		EF529450260D860800C3EF64 /* EsAppiOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EsAppiOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		EF529453260D860800C3EF64 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		EF52945C260D860800C3EF64 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		EF52945F260D860800C3EF64 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		EF529461260D860800C3EF64 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EF52946C260D886D00C3EF64 /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
+		EF52946F260D887400C3EF64 /* Splash.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Splash.storyboard; sourceTree = "<group>"; };
+		EF529473260D89E000C3EF64 /* Color.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Color.xcassets; sourceTree = "<group>"; };
+		EF52947A260D96BB00C3EF64 /* Login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
+		EF52947D260D96C500C3EF64 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		EF529481260D97FF00C3EF64 /* Extension+Notification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+Notification.swift"; sourceTree = "<group>"; };
+		EF529485260D992B00C3EF64 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		EF529489260D993200C3EF64 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		EF7D56FA260EF918004EE94A /* UIFont+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+Extension.swift"; sourceTree = "<group>"; };
+		EF7D56FD260EFD99004EE94A /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
+		EF7D5702260F0E04004EE94A /* DataListSectionHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataListSectionHeader.swift; sourceTree = "<group>"; };
+		EF7D5705260F0E13004EE94A /* DataListSectionHeader.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DataListSectionHeader.xib; sourceTree = "<group>"; };
+		EF7D570D260F182A004EE94A /* DataListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataListView.swift; sourceTree = "<group>"; };
+		EF7D5715260F1847004EE94A /* DataListViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataListViewCell.swift; sourceTree = "<group>"; };
+		EF7D5718260F184E004EE94A /* DataListView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DataListView.xib; sourceTree = "<group>"; };
+		EFED23D42612106000BD0CD7 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		EFED23D82612108C00BD0CD7 /* LoginRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRepository.swift; sourceTree = "<group>"; };
+		EFED23DD261210BC00BD0CD7 /* LoginUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginUseCase.swift; sourceTree = "<group>"; };
+		EFED23E6261211E200BD0CD7 /* LoginRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRequest.swift; sourceTree = "<group>"; };
+		EFED23E92612127D00BD0CD7 /* LoginResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginResponse.swift; sourceTree = "<group>"; };
+		EFED23EC2612145800BD0CD7 /* Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helpers.swift; sourceTree = "<group>"; };
+		EFED23EF261217FA00BD0CD7 /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
+		EFED24072612352300BD0CD7 /* ProductRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductRequest.swift; sourceTree = "<group>"; };
+		EFED240B2612352E00BD0CD7 /* ProductResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductResponse.swift; sourceTree = "<group>"; };
+		EFED240E2612356B00BD0CD7 /* GetProductUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetProductUseCase.swift; sourceTree = "<group>"; };
+		EFED24112612359800BD0CD7 /* MainRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainRepository.swift; sourceTree = "<group>"; };
+		EFED2414261235A100BD0CD7 /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
+		EFED24172612461800BD0CD7 /* UserDefaults+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserDefaults+Extension.swift"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		EF52944D260D860800C3EF64 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EF29F44A260E622B00ABE46D /* RadioGroup in Frameworks */,
+				EF29F42D260E31C000ABE46D /* NVActivityIndicatorView in Frameworks */,
+				EF29F40E260E2B4700ABE46D /* RxMoya in Frameworks */,
+				EF29F40C260E2B4700ABE46D /* Moya in Frameworks */,
+				EF29F410260E2B4700ABE46D /* ReactiveMoya in Frameworks */,
+				EF29F42F260E31C000ABE46D /* NVActivityIndicatorViewExtended in Frameworks */,
+				667C0C2B8EAE2F3D2EF24EBA /* Pods_EsAppiOS.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		143279CA3A83E99BAE37F117 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				29CF7B94345025EA7C5AFDB0 /* Pods_EsAppiOS.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		5ABC9F92E75E213EDE33AD2F /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				13414C314681D4E64E22F4BB /* Pods-EsAppiOS.debug.xcconfig */,
+				C3D71E7A6B69E9FC300AD523 /* Pods-EsAppiOS.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		EF29F412260E2BBB00ABE46D /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				EF29F43B260E44DB00ABE46D /* SceneOpen.swift */,
+				EF29F43F260E456000ABE46D /* NavigationManager.swift */,
+				EFED23EC2612145800BD0CD7 /* Helpers.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		EF29F417260E2CAD00ABE46D /* Provider */ = {
+			isa = PBXGroup;
+			children = (
+				EF29F422260E2D4300ABE46D /* Moya */,
+			);
+			path = Provider;
+			sourceTree = "<group>";
+		};
+		EF29F418260E2CCA00ABE46D /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				EF29F41C260E2CFA00ABE46D /* Kanit-Bold.ttf */,
+				EF29F41B260E2CFA00ABE46D /* Kanit-Light.ttf */,
+				EF29F41A260E2CFA00ABE46D /* Kanit-Medium.ttf */,
+				EF29F419260E2CFA00ABE46D /* Kanit-Regular.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		EF29F422260E2D4300ABE46D /* Moya */ = {
+			isa = PBXGroup;
+			children = (
+				EF29F423260E2D4D00ABE46D /* APIProvider.swift */,
+			);
+			path = Moya;
+			sourceTree = "<group>";
+		};
+		EF29F427260E315900ABE46D /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				EF29F428260E316200ABE46D /* UIViewController+Extension.swift */,
+				EF29F431260E32B200ABE46D /* UITextField+Extension.swift */,
+				EF29F434260E35EA00ABE46D /* UIButton+Extension.swift */,
+				EF29F442260E576800ABE46D /* UIImageView+Extension.swift */,
+				EF7D56FA260EF918004EE94A /* UIFont+Extension.swift */,
+				EF7D56FD260EFD99004EE94A /* UIView+Extension.swift */,
+				EFED23EF261217FA00BD0CD7 /* UIColor+Extension.swift */,
+				EFED24172612461800BD0CD7 /* UserDefaults+Extension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		EF529447260D860800C3EF64 = {
+			isa = PBXGroup;
+			children = (
+				EF529452260D860800C3EF64 /* EsAppiOS */,
+				EF529451260D860800C3EF64 /* Products */,
+				5ABC9F92E75E213EDE33AD2F /* Pods */,
+				143279CA3A83E99BAE37F117 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		EF529451260D860800C3EF64 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				EF529450260D860800C3EF64 /* EsAppiOS.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		EF529452260D860800C3EF64 /* EsAppiOS */ = {
+			isa = PBXGroup;
+			children = (
+				EF29F417260E2CAD00ABE46D /* Provider */,
+				EF29F412260E2BBB00ABE46D /* Helpers */,
+				EF529480260D97DF00C3EF64 /* Classes */,
+				EF529472260D89C500C3EF64 /* Resource */,
+				EF529468260D87F200C3EF64 /* Scene */,
+				EF529453260D860800C3EF64 /* AppDelegate.swift */,
+				EF52945E260D860800C3EF64 /* LaunchScreen.storyboard */,
+				EF529461260D860800C3EF64 /* Info.plist */,
+			);
+			path = EsAppiOS;
+			sourceTree = "<group>";
+		};
+		EF529468260D87F200C3EF64 /* Scene */ = {
+			isa = PBXGroup;
+			children = (
+				EF529484260D991F00C3EF64 /* Main */,
+				EF529479260D969700C3EF64 /* Login */,
+				EF529469260D87F800C3EF64 /* Splash */,
+			);
+			path = Scene;
+			sourceTree = "<group>";
+		};
+		EF529469260D87F800C3EF64 /* Splash */ = {
+			isa = PBXGroup;
+			children = (
+				EF52946C260D886D00C3EF64 /* SplashViewController.swift */,
+				EF52946F260D887400C3EF64 /* Splash.storyboard */,
+			);
+			path = Splash;
+			sourceTree = "<group>";
+		};
+		EF529472260D89C500C3EF64 /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				EF29F418260E2CCA00ABE46D /* Fonts */,
+				EF52945C260D860800C3EF64 /* Assets.xcassets */,
+				EF529473260D89E000C3EF64 /* Color.xcassets */,
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
+		EF529479260D969700C3EF64 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				EFED23DC2612109F00BD0CD7 /* UseCases */,
+				EFED23DB2612109900BD0CD7 /* Model */,
+				EFED23D72612106400BD0CD7 /* Repository */,
+				EFED23D32612104F00BD0CD7 /* ViewModel */,
+				EF52947A260D96BB00C3EF64 /* Login.storyboard */,
+				EF52947D260D96C500C3EF64 /* LoginViewController.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		EF529480260D97DF00C3EF64 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				EF29F427260E315900ABE46D /* Extensions */,
+				EF529481260D97FF00C3EF64 /* Extension+Notification.swift */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		EF529484260D991F00C3EF64 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				EFED23FC261234D900BD0CD7 /* Model */,
+				EFED23FB261234D000BD0CD7 /* UseCases */,
+				EFED23FA261234C900BD0CD7 /* Repository */,
+				EFED23F9261234C300BD0CD7 /* ViewModel */,
+				EF7D5700260F0DAA004EE94A /* View */,
+				EF529485260D992B00C3EF64 /* MainViewController.swift */,
+				EF529489260D993200C3EF64 /* Main.storyboard */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		EF7D5700260F0DAA004EE94A /* View */ = {
+			isa = PBXGroup;
+			children = (
+				EF7D570C260F17F7004EE94A /* DataListView */,
+				EF7D5701260F0DB8004EE94A /* DataListSectionHeader */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		EF7D5701260F0DB8004EE94A /* DataListSectionHeader */ = {
+			isa = PBXGroup;
+			children = (
+				EF7D5702260F0E04004EE94A /* DataListSectionHeader.swift */,
+				EF7D5705260F0E13004EE94A /* DataListSectionHeader.xib */,
+			);
+			path = DataListSectionHeader;
+			sourceTree = "<group>";
+		};
+		EF7D570C260F17F7004EE94A /* DataListView */ = {
+			isa = PBXGroup;
+			children = (
+				EF7D570D260F182A004EE94A /* DataListView.swift */,
+				EF7D5715260F1847004EE94A /* DataListViewCell.swift */,
+				EF7D5718260F184E004EE94A /* DataListView.xib */,
+			);
+			path = DataListView;
+			sourceTree = "<group>";
+		};
+		EFED23D32612104F00BD0CD7 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				EFED23D42612106000BD0CD7 /* LoginViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		EFED23D72612106400BD0CD7 /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				EFED23D82612108C00BD0CD7 /* LoginRepository.swift */,
+			);
+			path = Repository;
+			sourceTree = "<group>";
+		};
+		EFED23DB2612109900BD0CD7 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				EFED23E22612110000BD0CD7 /* Request */,
+				EFED23E1261210FB00BD0CD7 /* Response */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		EFED23DC2612109F00BD0CD7 /* UseCases */ = {
+			isa = PBXGroup;
+			children = (
+				EFED23DD261210BC00BD0CD7 /* LoginUseCase.swift */,
+			);
+			path = UseCases;
+			sourceTree = "<group>";
+		};
+		EFED23E1261210FB00BD0CD7 /* Response */ = {
+			isa = PBXGroup;
+			children = (
+				EFED23E92612127D00BD0CD7 /* LoginResponse.swift */,
+			);
+			path = Response;
+			sourceTree = "<group>";
+		};
+		EFED23E22612110000BD0CD7 /* Request */ = {
+			isa = PBXGroup;
+			children = (
+				EFED23E6261211E200BD0CD7 /* LoginRequest.swift */,
+			);
+			path = Request;
+			sourceTree = "<group>";
+		};
+		EFED23F9261234C300BD0CD7 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				EFED2414261235A100BD0CD7 /* MainViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		EFED23FA261234C900BD0CD7 /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				EFED24112612359800BD0CD7 /* MainRepository.swift */,
+			);
+			path = Repository;
+			sourceTree = "<group>";
+		};
+		EFED23FB261234D000BD0CD7 /* UseCases */ = {
+			isa = PBXGroup;
+			children = (
+				EFED240E2612356B00BD0CD7 /* GetProductUseCase.swift */,
+			);
+			path = UseCases;
+			sourceTree = "<group>";
+		};
+		EFED23FC261234D900BD0CD7 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				EFED23FE261234E700BD0CD7 /* Response */,
+				EFED23FD261234E100BD0CD7 /* Request */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		EFED23FD261234E100BD0CD7 /* Request */ = {
+			isa = PBXGroup;
+			children = (
+				EFED24072612352300BD0CD7 /* ProductRequest.swift */,
+			);
+			path = Request;
+			sourceTree = "<group>";
+		};
+		EFED23FE261234E700BD0CD7 /* Response */ = {
+			isa = PBXGroup;
+			children = (
+				EFED240B2612352E00BD0CD7 /* ProductResponse.swift */,
+			);
+			path = Response;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		EF52944F260D860800C3EF64 /* EsAppiOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EF529464260D860800C3EF64 /* Build configuration list for PBXNativeTarget "EsAppiOS" */;
+			buildPhases = (
+				4C94E609D080C3D83455042A /* [CP] Check Pods Manifest.lock */,
+				EF52944C260D860800C3EF64 /* Sources */,
+				EF52944D260D860800C3EF64 /* Frameworks */,
+				EF52944E260D860800C3EF64 /* Resources */,
+				CEDE274638E2DABD3569CD47 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = EsAppiOS;
+			packageProductDependencies = (
+				EF29F40B260E2B4700ABE46D /* Moya */,
+				EF29F40D260E2B4700ABE46D /* RxMoya */,
+				EF29F40F260E2B4700ABE46D /* ReactiveMoya */,
+				EF29F42C260E31C000ABE46D /* NVActivityIndicatorView */,
+				EF29F42E260E31C000ABE46D /* NVActivityIndicatorViewExtended */,
+				EF29F449260E622B00ABE46D /* RadioGroup */,
+			);
+			productName = EsAppiOS;
+			productReference = EF529450260D860800C3EF64 /* EsAppiOS.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		EF529448260D860800C3EF64 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1240;
+				LastUpgradeCheck = 1240;
+				TargetAttributes = {
+					EF52944F260D860800C3EF64 = {
+						CreatedOnToolsVersion = 12.4;
+					};
+				};
+			};
+			buildConfigurationList = EF52944B260D860800C3EF64 /* Build configuration list for PBXProject "EsAppiOS" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = EF529447260D860800C3EF64;
+			packageReferences = (
+				EF29F40A260E2B4700ABE46D /* XCRemoteSwiftPackageReference "Moya" */,
+				EF29F42B260E31C000ABE46D /* XCRemoteSwiftPackageReference "NVActivityIndicatorView" */,
+				EF29F448260E622B00ABE46D /* XCRemoteSwiftPackageReference "RadioGroup" */,
+			);
+			productRefGroup = EF529451260D860800C3EF64 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				EF52944F260D860800C3EF64 /* EsAppiOS */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		EF52944E260D860800C3EF64 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EF29F41F260E2D0B00ABE46D /* Kanit-Bold.ttf in Resources */,
+				EF29F41D260E2D0B00ABE46D /* Kanit-Light.ttf in Resources */,
+				EF7D5719260F184E004EE94A /* DataListView.xib in Resources */,
+				EF29F41E260E2D0B00ABE46D /* Kanit-Medium.ttf in Resources */,
+				EF529460260D860800C3EF64 /* LaunchScreen.storyboard in Resources */,
+				EF52945D260D860800C3EF64 /* Assets.xcassets in Resources */,
+				EF29F420260E2D0B00ABE46D /* Kanit-Regular.ttf in Resources */,
+				EF7D5706260F0E13004EE94A /* DataListSectionHeader.xib in Resources */,
+				EF529474260D89E000C3EF64 /* Color.xcassets in Resources */,
+				EF52948A260D993200C3EF64 /* Main.storyboard in Resources */,
+				EF52947B260D96BB00C3EF64 /* Login.storyboard in Resources */,
+				EF529470260D887400C3EF64 /* Splash.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		4C94E609D080C3D83455042A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-EsAppiOS-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CEDE274638E2DABD3569CD47 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-EsAppiOS/Pods-EsAppiOS-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-EsAppiOS/Pods-EsAppiOS-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-EsAppiOS/Pods-EsAppiOS-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		EF52944C260D860800C3EF64 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EFED24122612359800BD0CD7 /* MainRepository.swift in Sources */,
+				EF29F440260E456000ABE46D /* NavigationManager.swift in Sources */,
+				EF52947E260D96C500C3EF64 /* LoginViewController.swift in Sources */,
+				EF52946D260D886D00C3EF64 /* SplashViewController.swift in Sources */,
+				EF7D5716260F1847004EE94A /* DataListViewCell.swift in Sources */,
+				EFED23ED2612145800BD0CD7 /* Helpers.swift in Sources */,
+				EFED24082612352300BD0CD7 /* ProductRequest.swift in Sources */,
+				EF529482260D97FF00C3EF64 /* Extension+Notification.swift in Sources */,
+				EFED2415261235A100BD0CD7 /* MainViewModel.swift in Sources */,
+				EF529454260D860800C3EF64 /* AppDelegate.swift in Sources */,
+				EFED240C2612352E00BD0CD7 /* ProductResponse.swift in Sources */,
+				EF29F429260E316200ABE46D /* UIViewController+Extension.swift in Sources */,
+				EFED23D92612108C00BD0CD7 /* LoginRepository.swift in Sources */,
+				EF29F443260E576800ABE46D /* UIImageView+Extension.swift in Sources */,
+				EFED23D52612106000BD0CD7 /* LoginViewModel.swift in Sources */,
+				EF29F435260E35EA00ABE46D /* UIButton+Extension.swift in Sources */,
+				EF7D56FE260EFD99004EE94A /* UIView+Extension.swift in Sources */,
+				EFED23E7261211E200BD0CD7 /* LoginRequest.swift in Sources */,
+				EF29F432260E32B200ABE46D /* UITextField+Extension.swift in Sources */,
+				EFED240F2612356B00BD0CD7 /* GetProductUseCase.swift in Sources */,
+				EFED23F0261217FA00BD0CD7 /* UIColor+Extension.swift in Sources */,
+				EF529486260D992B00C3EF64 /* MainViewController.swift in Sources */,
+				EF7D56FB260EF918004EE94A /* UIFont+Extension.swift in Sources */,
+				EF29F424260E2D4D00ABE46D /* APIProvider.swift in Sources */,
+				EF29F43C260E44DB00ABE46D /* SceneOpen.swift in Sources */,
+				EF7D570E260F182A004EE94A /* DataListView.swift in Sources */,
+				EF7D5703260F0E04004EE94A /* DataListSectionHeader.swift in Sources */,
+				EFED23EA2612127D00BD0CD7 /* LoginResponse.swift in Sources */,
+				EFED24182612461800BD0CD7 /* UserDefaults+Extension.swift in Sources */,
+				EFED23DE261210BC00BD0CD7 /* LoginUseCase.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		EF52945E260D860800C3EF64 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EF52945F260D860800C3EF64 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		EF529462260D860800C3EF64 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		EF529463260D860800C3EF64 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		EF529465260D860800C3EF64 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 13414C314681D4E64E22F4BB /* Pods-EsAppiOS.debug.xcconfig */;
+			buildSettings = {
+				API_BASE_URL = "https://www.apiesource.com:3000/esprogram_get";
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 5XB8796434;
+				INFOPLIST_FILE = EsAppiOS/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.ssoft.EsAppiOS;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 2;
+			};
+			name = Debug;
+		};
+		EF529466260D860800C3EF64 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C3D71E7A6B69E9FC300AD523 /* Pods-EsAppiOS.release.xcconfig */;
+			buildSettings = {
+				API_BASE_URL = "https://www.apiesource.com:3000/esprogram_get";
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 5XB8796434;
+				INFOPLIST_FILE = EsAppiOS/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.ssoft.EsAppiOS;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 2;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		EF52944B260D860800C3EF64 /* Build configuration list for PBXProject "EsAppiOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EF529462260D860800C3EF64 /* Debug */,
+				EF529463260D860800C3EF64 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EF529464260D860800C3EF64 /* Build configuration list for PBXNativeTarget "EsAppiOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EF529465260D860800C3EF64 /* Debug */,
+				EF529466260D860800C3EF64 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		EF29F40A260E2B4700ABE46D /* XCRemoteSwiftPackageReference "Moya" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Moya/Moya.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 14.0.1;
+			};
+		};
+		EF29F42B260E31C000ABE46D /* XCRemoteSwiftPackageReference "NVActivityIndicatorView" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ninjaprox/NVActivityIndicatorView.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.1.1;
+			};
+		};
+		EF29F448260E622B00ABE46D /* XCRemoteSwiftPackageReference "RadioGroup" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/yonat/RadioGroup";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.4.3;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		EF29F40B260E2B4700ABE46D /* Moya */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = EF29F40A260E2B4700ABE46D /* XCRemoteSwiftPackageReference "Moya" */;
+			productName = Moya;
+		};
+		EF29F40D260E2B4700ABE46D /* RxMoya */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = EF29F40A260E2B4700ABE46D /* XCRemoteSwiftPackageReference "Moya" */;
+			productName = RxMoya;
+		};
+		EF29F40F260E2B4700ABE46D /* ReactiveMoya */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = EF29F40A260E2B4700ABE46D /* XCRemoteSwiftPackageReference "Moya" */;
+			productName = ReactiveMoya;
+		};
+		EF29F42C260E31C000ABE46D /* NVActivityIndicatorView */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = EF29F42B260E31C000ABE46D /* XCRemoteSwiftPackageReference "NVActivityIndicatorView" */;
+			productName = NVActivityIndicatorView;
+		};
+		EF29F42E260E31C000ABE46D /* NVActivityIndicatorViewExtended */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = EF29F42B260E31C000ABE46D /* XCRemoteSwiftPackageReference "NVActivityIndicatorView" */;
+			productName = NVActivityIndicatorViewExtended;
+		};
+		EF29F449260E622B00ABE46D /* RadioGroup */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = EF29F448260E622B00ABE46D /* XCRemoteSwiftPackageReference "RadioGroup" */;
+			productName = RadioGroup;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = EF529448260D860800C3EF64 /* Project object */;
+}
