@@ -11,10 +11,6 @@
 		EF29F40C260E2B4700ABE46D /* Moya in Frameworks */ = {isa = PBXBuildFile; productRef = EF29F40B260E2B4700ABE46D /* Moya */; };
 		EF29F40E260E2B4700ABE46D /* RxMoya in Frameworks */ = {isa = PBXBuildFile; productRef = EF29F40D260E2B4700ABE46D /* RxMoya */; };
 		EF29F410260E2B4700ABE46D /* ReactiveMoya in Frameworks */ = {isa = PBXBuildFile; productRef = EF29F40F260E2B4700ABE46D /* ReactiveMoya */; };
-		EF29F41D260E2D0B00ABE46D /* Kanit-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EF29F41B260E2CFA00ABE46D /* Kanit-Light.ttf */; };
-		EF29F41E260E2D0B00ABE46D /* Kanit-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EF29F41A260E2CFA00ABE46D /* Kanit-Medium.ttf */; };
-		EF29F41F260E2D0B00ABE46D /* Kanit-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EF29F41C260E2CFA00ABE46D /* Kanit-Bold.ttf */; };
-		EF29F420260E2D0B00ABE46D /* Kanit-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EF29F419260E2CFA00ABE46D /* Kanit-Regular.ttf */; };
 		EF29F424260E2D4D00ABE46D /* APIProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF29F423260E2D4D00ABE46D /* APIProvider.swift */; };
 		EF29F429260E316200ABE46D /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF29F428260E316200ABE46D /* UIViewController+Extension.swift */; };
 		EF29F42D260E31C000ABE46D /* NVActivityIndicatorView in Frameworks */ = {isa = PBXBuildFile; productRef = EF29F42C260E31C000ABE46D /* NVActivityIndicatorView */; };
@@ -25,6 +21,13 @@
 		EF29F440260E456000ABE46D /* NavigationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF29F43F260E456000ABE46D /* NavigationManager.swift */; };
 		EF29F443260E576800ABE46D /* UIImageView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF29F442260E576800ABE46D /* UIImageView+Extension.swift */; };
 		EF29F44A260E622B00ABE46D /* RadioGroup in Frameworks */ = {isa = PBXBuildFile; productRef = EF29F449260E622B00ABE46D /* RadioGroup */; };
+		EF5242CA262AADC90071572B /* ProductInfo.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF5242C9262AADC90071572B /* ProductInfo.storyboard */; };
+		EF5242CD262AADDA0071572B /* ProductInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF5242CC262AADDA0071572B /* ProductInfoViewController.swift */; };
+		EF5242D7262AC96F0071572B /* RobotoCondensed-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EF5242D1262AC96F0071572B /* RobotoCondensed-Light.ttf */; };
+		EF5242D9262AC96F0071572B /* RobotoCondensed-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EF5242D3262AC96F0071572B /* RobotoCondensed-Bold.ttf */; };
+		EF5242DA262AC96F0071572B /* RobotoCondensed-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EF5242D4262AC96F0071572B /* RobotoCondensed-Regular.ttf */; };
+		EF5242E2262ADDD60071572B /* ImageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF5242E0262ADDD60071572B /* ImageCollectionViewCell.swift */; };
+		EF5242E3262ADDD60071572B /* ImageCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EF5242E1262ADDD60071572B /* ImageCollectionViewCell.xib */; };
 		EF529454260D860800C3EF64 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF529453260D860800C3EF64 /* AppDelegate.swift */; };
 		EF52945D260D860800C3EF64 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EF52945C260D860800C3EF64 /* Assets.xcassets */; };
 		EF529460260D860800C3EF64 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF52945E260D860800C3EF64 /* LaunchScreen.storyboard */; };
@@ -36,6 +39,10 @@
 		EF529482260D97FF00C3EF64 /* Extension+Notification.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF529481260D97FF00C3EF64 /* Extension+Notification.swift */; };
 		EF529486260D992B00C3EF64 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF529485260D992B00C3EF64 /* MainViewController.swift */; };
 		EF52948A260D993200C3EF64 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF529489260D993200C3EF64 /* Main.storyboard */; };
+		EF74ED15262D2D1700E420C8 /* PriceListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF74ED13262D2D1700E420C8 /* PriceListTableViewCell.swift */; };
+		EF74ED16262D2D1700E420C8 /* PriceListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EF74ED14262D2D1700E420C8 /* PriceListTableViewCell.xib */; };
+		EF74ED1B262D2D6500E420C8 /* PriceHeaderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF74ED1A262D2D6500E420C8 /* PriceHeaderTableViewCell.swift */; };
+		EF74ED1F262D2D7F00E420C8 /* PriceHeaderTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EF74ED1E262D2D7F00E420C8 /* PriceHeaderTableViewCell.xib */; };
 		EF7D56FB260EF918004EE94A /* UIFont+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF7D56FA260EF918004EE94A /* UIFont+Extension.swift */; };
 		EF7D56FE260EFD99004EE94A /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF7D56FD260EFD99004EE94A /* UIView+Extension.swift */; };
 		EF7D5703260F0E04004EE94A /* DataListSectionHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF7D5702260F0E04004EE94A /* DataListSectionHeader.swift */; };
@@ -62,10 +69,6 @@
 		13414C314681D4E64E22F4BB /* Pods-EsAppiOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EsAppiOS.debug.xcconfig"; path = "Target Support Files/Pods-EsAppiOS/Pods-EsAppiOS.debug.xcconfig"; sourceTree = "<group>"; };
 		29CF7B94345025EA7C5AFDB0 /* Pods_EsAppiOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EsAppiOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C3D71E7A6B69E9FC300AD523 /* Pods-EsAppiOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EsAppiOS.release.xcconfig"; path = "Target Support Files/Pods-EsAppiOS/Pods-EsAppiOS.release.xcconfig"; sourceTree = "<group>"; };
-		EF29F419260E2CFA00ABE46D /* Kanit-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Kanit-Regular.ttf"; sourceTree = "<group>"; };
-		EF29F41A260E2CFA00ABE46D /* Kanit-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Kanit-Medium.ttf"; sourceTree = "<group>"; };
-		EF29F41B260E2CFA00ABE46D /* Kanit-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Kanit-Light.ttf"; sourceTree = "<group>"; };
-		EF29F41C260E2CFA00ABE46D /* Kanit-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Kanit-Bold.ttf"; sourceTree = "<group>"; };
 		EF29F423260E2D4D00ABE46D /* APIProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIProvider.swift; sourceTree = "<group>"; };
 		EF29F428260E316200ABE46D /* UIViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
 		EF29F431260E32B200ABE46D /* UITextField+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+Extension.swift"; sourceTree = "<group>"; };
@@ -73,6 +76,13 @@
 		EF29F43B260E44DB00ABE46D /* SceneOpen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneOpen.swift; sourceTree = "<group>"; };
 		EF29F43F260E456000ABE46D /* NavigationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationManager.swift; sourceTree = "<group>"; };
 		EF29F442260E576800ABE46D /* UIImageView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Extension.swift"; sourceTree = "<group>"; };
+		EF5242C9262AADC90071572B /* ProductInfo.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ProductInfo.storyboard; sourceTree = "<group>"; };
+		EF5242CC262AADDA0071572B /* ProductInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductInfoViewController.swift; sourceTree = "<group>"; };
+		EF5242D1262AC96F0071572B /* RobotoCondensed-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "RobotoCondensed-Light.ttf"; sourceTree = "<group>"; };
+		EF5242D3262AC96F0071572B /* RobotoCondensed-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "RobotoCondensed-Bold.ttf"; sourceTree = "<group>"; };
+		EF5242D4262AC96F0071572B /* RobotoCondensed-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "RobotoCondensed-Regular.ttf"; sourceTree = "<group>"; };
+		EF5242E0262ADDD60071572B /* ImageCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCollectionViewCell.swift; sourceTree = "<group>"; };
+		EF5242E1262ADDD60071572B /* ImageCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ImageCollectionViewCell.xib; sourceTree = "<group>"; };
 		EF529450260D860800C3EF64 /* EsAppiOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EsAppiOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF529453260D860800C3EF64 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EF52945C260D860800C3EF64 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -86,6 +96,10 @@
 		EF529481260D97FF00C3EF64 /* Extension+Notification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+Notification.swift"; sourceTree = "<group>"; };
 		EF529485260D992B00C3EF64 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		EF529489260D993200C3EF64 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		EF74ED13262D2D1700E420C8 /* PriceListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriceListTableViewCell.swift; sourceTree = "<group>"; };
+		EF74ED14262D2D1700E420C8 /* PriceListTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PriceListTableViewCell.xib; sourceTree = "<group>"; };
+		EF74ED1A262D2D6500E420C8 /* PriceHeaderTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriceHeaderTableViewCell.swift; sourceTree = "<group>"; };
+		EF74ED1E262D2D7F00E420C8 /* PriceHeaderTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PriceHeaderTableViewCell.xib; sourceTree = "<group>"; };
 		EF7D56FA260EF918004EE94A /* UIFont+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+Extension.swift"; sourceTree = "<group>"; };
 		EF7D56FD260EFD99004EE94A /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
 		EF7D5702260F0E04004EE94A /* DataListSectionHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataListSectionHeader.swift; sourceTree = "<group>"; };
@@ -164,10 +178,9 @@
 		EF29F418260E2CCA00ABE46D /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
-				EF29F41C260E2CFA00ABE46D /* Kanit-Bold.ttf */,
-				EF29F41B260E2CFA00ABE46D /* Kanit-Light.ttf */,
-				EF29F41A260E2CFA00ABE46D /* Kanit-Medium.ttf */,
-				EF29F419260E2CFA00ABE46D /* Kanit-Regular.ttf */,
+				EF5242D3262AC96F0071572B /* RobotoCondensed-Bold.ttf */,
+				EF5242D1262AC96F0071572B /* RobotoCondensed-Light.ttf */,
+				EF5242D4262AC96F0071572B /* RobotoCondensed-Regular.ttf */,
 			);
 			path = Fonts;
 			sourceTree = "<group>";
@@ -193,6 +206,34 @@
 				EFED24172612461800BD0CD7 /* UserDefaults+Extension.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		EF5242C8262AADA80071572B /* ProductInfo */ = {
+			isa = PBXGroup;
+			children = (
+				EF5242DE262ADDB60071572B /* View */,
+				EF5242C9262AADC90071572B /* ProductInfo.storyboard */,
+				EF5242CC262AADDA0071572B /* ProductInfoViewController.swift */,
+			);
+			path = ProductInfo;
+			sourceTree = "<group>";
+		};
+		EF5242DE262ADDB60071572B /* View */ = {
+			isa = PBXGroup;
+			children = (
+				EF74ED11262D2CD500E420C8 /* PriceTableViewCell */,
+				EF5242DF262ADDBB0071572B /* ImageCollectionViewCell */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		EF5242DF262ADDBB0071572B /* ImageCollectionViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				EF5242E0262ADDD60071572B /* ImageCollectionViewCell.swift */,
+				EF5242E1262ADDD60071572B /* ImageCollectionViewCell.xib */,
+			);
+			path = ImageCollectionViewCell;
 			sourceTree = "<group>";
 		};
 		EF529447260D860800C3EF64 = {
@@ -231,6 +272,7 @@
 		EF529468260D87F200C3EF64 /* Scene */ = {
 			isa = PBXGroup;
 			children = (
+				EF5242C8262AADA80071572B /* ProductInfo */,
 				EF529484260D991F00C3EF64 /* Main */,
 				EF529479260D969700C3EF64 /* Login */,
 				EF529469260D87F800C3EF64 /* Splash */,
@@ -291,6 +333,33 @@
 				EF529489260D993200C3EF64 /* Main.storyboard */,
 			);
 			path = Main;
+			sourceTree = "<group>";
+		};
+		EF74ED11262D2CD500E420C8 /* PriceTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				EF74ED19262D2D3400E420C8 /* PriceHeaderTableViewCell */,
+				EF74ED12262D2CEF00E420C8 /* PriceListTableViewCell */,
+			);
+			path = PriceTableViewCell;
+			sourceTree = "<group>";
+		};
+		EF74ED12262D2CEF00E420C8 /* PriceListTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				EF74ED13262D2D1700E420C8 /* PriceListTableViewCell.swift */,
+				EF74ED14262D2D1700E420C8 /* PriceListTableViewCell.xib */,
+			);
+			path = PriceListTableViewCell;
+			sourceTree = "<group>";
+		};
+		EF74ED19262D2D3400E420C8 /* PriceHeaderTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				EF74ED1A262D2D6500E420C8 /* PriceHeaderTableViewCell.swift */,
+				EF74ED1E262D2D7F00E420C8 /* PriceHeaderTableViewCell.xib */,
+			);
+			path = PriceHeaderTableViewCell;
 			sourceTree = "<group>";
 		};
 		EF7D5700260F0DAA004EE94A /* View */ = {
@@ -491,18 +560,21 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EF29F41F260E2D0B00ABE46D /* Kanit-Bold.ttf in Resources */,
-				EF29F41D260E2D0B00ABE46D /* Kanit-Light.ttf in Resources */,
 				EF7D5719260F184E004EE94A /* DataListView.xib in Resources */,
-				EF29F41E260E2D0B00ABE46D /* Kanit-Medium.ttf in Resources */,
 				EF529460260D860800C3EF64 /* LaunchScreen.storyboard in Resources */,
+				EF5242DA262AC96F0071572B /* RobotoCondensed-Regular.ttf in Resources */,
 				EF52945D260D860800C3EF64 /* Assets.xcassets in Resources */,
-				EF29F420260E2D0B00ABE46D /* Kanit-Regular.ttf in Resources */,
 				EF7D5706260F0E13004EE94A /* DataListSectionHeader.xib in Resources */,
+				EF74ED16262D2D1700E420C8 /* PriceListTableViewCell.xib in Resources */,
 				EF529474260D89E000C3EF64 /* Color.xcassets in Resources */,
 				EF52948A260D993200C3EF64 /* Main.storyboard in Resources */,
+				EF5242E3262ADDD60071572B /* ImageCollectionViewCell.xib in Resources */,
 				EF52947B260D96BB00C3EF64 /* Login.storyboard in Resources */,
+				EF5242D7262AC96F0071572B /* RobotoCondensed-Light.ttf in Resources */,
 				EF529470260D887400C3EF64 /* Splash.storyboard in Resources */,
+				EF5242D9262AC96F0071572B /* RobotoCondensed-Bold.ttf in Resources */,
+				EF74ED1F262D2D7F00E420C8 /* PriceHeaderTableViewCell.xib in Resources */,
+				EF5242CA262AADC90071572B /* ProductInfo.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -557,7 +629,9 @@
 			files = (
 				EFED24122612359800BD0CD7 /* MainRepository.swift in Sources */,
 				EF29F440260E456000ABE46D /* NavigationManager.swift in Sources */,
+				EF5242E2262ADDD60071572B /* ImageCollectionViewCell.swift in Sources */,
 				EF52947E260D96C500C3EF64 /* LoginViewController.swift in Sources */,
+				EF74ED1B262D2D6500E420C8 /* PriceHeaderTableViewCell.swift in Sources */,
 				EF52946D260D886D00C3EF64 /* SplashViewController.swift in Sources */,
 				EF7D5716260F1847004EE94A /* DataListViewCell.swift in Sources */,
 				EFED23ED2612145800BD0CD7 /* Helpers.swift in Sources */,
@@ -573,6 +647,7 @@
 				EF29F435260E35EA00ABE46D /* UIButton+Extension.swift in Sources */,
 				EF7D56FE260EFD99004EE94A /* UIView+Extension.swift in Sources */,
 				EFED23E7261211E200BD0CD7 /* LoginRequest.swift in Sources */,
+				EF5242CD262AADDA0071572B /* ProductInfoViewController.swift in Sources */,
 				EF29F432260E32B200ABE46D /* UITextField+Extension.swift in Sources */,
 				EFED240F2612356B00BD0CD7 /* GetProductUseCase.swift in Sources */,
 				EFED23F0261217FA00BD0CD7 /* UIColor+Extension.swift in Sources */,
@@ -584,6 +659,7 @@
 				EF7D5703260F0E04004EE94A /* DataListSectionHeader.swift in Sources */,
 				EFED23EA2612127D00BD0CD7 /* LoginResponse.swift in Sources */,
 				EFED24182612461800BD0CD7 /* UserDefaults+Extension.swift in Sources */,
+				EF74ED15262D2D1700E420C8 /* PriceListTableViewCell.swift in Sources */,
 				EFED23DE261210BC00BD0CD7 /* LoginUseCase.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

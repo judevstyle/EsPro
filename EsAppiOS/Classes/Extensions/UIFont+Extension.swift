@@ -11,19 +11,19 @@ import UIKit
 extension UIFont {
     
     static func PrimaryBold(size: CGFloat) -> UIFont {
-        return UIFont(name: "Kanit-Bold", size: size)!
+        return UIFont(name: "RobotoCondensed-Bold", size: size)!
     }
 
-    static func PrimaryMedium(size: CGFloat) -> UIFont {
-        return UIFont(name: "Kanit-Medium", size: size)!
-    }
+//    static func PrimaryMedium(size: CGFloat) -> UIFont {
+//        return UIFont(name: "Kanit-Medium", size: size)!
+//    }
 
     static func PrimaryRegular(size: CGFloat) -> UIFont {
-        return UIFont(name: "Kanit-Regular", size: size)!
+        return UIFont(name: "RobotoCondensed-Regular", size: size)!
     }
 
     static func PrimaryLight(size: CGFloat) -> UIFont {
-        return UIFont(name: "Kanit-Light", size: size)!
+        return UIFont(name: "RobotoCondensed-Light", size: size)!
     }
     
 }

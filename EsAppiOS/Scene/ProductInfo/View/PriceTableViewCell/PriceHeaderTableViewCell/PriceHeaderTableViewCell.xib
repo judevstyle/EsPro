@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="ipad10_9rounded" orientation="portrait" layout="fullscreen" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="RobotoCondensed-Regular.ttf">
+            <string>RobotoCondensed-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="PriceHeaderTableViewCell" customModule="EsAppiOS" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="25"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="bF1-9R-eTR">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="25"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mLH-t6-gPO">
+                            <rect key="frame" x="0.0" y="0.0" width="207" height="25"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="QYT" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iAP-KK-Lnf">
+                                    <rect key="frame" x="0.0" y="0.0" width="207" height="25"/>
+                                    <fontDescription key="fontDescription" name="RobotoCondensed-Regular" family="Roboto Condensed" pointSize="16"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                            <color key="backgroundColor" systemColor="systemGray6Color"/>
+                            <constraints>
+                                <constraint firstAttribute="bottom" secondItem="iAP-KK-Lnf" secondAttribute="bottom" id="0Aa-T4-U46"/>
+                                <constraint firstItem="iAP-KK-Lnf" firstAttribute="top" secondItem="mLH-t6-gPO" secondAttribute="top" id="4bb-dC-tAr"/>
+                                <constraint firstAttribute="trailing" secondItem="iAP-KK-Lnf" secondAttribute="trailing" id="Mzi-jS-So8"/>
+                                <constraint firstItem="iAP-KK-Lnf" firstAttribute="leading" secondItem="mLH-t6-gPO" secondAttribute="leading" id="cnD-no-2J8"/>
+                            </constraints>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Et0-lz-Imm">
+                            <rect key="frame" x="207" y="0.0" width="207" height="25"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="UNIT PRICE" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F89-YJ-sWb">
+                                    <rect key="frame" x="0.0" y="0.0" width="207" height="25"/>
+                                    <fontDescription key="fontDescription" name="RobotoCondensed-Regular" family="Roboto Condensed" pointSize="17"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                            <color key="backgroundColor" systemColor="systemGray6Color"/>
+                            <constraints>
+                                <constraint firstAttribute="bottom" secondItem="F89-YJ-sWb" secondAttribute="bottom" id="Qjw-Rb-BB6"/>
+                                <constraint firstAttribute="trailing" secondItem="F89-YJ-sWb" secondAttribute="trailing" id="RA5-tp-ppk"/>
+                                <constraint firstItem="F89-YJ-sWb" firstAttribute="top" secondItem="Et0-lz-Imm" secondAttribute="top" id="rCg-Gg-wFw"/>
+                                <constraint firstItem="F89-YJ-sWb" firstAttribute="leading" secondItem="Et0-lz-Imm" secondAttribute="leading" id="uR4-r1-kgf"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                    <color key="backgroundColor" name="HeadTableColor"/>
+                </stackView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="bF1-9R-eTR" secondAttribute="bottom" id="JDv-cX-Iqh"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="bF1-9R-eTR" secondAttribute="trailing" id="U4w-UW-ExE"/>
+                <constraint firstItem="bF1-9R-eTR" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="dsR-L2-sRB"/>
+                <constraint firstItem="bF1-9R-eTR" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="wQ1-jq-mgX"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="86.341463414634148" y="-166.77966101694915"/>
+        </view>
+    </objects>
+    <resources>
+        <namedColor name="HeadTableColor">
+            <color red="0.94117647058823528" green="0.94117647058823528" blue="0.94117647058823528" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGray6Color">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

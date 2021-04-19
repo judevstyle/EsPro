@@ -43,10 +43,9 @@
 	</array>
 	<key>UIAppFonts</key>
 	<array>
-		<string>Kanit-Light.ttf</string>
-		<string>Kanit-Medium.ttf</string>
-		<string>Kanit-Regular.ttf</string>
-		<string>Kanit-Bold.ttf</string>
+		<string>RobotoCondensed-Light.ttf</string>
+		<string>RobotoCondensed-Regular.ttf</string>
+		<string>RobotoCondensed-Bold.ttf</string>
 	</array>
 	<key>API_BASE_URL</key>
 	<string>$(API_BASE_URL)</string>

@@ -41,6 +41,10 @@ class MainViewController: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         viewModel.input.searchProduct(searchType: .ES)
+        
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
+            self.openScene(identifier: .SceneProductInformation)
+        }
     }
 }
 
@@ -173,7 +177,7 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         let headerView = tableView.dequeueReusableHeaderFooterView(withIdentifier: "DataListSectionHeader") as! DataListSectionHeader
         
-           return headerView
+        return headerView
     }
     
     
@@ -195,6 +199,15 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         print(indexPath.item)
     }
-    
-    
+}
+
+extension MainViewController {
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == SceneOpen.SceneProductInformation.rawValue {
+              if let targetController = segue.destination as? ProductInfoViewController {
+//                    print("Nontawat ProductInfoViewController")
+                    targetController.navigationController?.navigationBar.backItem?.title = ""
+              }
+          }
+    }
 }

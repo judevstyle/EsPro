@@ -160,7 +160,7 @@
                         <outlet property="inputPassword" destination="XX7-fT-Co6" id="y37-3N-an0"/>
                         <outlet property="inputUsername" destination="JXk-jS-0Vv" id="rfR-7l-eCm"/>
                         <outlet property="viewKeyboardHeight" destination="HF4-FX-O8c" id="6ca-r5-LdX"/>
-                        <segue destination="QAN-WV-2Fy" kind="presentation" identifier="SceneMain" id="5YI-fc-dks"/>
+                        <segue destination="QAN-WV-2Fy" kind="presentation" identifier="SceneMain" modalPresentationStyle="fullScreen" id="5YI-fc-dks"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Tgn-bK-a7l" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

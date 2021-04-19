@@ -76,6 +76,7 @@ extension LoginViewController {
         return { [weak self] in
             guard let weakSelf = self else { return }
             weakSelf.stopLoding()
+            weakSelf.openScene(identifier: .SceneMain)
         }
     }
     
