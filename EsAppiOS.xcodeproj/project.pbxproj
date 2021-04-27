@@ -21,6 +21,25 @@
 		EF29F440260E456000ABE46D /* NavigationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF29F43F260E456000ABE46D /* NavigationManager.swift */; };
 		EF29F443260E576800ABE46D /* UIImageView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF29F442260E576800ABE46D /* UIImageView+Extension.swift */; };
 		EF29F44A260E622B00ABE46D /* RadioGroup in Frameworks */ = {isa = PBXBuildFile; productRef = EF29F449260E622B00ABE46D /* RadioGroup */; };
+		EF39943F26340E1D00BBC189 /* PriceTableModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF39943E26340E1D00BBC189 /* PriceTableModel.swift */; };
+		EF3994452634100700BBC189 /* InventoryHeaderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF3994442634100700BBC189 /* InventoryHeaderTableViewCell.swift */; };
+		EF3994482634101200BBC189 /* InventoryHeaderTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EF3994472634101200BBC189 /* InventoryHeaderTableViewCell.xib */; };
+		EF39944C2634102800BBC189 /* InventoryListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF39944A2634102800BBC189 /* InventoryListTableViewCell.swift */; };
+		EF39944D2634102800BBC189 /* InventoryListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EF39944B2634102800BBC189 /* InventoryListTableViewCell.xib */; };
+		EF399450263412FE00BBC189 /* InventoryTableModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF39944F263412FE00BBC189 /* InventoryTableModel.swift */; };
+		EF3994542634218A00BBC189 /* InventoryFooterTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF3994532634218A00BBC189 /* InventoryFooterTableViewCell.swift */; };
+		EF3994572634219100BBC189 /* InventoryFooterTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EF3994562634219100BBC189 /* InventoryFooterTableViewCell.xib */; };
+		EF399461263429ED00BBC189 /* ShipmentHeaderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF399460263429ED00BBC189 /* ShipmentHeaderTableViewCell.swift */; };
+		EF399465263429F300BBC189 /* ShipmentHeaderTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EF399464263429F300BBC189 /* ShipmentHeaderTableViewCell.xib */; };
+		EF39946E26342A2900BBC189 /* ShipmentListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF39946C26342A2900BBC189 /* ShipmentListTableViewCell.swift */; };
+		EF39946F26342A2900BBC189 /* ShipmentListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EF39946D26342A2900BBC189 /* ShipmentListTableViewCell.xib */; };
+		EF39947326342D0E00BBC189 /* ShipmentTableModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF39947226342D0E00BBC189 /* ShipmentTableModel.swift */; };
+		EF3994882634363200BBC189 /* BetterSegmentedControl in Frameworks */ = {isa = PBXBuildFile; productRef = EF3994872634363200BBC189 /* BetterSegmentedControl */; };
+		EF39949C26343F8200BBC189 /* ProductSpecificationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF39949A26343F8200BBC189 /* ProductSpecificationTableViewCell.swift */; };
+		EF39949D26343F8200BBC189 /* ProductSpecificationTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EF39949B26343F8200BBC189 /* ProductSpecificationTableViewCell.xib */; };
+		EF3994A126343F9500BBC189 /* ProductInformationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF39949F26343F9500BBC189 /* ProductInformationTableViewCell.swift */; };
+		EF3994A226343F9500BBC189 /* ProductInformationTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EF3994A026343F9500BBC189 /* ProductInformationTableViewCell.xib */; };
+		EF3994AC2634454C00BBC189 /* ProductTableModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF3994AB2634454C00BBC189 /* ProductTableModel.swift */; };
 		EF5242CA262AADC90071572B /* ProductInfo.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF5242C9262AADC90071572B /* ProductInfo.storyboard */; };
 		EF5242CD262AADDA0071572B /* ProductInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF5242CC262AADDA0071572B /* ProductInfoViewController.swift */; };
 		EF5242D7262AC96F0071572B /* RobotoCondensed-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EF5242D1262AC96F0071572B /* RobotoCondensed-Light.ttf */; };
@@ -76,6 +95,24 @@
 		EF29F43B260E44DB00ABE46D /* SceneOpen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneOpen.swift; sourceTree = "<group>"; };
 		EF29F43F260E456000ABE46D /* NavigationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationManager.swift; sourceTree = "<group>"; };
 		EF29F442260E576800ABE46D /* UIImageView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Extension.swift"; sourceTree = "<group>"; };
+		EF39943E26340E1D00BBC189 /* PriceTableModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriceTableModel.swift; sourceTree = "<group>"; };
+		EF3994442634100700BBC189 /* InventoryHeaderTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InventoryHeaderTableViewCell.swift; sourceTree = "<group>"; };
+		EF3994472634101200BBC189 /* InventoryHeaderTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InventoryHeaderTableViewCell.xib; sourceTree = "<group>"; };
+		EF39944A2634102800BBC189 /* InventoryListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InventoryListTableViewCell.swift; sourceTree = "<group>"; };
+		EF39944B2634102800BBC189 /* InventoryListTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InventoryListTableViewCell.xib; sourceTree = "<group>"; };
+		EF39944F263412FE00BBC189 /* InventoryTableModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InventoryTableModel.swift; sourceTree = "<group>"; };
+		EF3994532634218A00BBC189 /* InventoryFooterTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InventoryFooterTableViewCell.swift; sourceTree = "<group>"; };
+		EF3994562634219100BBC189 /* InventoryFooterTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InventoryFooterTableViewCell.xib; sourceTree = "<group>"; };
+		EF399460263429ED00BBC189 /* ShipmentHeaderTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShipmentHeaderTableViewCell.swift; sourceTree = "<group>"; };
+		EF399464263429F300BBC189 /* ShipmentHeaderTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ShipmentHeaderTableViewCell.xib; sourceTree = "<group>"; };
+		EF39946C26342A2900BBC189 /* ShipmentListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShipmentListTableViewCell.swift; sourceTree = "<group>"; };
+		EF39946D26342A2900BBC189 /* ShipmentListTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ShipmentListTableViewCell.xib; sourceTree = "<group>"; };
+		EF39947226342D0E00BBC189 /* ShipmentTableModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShipmentTableModel.swift; sourceTree = "<group>"; };
+		EF39949A26343F8200BBC189 /* ProductSpecificationTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductSpecificationTableViewCell.swift; sourceTree = "<group>"; };
+		EF39949B26343F8200BBC189 /* ProductSpecificationTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProductSpecificationTableViewCell.xib; sourceTree = "<group>"; };
+		EF39949F26343F9500BBC189 /* ProductInformationTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductInformationTableViewCell.swift; sourceTree = "<group>"; };
+		EF3994A026343F9500BBC189 /* ProductInformationTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProductInformationTableViewCell.xib; sourceTree = "<group>"; };
+		EF3994AB2634454C00BBC189 /* ProductTableModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductTableModel.swift; sourceTree = "<group>"; };
 		EF5242C9262AADC90071572B /* ProductInfo.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ProductInfo.storyboard; sourceTree = "<group>"; };
 		EF5242CC262AADDA0071572B /* ProductInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductInfoViewController.swift; sourceTree = "<group>"; };
 		EF5242D1262AC96F0071572B /* RobotoCondensed-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "RobotoCondensed-Light.ttf"; sourceTree = "<group>"; };
@@ -128,6 +165,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EF29F44A260E622B00ABE46D /* RadioGroup in Frameworks */,
+				EF3994882634363200BBC189 /* BetterSegmentedControl in Frameworks */,
 				EF29F42D260E31C000ABE46D /* NVActivityIndicatorView in Frameworks */,
 				EF29F40E260E2B4700ABE46D /* RxMoya in Frameworks */,
 				EF29F40C260E2B4700ABE46D /* Moya in Frameworks */,
@@ -208,9 +246,112 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
+		EF39943D26340E0500BBC189 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				EF39943E26340E1D00BBC189 /* PriceTableModel.swift */,
+				EF39944F263412FE00BBC189 /* InventoryTableModel.swift */,
+				EF39947226342D0E00BBC189 /* ShipmentTableModel.swift */,
+				EF3994AB2634454C00BBC189 /* ProductTableModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		EF39944126340FBB00BBC189 /* InventoryTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				EF3994522634217300BBC189 /* InventoryFooterTableViewCell */,
+				EF39944326340FDC00BBC189 /* InventoryListTableViewCell */,
+				EF39944226340FD400BBC189 /* InventoryHeaderTableViewCell */,
+			);
+			path = InventoryTableViewCell;
+			sourceTree = "<group>";
+		};
+		EF39944226340FD400BBC189 /* InventoryHeaderTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				EF3994442634100700BBC189 /* InventoryHeaderTableViewCell.swift */,
+				EF3994472634101200BBC189 /* InventoryHeaderTableViewCell.xib */,
+			);
+			path = InventoryHeaderTableViewCell;
+			sourceTree = "<group>";
+		};
+		EF39944326340FDC00BBC189 /* InventoryListTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				EF39944A2634102800BBC189 /* InventoryListTableViewCell.swift */,
+				EF39944B2634102800BBC189 /* InventoryListTableViewCell.xib */,
+			);
+			path = InventoryListTableViewCell;
+			sourceTree = "<group>";
+		};
+		EF3994522634217300BBC189 /* InventoryFooterTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				EF3994532634218A00BBC189 /* InventoryFooterTableViewCell.swift */,
+				EF3994562634219100BBC189 /* InventoryFooterTableViewCell.xib */,
+			);
+			path = InventoryFooterTableViewCell;
+			sourceTree = "<group>";
+		};
+		EF399459263429C100BBC189 /* ShipmentTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				EF399467263429F900BBC189 /* ShipmentListTableViewCell */,
+				EF39945F263429E500BBC189 /* ShipmentHeaderTableViewCell */,
+			);
+			path = ShipmentTableViewCell;
+			sourceTree = "<group>";
+		};
+		EF39945F263429E500BBC189 /* ShipmentHeaderTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				EF399460263429ED00BBC189 /* ShipmentHeaderTableViewCell.swift */,
+				EF399464263429F300BBC189 /* ShipmentHeaderTableViewCell.xib */,
+			);
+			path = ShipmentHeaderTableViewCell;
+			sourceTree = "<group>";
+		};
+		EF399467263429F900BBC189 /* ShipmentListTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				EF39946C26342A2900BBC189 /* ShipmentListTableViewCell.swift */,
+				EF39946D26342A2900BBC189 /* ShipmentListTableViewCell.xib */,
+			);
+			path = ShipmentListTableViewCell;
+			sourceTree = "<group>";
+		};
+		EF39949126343F4300BBC189 /* ProductTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				EF39949326343F6000BBC189 /* ProductSpecificationTableViewCell */,
+				EF39949226343F5400BBC189 /* ProductInformationTableViewCell */,
+			);
+			path = ProductTableViewCell;
+			sourceTree = "<group>";
+		};
+		EF39949226343F5400BBC189 /* ProductInformationTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				EF39949F26343F9500BBC189 /* ProductInformationTableViewCell.swift */,
+				EF3994A026343F9500BBC189 /* ProductInformationTableViewCell.xib */,
+			);
+			path = ProductInformationTableViewCell;
+			sourceTree = "<group>";
+		};
+		EF39949326343F6000BBC189 /* ProductSpecificationTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				EF39949A26343F8200BBC189 /* ProductSpecificationTableViewCell.swift */,
+				EF39949B26343F8200BBC189 /* ProductSpecificationTableViewCell.xib */,
+			);
+			path = ProductSpecificationTableViewCell;
+			sourceTree = "<group>";
+		};
 		EF5242C8262AADA80071572B /* ProductInfo */ = {
 			isa = PBXGroup;
 			children = (
+				EF39943D26340E0500BBC189 /* Model */,
 				EF5242DE262ADDB60071572B /* View */,
 				EF5242C9262AADC90071572B /* ProductInfo.storyboard */,
 				EF5242CC262AADDA0071572B /* ProductInfoViewController.swift */,
@@ -221,6 +362,9 @@
 		EF5242DE262ADDB60071572B /* View */ = {
 			isa = PBXGroup;
 			children = (
+				EF39949126343F4300BBC189 /* ProductTableViewCell */,
+				EF399459263429C100BBC189 /* ShipmentTableViewCell */,
+				EF39944126340FBB00BBC189 /* InventoryTableViewCell */,
 				EF74ED11262D2CD500E420C8 /* PriceTableViewCell */,
 				EF5242DF262ADDBB0071572B /* ImageCollectionViewCell */,
 			);
@@ -513,6 +657,7 @@
 				EF29F42C260E31C000ABE46D /* NVActivityIndicatorView */,
 				EF29F42E260E31C000ABE46D /* NVActivityIndicatorViewExtended */,
 				EF29F449260E622B00ABE46D /* RadioGroup */,
+				EF3994872634363200BBC189 /* BetterSegmentedControl */,
 			);
 			productName = EsAppiOS;
 			productReference = EF529450260D860800C3EF64 /* EsAppiOS.app */;
@@ -545,6 +690,7 @@
 				EF29F40A260E2B4700ABE46D /* XCRemoteSwiftPackageReference "Moya" */,
 				EF29F42B260E31C000ABE46D /* XCRemoteSwiftPackageReference "NVActivityIndicatorView" */,
 				EF29F448260E622B00ABE46D /* XCRemoteSwiftPackageReference "RadioGroup" */,
+				EF3994862634363200BBC189 /* XCRemoteSwiftPackageReference "BetterSegmentedControl" */,
 			);
 			productRefGroup = EF529451260D860800C3EF64 /* Products */;
 			projectDirPath = "";
@@ -561,15 +707,22 @@
 			buildActionMask = 2147483647;
 			files = (
 				EF7D5719260F184E004EE94A /* DataListView.xib in Resources */,
+				EF39946F26342A2900BBC189 /* ShipmentListTableViewCell.xib in Resources */,
+				EF39949D26343F8200BBC189 /* ProductSpecificationTableViewCell.xib in Resources */,
 				EF529460260D860800C3EF64 /* LaunchScreen.storyboard in Resources */,
+				EF399465263429F300BBC189 /* ShipmentHeaderTableViewCell.xib in Resources */,
+				EF3994572634219100BBC189 /* InventoryFooterTableViewCell.xib in Resources */,
 				EF5242DA262AC96F0071572B /* RobotoCondensed-Regular.ttf in Resources */,
 				EF52945D260D860800C3EF64 /* Assets.xcassets in Resources */,
+				EF3994A226343F9500BBC189 /* ProductInformationTableViewCell.xib in Resources */,
 				EF7D5706260F0E13004EE94A /* DataListSectionHeader.xib in Resources */,
 				EF74ED16262D2D1700E420C8 /* PriceListTableViewCell.xib in Resources */,
+				EF3994482634101200BBC189 /* InventoryHeaderTableViewCell.xib in Resources */,
 				EF529474260D89E000C3EF64 /* Color.xcassets in Resources */,
 				EF52948A260D993200C3EF64 /* Main.storyboard in Resources */,
 				EF5242E3262ADDD60071572B /* ImageCollectionViewCell.xib in Resources */,
 				EF52947B260D96BB00C3EF64 /* Login.storyboard in Resources */,
+				EF39944D2634102800BBC189 /* InventoryListTableViewCell.xib in Resources */,
 				EF5242D7262AC96F0071572B /* RobotoCondensed-Light.ttf in Resources */,
 				EF529470260D887400C3EF64 /* Splash.storyboard in Resources */,
 				EF5242D9262AC96F0071572B /* RobotoCondensed-Bold.ttf in Resources */,
@@ -630,6 +783,8 @@
 				EFED24122612359800BD0CD7 /* MainRepository.swift in Sources */,
 				EF29F440260E456000ABE46D /* NavigationManager.swift in Sources */,
 				EF5242E2262ADDD60071572B /* ImageCollectionViewCell.swift in Sources */,
+				EF39946E26342A2900BBC189 /* ShipmentListTableViewCell.swift in Sources */,
+				EF3994452634100700BBC189 /* InventoryHeaderTableViewCell.swift in Sources */,
 				EF52947E260D96C500C3EF64 /* LoginViewController.swift in Sources */,
 				EF74ED1B262D2D6500E420C8 /* PriceHeaderTableViewCell.swift in Sources */,
 				EF52946D260D886D00C3EF64 /* SplashViewController.swift in Sources */,
@@ -639,7 +794,12 @@
 				EF529482260D97FF00C3EF64 /* Extension+Notification.swift in Sources */,
 				EFED2415261235A100BD0CD7 /* MainViewModel.swift in Sources */,
 				EF529454260D860800C3EF64 /* AppDelegate.swift in Sources */,
+				EF39947326342D0E00BBC189 /* ShipmentTableModel.swift in Sources */,
+				EF3994542634218A00BBC189 /* InventoryFooterTableViewCell.swift in Sources */,
+				EF399450263412FE00BBC189 /* InventoryTableModel.swift in Sources */,
 				EFED240C2612352E00BD0CD7 /* ProductResponse.swift in Sources */,
+				EF3994AC2634454C00BBC189 /* ProductTableModel.swift in Sources */,
+				EF399461263429ED00BBC189 /* ShipmentHeaderTableViewCell.swift in Sources */,
 				EF29F429260E316200ABE46D /* UIViewController+Extension.swift in Sources */,
 				EFED23D92612108C00BD0CD7 /* LoginRepository.swift in Sources */,
 				EF29F443260E576800ABE46D /* UIImageView+Extension.swift in Sources */,
@@ -647,6 +807,7 @@
 				EF29F435260E35EA00ABE46D /* UIButton+Extension.swift in Sources */,
 				EF7D56FE260EFD99004EE94A /* UIView+Extension.swift in Sources */,
 				EFED23E7261211E200BD0CD7 /* LoginRequest.swift in Sources */,
+				EF39949C26343F8200BBC189 /* ProductSpecificationTableViewCell.swift in Sources */,
 				EF5242CD262AADDA0071572B /* ProductInfoViewController.swift in Sources */,
 				EF29F432260E32B200ABE46D /* UITextField+Extension.swift in Sources */,
 				EFED240F2612356B00BD0CD7 /* GetProductUseCase.swift in Sources */,
@@ -657,10 +818,13 @@
 				EF29F43C260E44DB00ABE46D /* SceneOpen.swift in Sources */,
 				EF7D570E260F182A004EE94A /* DataListView.swift in Sources */,
 				EF7D5703260F0E04004EE94A /* DataListSectionHeader.swift in Sources */,
+				EF39943F26340E1D00BBC189 /* PriceTableModel.swift in Sources */,
 				EFED23EA2612127D00BD0CD7 /* LoginResponse.swift in Sources */,
 				EFED24182612461800BD0CD7 /* UserDefaults+Extension.swift in Sources */,
 				EF74ED15262D2D1700E420C8 /* PriceListTableViewCell.swift in Sources */,
 				EFED23DE261210BC00BD0CD7 /* LoginUseCase.swift in Sources */,
+				EF3994A126343F9500BBC189 /* ProductInformationTableViewCell.swift in Sources */,
+				EF39944C2634102800BBC189 /* InventoryListTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -886,6 +1050,14 @@
 				minimumVersion = 1.4.3;
 			};
 		};
+		EF3994862634363200BBC189 /* XCRemoteSwiftPackageReference "BetterSegmentedControl" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/gmarm/BetterSegmentedControl";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -918,6 +1090,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = EF29F448260E622B00ABE46D /* XCRemoteSwiftPackageReference "RadioGroup" */;
 			productName = RadioGroup;
+		};
+		EF3994872634363200BBC189 /* BetterSegmentedControl */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = EF3994862634363200BBC189 /* XCRemoteSwiftPackageReference "BetterSegmentedControl" */;
+			productName = BetterSegmentedControl;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

@@ -9,6 +9,15 @@ import UIKit
 
 class PriceListTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var qtyLabel: UILabel!
+    @IBOutlet weak var unitPriceLabel: UILabel!
+    
+    var item: PriceTableModel? {
+        didSet {
+            setupValue()
+        }
+    }
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -18,6 +27,11 @@ class PriceListTableViewCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
 
         // Configure the view for the selected state
+    }
+    
+    func setupValue() {
+        qtyLabel.text = "\(item?.qyt ?? 0)"
+        unitPriceLabel.text = item?.unitPrice ?? ""
     }
     
 }
