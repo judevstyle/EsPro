@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="ipad10_9rounded" orientation="portrait" layout="fullscreen" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="RobotoCondensed-Bold.ttf">
+            <string>RobotoCondensed-Bold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="SimilarRelatedHeaderTableViewCell" customModule="EsAppiOS" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="820" height="60"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wMb-9X-EAa">
+                    <rect key="frame" x="0.0" y="0.0" width="804" height="60"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SIMILAR PART" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Za6-Yk-Jsd">
+                            <rect key="frame" x="32" y="0.0" width="772" height="60"/>
+                            <fontDescription key="fontDescription" name="RobotoCondensed-Bold" family="Roboto Condensed" pointSize="19"/>
+                            <color key="textColor" name="NewPrimary"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" name="HeaderSimilar"/>
+                    <constraints>
+                        <constraint firstAttribute="bottom" secondItem="Za6-Yk-Jsd" secondAttribute="bottom" id="3zX-Ki-d9O"/>
+                        <constraint firstItem="Za6-Yk-Jsd" firstAttribute="leading" secondItem="wMb-9X-EAa" secondAttribute="leading" constant="32" id="Pm4-AB-Vmg"/>
+                        <constraint firstAttribute="trailing" secondItem="Za6-Yk-Jsd" secondAttribute="trailing" id="oLB-sh-tcR"/>
+                        <constraint firstItem="Za6-Yk-Jsd" firstAttribute="top" secondItem="wMb-9X-EAa" secondAttribute="top" id="wmj-Yw-Ojq"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <constraints>
+                <constraint firstItem="wMb-9X-EAa" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="25s-CJ-LyF"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="wMb-9X-EAa" secondAttribute="trailing" constant="16" id="jH8-Ug-Hb9"/>
+                <constraint firstItem="wMb-9X-EAa" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="k8i-ho-7MP"/>
+                <constraint firstAttribute="bottom" secondItem="wMb-9X-EAa" secondAttribute="bottom" id="wu3-mP-DJD"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="133" y="74"/>
+        </view>
+    </objects>
+    <resources>
+        <namedColor name="HeaderSimilar">
+            <color red="0.95294117647058818" green="0.94117647058823528" blue="0.87058823529411766" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="NewPrimary">
+            <color red="0.10588235294117647" green="0.27843137254901962" blue="0.58431372549019611" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

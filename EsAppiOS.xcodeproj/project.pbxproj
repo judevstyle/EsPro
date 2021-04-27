@@ -8,6 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		667C0C2B8EAE2F3D2EF24EBA /* Pods_EsAppiOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 29CF7B94345025EA7C5AFDB0 /* Pods_EsAppiOS.framework */; };
+		EF239BED26384DF400983EA8 /* SimilarTableModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF239BEC26384DF400983EA8 /* SimilarTableModel.swift */; };
+		EF239BF726384F3900983EA8 /* SimilarRelatedHeaderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF239BF626384F3900983EA8 /* SimilarRelatedHeaderTableViewCell.swift */; };
+		EF239BFA26384F3E00983EA8 /* SimilarRelatedHeaderTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EF239BF926384F3E00983EA8 /* SimilarRelatedHeaderTableViewCell.xib */; };
+		EF239BFF26384F5800983EA8 /* SimilarRelatedListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF239BFD26384F5800983EA8 /* SimilarRelatedListTableViewCell.swift */; };
+		EF239C0026384F5800983EA8 /* SimilarRelatedListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EF239BFE26384F5800983EA8 /* SimilarRelatedListTableViewCell.xib */; };
 		EF29F40C260E2B4700ABE46D /* Moya in Frameworks */ = {isa = PBXBuildFile; productRef = EF29F40B260E2B4700ABE46D /* Moya */; };
 		EF29F40E260E2B4700ABE46D /* RxMoya in Frameworks */ = {isa = PBXBuildFile; productRef = EF29F40D260E2B4700ABE46D /* RxMoya */; };
 		EF29F410260E2B4700ABE46D /* ReactiveMoya in Frameworks */ = {isa = PBXBuildFile; productRef = EF29F40F260E2B4700ABE46D /* ReactiveMoya */; };
@@ -88,6 +93,11 @@
 		13414C314681D4E64E22F4BB /* Pods-EsAppiOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EsAppiOS.debug.xcconfig"; path = "Target Support Files/Pods-EsAppiOS/Pods-EsAppiOS.debug.xcconfig"; sourceTree = "<group>"; };
 		29CF7B94345025EA7C5AFDB0 /* Pods_EsAppiOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EsAppiOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C3D71E7A6B69E9FC300AD523 /* Pods-EsAppiOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EsAppiOS.release.xcconfig"; path = "Target Support Files/Pods-EsAppiOS/Pods-EsAppiOS.release.xcconfig"; sourceTree = "<group>"; };
+		EF239BEC26384DF400983EA8 /* SimilarTableModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimilarTableModel.swift; sourceTree = "<group>"; };
+		EF239BF626384F3900983EA8 /* SimilarRelatedHeaderTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimilarRelatedHeaderTableViewCell.swift; sourceTree = "<group>"; };
+		EF239BF926384F3E00983EA8 /* SimilarRelatedHeaderTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SimilarRelatedHeaderTableViewCell.xib; sourceTree = "<group>"; };
+		EF239BFD26384F5800983EA8 /* SimilarRelatedListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimilarRelatedListTableViewCell.swift; sourceTree = "<group>"; };
+		EF239BFE26384F5800983EA8 /* SimilarRelatedListTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SimilarRelatedListTableViewCell.xib; sourceTree = "<group>"; };
 		EF29F423260E2D4D00ABE46D /* APIProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIProvider.swift; sourceTree = "<group>"; };
 		EF29F428260E316200ABE46D /* UIViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
 		EF29F431260E32B200ABE46D /* UITextField+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+Extension.swift"; sourceTree = "<group>"; };
@@ -195,6 +205,33 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		EF239BEF26384F0100983EA8 /* SimilarRelatedTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				EF239BFC26384F4200983EA8 /* SimilarRelatedListTableViewCell */,
+				EF239BF426384F2E00983EA8 /* SimilarRelatedHeaderTableViewCell */,
+			);
+			path = SimilarRelatedTableViewCell;
+			sourceTree = "<group>";
+		};
+		EF239BF426384F2E00983EA8 /* SimilarRelatedHeaderTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				EF239BF626384F3900983EA8 /* SimilarRelatedHeaderTableViewCell.swift */,
+				EF239BF926384F3E00983EA8 /* SimilarRelatedHeaderTableViewCell.xib */,
+			);
+			path = SimilarRelatedHeaderTableViewCell;
+			sourceTree = "<group>";
+		};
+		EF239BFC26384F4200983EA8 /* SimilarRelatedListTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				EF239BFD26384F5800983EA8 /* SimilarRelatedListTableViewCell.swift */,
+				EF239BFE26384F5800983EA8 /* SimilarRelatedListTableViewCell.xib */,
+			);
+			path = SimilarRelatedListTableViewCell;
+			sourceTree = "<group>";
+		};
 		EF29F412260E2BBB00ABE46D /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
@@ -253,6 +290,7 @@
 				EF39944F263412FE00BBC189 /* InventoryTableModel.swift */,
 				EF39947226342D0E00BBC189 /* ShipmentTableModel.swift */,
 				EF3994AB2634454C00BBC189 /* ProductTableModel.swift */,
+				EF239BEC26384DF400983EA8 /* SimilarTableModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -362,6 +400,7 @@
 		EF5242DE262ADDB60071572B /* View */ = {
 			isa = PBXGroup;
 			children = (
+				EF239BEF26384F0100983EA8 /* SimilarRelatedTableViewCell */,
 				EF39949126343F4300BBC189 /* ProductTableViewCell */,
 				EF399459263429C100BBC189 /* ShipmentTableViewCell */,
 				EF39944126340FBB00BBC189 /* InventoryTableViewCell */,
@@ -711,6 +750,7 @@
 				EF39949D26343F8200BBC189 /* ProductSpecificationTableViewCell.xib in Resources */,
 				EF529460260D860800C3EF64 /* LaunchScreen.storyboard in Resources */,
 				EF399465263429F300BBC189 /* ShipmentHeaderTableViewCell.xib in Resources */,
+				EF239C0026384F5800983EA8 /* SimilarRelatedListTableViewCell.xib in Resources */,
 				EF3994572634219100BBC189 /* InventoryFooterTableViewCell.xib in Resources */,
 				EF5242DA262AC96F0071572B /* RobotoCondensed-Regular.ttf in Resources */,
 				EF52945D260D860800C3EF64 /* Assets.xcassets in Resources */,
@@ -722,6 +762,7 @@
 				EF52948A260D993200C3EF64 /* Main.storyboard in Resources */,
 				EF5242E3262ADDD60071572B /* ImageCollectionViewCell.xib in Resources */,
 				EF52947B260D96BB00C3EF64 /* Login.storyboard in Resources */,
+				EF239BFA26384F3E00983EA8 /* SimilarRelatedHeaderTableViewCell.xib in Resources */,
 				EF39944D2634102800BBC189 /* InventoryListTableViewCell.xib in Resources */,
 				EF5242D7262AC96F0071572B /* RobotoCondensed-Light.ttf in Resources */,
 				EF529470260D887400C3EF64 /* Splash.storyboard in Resources */,
@@ -781,6 +822,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EFED24122612359800BD0CD7 /* MainRepository.swift in Sources */,
+				EF239BFF26384F5800983EA8 /* SimilarRelatedListTableViewCell.swift in Sources */,
 				EF29F440260E456000ABE46D /* NavigationManager.swift in Sources */,
 				EF5242E2262ADDD60071572B /* ImageCollectionViewCell.swift in Sources */,
 				EF39946E26342A2900BBC189 /* ShipmentListTableViewCell.swift in Sources */,
@@ -796,6 +838,7 @@
 				EF529454260D860800C3EF64 /* AppDelegate.swift in Sources */,
 				EF39947326342D0E00BBC189 /* ShipmentTableModel.swift in Sources */,
 				EF3994542634218A00BBC189 /* InventoryFooterTableViewCell.swift in Sources */,
+				EF239BF726384F3900983EA8 /* SimilarRelatedHeaderTableViewCell.swift in Sources */,
 				EF399450263412FE00BBC189 /* InventoryTableModel.swift in Sources */,
 				EFED240C2612352E00BD0CD7 /* ProductResponse.swift in Sources */,
 				EF3994AC2634454C00BBC189 /* ProductTableModel.swift in Sources */,
@@ -808,6 +851,7 @@
 				EF7D56FE260EFD99004EE94A /* UIView+Extension.swift in Sources */,
 				EFED23E7261211E200BD0CD7 /* LoginRequest.swift in Sources */,
 				EF39949C26343F8200BBC189 /* ProductSpecificationTableViewCell.swift in Sources */,
+				EF239BED26384DF400983EA8 /* SimilarTableModel.swift in Sources */,
 				EF5242CD262AADDA0071572B /* ProductInfoViewController.swift in Sources */,
 				EF29F432260E32B200ABE46D /* UITextField+Extension.swift in Sources */,
 				EFED240F2612356B00BD0CD7 /* GetProductUseCase.swift in Sources */,

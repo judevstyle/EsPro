@@ -25,13 +25,23 @@ class ProductInfoViewController: UIViewController {
     @IBOutlet weak var productTableView: UITableView!
     @IBOutlet weak var productTableViewHeight: NSLayoutConstraint!
     
+    
+    //similar & related
+    @IBOutlet weak var similarTableView: UITableView!
+    @IBOutlet weak var similarTableViewHeight: NSLayoutConstraint!
+    
+    @IBOutlet weak var relatedTableView: UITableView!
+    @IBOutlet weak var relatedTableViewHeight: NSLayoutConstraint!
+    
     var listPriceTable: [PriceTableModel] = []
     var listInventoryTable: [InventoryTableModel] = []
     var listShipmentTable: [ShipmentTableModel] = []
     
-    
     var listProductInformation: [ProductTableModel] = []
     var listProductSpecification: [ProductTableModel] = []
+    
+    var listSimilarTable: [SimilarTableModel] = []
+    var listRelatedTable: [SimilarTableModel] = []
     
     var segmentControlSelectIndex: Int = 0
     
@@ -46,6 +56,7 @@ class ProductInfoViewController: UIViewController {
         setupShipmentTableView()
         setupSegmentControlProductView()
         setupProductTableView()
+        setupSimilarRelatedTableView()
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -110,6 +121,11 @@ class ProductInfoViewController: UIViewController {
         listProductSpecification.append(ProductTableModel(title: "Instrument Type", value: "XXXXXX"))
         listProductSpecification.append(ProductTableModel(title: "Instrument Type", value: "XXXXXX"))
         listProductSpecification.append(ProductTableModel(title: "Instrument Type", value: "XXXXXX"))
+        
+        //listSimilarTable
+        listSimilarTable.append(SimilarTableModel(image: "", title: "XXXXXXXXX", type: "XXXXXXXXXXXX", desc: "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx", price: "X,XXX"))
+        listSimilarTable.append(SimilarTableModel(image: "", title: "XXXXXXXXX", type: "XXXXXXXXXXXX", desc: "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx", price: "X,XXX"))
+        listSimilarTable.append(SimilarTableModel(image: "", title: "XXXXXXXXX", type: "XXXXXXXXXXXX", desc: "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx", price: "X,XXX"))
     }
 }
 
@@ -213,6 +229,34 @@ extension ProductInfoViewController {
         productTableView.reloadData()
     }
     
+    
+    func setupSimilarRelatedTableView() {
+        similarTableView.delegate = self
+        similarTableView.dataSource = self
+        similarTableView.backgroundView?.backgroundColor = .white
+        similarTableView.backgroundColor = .white
+        similarTableView.separatorInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
+        similarTableView.separatorStyle = .none
+        similarTableView.separatorColor = .clear
+        
+        let headerNib = UINib.init(nibName: "SimilarRelatedHeaderTableViewCell", bundle: Bundle.main)
+        similarTableView.register(headerNib, forHeaderFooterViewReuseIdentifier: "SimilarRelatedHeaderTableViewCell")
+        
+        let similarNib = UINib.init(nibName: "SimilarRelatedListTableViewCell", bundle: Bundle.main)
+        similarTableView.register(similarNib, forCellReuseIdentifier: "SimilarRelatedListTableViewCell")
+        
+        
+        relatedTableView.delegate = self
+        relatedTableView.dataSource = self
+        relatedTableView.backgroundView?.backgroundColor = .white
+        relatedTableView.backgroundColor = .white
+        relatedTableView.separatorInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
+        relatedTableView.separatorStyle = .none
+        relatedTableView.separatorColor = .clear
+        relatedTableView.register(headerNib, forHeaderFooterViewReuseIdentifier: "SimilarRelatedHeaderTableViewCell")
+        relatedTableView.register(similarNib, forCellReuseIdentifier: "SimilarRelatedListTableViewCell")
+    }
+    
     @objc func menuTapped() {
         
     }
@@ -266,6 +310,9 @@ extension ProductInfoViewController: UITableViewDelegate, UITableViewDataSource 
         case shipmentTableView:
             let headerView = tableView.dequeueReusableHeaderFooterView(withIdentifier: "ShipmentHeaderTableViewCell") as! ShipmentHeaderTableViewCell
             return headerView
+        case similarTableView, relatedTableView:
+            let headerView = tableView.dequeueReusableHeaderFooterView(withIdentifier: "SimilarRelatedHeaderTableViewCell") as! SimilarRelatedHeaderTableViewCell
+            return headerView
         default:
             return UITableViewHeaderFooterView()
         }
@@ -288,6 +335,8 @@ extension ProductInfoViewController: UITableViewDelegate, UITableViewDataSource 
         switch tableView {
         case productTableView:
             return 0
+        case similarTableView, relatedTableView:
+            return 60
         default:
             return 30
         }
@@ -321,6 +370,10 @@ extension ProductInfoViewController: UITableViewDelegate, UITableViewDataSource 
                 productTableViewHeight.constant = CGFloat(listProductSpecification.count * 30)
                 return listProductSpecification.count
             }
+        case similarTableView, relatedTableView:
+            similarTableViewHeight.constant = CGFloat((listSimilarTable.count * 200) + 60)
+            relatedTableViewHeight.constant = CGFloat((listSimilarTable.count * 200) + 60)
+            return listSimilarTable.count
         default:
             return 0
         }
@@ -359,6 +412,11 @@ extension ProductInfoViewController: UITableViewDelegate, UITableViewDataSource 
                     cell.backgroundColor = UIColor.clear
                     return cell
                 }
+            case similarTableView, relatedTableView:
+                let cell = tableView.dequeueReusableCell(withIdentifier: "SimilarRelatedListTableViewCell", for: indexPath) as! SimilarRelatedListTableViewCell
+//                cell.item = listProductSpecification[indexPath.item]
+                cell.backgroundColor = UIColor.clear
+                return cell
             default:
                 return UITableViewCell()
             }
@@ -368,6 +426,8 @@ extension ProductInfoViewController: UITableViewDelegate, UITableViewDataSource 
         switch tableView {
         case priceTableView, inventoryTableView, shipmentTableView, productTableView:
             return 30
+        case similarTableView, relatedTableView:
+            return 200
         default:
             return 44
         }
