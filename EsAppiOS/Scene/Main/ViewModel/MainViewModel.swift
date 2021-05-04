@@ -107,6 +107,10 @@ class MainViewModel: MainProtocol, MainProtocolOutput {
             sortListProduct = sortedArray
         case .None:
             sortListProduct = listProduct
+        case .CustomerNo:
+            sortListProduct = listProduct
+        case .CustomerName:
+            sortListProduct = listProduct
         }
         didSortProductResult?()
     }
@@ -124,11 +128,15 @@ enum SortType : String {
     case None = "None"
     case ES = "ES P/N"
     case MFR = "MFR P/N"
+    case CustomerNo = "Customer No."
+    case CustomerName = "CustomerName"
 }
 
 enum SearchType : String {
     case ES = "ES P/N"
     case MFR = "MFR P/N"
+    case CustomerNo = "Customer No."
+    case CustomerName = "CustomerName"
     
     var value: String {
         switch self {
@@ -136,6 +144,10 @@ enum SearchType : String {
             return "espart"
         case .MFR:
             return "mfrpart"
+        case .CustomerNo:
+            return "customerno"
+        case .CustomerName:
+            return "customername"
         }
     }
 }

@@ -304,22 +304,33 @@
                         <outlet property="tableView" destination="kjs-Nl-eHj" id="YVD-cG-adh"/>
                         <outlet property="userImage" destination="DQo-De-VBX" id="9Id-0X-XGQ"/>
                         <outlet property="viewRadioGroup" destination="OC8-OH-a1b" id="gZA-cf-vlV"/>
-                        <segue destination="Chn-st-jUm" kind="show" identifier="SceneProductInformation" id="fE2-NB-L0h"/>
+                        <segue destination="OIj-2U-nlH" kind="show" identifier="SceneProductInformation" id="Q1I-Xu-0Bt"/>
+                        <segue destination="plO-Ke-tqR" kind="show" identifier="SceneCustomerInformation" id="ihu-X8-ixW"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="A2z-Cg-wwg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="88.536585365853654" y="69.66101694915254"/>
         </scene>
-        <!--ProductInfo-->
-        <scene sceneID="cSJ-XG-YHy">
+        <!--ProductInfoList-->
+        <scene sceneID="WNg-Bw-wEQ">
             <objects>
-                <viewControllerPlaceholder storyboardName="ProductInfo" id="Chn-st-jUm" sceneMemberID="viewController">
-                    <navigationItem key="navigationItem" id="IxO-AY-1Hm"/>
+                <viewControllerPlaceholder storyboardName="ProductInfoList" id="OIj-2U-nlH" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="F5l-9d-1SA"/>
                 </viewControllerPlaceholder>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dVU-Vj-Xa9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="elJ-9x-JIA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="636" y="16"/>
+            <point key="canvasLocation" x="681" y="-24"/>
+        </scene>
+        <!--CustomerInfoList-->
+        <scene sceneID="UP1-92-nC7">
+            <objects>
+                <viewControllerPlaceholder storyboardName="CustomerInfoList" id="plO-Ke-tqR" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="TER-UT-aNz"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="IK3-dk-1wA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="722" y="175"/>
         </scene>
     </scenes>
     <resources>

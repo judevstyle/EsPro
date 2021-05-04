@@ -9,4 +9,7 @@ public enum SceneOpen : String {
     case SceneLogin = "SceneLogin"
     case SceneMain = "SceneMain"
     case SceneProductInformation = "SceneProductInformation"
+    case SceneCustomerInformation = "SceneCustomerInformation"
+    case SceneProductInformationDetail = "SceneProductInformationDetail"
+    case SceneCustomerInformationDetail = "SceneCustomerInformationDetail"
 }
