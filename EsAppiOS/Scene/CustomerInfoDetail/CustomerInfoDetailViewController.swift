@@ -1,0 +1,109 @@
+//
+//  CustomerInfoDetailViewController.swift
+//  EsAppiOS
+//
+//  Created by Nontawat Kanboon on 5/9/21.
+//
+
+import UIKit
+
+class CustomerInfoDetailViewController: UIViewController {
+
+    @IBOutlet weak var bgTopView: UIView!
+    @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var customerNo: UILabel!
+    @IBOutlet weak var customerName: UILabel!
+    @IBOutlet weak var tableViewHeight: NSLayoutConstraint!
+    
+    var mockDataList: [CustomerInfoDetailListModel] = []
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        setupUI()
+        setupTableView()
+        mockData()
+    }
+    
+}
+
+//MARK: - SetupUI
+extension CustomerInfoDetailViewController {
+    func setupUI(){
+        hideKeyboardWhenTappedAround()
+//        navigationItem.title = "Customer Information"
+        navigationItem.title = "Customer Infomation"
+        
+        bgTopView.setRounded(rounded: 8)
+        
+        let menuRight = UIBarButtonItem()
+        menuRight.action = #selector(menuTapped)
+        menuRight.image = UIImage(named: "menu")?.withRenderingMode(.alwaysTemplate)
+        menuRight.tintColor = .darkGray
+        navigationItem.rightBarButtonItem = menuRight
+        
+        let backLeft = UIBarButtonItem()
+        backLeft.action = #selector(closeTapped)
+        backLeft.image = UIImage(systemName: "arrow.left")?.withRenderingMode(.alwaysTemplate)
+        backLeft.tintColor = .darkGray
+        navigationItem.leftBarButtonItem = backLeft
+        
+    }
+    
+    func setupTableView(){
+        tableView.delegate = self
+        tableView.dataSource = self
+        tableView.separatorInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
+        tableView.separatorStyle = .none
+        let customerInfoNib = UINib.init(nibName: "CustomerInfoDetailTableViewCell", bundle: Bundle.main)
+        tableView.register(customerInfoNib, forCellReuseIdentifier: "CustomerInfoDetailTableViewCell")
+        tableView.layer.borderWidth = 1
+        tableView.layer.borderColor = UIColor.lightGray.cgColor
+        tableView.layer.cornerRadius = 8
+        tableView.isScrollEnabled = false
+    }
+    
+    func mockData() {
+        mockDataList.append(CustomerInfoDetailListModel(arrowImage: "", title: "Customer Profile", iconImage: ""))
+        mockDataList.append(CustomerInfoDetailListModel(arrowImage: "", title: "This Month Sell", iconImage: ""))
+        mockDataList.append(CustomerInfoDetailListModel(arrowImage: "", title: "Sell History", iconImage: ""))
+        mockDataList.append(CustomerInfoDetailListModel(arrowImage: "", title: "D/O Report", iconImage: ""))
+    }
+}
+
+//MARK:- Event
+extension CustomerInfoDetailViewController {
+    @objc func menuTapped() {
+        
+    }
+    
+    @objc func closeTapped() {
+        print("SSS")
+        self.dismiss(animated: true, completion: nil)
+    }
+}
+
+extension CustomerInfoDetailViewController: UITableViewDelegate, UITableViewDataSource {
+    
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
+    }
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        tableViewHeight.constant = CGFloat(65*self.mockDataList.count)
+        return self.mockDataList.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "CustomerInfoDetailTableViewCell", for: indexPath) as! CustomerInfoDetailTableViewCell
+        cell.data = mockDataList[indexPath.item]
+        return cell
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        if self.mockDataList.count == 0 {
+            return 0
+        }
+        return 65
+    }
+    
+    
+}

@@ -43,7 +43,7 @@ class MainViewController: UIViewController {
         viewModel.input.searchProduct(searchType: .ES)
         
         DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
-            self.openScene(identifier: .SceneProductInformation)
+            self.openScene(identifier: .SceneCustomerInformation)
         }
     }
 }
@@ -123,7 +123,7 @@ extension MainViewController {
         radioGroup.tintColor = .red       // surrounding ring
         radioGroup.selectedColor = .red
         radioGroup.selectedIndex = 0
-        radioGroup.titleFont = UIFont.PrimaryLight(size: 18)
+        radioGroup.titleFont = UIFont.Primary(size: 18)
         radioGroup.itemSpacing = 8
         radioGroup.buttonSize = 21
         radioGroup.spacing = 0
@@ -146,7 +146,7 @@ extension MainViewController {
     @IBAction func tapChooseSortBy(_ sender: UIButton) {
         dropDown.dataSource = [SortType.None.rawValue, SortType.ES.rawValue, SortType.MFR.rawValue]
         dropDown.anchorView = sortByButton
-        dropDown.textFont = UIFont.PrimaryLight(size: 18)
+        dropDown.textFont = UIFont.Primary(size: 18)
         dropDown.textColor = .darkGray
         dropDown.bottomOffset = CGPoint(x: 0, y: sortByButton.frame.size.height)
         dropDown.show()

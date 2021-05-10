@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="259-1c-KEm">
+    <device id="ipad10_9rounded" orientation="portrait" layout="fullscreen" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="supermarket.ttf">
+            <string>supermarket</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Customer Info Detail View Controller-->
+        <scene sceneID="pEB-WS-SKQ">
+            <objects>
+                <viewController id="259-1c-KEm" customClass="CustomerInfoDetailViewController" customModule="EsAppiOS" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="1Dg-08-y6V">
+                        <rect key="frame" x="0.0" y="0.0" width="820" height="1180"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Hih-Wm-7yl">
+                                <rect key="frame" x="0.0" y="0.0" width="820" height="75"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IQf-HT-arg">
+                                        <rect key="frame" x="16" y="0.0" width="788" height="75"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="j2y-Hh-gUQ">
+                                                <rect key="frame" x="0.0" y="0.0" width="215" height="75"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dKS-R8-2zd">
+                                                        <rect key="frame" x="0.0" y="0.0" width="215" height="75"/>
+                                                        <string key="text" base64-UTF8="YES">
+EEN1c3RvbWVyIE5vLiAxNzQ
+</string>
+                                                        <fontDescription key="fontDescription" name="supermarket" family="supermarket" pointSize="24"/>
+                                                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                                <constraints>
+                                                    <constraint firstAttribute="bottom" secondItem="dKS-R8-2zd" secondAttribute="bottom" id="3Am-h5-USI"/>
+                                                    <constraint firstItem="dKS-R8-2zd" firstAttribute="top" secondItem="j2y-Hh-gUQ" secondAttribute="top" id="7yw-zJ-Zf8"/>
+                                                    <constraint firstItem="dKS-R8-2zd" firstAttribute="leading" secondItem="j2y-Hh-gUQ" secondAttribute="leading" id="OtY-2A-QF3"/>
+                                                    <constraint firstAttribute="width" constant="215" id="eYQ-kk-sNY"/>
+                                                    <constraint firstAttribute="trailing" secondItem="dKS-R8-2zd" secondAttribute="trailing" id="gJy-E8-pIN"/>
+                                                </constraints>
+                                            </view>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PROPESSIONAL TELECOM INSTALLATION CO.,LTD." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="knI-gT-NjZ">
+                                                <rect key="frame" x="215" y="0.0" width="573" height="75"/>
+                                                <fontDescription key="fontDescription" name="supermarket" family="supermarket" pointSize="24"/>
+                                                <color key="textColor" name="Primary1Color"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemGray5Color"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="IQf-HT-arg" secondAttribute="trailing" constant="16" id="H5E-dF-iGs"/>
+                                    <constraint firstItem="IQf-HT-arg" firstAttribute="leading" secondItem="Hih-Wm-7yl" secondAttribute="leading" constant="16" id="PrE-mC-haB"/>
+                                    <constraint firstAttribute="height" constant="75" id="TTP-0Y-qAC"/>
+                                    <constraint firstItem="IQf-HT-arg" firstAttribute="top" secondItem="Hih-Wm-7yl" secondAttribute="top" id="fH3-0h-z25"/>
+                                    <constraint firstAttribute="bottom" secondItem="IQf-HT-arg" secondAttribute="bottom" id="nia-na-Ken"/>
+                                </constraints>
+                            </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Tja-DF-mlP">
+                                <rect key="frame" x="20" y="95" width="300" height="400"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="300" id="gwe-WX-4mL"/>
+                                    <constraint firstAttribute="height" constant="400" id="k6Z-OJ-q0c"/>
+                                </constraints>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="c9r-9b-2gd"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Hih-Wm-7yl" firstAttribute="top" secondItem="c9r-9b-2gd" secondAttribute="top" id="2qN-Ca-8gY"/>
+                            <constraint firstItem="Tja-DF-mlP" firstAttribute="leading" secondItem="c9r-9b-2gd" secondAttribute="leading" constant="20" id="Jh9-Zw-OPq"/>
+                            <constraint firstItem="Tja-DF-mlP" firstAttribute="top" secondItem="Hih-Wm-7yl" secondAttribute="bottom" constant="20" id="MJK-fe-78J"/>
+                            <constraint firstItem="c9r-9b-2gd" firstAttribute="trailing" secondItem="Hih-Wm-7yl" secondAttribute="trailing" id="eRy-HO-Lyv"/>
+                            <constraint firstItem="Hih-Wm-7yl" firstAttribute="leading" secondItem="c9r-9b-2gd" secondAttribute="leading" id="m77-SN-LCi"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="bgTopView" destination="Hih-Wm-7yl" id="t4t-n6-gTt"/>
+                        <outlet property="customerName" destination="knI-gT-NjZ" id="AYr-h0-A21"/>
+                        <outlet property="customerNo" destination="dKS-R8-2zd" id="9KT-ea-lgV"/>
+                        <outlet property="tableView" destination="Tja-DF-mlP" id="TZm-G2-MeL"/>
+                        <outlet property="tableViewHeight" destination="k6Z-OJ-q0c" id="dWM-L3-jV3"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SIA-Lb-297" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="110.48780487804878" y="28.98305084745763"/>
+        </scene>
+    </scenes>
+    <resources>
+        <namedColor name="Primary1Color">
+            <color red="0.10980392156862745" green="0.27843137254901962" blue="0.58431372549019611" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGray5Color">
+            <color red="0.89803921568627454" green="0.89803921568627454" blue="0.91764705882352937" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

@@ -8,8 +8,8 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
-        <array key="RobotoCondensed-Regular.ttf">
-            <string>RobotoCondensed-Regular</string>
+        <array key="supermarket.ttf">
+            <string>supermarket</string>
         </array>
     </customFonts>
     <objects>
@@ -30,7 +30,7 @@
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MRQ-CS-8UL">
                                         <rect key="frame" x="0.0" y="0.0" width="150" height="44"/>
-                                        <fontDescription key="fontDescription" name="RobotoCondensed-Regular" family="Roboto Condensed" pointSize="17"/>
+                                        <fontDescription key="fontDescription" name="supermarket" family="supermarket" pointSize="17"/>
                                         <color key="textColor" name="NewPrimary"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -48,7 +48,7 @@
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name Test Test" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nQA-ba-GKa">
                                         <rect key="frame" x="0.0" y="0.0" width="700" height="44"/>
-                                        <fontDescription key="fontDescription" name="RobotoCondensed-Regular" family="Roboto Condensed" pointSize="17"/>
+                                        <fontDescription key="fontDescription" name="supermarket" family="supermarket" pointSize="17"/>
                                         <color key="textColor" name="NewPrimary"/>
                                         <nil key="highlightedColor"/>
                                     </label>

@@ -11,6 +11,9 @@
         <array key="Kanit-Light.ttf">
             <string>Kanit-Light</string>
         </array>
+        <array key="supermarket.ttf">
+            <string>supermarket</string>
+        </array>
     </customFonts>
     <scenes>
         <!--Product Info List View Controller-->
@@ -51,6 +54,7 @@
                                                             <constraint firstAttribute="height" constant="45" id="Qaf-YT-uST"/>
                                                             <constraint firstAttribute="width" constant="85" id="pbG-a5-r9k"/>
                                                         </constraints>
+                                                        <fontDescription key="fontDescription" name="supermarket" family="supermarket" pointSize="21"/>
                                                         <state key="normal" title="SEARCH">
                                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         </state>
@@ -74,18 +78,18 @@
                                                                 <rect key="frame" x="0.0" y="0.0" width="250" height="85"/>
                                                                 <subviews>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Search by" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IWt-Xf-XNH">
-                                                                        <rect key="frame" x="8" y="8" width="76" height="20.5"/>
-                                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                        <rect key="frame" x="8" y="8" width="79.5" height="16.5"/>
+                                                                        <fontDescription key="fontDescription" name="supermarket" family="supermarket" pointSize="21"/>
                                                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
                                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1to-4h-7om" customClass="RadioGroup" customModule="RadioGroup">
-                                                                        <rect key="frame" x="92" y="8" width="150" height="69"/>
+                                                                        <rect key="frame" x="95.5" y="0.0" width="146.5" height="77"/>
                                                                     </view>
                                                                 </subviews>
                                                                 <constraints>
                                                                     <constraint firstItem="IWt-Xf-XNH" firstAttribute="top" secondItem="tu4-Ex-NvH" secondAttribute="top" constant="8" id="Qdx-OS-EF1"/>
-                                                                    <constraint firstItem="1to-4h-7om" firstAttribute="top" secondItem="IWt-Xf-XNH" secondAttribute="top" id="TtM-q2-XkH"/>
+                                                                    <constraint firstItem="1to-4h-7om" firstAttribute="top" secondItem="IWt-Xf-XNH" secondAttribute="top" constant="-8" id="TtM-q2-XkH"/>
                                                                     <constraint firstAttribute="bottom" secondItem="1to-4h-7om" secondAttribute="bottom" constant="8" id="cxd-7p-Zih"/>
                                                                     <constraint firstItem="1to-4h-7om" firstAttribute="leading" secondItem="IWt-Xf-XNH" secondAttribute="trailing" constant="8" id="g17-yB-sBc"/>
                                                                     <constraint firstItem="IWt-Xf-XNH" firstAttribute="leading" secondItem="tu4-Ex-NvH" secondAttribute="leading" constant="8" id="hl0-YS-7ki"/>
@@ -96,13 +100,13 @@
                                                                 <rect key="frame" x="0.0" y="85" width="250" height="85"/>
                                                                 <subviews>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sort by" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zat-95-73J">
-                                                                        <rect key="frame" x="8" y="8" width="76" height="20.5"/>
-                                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                        <rect key="frame" x="8" y="8" width="79.5" height="16.5"/>
+                                                                        <fontDescription key="fontDescription" name="supermarket" family="supermarket" pointSize="21"/>
                                                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
                                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FfN-2f-v33" customClass="RadioGroup" customModule="RadioGroup">
-                                                                        <rect key="frame" x="92" y="8" width="150" height="69"/>
+                                                                        <rect key="frame" x="95.5" y="0.0" width="146.5" height="77"/>
                                                                     </view>
                                                                 </subviews>
                                                                 <constraints>
@@ -111,7 +115,7 @@
                                                                     <constraint firstItem="FfN-2f-v33" firstAttribute="leading" secondItem="zat-95-73J" secondAttribute="trailing" constant="8" id="cIi-u6-uEH"/>
                                                                     <constraint firstAttribute="trailing" secondItem="FfN-2f-v33" secondAttribute="trailing" constant="8" id="i1C-fU-yJc"/>
                                                                     <constraint firstItem="zat-95-73J" firstAttribute="top" secondItem="uNj-gY-QMk" secondAttribute="top" constant="8" id="lPM-mn-vM4"/>
-                                                                    <constraint firstItem="FfN-2f-v33" firstAttribute="top" secondItem="zat-95-73J" secondAttribute="top" id="qsF-Qg-wM1"/>
+                                                                    <constraint firstItem="FfN-2f-v33" firstAttribute="top" secondItem="zat-95-73J" secondAttribute="top" constant="-8" id="qsF-Qg-wM1"/>
                                                                 </constraints>
                                                             </view>
                                                         </subviews>
@@ -167,11 +171,22 @@
                         <outlet property="radioSearchByGroup" destination="1to-4h-7om" id="SPs-rX-bAw"/>
                         <outlet property="radioSortByGroup" destination="FfN-2f-v33" id="Hr0-QE-X2I"/>
                         <outlet property="tableView" destination="dgX-t8-G0J" id="Clm-ux-Poo"/>
+                        <segue destination="Naq-c1-5LZ" kind="show" identifier="SceneProductInformationDetail" id="Yx0-y5-kzm"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PRn-cq-DaG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="110.48780487804878" y="28.98305084745763"/>
+        </scene>
+        <!--ProductInfo-->
+        <scene sceneID="pUo-QQ-0Qy">
+            <objects>
+                <viewControllerPlaceholder storyboardName="ProductInfo" id="Naq-c1-5LZ" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="I8j-Oj-f1b"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Pah-nF-2H4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="619" y="-112"/>
         </scene>
     </scenes>
     <resources>

@@ -43,6 +43,7 @@
 	</array>
 	<key>UIAppFonts</key>
 	<array>
+		<string>supermarket.ttf</string>
 		<string>RobotoCondensed-Light.ttf</string>
 		<string>RobotoCondensed-Regular.ttf</string>
 		<string>RobotoCondensed-Bold.ttf</string>

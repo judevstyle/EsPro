@@ -136,8 +136,16 @@ extension ProductInfoViewController {
         let menuRight = UIBarButtonItem()
         menuRight.action = #selector(menuTapped)
         menuRight.image = UIImage(named: "menu")?.withRenderingMode(.alwaysTemplate)
-        menuRight.tintColor = .black
+        menuRight.tintColor = .darkGray
         navigationItem.rightBarButtonItem = menuRight
+        
+        let backLeft = UIBarButtonItem()
+        backLeft.action = #selector(menuTapped)
+        backLeft.image = UIImage(systemName: "arrow.left")?.withRenderingMode(.alwaysTemplate)
+        backLeft.tintColor = .darkGray
+        navigationItem.leftBarButtonItem = backLeft
+        
+        
     }
     
     func setupImageCollection() {
@@ -216,7 +224,7 @@ extension ProductInfoViewController {
                                                            y: 0,
                                                            width: headerSegmentControlProductView.bounds.width,
                                                            height: headerSegmentControlProductView.bounds.height))
-        control.segments = LabelSegment.segments(withTitles: ["PRODUCT INFORMATION", "PRODUCT SPECIFICATION"], numberOfLines: 1, normalBackgroundColor: .white, normalFont: UIFont.init(name: "RobotoCondensed-Bold", size: 19), normalTextColor: UIColor.init(named: "NewPrimary"), selectedBackgroundColor: UIColor.init(named: "NewPrimary"), selectedFont: UIFont.init(name: "RobotoCondensed-Bold", size: 19), selectedTextColor: .white)
+        control.segments = LabelSegment.segments(withTitles: ["PRODUCT INFORMATION", "PRODUCT SPECIFICATION"], numberOfLines: 1, normalBackgroundColor: .white, normalFont: UIFont.init(name: "supermarket", size: 19), normalTextColor: UIColor.init(named: "NewPrimary"), selectedBackgroundColor: UIColor.init(named: "NewPrimary"), selectedFont: UIFont.init(name: "supermarket", size: 19), selectedTextColor: .white)
         control.cornerRadius = 8
         control.addTarget(self, action: #selector(segmentedControlValueChanged(_:)), for: .valueChanged)
         headerSegmentControlProductView.setRounded(rounded: 8)

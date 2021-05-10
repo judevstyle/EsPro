@@ -8,8 +8,8 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
-        <array key="RobotoCondensed-Regular.ttf">
-            <string>RobotoCondensed-Regular</string>
+        <array key="supermarket.ttf">
+            <string>supermarket</string>
         </array>
     </customFonts>
     <objects>
@@ -23,14 +23,14 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="ymg-LK-gaK">
-                        <rect key="frame" x="0.0" y="0.0" width="917.5" height="44"/>
+                        <rect key="frame" x="0.0" y="0.0" width="1025" height="44"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QLd-HF-aCq">
-                                <rect key="frame" x="0.0" y="0.0" width="183.5" height="44"/>
+                                <rect key="frame" x="0.0" y="0.0" width="205" height="44"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1464-0001-6" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kzd-DB-k3Q">
-                                        <rect key="frame" x="0.0" y="0.0" width="183.5" height="44"/>
-                                        <fontDescription key="fontDescription" name="RobotoCondensed-Regular" family="Roboto Condensed" pointSize="17"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="205" height="44"/>
+                                        <fontDescription key="fontDescription" name="supermarket" family="supermarket" pointSize="19"/>
                                         <color key="textColor" name="NewPrimary"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -43,11 +43,11 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gbI-iI-OuW">
-                                <rect key="frame" x="183.5" y="0.0" width="183.5" height="44"/>
+                                <rect key="frame" x="205" y="0.0" width="205" height="44"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="FS300-325-BAS-P1-W1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qPr-d3-LvX">
-                                        <rect key="frame" x="0.0" y="0.0" width="183.5" height="44"/>
-                                        <fontDescription key="fontDescription" name="RobotoCondensed-Regular" family="Roboto Condensed" pointSize="17"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="205" height="44"/>
+                                        <fontDescription key="fontDescription" name="supermarket" family="supermarket" pointSize="19"/>
                                         <color key="textColor" name="NewPrimary"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -60,11 +60,11 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="luc-wI-6zH">
-                                <rect key="frame" x="367" y="0.0" width="183.5" height="44"/>
+                                <rect key="frame" x="410" y="0.0" width="205" height="44"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="DESCRIPTION" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6hU-wC-Fbw">
-                                        <rect key="frame" x="0.0" y="0.0" width="183.5" height="44"/>
-                                        <fontDescription key="fontDescription" name="RobotoCondensed-Regular" family="Roboto Condensed" pointSize="17"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="205" height="44"/>
+                                        <fontDescription key="fontDescription" name="supermarket" family="supermarket" pointSize="19"/>
                                         <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -78,11 +78,11 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MHY-Sp-tmg">
-                                <rect key="frame" x="550.5" y="0.0" width="183.5" height="44"/>
+                                <rect key="frame" x="615" y="0.0" width="205" height="44"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xVX-sN-aiU">
-                                        <rect key="frame" x="0.0" y="0.0" width="183.5" height="44"/>
-                                        <fontDescription key="fontDescription" name="RobotoCondensed-Regular" family="Roboto Condensed" pointSize="17"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="205" height="44"/>
+                                        <fontDescription key="fontDescription" name="supermarket" family="supermarket" pointSize="19"/>
                                         <color key="textColor" name="NewPrimary"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -95,11 +95,11 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="B5I-9a-kd5">
-                                <rect key="frame" x="734" y="0.0" width="183.5" height="44"/>
+                                <rect key="frame" x="820" y="0.0" width="205" height="44"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2.0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="17D-7t-OOu">
-                                        <rect key="frame" x="0.0" y="0.0" width="183.5" height="44"/>
-                                        <fontDescription key="fontDescription" name="RobotoCondensed-Regular" family="Roboto Condensed" pointSize="17"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="205" height="44"/>
+                                        <fontDescription key="fontDescription" name="supermarket" family="supermarket" pointSize="19"/>
                                         <color key="textColor" name="NewPrimary"/>
                                         <nil key="highlightedColor"/>
                                     </label>

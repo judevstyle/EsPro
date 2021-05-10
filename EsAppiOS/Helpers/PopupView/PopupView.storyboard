@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="ipad10_9rounded" orientation="portrait" layout="fullscreen" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="supermarket.ttf">
+            <string>supermarket</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Popup View Controller-->
+        <scene sceneID="nC5-Bx-aEx">
+            <objects>
+                <viewController storyboardIdentifier="PopupView" id="5lo-Sf-5Vz" customClass="PopupViewController" customModule="EsAppiOS" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="GNg-sq-fDA">
+                        <rect key="frame" x="0.0" y="0.0" width="820" height="1180"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bnh-cW-luE">
+                                <rect key="frame" x="210" y="482" width="400" height="196.5"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="b80-bi-anT">
+                                        <rect key="frame" x="0.0" y="0.0" width="400" height="196.5"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bNk-77-lBP">
+                                                <rect key="frame" x="0.0" y="0.0" width="400" height="81.5"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Incorret password!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LJQ-Ot-N3F">
+                                                        <rect key="frame" x="8" y="40" width="384" height="33.5"/>
+                                                        <fontDescription key="fontDescription" name="supermarket" family="supermarket" pointSize="28"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                                <constraints>
+                                                    <constraint firstItem="LJQ-Ot-N3F" firstAttribute="leading" secondItem="bNk-77-lBP" secondAttribute="leading" constant="8" id="BPz-48-ldu"/>
+                                                    <constraint firstItem="LJQ-Ot-N3F" firstAttribute="top" secondItem="bNk-77-lBP" secondAttribute="top" constant="40" id="TJy-18-xMW"/>
+                                                    <constraint firstAttribute="trailing" secondItem="LJQ-Ot-N3F" secondAttribute="trailing" constant="8" id="ZUx-do-Qgq"/>
+                                                    <constraint firstAttribute="bottom" secondItem="LJQ-Ot-N3F" secondAttribute="bottom" constant="8" id="kFz-gp-HPK"/>
+                                                </constraints>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Afo-s3-qsS">
+                                                <rect key="frame" x="0.0" y="101.5" width="400" height="95"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bhk-4d-r99">
+                                                        <rect key="frame" x="150" y="0.0" width="100" height="55"/>
+                                                        <color key="backgroundColor" name="PrimaryButton"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="55" id="0jS-Cm-lmO"/>
+                                                            <constraint firstAttribute="width" constant="100" id="TBx-KK-jYA"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" name="supermarket" family="supermarket" pointSize="19"/>
+                                                        <state key="normal" title="OK">
+                                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="handleOk:" destination="5lo-Sf-5Vz" eventType="touchUpInside" id="NoI-v4-DYa"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                                <constraints>
+                                                    <constraint firstAttribute="bottom" secondItem="Bhk-4d-r99" secondAttribute="bottom" constant="40" id="BeA-Y7-PTf"/>
+                                                    <constraint firstItem="Bhk-4d-r99" firstAttribute="centerX" secondItem="Afo-s3-qsS" secondAttribute="centerX" id="Di0-ke-NVw"/>
+                                                    <constraint firstItem="Bhk-4d-r99" firstAttribute="top" secondItem="Afo-s3-qsS" secondAttribute="top" id="V78-gm-iDE"/>
+                                                </constraints>
+                                            </view>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="b80-bi-anT" firstAttribute="leading" secondItem="bnh-cW-luE" secondAttribute="leading" id="D5A-Tm-8b1"/>
+                                    <constraint firstAttribute="trailing" secondItem="b80-bi-anT" secondAttribute="trailing" id="Is4-ad-wCy"/>
+                                    <constraint firstItem="b80-bi-anT" firstAttribute="top" secondItem="bnh-cW-luE" secondAttribute="top" id="VQ9-QZ-hfB"/>
+                                    <constraint firstAttribute="bottom" secondItem="b80-bi-anT" secondAttribute="bottom" id="s5r-Pr-cAs"/>
+                                    <constraint firstAttribute="width" constant="400" id="w88-1y-Ive"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="XGc-4V-Rv1"/>
+                        <constraints>
+                            <constraint firstItem="bnh-cW-luE" firstAttribute="centerY" secondItem="XGc-4V-Rv1" secondAttribute="centerY" id="6kb-Ro-5E6"/>
+                            <constraint firstItem="bnh-cW-luE" firstAttribute="centerX" secondItem="XGc-4V-Rv1" secondAttribute="centerX" id="wqN-1E-Bd4"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="bgDialog" destination="bnh-cW-luE" id="4g3-2U-xYt"/>
+                        <outlet property="button" destination="Bhk-4d-r99" id="EFk-nP-2xa"/>
+                        <outlet property="titleText" destination="LJQ-Ot-N3F" id="cb4-VH-aCJ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Fqe-8u-Jrq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="55" y="-209"/>
+        </scene>
+    </scenes>
+    <resources>
+        <namedColor name="PrimaryButton">
+            <color red="0.43529411764705883" green="0.42745098039215684" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

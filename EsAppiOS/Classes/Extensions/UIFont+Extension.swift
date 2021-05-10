@@ -14,9 +14,9 @@ extension UIFont {
         return UIFont(name: "RobotoCondensed-Bold", size: size)!
     }
 
-//    static func PrimaryMedium(size: CGFloat) -> UIFont {
-//        return UIFont(name: "Kanit-Medium", size: size)!
-//    }
+    static func Primary(size: CGFloat) -> UIFont {
+        return UIFont(name: "supermarket", size: size)!
+    }
 
     static func PrimaryRegular(size: CGFloat) -> UIFont {
         return UIFont(name: "RobotoCondensed-Regular", size: size)!

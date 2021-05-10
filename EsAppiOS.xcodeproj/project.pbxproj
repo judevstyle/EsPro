@@ -8,6 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		667C0C2B8EAE2F3D2EF24EBA /* Pods_EsAppiOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 29CF7B94345025EA7C5AFDB0 /* Pods_EsAppiOS.framework */; };
+		EF22CC632648073400E5438F /* CustomerInfoDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF22CC622648073400E5438F /* CustomerInfoDetailViewController.swift */; };
+		EF22CC662648073A00E5438F /* CustomerInfoDetail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF22CC652648073A00E5438F /* CustomerInfoDetail.storyboard */; };
+		EF22CC6C26480A2000E5438F /* CustomerInfoDetailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF22CC6A26480A2000E5438F /* CustomerInfoDetailTableViewCell.swift */; };
+		EF22CC6D26480A2000E5438F /* CustomerInfoDetailTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EF22CC6B26480A2000E5438F /* CustomerInfoDetailTableViewCell.xib */; };
+		EF22CC7126480F8000E5438F /* CustomerInfoDetailListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF22CC7026480F8000E5438F /* CustomerInfoDetailListModel.swift */; };
+		EF22CC752648140300E5438F /* PopupView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF22CC742648140300E5438F /* PopupView.storyboard */; };
+		EF22CC782648141500E5438F /* PopupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF22CC772648141500E5438F /* PopupViewController.swift */; };
+		EF22CC7B26484C9800E5438F /* supermarket.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EF22CC7A26484C9800E5438F /* supermarket.ttf */; };
 		EF239BED26384DF400983EA8 /* SimilarTableModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF239BEC26384DF400983EA8 /* SimilarTableModel.swift */; };
 		EF239BF726384F3900983EA8 /* SimilarRelatedHeaderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF239BF626384F3900983EA8 /* SimilarRelatedHeaderTableViewCell.swift */; };
 		EF239BFA26384F3E00983EA8 /* SimilarRelatedHeaderTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EF239BF926384F3E00983EA8 /* SimilarRelatedHeaderTableViewCell.xib */; };
@@ -105,6 +113,14 @@
 		13414C314681D4E64E22F4BB /* Pods-EsAppiOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EsAppiOS.debug.xcconfig"; path = "Target Support Files/Pods-EsAppiOS/Pods-EsAppiOS.debug.xcconfig"; sourceTree = "<group>"; };
 		29CF7B94345025EA7C5AFDB0 /* Pods_EsAppiOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EsAppiOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C3D71E7A6B69E9FC300AD523 /* Pods-EsAppiOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EsAppiOS.release.xcconfig"; path = "Target Support Files/Pods-EsAppiOS/Pods-EsAppiOS.release.xcconfig"; sourceTree = "<group>"; };
+		EF22CC622648073400E5438F /* CustomerInfoDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomerInfoDetailViewController.swift; sourceTree = "<group>"; };
+		EF22CC652648073A00E5438F /* CustomerInfoDetail.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CustomerInfoDetail.storyboard; sourceTree = "<group>"; };
+		EF22CC6A26480A2000E5438F /* CustomerInfoDetailTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomerInfoDetailTableViewCell.swift; sourceTree = "<group>"; };
+		EF22CC6B26480A2000E5438F /* CustomerInfoDetailTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomerInfoDetailTableViewCell.xib; sourceTree = "<group>"; };
+		EF22CC7026480F8000E5438F /* CustomerInfoDetailListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomerInfoDetailListModel.swift; sourceTree = "<group>"; };
+		EF22CC742648140300E5438F /* PopupView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PopupView.storyboard; sourceTree = "<group>"; };
+		EF22CC772648141500E5438F /* PopupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopupViewController.swift; sourceTree = "<group>"; };
+		EF22CC7A26484C9800E5438F /* supermarket.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = supermarket.ttf; sourceTree = "<group>"; };
 		EF239BEC26384DF400983EA8 /* SimilarTableModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimilarTableModel.swift; sourceTree = "<group>"; };
 		EF239BF626384F3900983EA8 /* SimilarRelatedHeaderTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimilarRelatedHeaderTableViewCell.swift; sourceTree = "<group>"; };
 		EF239BF926384F3E00983EA8 /* SimilarRelatedHeaderTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SimilarRelatedHeaderTableViewCell.xib; sourceTree = "<group>"; };
@@ -229,6 +245,40 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		EF22CC68264809E900E5438F /* View */ = {
+			isa = PBXGroup;
+			children = (
+				EF22CC69264809EF00E5438F /* CustomerInfoDetailTableViewCell */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		EF22CC69264809EF00E5438F /* CustomerInfoDetailTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				EF22CC6A26480A2000E5438F /* CustomerInfoDetailTableViewCell.swift */,
+				EF22CC6B26480A2000E5438F /* CustomerInfoDetailTableViewCell.xib */,
+			);
+			path = CustomerInfoDetailTableViewCell;
+			sourceTree = "<group>";
+		};
+		EF22CC6F26480F6500E5438F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				EF22CC7026480F8000E5438F /* CustomerInfoDetailListModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		EF22CC73264813E500E5438F /* PopupView */ = {
+			isa = PBXGroup;
+			children = (
+				EF22CC742648140300E5438F /* PopupView.storyboard */,
+				EF22CC772648141500E5438F /* PopupViewController.swift */,
+			);
+			path = PopupView;
+			sourceTree = "<group>";
+		};
 		EF239BEF26384F0100983EA8 /* SimilarRelatedTableViewCell */ = {
 			isa = PBXGroup;
 			children = (
@@ -259,6 +309,7 @@
 		EF29F412260E2BBB00ABE46D /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				EF22CC73264813E500E5438F /* PopupView */,
 				EF29F43B260E44DB00ABE46D /* SceneOpen.swift */,
 				EF29F43F260E456000ABE46D /* NavigationManager.swift */,
 				EFED23EC2612145800BD0CD7 /* Helpers.swift */,
@@ -280,6 +331,7 @@
 				EF5242D3262AC96F0071572B /* RobotoCondensed-Bold.ttf */,
 				EF5242D1262AC96F0071572B /* RobotoCondensed-Light.ttf */,
 				EF5242D4262AC96F0071572B /* RobotoCondensed-Regular.ttf */,
+				EF22CC7A26484C9800E5438F /* supermarket.ttf */,
 			);
 			path = Fonts;
 			sourceTree = "<group>";
@@ -625,6 +677,10 @@
 		EFEA18A82641986900251F19 /* CustomerInfoDetail */ = {
 			isa = PBXGroup;
 			children = (
+				EF22CC6F26480F6500E5438F /* Model */,
+				EF22CC68264809E900E5438F /* View */,
+				EF22CC622648073400E5438F /* CustomerInfoDetailViewController.swift */,
+				EF22CC652648073A00E5438F /* CustomerInfoDetail.storyboard */,
 			);
 			path = CustomerInfoDetail;
 			sourceTree = "<group>";
@@ -893,12 +949,14 @@
 				EF399465263429F300BBC189 /* ShipmentHeaderTableViewCell.xib in Resources */,
 				EF239C0026384F5800983EA8 /* SimilarRelatedListTableViewCell.xib in Resources */,
 				EF3994572634219100BBC189 /* InventoryFooterTableViewCell.xib in Resources */,
+				EF22CC6D26480A2000E5438F /* CustomerInfoDetailTableViewCell.xib in Resources */,
 				EFEA18C52641A26E00251F19 /* ProductInfoHeaderTableViewCell.xib in Resources */,
 				EFEA18F12641B02A00251F19 /* CustomerInfoListTableViewCell.xib in Resources */,
 				EF5242DA262AC96F0071572B /* RobotoCondensed-Regular.ttf in Resources */,
 				EF52945D260D860800C3EF64 /* Assets.xcassets in Resources */,
 				EF3994A226343F9500BBC189 /* ProductInformationTableViewCell.xib in Resources */,
 				EF7D5706260F0E13004EE94A /* DataListSectionHeader.xib in Resources */,
+				EF22CC662648073A00E5438F /* CustomerInfoDetail.storyboard in Resources */,
 				EF74ED16262D2D1700E420C8 /* PriceListTableViewCell.xib in Resources */,
 				EFEA18BF2641A24600251F19 /* ProductInfoListTableViewCell.xib in Resources */,
 				EF3994482634101200BBC189 /* InventoryHeaderTableViewCell.xib in Resources */,
@@ -908,10 +966,12 @@
 				EF52947B260D96BB00C3EF64 /* Login.storyboard in Resources */,
 				EF239BFA26384F3E00983EA8 /* SimilarRelatedHeaderTableViewCell.xib in Resources */,
 				EF39944D2634102800BBC189 /* InventoryListTableViewCell.xib in Resources */,
+				EF22CC752648140300E5438F /* PopupView.storyboard in Resources */,
 				EF5242D7262AC96F0071572B /* RobotoCondensed-Light.ttf in Resources */,
 				EFEA18EB2641AFEE00251F19 /* CustomerInfoHeaderTableViewCell.xib in Resources */,
 				EF529470260D887400C3EF64 /* Splash.storyboard in Resources */,
 				EF5242D9262AC96F0071572B /* RobotoCondensed-Bold.ttf in Resources */,
+				EF22CC7B26484C9800E5438F /* supermarket.ttf in Resources */,
 				EFEA18AE2641989C00251F19 /* ProductInfoList.storyboard in Resources */,
 				EF74ED1F262D2D7F00E420C8 /* PriceHeaderTableViewCell.xib in Resources */,
 				EF5242CA262AADC90071572B /* ProductInfo.storyboard in Resources */,
@@ -1001,6 +1061,7 @@
 				EF7D56FE260EFD99004EE94A /* UIView+Extension.swift in Sources */,
 				EFED23E7261211E200BD0CD7 /* LoginRequest.swift in Sources */,
 				EF39949C26343F8200BBC189 /* ProductSpecificationTableViewCell.swift in Sources */,
+				EF22CC632648073400E5438F /* CustomerInfoDetailViewController.swift in Sources */,
 				EF239BED26384DF400983EA8 /* SimilarTableModel.swift in Sources */,
 				EFEA18AA2641989600251F19 /* ProductInfoListViewController.swift in Sources */,
 				EF5242CD262AADDA0071572B /* ProductInfoViewController.swift in Sources */,
@@ -1013,12 +1074,15 @@
 				EF29F424260E2D4D00ABE46D /* APIProvider.swift in Sources */,
 				EF29F43C260E44DB00ABE46D /* SceneOpen.swift in Sources */,
 				EF7D570E260F182A004EE94A /* DataListView.swift in Sources */,
+				EF22CC7126480F8000E5438F /* CustomerInfoDetailListModel.swift in Sources */,
 				EF7D5703260F0E04004EE94A /* DataListSectionHeader.swift in Sources */,
 				EF39943F26340E1D00BBC189 /* PriceTableModel.swift in Sources */,
 				EFED23EA2612127D00BD0CD7 /* LoginResponse.swift in Sources */,
 				EFED24182612461800BD0CD7 /* UserDefaults+Extension.swift in Sources */,
 				EF74ED15262D2D1700E420C8 /* PriceListTableViewCell.swift in Sources */,
+				EF22CC6C26480A2000E5438F /* CustomerInfoDetailTableViewCell.swift in Sources */,
 				EFED23DE261210BC00BD0CD7 /* LoginUseCase.swift in Sources */,
+				EF22CC782648141500E5438F /* PopupViewController.swift in Sources */,
 				EF3994A126343F9500BBC189 /* ProductInformationTableViewCell.swift in Sources */,
 				EF39944C2634102800BBC189 /* InventoryListTableViewCell.swift in Sources */,
 			);

@@ -72,8 +72,8 @@ extension LoginViewController {
             
             guard let userID = weakSelf.inputUsername.text, userID != "", weakSelf.viewModel.output.checkPermissionAuthUser(user_id: userID)
             else { return}
-            
-            weakSelf.openScene(identifier: .SceneMain)
+            weakSelf.openPopupDialog(title: "Incorret")
+//            weakSelf.openScene(identifier: .SceneMain)
         }
     }
     
@@ -81,7 +81,8 @@ extension LoginViewController {
         return { [weak self] in
             guard let weakSelf = self else { return }
             weakSelf.stopLoding()
-            weakSelf.openScene(identifier: .SceneMain)
+//            weakSelf.openScene(identifier: .SceneMain)
+            weakSelf.openPopupDialog(title: "Incorret")
         }
     }
     

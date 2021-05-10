@@ -249,14 +249,14 @@
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="cellDataList" id="hFI-gg-EFi" customClass="DataListViewCell" customModule="EsAppiOS" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="820" height="44"/>
+                                        <rect key="frame" x="0.0" y="28" width="820" height="40"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="hFI-gg-EFi" id="IHM-fG-dQ4">
-                                            <rect key="frame" x="0.0" y="0.0" width="820" height="44"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="820" height="40"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9bo-LX-bM7" customClass="DataListView" customModule="EsAppiOS" customModuleProvider="target">
-                                                    <rect key="frame" x="0.0" y="0.0" width="820" height="44"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="820" height="40"/>
                                                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                 </view>
                                             </subviews>

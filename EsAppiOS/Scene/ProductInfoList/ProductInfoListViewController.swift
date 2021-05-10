@@ -39,6 +39,12 @@ extension ProductInfoListViewController {
         menuRight.tintColor = .black
         navigationItem.rightBarButtonItem = menuRight
         
+        let backLeft = UIBarButtonItem()
+        backLeft.action = #selector(menuTapped)
+        backLeft.image = UIImage(systemName: "arrow.left")?.withRenderingMode(.alwaysTemplate)
+        backLeft.tintColor = .darkGray
+        navigationItem.leftBarButtonItem = backLeft
+        
         btnSearch.setRounded(rounded: 8)
         setRadioSearchBy()
         setRadioSortBy()
@@ -54,7 +60,7 @@ extension ProductInfoListViewController {
         radioSearchByGroup.tintColor = .white       // surrounding ring
         radioSearchByGroup.selectedColor = .white
         radioSearchByGroup.selectedIndex = 0
-        radioSearchByGroup.titleFont = UIFont.PrimaryLight(size: 18)
+        radioSearchByGroup.titleFont = UIFont.Primary(size: 18)
         radioSearchByGroup.titleColor = .white
         radioSearchByGroup.itemSpacing = 8
         radioSearchByGroup.buttonSize = 21
@@ -69,7 +75,7 @@ extension ProductInfoListViewController {
         radioSortByGroup.tintColor = .white      // surrounding ring
         radioSortByGroup.selectedColor = .white
         radioSortByGroup.selectedIndex = 0
-        radioSortByGroup.titleFont = UIFont.PrimaryLight(size: 18)
+        radioSortByGroup.titleFont = UIFont.Primary(size: 18)
         radioSortByGroup.titleColor = .white
         radioSortByGroup.itemSpacing = 8
         radioSortByGroup.buttonSize = 21
@@ -141,6 +147,6 @@ extension ProductInfoListViewController: UITableViewDelegate, UITableViewDataSou
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        print(indexPath.item)
+        self.openScene(identifier: .SceneProductInformationDetail)
     }
 }
