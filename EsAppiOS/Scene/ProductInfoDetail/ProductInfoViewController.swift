@@ -54,13 +54,13 @@ class ProductInfoViewController: UIViewController {
         setupPriceTableView()
         setupInventoryTableView()
         setupShipmentTableView()
-        setupSegmentControlProductView()
         setupProductTableView()
         setupSimilarRelatedTableView()
     }
     
     override func viewDidAppear(_ animated: Bool) {
         self.navigationController?.navigationBar.backItem?.title = ""
+        setupSegmentControlProductView()
     }
     
     func mockData(){
@@ -133,14 +133,16 @@ extension ProductInfoViewController {
     func setupUI() {
         navigationItem.title = "Product Information"
         
-        let menuRight = UIBarButtonItem()
-        menuRight.action = #selector(menuTapped)
-        menuRight.image = UIImage(named: "menu")?.withRenderingMode(.alwaysTemplate)
-        menuRight.tintColor = .darkGray
-        navigationItem.rightBarButtonItem = menuRight
+//        let menuRight = UIBarButtonItem()
+//        menuRight.target = self
+//        menuRight.action = #selector(dismissTapped)
+//        menuRight.image = UIImage(named: "menu")?.withRenderingMode(.alwaysTemplate)
+//        menuRight.tintColor = .darkGray
+//        navigationItem.rightBarButtonItem = menuRight
         
         let backLeft = UIBarButtonItem()
-        backLeft.action = #selector(menuTapped)
+        backLeft.target = self
+        backLeft.action = #selector(dismissTapped)
         backLeft.image = UIImage(systemName: "arrow.left")?.withRenderingMode(.alwaysTemplate)
         backLeft.tintColor = .darkGray
         navigationItem.leftBarButtonItem = backLeft
@@ -222,8 +224,8 @@ extension ProductInfoViewController {
     func setupSegmentControlProductView() {
         let control = BetterSegmentedControl(frame: CGRect(x: 0,
                                                            y: 0,
-                                                           width: headerSegmentControlProductView.bounds.width,
-                                                           height: headerSegmentControlProductView.bounds.height))
+                                                           width: headerSegmentControlProductView.frame.width,
+                                                           height: headerSegmentControlProductView.frame.height))
         control.segments = LabelSegment.segments(withTitles: ["PRODUCT INFORMATION", "PRODUCT SPECIFICATION"], numberOfLines: 1, normalBackgroundColor: .white, normalFont: UIFont.init(name: "supermarket", size: 19), normalTextColor: UIColor.init(named: "NewPrimary"), selectedBackgroundColor: UIColor.init(named: "NewPrimary"), selectedFont: UIFont.init(name: "supermarket", size: 19), selectedTextColor: .white)
         control.cornerRadius = 8
         control.addTarget(self, action: #selector(segmentedControlValueChanged(_:)), for: .valueChanged)
@@ -267,6 +269,11 @@ extension ProductInfoViewController {
     
     @objc func menuTapped() {
         
+    }
+    
+    @objc func dismissTapped() {
+        debugPrint("dismissTapped")
+        self.navigationController?.popViewController(animated: true)
     }
 }
 

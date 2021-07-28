@@ -35,6 +35,10 @@ class LoginViewController: UIViewController {
     func configure(_ interface: LoginProtocol) {
         self.viewModel = interface
     }
+    
+    @IBAction func actionHideShowPassword(_ sender: Any) {
+        inputPassword.isSecureTextEntry = !inputPassword.isSecureTextEntry
+    }
 }
 
 //MARK: - SetupUI
@@ -51,10 +55,13 @@ extension LoginViewController {
         
         btnHidePassword.contentVerticalAlignment = .fill
         btnHidePassword.contentHorizontalAlignment = .fill
-        btnHidePassword.imageEdgeInsets = UIEdgeInsets(top: 32, left: 16, bottom: 32, right: 16)
+        btnHidePassword.imageEdgeInsets = UIEdgeInsets(top: 20, left: 16, bottom: 20, right: 16)
         
-        inputUsername.text = "CHAIWAT_K"
-        inputPassword.text = "1234"
+//        inputUsername.text = "CHAIWAT_K"
+//        inputPassword.text = "1234"
+        
+        inputUsername.text = "test"
+        inputPassword.text = "123123"
     }
 }
 
@@ -72,8 +79,8 @@ extension LoginViewController {
             
             guard let userID = weakSelf.inputUsername.text, userID != "", weakSelf.viewModel.output.checkPermissionAuthUser(user_id: userID)
             else { return}
-            weakSelf.openPopupDialog(title: "Incorret")
-//            weakSelf.openScene(identifier: .SceneMain)
+//            weakSelf.openPopupDialog(title: "Incorret")
+            weakSelf.gotoProductInfomation()
         }
     }
     
@@ -81,9 +88,27 @@ extension LoginViewController {
         return { [weak self] in
             guard let weakSelf = self else { return }
             weakSelf.stopLoding()
+            weakSelf.gotoProductInfomation()
 //            weakSelf.openScene(identifier: .SceneMain)
-            weakSelf.openPopupDialog(title: "Incorret")
+//            weakSelf.openPopupDialog(title: "Incorret")
         }
+    }
+    
+    private func gotoProductInfomation(){
+        UIView.transition(
+             with: UIApplication.shared.keyWindow!,
+             duration: 0.25,
+             options: .transitionFlipFromLeft,
+             animations: {
+                let loadingStoryBoard = "ProductInfoList"
+                // Override point for customization after application launch.
+                let storyboard = UIStoryboard(name: loadingStoryBoard, bundle: nil)
+                let initialViewController = storyboard.instantiateInitialViewController()
+
+                let appDelegate = UIApplication.shared.delegate as! AppDelegate
+                appDelegate.window?.rootViewController = initialViewController
+                appDelegate.window?.makeKeyAndVisible()
+         })
     }
     
 }
@@ -115,3 +140,32 @@ extension LoginViewController {
     }
 }
 
+
+
+enum SortType : String {
+    case None = "None"
+    case ES = "ES P/N"
+    case MFR = "MFR P/N"
+    case CustomerNo = "Customer No."
+    case CustomerName = "CustomerName"
+}
+
+enum SearchType : String {
+    case ES = "ES P/N"
+    case MFR = "MFR P/N"
+    case CustomerNo = "Customer No."
+    case CustomerName = "CustomerName"
+    
+    var value: String {
+        switch self {
+        case .ES:
+            return "espart"
+        case .MFR:
+            return "mfrpart"
+        case .CustomerNo:
+            return "customerno"
+        case .CustomerName:
+            return "customername"
+        }
+    }
+}

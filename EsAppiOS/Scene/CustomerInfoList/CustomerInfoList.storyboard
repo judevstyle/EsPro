@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="U49-wu-nAg">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="aHr-gW-tlT">
     <device id="ipad10_9rounded" orientation="portrait" layout="fullscreen" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -16,6 +16,22 @@
         </array>
     </customFonts>
     <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="9qk-Wd-Ukf">
+            <objects>
+                <navigationController id="aHr-gW-tlT" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="xgp-fG-x1E">
+                        <rect key="frame" x="0.0" y="0.0" width="820" height="50"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="U49-wu-nAg" kind="relationship" relationship="rootViewController" id="kew-gL-bK0"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mPD-uT-fNx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1077" y="-39"/>
+        </scene>
         <!--Customer Info List View Controller-->
         <scene sceneID="3br-pc-835">
             <objects>
@@ -25,19 +41,19 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VNA-Hz-Rvc">
-                                <rect key="frame" x="20" y="20" width="780" height="186"/>
+                                <rect key="frame" x="16" y="60" width="788" height="160"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bgTop" translatesAutoresizingMaskIntoConstraints="NO" id="kLs-h6-fsF">
-                                        <rect key="frame" x="0.0" y="0.0" width="780" height="186"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="788" height="160"/>
                                     </imageView>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="fMh-3K-ISl">
-                                        <rect key="frame" x="0.0" y="8" width="780" height="170"/>
+                                        <rect key="frame" x="0.0" y="8" width="788" height="144"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ars-SM-Q69">
-                                                <rect key="frame" x="0.0" y="0.0" width="522" height="170"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="530" height="144"/>
                                                 <subviews>
                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qlR-8h-SYl">
-                                                        <rect key="frame" x="20" y="62.5" width="401" height="45"/>
+                                                        <rect key="frame" x="20" y="49.5" width="409" height="45"/>
                                                         <color key="backgroundColor" red="0.91477507349999998" green="0.91127270459999998" blue="0.90760022399999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <color key="tintColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <constraints>
@@ -48,7 +64,7 @@
                                                         <textInputTraits key="textInputTraits"/>
                                                     </textField>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zat-gN-32d">
-                                                        <rect key="frame" x="429" y="62.5" width="85" height="45"/>
+                                                        <rect key="frame" x="437" y="49.5" width="85" height="45"/>
                                                         <color key="backgroundColor" red="0.85490196080000003" green="0.35686274509999999" blue="0.28627450980000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="85" id="Dgo-1X-sai"/>
@@ -69,13 +85,13 @@
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kpU-S5-ywz">
-                                                <rect key="frame" x="530" y="0.0" width="250" height="170"/>
+                                                <rect key="frame" x="538" y="0.0" width="250" height="144"/>
                                                 <subviews>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="CC5-lF-xYA">
-                                                        <rect key="frame" x="0.0" y="0.0" width="250" height="170"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="250" height="144"/>
                                                         <subviews>
                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3Rk-JX-LUp">
-                                                                <rect key="frame" x="0.0" y="0.0" width="250" height="85"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="250" height="72"/>
                                                                 <subviews>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Search by" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RTJ-S5-wSL">
                                                                         <rect key="frame" x="8" y="8" width="79.5" height="16.5"/>
@@ -84,7 +100,7 @@
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
                                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Wgw-K6-vAa" customClass="RadioGroup" customModule="RadioGroup">
-                                                                        <rect key="frame" x="95.5" y="0.0" width="146.5" height="77"/>
+                                                                        <rect key="frame" x="95.5" y="0.0" width="146.5" height="64"/>
                                                                     </view>
                                                                 </subviews>
                                                                 <constraints>
@@ -97,7 +113,7 @@
                                                                 </constraints>
                                                             </view>
                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="x21-ef-Klp">
-                                                                <rect key="frame" x="0.0" y="85" width="250" height="85"/>
+                                                                <rect key="frame" x="0.0" y="72" width="250" height="72"/>
                                                                 <subviews>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sort by" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w1e-YG-HDi">
                                                                         <rect key="frame" x="8" y="8" width="79.5" height="16.5"/>
@@ -106,7 +122,7 @@
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
                                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="w6i-Sm-iIX" customClass="RadioGroup" customModule="RadioGroup">
-                                                                        <rect key="frame" x="95.5" y="0.0" width="146.5" height="77"/>
+                                                                        <rect key="frame" x="95.5" y="0.0" width="146.5" height="64"/>
                                                                     </view>
                                                                 </subviews>
                                                                 <constraints>
@@ -140,15 +156,15 @@
                                     <constraint firstAttribute="trailing" secondItem="fMh-3K-ISl" secondAttribute="trailing" id="7o3-Pa-cte"/>
                                     <constraint firstItem="fMh-3K-ISl" firstAttribute="leading" secondItem="VNA-Hz-Rvc" secondAttribute="leading" id="H9F-hb-b6U"/>
                                     <constraint firstAttribute="bottom" secondItem="kLs-h6-fsF" secondAttribute="bottom" id="i55-Ez-z6J"/>
-                                    <constraint firstAttribute="height" constant="186" id="l1X-Ti-9X9"/>
+                                    <constraint firstAttribute="height" constant="160" id="l1X-Ti-9X9"/>
                                     <constraint firstAttribute="bottom" secondItem="fMh-3K-ISl" secondAttribute="bottom" constant="8" id="n25-fc-JXh"/>
                                     <constraint firstItem="fMh-3K-ISl" firstAttribute="top" secondItem="VNA-Hz-Rvc" secondAttribute="top" constant="8" id="r98-DA-Gd2"/>
                                     <constraint firstAttribute="trailing" secondItem="kLs-h6-fsF" secondAttribute="trailing" id="v7D-CB-DAJ"/>
                                     <constraint firstItem="kLs-h6-fsF" firstAttribute="top" secondItem="VNA-Hz-Rvc" secondAttribute="top" id="xy2-t8-4mF"/>
                                 </constraints>
                             </view>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="6hl-jR-DrX">
-                                <rect key="frame" x="20" y="206" width="780" height="934"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" bounces="NO" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="6hl-jR-DrX">
+                                <rect key="frame" x="16" y="220" width="788" height="920"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </tableView>
                         </subviews>
@@ -156,18 +172,28 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="8ZU-wI-l35" firstAttribute="bottom" secondItem="6hl-jR-DrX" secondAttribute="bottom" constant="20" id="2aO-AI-Ie5"/>
-                            <constraint firstItem="VNA-Hz-Rvc" firstAttribute="leading" secondItem="8ZU-wI-l35" secondAttribute="leading" constant="20" id="9Rn-Uh-1hg"/>
-                            <constraint firstItem="8ZU-wI-l35" firstAttribute="trailing" secondItem="6hl-jR-DrX" secondAttribute="trailing" constant="20" id="Uaz-0m-EdY"/>
-                            <constraint firstItem="8ZU-wI-l35" firstAttribute="trailing" secondItem="VNA-Hz-Rvc" secondAttribute="trailing" constant="20" id="WhN-gK-D70"/>
+                            <constraint firstItem="VNA-Hz-Rvc" firstAttribute="leading" secondItem="8ZU-wI-l35" secondAttribute="leading" constant="16" id="9Rn-Uh-1hg"/>
+                            <constraint firstItem="8ZU-wI-l35" firstAttribute="trailing" secondItem="6hl-jR-DrX" secondAttribute="trailing" constant="16" id="Uaz-0m-EdY"/>
+                            <constraint firstItem="8ZU-wI-l35" firstAttribute="trailing" secondItem="VNA-Hz-Rvc" secondAttribute="trailing" constant="16" id="WhN-gK-D70"/>
                             <constraint firstItem="6hl-jR-DrX" firstAttribute="top" secondItem="VNA-Hz-Rvc" secondAttribute="bottom" id="bYT-y2-OHg"/>
-                            <constraint firstItem="6hl-jR-DrX" firstAttribute="leading" secondItem="8ZU-wI-l35" secondAttribute="leading" constant="20" id="gcE-Sz-Hwh"/>
-                            <constraint firstItem="VNA-Hz-Rvc" firstAttribute="top" secondItem="8ZU-wI-l35" secondAttribute="top" constant="20" id="t8g-YC-7MI"/>
+                            <constraint firstItem="6hl-jR-DrX" firstAttribute="leading" secondItem="8ZU-wI-l35" secondAttribute="leading" constant="16" id="gcE-Sz-Hwh"/>
+                            <constraint firstItem="VNA-Hz-Rvc" firstAttribute="top" secondItem="8ZU-wI-l35" secondAttribute="top" constant="10" id="t8g-YC-7MI"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="Neb-8z-8Ov">
+                        <leftBarButtonItems>
+                            <barButtonItem enabled="NO" title="Item" image="logo-topnav" style="plain" id="1gG-6O-y1a"/>
+                            <barButtonItem title="USER" id="pur-Wo-6y5"/>
+                            <barButtonItem title="ADMIN" id="S9r-t9-y1K"/>
+                        </leftBarButtonItems>
+                    </navigationItem>
                     <connections>
                         <outlet property="bgTopView" destination="VNA-Hz-Rvc" id="0pt-fR-p3g"/>
                         <outlet property="btnSearch" destination="Zat-gN-32d" id="kVa-cs-JAJ"/>
                         <outlet property="inputSearch" destination="qlR-8h-SYl" id="6F4-6i-E6e"/>
+                        <outlet property="logoTobnav" destination="1gG-6O-y1a" id="7HM-tA-Zto"/>
+                        <outlet property="menuAdminTopNav" destination="S9r-t9-y1K" id="jX2-YN-haz"/>
+                        <outlet property="menuUserTopNav" destination="pur-Wo-6y5" id="oTB-CX-9En"/>
                         <outlet property="radioSearchByGroup" destination="Wgw-K6-vAa" id="0LC-Qd-Cc1"/>
                         <outlet property="radioSortByGroup" destination="w6i-Sm-iIX" id="uhD-qy-9nU"/>
                         <outlet property="tableView" destination="6hl-jR-DrX" id="jEa-85-x3o"/>
@@ -191,6 +217,7 @@
     </scenes>
     <resources>
         <image name="bgTop" width="1583" height="250"/>
+        <image name="logo-topnav" width="79" height="30"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

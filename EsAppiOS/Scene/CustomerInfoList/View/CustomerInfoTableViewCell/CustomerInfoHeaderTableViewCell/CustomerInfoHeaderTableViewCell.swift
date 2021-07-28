@@ -2,19 +2,37 @@
 //  CustomerInfoHeaderTableViewCell.swift
 //  EsAppiOS
 //
-//  Created by Nontawat Kanboon on 5/4/21.
+//  Created by Nontawat Kanboon on 7/29/21.
 //
 
 import UIKit
 
-class CustomerInfoHeaderTableViewCell: UITableViewHeaderFooterView {
+class CustomerInfoHeaderTableViewCell: UITableViewCell {
 
-    /*
-    // Only override draw() if you perform custom drawing.
-    // An empty implementation adversely affects performance during animation.
-    override func draw(_ rect: CGRect) {
-        // Drawing code
+    @IBOutlet var customerNoView: UIView!
+    @IBOutlet var customerNo: UILabel!
+    
+    @IBOutlet var customerNameView: UIView!
+    
+    @IBOutlet var customerName: UILabel!
+    
+    
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        // Initialization code
+//        setupUI()
     }
-    */
 
+    override func setSelected(_ selected: Bool, animated: Bool) {
+        super.setSelected(selected, animated: animated)
+
+        // Configure the view for the selected state
+    }
+    
+    public func setupUI()  {
+        customerNoView.useUnderline()
+        customerNameView.useUnderline()
+        customerNoView.addRightBorder(with: UIColor.gray, andWidth: 0.5)
+    }
+    
 }

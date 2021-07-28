@@ -19,7 +19,7 @@ enum APIDomain: String {
 
 enum APIService {
     case authLogin(request: LoginRequest)
-    case getProduct(request: ProductRequest)
+//    case getProduct(request: ProductRequest)
 }
 
 extension APIService: TargetType {
@@ -36,14 +36,14 @@ extension APIService: TargetType {
     
     var path: String {
         switch self {
-        case .authLogin, .getProduct:
+        case .authLogin:
             return ""
         }
     }
     
     var method: Moya.Method {
         switch self {
-        case .authLogin, .getProduct:
+        case .authLogin:
             return .get
         }
     }
@@ -55,11 +55,6 @@ extension APIService: TargetType {
     var task: Task {
         switch self {
         case let .authLogin(request):
-            guard let json = request.toJSON else {
-                return .requestPlain
-            }
-            return .requestParameters(parameters: json, encoding: URLEncoding.queryString)
-        case let .getProduct(request):
             guard let json = request.toJSON else {
                 return .requestPlain
             }

@@ -35,14 +35,15 @@ extension CustomerInfoDetailViewController {
         
         bgTopView.setRounded(rounded: 8)
         
-        let menuRight = UIBarButtonItem()
-        menuRight.action = #selector(menuTapped)
-        menuRight.image = UIImage(named: "menu")?.withRenderingMode(.alwaysTemplate)
-        menuRight.tintColor = .darkGray
-        navigationItem.rightBarButtonItem = menuRight
+//        let menuRight = UIBarButtonItem()
+//        menuRight.action = #selector(menuTapped)
+//        menuRight.image = UIImage(named: "menu")?.withRenderingMode(.alwaysTemplate)
+//        menuRight.tintColor = .darkGray
+//        navigationItem.rightBarButtonItem = menuRight
         
         let backLeft = UIBarButtonItem()
-        backLeft.action = #selector(closeTapped)
+        backLeft.target = self
+        backLeft.action = #selector(dismissTapped)
         backLeft.image = UIImage(systemName: "arrow.left")?.withRenderingMode(.alwaysTemplate)
         backLeft.tintColor = .darkGray
         navigationItem.leftBarButtonItem = backLeft
@@ -76,9 +77,9 @@ extension CustomerInfoDetailViewController {
         
     }
     
-    @objc func closeTapped() {
-        print("SSS")
-        self.dismiss(animated: true, completion: nil)
+    @objc func dismissTapped() {
+        debugPrint("dismissTapped")
+        self.navigationController?.popViewController(animated: true)
     }
 }
 

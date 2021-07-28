@@ -71,6 +71,7 @@ class LoginViewModel: LoginProtocol, LoginProtocolOutput {
                 weakSelf.didAuthLoginError?()
                 weakSelf.vcLogin.stopLoding()
             }).disposed(by: disposeBag)
+        didAuthLoginSuccess?()
     }
     
     func getListAuthUser() -> [LoginResponse]? {

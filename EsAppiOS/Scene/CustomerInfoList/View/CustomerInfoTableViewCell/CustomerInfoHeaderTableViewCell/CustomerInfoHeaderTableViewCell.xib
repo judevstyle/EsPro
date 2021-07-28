@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
-    <device id="ipad10_9rounded" orientation="portrait" layout="fullscreen" appearance="light"/>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
@@ -16,70 +15,75 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="CustomerInfoHeaderTableViewCell" customModule="EsAppiOS" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="820" height="60"/>
-            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-            <subviews>
-                <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="364-p3-exw">
-                    <rect key="frame" x="0.0" y="0.0" width="820" height="60"/>
-                    <subviews>
-                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YgP-WS-kvj">
-                            <rect key="frame" x="0.0" y="0.0" width="150" height="60"/>
-                            <subviews>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Customer No." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UIH-BO-i2X">
-                                    <rect key="frame" x="0.0" y="0.0" width="150" height="60"/>
-                                    <fontDescription key="fontDescription" name="supermarket" family="supermarket" pointSize="17"/>
-                                    <color key="textColor" name="NewPrimary"/>
-                                    <nil key="highlightedColor"/>
-                                </label>
-                            </subviews>
-                            <constraints>
-                                <constraint firstItem="UIH-BO-i2X" firstAttribute="leading" secondItem="YgP-WS-kvj" secondAttribute="leading" id="3Rk-Yd-KAw"/>
-                                <constraint firstAttribute="bottom" secondItem="UIH-BO-i2X" secondAttribute="bottom" id="AG9-wT-cTq"/>
-                                <constraint firstAttribute="trailing" secondItem="UIH-BO-i2X" secondAttribute="trailing" id="MbU-Za-ZUG"/>
-                                <constraint firstAttribute="width" constant="150" id="OT8-3I-JPV"/>
-                                <constraint firstItem="UIH-BO-i2X" firstAttribute="top" secondItem="YgP-WS-kvj" secondAttribute="top" id="x40-dA-gF9"/>
-                            </constraints>
-                        </view>
-                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GCV-Lg-MVp">
-                            <rect key="frame" x="150" y="0.0" width="670" height="60"/>
-                            <subviews>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Customer Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z2w-gr-fjF">
-                                    <rect key="frame" x="0.0" y="0.0" width="670" height="60"/>
-                                    <fontDescription key="fontDescription" name="supermarket" family="supermarket" pointSize="17"/>
-                                    <color key="textColor" name="NewPrimary"/>
-                                    <nil key="highlightedColor"/>
-                                </label>
-                            </subviews>
-                            <constraints>
-                                <constraint firstItem="z2w-gr-fjF" firstAttribute="top" secondItem="GCV-Lg-MVp" secondAttribute="top" id="YuB-uS-gzW"/>
-                                <constraint firstItem="z2w-gr-fjF" firstAttribute="leading" secondItem="GCV-Lg-MVp" secondAttribute="leading" id="eXj-kG-gUu"/>
-                                <constraint firstAttribute="trailing" secondItem="z2w-gr-fjF" secondAttribute="trailing" id="lNl-dL-B1Q"/>
-                                <constraint firstAttribute="bottom" secondItem="z2w-gr-fjF" secondAttribute="bottom" id="o0H-n6-Ms4"/>
-                            </constraints>
-                        </view>
-                    </subviews>
-                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                </stackView>
-            </subviews>
-            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
-            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-            <constraints>
-                <constraint firstItem="364-p3-exw" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="4pL-Ra-o9w"/>
-                <constraint firstAttribute="bottom" secondItem="364-p3-exw" secondAttribute="bottom" id="9JP-IG-oUv"/>
-                <constraint firstItem="364-p3-exw" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="KHg-oh-rF9"/>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="364-p3-exw" secondAttribute="trailing" id="W9f-ja-7Ia"/>
-            </constraints>
-            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-            <point key="canvasLocation" x="130" y="74"/>
-        </view>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="KGk-i7-Jjw" customClass="CustomerInfoHeaderTableViewCell" customModule="EsAppiOS" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="850" height="60"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="850" height="60"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rJT-09-lJm">
+                        <rect key="frame" x="0.0" y="0.0" width="850" height="60"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="k0M-2p-6qa">
+                                <rect key="frame" x="0.0" y="0.0" width="150" height="60"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Customer No." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C9x-48-i5h">
+                                        <rect key="frame" x="8" y="0.0" width="134" height="60"/>
+                                        <fontDescription key="fontDescription" name="supermarket" family="supermarket" pointSize="19"/>
+                                        <color key="textColor" name="NewPrimary"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="C9x-48-i5h" secondAttribute="trailing" constant="8" id="5N1-H1-Xem"/>
+                                    <constraint firstItem="C9x-48-i5h" firstAttribute="leading" secondItem="k0M-2p-6qa" secondAttribute="leading" constant="8" id="Kat-yM-TKK"/>
+                                    <constraint firstItem="C9x-48-i5h" firstAttribute="top" secondItem="k0M-2p-6qa" secondAttribute="top" id="MKU-3l-3pD"/>
+                                    <constraint firstAttribute="bottom" secondItem="C9x-48-i5h" secondAttribute="bottom" id="cC7-dJ-Cyw"/>
+                                    <constraint firstAttribute="width" constant="150" id="lO9-OH-Lra"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1cO-xx-Zuk">
+                                <rect key="frame" x="150" y="0.0" width="700" height="60"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Customer Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RWG-7S-Zen">
+                                        <rect key="frame" x="8" y="0.0" width="684" height="60"/>
+                                        <fontDescription key="fontDescription" name="supermarket" family="supermarket" pointSize="19"/>
+                                        <color key="textColor" name="NewPrimary"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="RWG-7S-Zen" firstAttribute="leading" secondItem="1cO-xx-Zuk" secondAttribute="leading" constant="8" id="SfP-fr-Gy3"/>
+                                    <constraint firstAttribute="trailing" secondItem="RWG-7S-Zen" secondAttribute="trailing" constant="8" id="cIX-Eu-ZaH"/>
+                                    <constraint firstAttribute="bottom" secondItem="RWG-7S-Zen" secondAttribute="bottom" id="dge-Vu-3LV"/>
+                                    <constraint firstItem="RWG-7S-Zen" firstAttribute="top" secondItem="1cO-xx-Zuk" secondAttribute="top" id="lMD-4c-49G"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </stackView>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="rJT-09-lJm" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="Y3L-zp-PkI"/>
+                    <constraint firstItem="rJT-09-lJm" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="Y9P-OI-nUP"/>
+                    <constraint firstAttribute="trailing" secondItem="rJT-09-lJm" secondAttribute="trailing" id="kNX-vG-sWb"/>
+                    <constraint firstAttribute="bottom" secondItem="rJT-09-lJm" secondAttribute="bottom" id="yaS-hB-aus"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="customerName" destination="RWG-7S-Zen" id="BpQ-SQ-XAb"/>
+                <outlet property="customerNameView" destination="1cO-xx-Zuk" id="Zj2-uA-nvH"/>
+                <outlet property="customerNo" destination="C9x-48-i5h" id="AGp-cn-DVj"/>
+                <outlet property="customerNoView" destination="k0M-2p-6qa" id="tG4-Oj-iV3"/>
+            </connections>
+            <point key="canvasLocation" x="1" y="-18"/>
+        </tableViewCell>
     </objects>
     <resources>
         <namedColor name="NewPrimary">
             <color red="0.10588235294117647" green="0.27843137254901962" blue="0.58431372549019611" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
     </resources>
 </document>

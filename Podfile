@@ -7,5 +7,7 @@ target 'EsAppiOS' do
 
   # Pods for EsAppiOS
   pod 'DropDown'
-
+  pod 'RadioGroup'
+  pod 'BetterSegmentedControl'
+  
 end

@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="ipad10_9rounded" orientation="portrait" layout="fullscreen" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -29,8 +29,8 @@
                                 <rect key="frame" x="0.0" y="0.0" width="150" height="44"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MRQ-CS-8UL">
-                                        <rect key="frame" x="0.0" y="0.0" width="150" height="44"/>
-                                        <fontDescription key="fontDescription" name="supermarket" family="supermarket" pointSize="17"/>
+                                        <rect key="frame" x="8" y="0.0" width="134" height="44"/>
+                                        <fontDescription key="fontDescription" name="supermarket" family="supermarket" pointSize="19"/>
                                         <color key="textColor" name="NewPrimary"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -38,8 +38,8 @@
                                 <constraints>
                                     <constraint firstAttribute="width" constant="150" id="51g-hs-9qx"/>
                                     <constraint firstItem="MRQ-CS-8UL" firstAttribute="top" secondItem="VGq-lu-LIY" secondAttribute="top" id="A7P-47-7rc"/>
-                                    <constraint firstItem="MRQ-CS-8UL" firstAttribute="leading" secondItem="VGq-lu-LIY" secondAttribute="leading" id="DML-qM-JE4"/>
-                                    <constraint firstAttribute="trailing" secondItem="MRQ-CS-8UL" secondAttribute="trailing" id="Qvd-tr-2JN"/>
+                                    <constraint firstItem="MRQ-CS-8UL" firstAttribute="leading" secondItem="VGq-lu-LIY" secondAttribute="leading" constant="8" id="DML-qM-JE4"/>
+                                    <constraint firstAttribute="trailing" secondItem="MRQ-CS-8UL" secondAttribute="trailing" constant="8" id="Qvd-tr-2JN"/>
                                     <constraint firstAttribute="bottom" secondItem="MRQ-CS-8UL" secondAttribute="bottom" id="nsq-k8-6NO"/>
                                 </constraints>
                             </view>
@@ -47,16 +47,16 @@
                                 <rect key="frame" x="150" y="0.0" width="700" height="44"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name Test Test" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nQA-ba-GKa">
-                                        <rect key="frame" x="0.0" y="0.0" width="700" height="44"/>
-                                        <fontDescription key="fontDescription" name="supermarket" family="supermarket" pointSize="17"/>
+                                        <rect key="frame" x="8" y="0.0" width="684" height="44"/>
+                                        <fontDescription key="fontDescription" name="supermarket" family="supermarket" pointSize="19"/>
                                         <color key="textColor" name="NewPrimary"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstItem="nQA-ba-GKa" firstAttribute="leading" secondItem="VNj-nU-joz" secondAttribute="leading" id="F3Q-2x-59c"/>
+                                    <constraint firstItem="nQA-ba-GKa" firstAttribute="leading" secondItem="VNj-nU-joz" secondAttribute="leading" constant="8" id="F3Q-2x-59c"/>
                                     <constraint firstAttribute="bottom" secondItem="nQA-ba-GKa" secondAttribute="bottom" id="Q19-ib-9dE"/>
-                                    <constraint firstAttribute="trailing" secondItem="nQA-ba-GKa" secondAttribute="trailing" id="WsV-Pk-3Es"/>
+                                    <constraint firstAttribute="trailing" secondItem="nQA-ba-GKa" secondAttribute="trailing" constant="8" id="WsV-Pk-3Es"/>
                                     <constraint firstItem="nQA-ba-GKa" firstAttribute="top" secondItem="VNj-nU-joz" secondAttribute="top" id="bvG-5X-oqp"/>
                                 </constraints>
                             </view>
@@ -74,7 +74,9 @@
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
                 <outlet property="customerName" destination="nQA-ba-GKa" id="rsQ-MA-Im2"/>
+                <outlet property="customerNameView" destination="VNj-nU-joz" id="76t-05-NFR"/>
                 <outlet property="customerNo" destination="MRQ-CS-8UL" id="q3O-6W-tFa"/>
+                <outlet property="customerNoView" destination="VGq-lu-LIY" id="qzl-RO-NVE"/>
             </connections>
             <point key="canvasLocation" x="130" y="74"/>
         </tableViewCell>

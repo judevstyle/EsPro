@@ -11,15 +11,6 @@
         }
       },
       {
-        "package": "BetterSegmentedControl",
-        "repositoryURL": "https://github.com/gmarm/BetterSegmentedControl",
-        "state": {
-          "branch": null,
-          "revision": "a2b2116761f71320cee7e69b4249863f0f372c71",
-          "version": "2.0.1"
-        }
-      },
-      {
         "package": "Logger",
         "repositoryURL": "https://github.com/shibapm/Logger",
         "state": {
@@ -83,15 +74,6 @@
         }
       },
       {
-        "package": "RadioGroup",
-        "repositoryURL": "https://github.com/yonat/RadioGroup",
-        "state": {
-          "branch": null,
-          "revision": "7e4d8b48bf8da1adb27bca49307d1386aa47e3ac",
-          "version": "1.4.3"
-        }
-      },
-      {
         "package": "ReactiveSwift",
         "repositoryURL": "https://github.com/Moya/ReactiveSwift.git",
         "state": {
@@ -116,15 +98,6 @@
           "branch": null,
           "revision": "254617dd7fae0c45319ba5fbea435bf4d0e15b5d",
           "version": "5.1.2"
-        }
-      },
-      {
-        "package": "SweeterSwift",
-        "repositoryURL": "https://github.com/yonat/SweeterSwift",
-        "state": {
-          "branch": null,
-          "revision": "783afac9c3492e905ab3f5afea4069a737edfc40",
-          "version": "1.1.4"
         }
       },
       {
