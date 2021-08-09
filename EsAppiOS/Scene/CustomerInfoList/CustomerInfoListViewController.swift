@@ -200,11 +200,13 @@ extension CustomerInfoListViewController: UITableViewDelegate, UITableViewDataSo
         if indexPath.item == 0 {
             let cell = tableView.dequeueReusableCell(withIdentifier: "CustomerInfoHeaderTableViewCell", for: indexPath) as! CustomerInfoHeaderTableViewCell
             cell.backgroundColor = UIColor.clear
+            cell.selectionStyle = .none
             cell.setupUI()
             return cell
         } else {
             let cell = tableView.dequeueReusableCell(withIdentifier: "CustomerInfoListTableViewCell", for: indexPath) as! CustomerInfoListTableViewCell
             cell.backgroundColor = UIColor.clear
+            cell.selectionStyle = .none
             cell.setupUI()
             return cell
         }

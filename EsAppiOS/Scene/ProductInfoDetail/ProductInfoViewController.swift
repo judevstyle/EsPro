@@ -59,7 +59,6 @@ class ProductInfoViewController: UIViewController {
     }
     
     override func viewDidAppear(_ animated: Bool) {
-        self.navigationController?.navigationBar.backItem?.title = ""
         setupSegmentControlProductView()
     }
     
@@ -140,12 +139,12 @@ extension ProductInfoViewController {
 //        menuRight.tintColor = .darkGray
 //        navigationItem.rightBarButtonItem = menuRight
         
-        let backLeft = UIBarButtonItem()
-        backLeft.target = self
-        backLeft.action = #selector(dismissTapped)
-        backLeft.image = UIImage(systemName: "arrow.left")?.withRenderingMode(.alwaysTemplate)
-        backLeft.tintColor = .darkGray
-        navigationItem.leftBarButtonItem = backLeft
+//        let backLeft = UIBarButtonItem()
+//        backLeft.target = self
+//        backLeft.action = #selector(dismissTapped)
+//        backLeft.image = UIImage(systemName: "arrow.left")?.withRenderingMode(.alwaysTemplate)
+//        backLeft.tintColor = .darkGray
+//        navigationItem.leftBarButtonItem = backLeft
         
         
     }
@@ -406,7 +405,12 @@ extension ProductInfoViewController: UITableViewDelegate, UITableViewDataSource 
                 if indexPath.item % 2 == 0 {
                     cell.backgroundColor = UIColor.clear
                 }else {
-                    cell.backgroundColor = UIColor.systemGray5
+                    if #available(iOS 13.0, *) {
+                        cell.backgroundColor = UIColor.systemGray5
+                    } else {
+                        // Fallback on earlier versions
+                        cell.backgroundColor = UIColor(red: 229.0, green: 229.0, blue: 234.0, alpha: 1.0)
+                    }
                 }
                 return cell
             case shipmentTableView:

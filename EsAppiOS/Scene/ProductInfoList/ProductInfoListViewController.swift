@@ -190,11 +190,13 @@ extension ProductInfoListViewController: UITableViewDelegate, UITableViewDataSou
         if indexPath.item == 0 {
             let cell = tableView.dequeueReusableCell(withIdentifier: "ProductInfoHeaderTableViewCell", for: indexPath) as! ProductInfoHeaderTableViewCell
             cell.backgroundColor = UIColor.clear
+            cell.selectionStyle = .none
             cell.setupUI()
             return cell
         } else {
             let cell = tableView.dequeueReusableCell(withIdentifier: "ProductInfoListTableViewCell", for: indexPath) as! ProductInfoListTableViewCell
             cell.backgroundColor = UIColor.clear
+            cell.selectionStyle = .none
             cell.setupUI()
             return cell
         }

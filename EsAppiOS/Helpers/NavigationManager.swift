@@ -11,6 +11,8 @@ import UIKit
 extension UIViewController {
     
     func openScene(identifier: SceneOpen) {
+        self.navigationController?.navigationBar.topItem?.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
+        self.navigationController?.navigationBar.topItem?.backBarButtonItem?.tintColor = UIColor.black
         self.performSegue(withIdentifier: identifier.rawValue, sender: nil)
     }
     

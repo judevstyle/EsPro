@@ -41,13 +41,13 @@ extension CustomerInfoDetailViewController {
 //        menuRight.tintColor = .darkGray
 //        navigationItem.rightBarButtonItem = menuRight
         
-        let backLeft = UIBarButtonItem()
-        backLeft.target = self
-        backLeft.action = #selector(dismissTapped)
-        backLeft.image = UIImage(systemName: "arrow.left")?.withRenderingMode(.alwaysTemplate)
-        backLeft.tintColor = .darkGray
-        navigationItem.leftBarButtonItem = backLeft
-        
+//        let backLeft = UIBarButtonItem()
+//        backLeft.target = self
+//        backLeft.action = #selector(dismissTapped)
+//        backLeft.image = UIImage(systemName: "arrow.left")?.withRenderingMode(.alwaysTemplate)
+//        backLeft.tintColor = .darkGray
+//        navigationItem.leftBarButtonItem = backLeft
+
     }
     
     func setupTableView(){
