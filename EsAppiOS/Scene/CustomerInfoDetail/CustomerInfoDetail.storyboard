@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="259-1c-KEm">
     <device id="ipad10_9rounded" orientation="portrait" layout="fullscreen" appearance="light"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -92,11 +93,22 @@ EEN1c3RvbWVyIE5vLiAxNzQ
                         <outlet property="customerNo" destination="dKS-R8-2zd" id="9KT-ea-lgV"/>
                         <outlet property="tableView" destination="Tja-DF-mlP" id="TZm-G2-MeL"/>
                         <outlet property="tableViewHeight" destination="k6Z-OJ-q0c" id="dWM-L3-jV3"/>
+                        <segue destination="15Y-zm-lUc" kind="show" identifier="SceneCustomerProfile" id="2qZ-98-NTx"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SIA-Lb-297" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="110.48780487804878" y="28.98305084745763"/>
+        </scene>
+        <!--CustomerProfile-->
+        <scene sceneID="vUb-4i-2aE">
+            <objects>
+                <viewControllerPlaceholder storyboardName="CustomerProfile" id="15Y-zm-lUc" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="Qw2-is-kzr"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Otj-mm-qw3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="757" y="7"/>
         </scene>
     </scenes>
     <resources>

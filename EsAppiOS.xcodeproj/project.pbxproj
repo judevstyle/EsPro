@@ -51,6 +51,12 @@
 		EF3994A126343F9500BBC189 /* ProductInformationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF39949F26343F9500BBC189 /* ProductInformationTableViewCell.swift */; };
 		EF3994A226343F9500BBC189 /* ProductInformationTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EF3994A026343F9500BBC189 /* ProductInformationTableViewCell.xib */; };
 		EF3994AC2634454C00BBC189 /* ProductTableModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF3994AB2634454C00BBC189 /* ProductTableModel.swift */; };
+		EF50D8CC26F73CCD008F11D7 /* CustomerProfile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF50D8CB26F73CCD008F11D7 /* CustomerProfile.storyboard */; };
+		EF50D8D026F73D5A008F11D7 /* CustomerProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF50D8CF26F73D5A008F11D7 /* CustomerProfileViewController.swift */; };
+		EF50D8D826F75771008F11D7 /* ContactHeaderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF50D8D626F75771008F11D7 /* ContactHeaderTableViewCell.swift */; };
+		EF50D8D926F75771008F11D7 /* ContactHeaderTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EF50D8D726F75771008F11D7 /* ContactHeaderTableViewCell.xib */; };
+		EF50D8DC26F7577D008F11D7 /* ContactItemTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF50D8DA26F7577D008F11D7 /* ContactItemTableViewCell.swift */; };
+		EF50D8DD26F7577D008F11D7 /* ContactItemTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EF50D8DB26F7577D008F11D7 /* ContactItemTableViewCell.xib */; };
 		EF5242CA262AADC90071572B /* ProductInfo.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF5242C9262AADC90071572B /* ProductInfo.storyboard */; };
 		EF5242CD262AADDA0071572B /* ProductInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF5242CC262AADDA0071572B /* ProductInfoViewController.swift */; };
 		EF5242D7262AC96F0071572B /* RobotoCondensed-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EF5242D1262AC96F0071572B /* RobotoCondensed-Light.ttf */; };
@@ -137,6 +143,12 @@
 		EF39949F26343F9500BBC189 /* ProductInformationTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductInformationTableViewCell.swift; sourceTree = "<group>"; };
 		EF3994A026343F9500BBC189 /* ProductInformationTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProductInformationTableViewCell.xib; sourceTree = "<group>"; };
 		EF3994AB2634454C00BBC189 /* ProductTableModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductTableModel.swift; sourceTree = "<group>"; };
+		EF50D8CB26F73CCD008F11D7 /* CustomerProfile.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CustomerProfile.storyboard; sourceTree = "<group>"; };
+		EF50D8CF26F73D5A008F11D7 /* CustomerProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomerProfileViewController.swift; sourceTree = "<group>"; };
+		EF50D8D626F75771008F11D7 /* ContactHeaderTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactHeaderTableViewCell.swift; sourceTree = "<group>"; };
+		EF50D8D726F75771008F11D7 /* ContactHeaderTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ContactHeaderTableViewCell.xib; sourceTree = "<group>"; };
+		EF50D8DA26F7577D008F11D7 /* ContactItemTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactItemTableViewCell.swift; sourceTree = "<group>"; };
+		EF50D8DB26F7577D008F11D7 /* ContactItemTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ContactItemTableViewCell.xib; sourceTree = "<group>"; };
 		EF5242C9262AADC90071572B /* ProductInfo.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ProductInfo.storyboard; sourceTree = "<group>"; };
 		EF5242CC262AADDA0071572B /* ProductInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductInfoViewController.swift; sourceTree = "<group>"; };
 		EF5242D1262AC96F0071572B /* RobotoCondensed-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "RobotoCondensed-Light.ttf"; sourceTree = "<group>"; };
@@ -434,6 +446,58 @@
 			path = ProductSpecificationTableViewCell;
 			sourceTree = "<group>";
 		};
+		EF50D8CA26F73CB1008F11D7 /* CustomerProfileView */ = {
+			isa = PBXGroup;
+			children = (
+				EF50D8CB26F73CCD008F11D7 /* CustomerProfile.storyboard */,
+				EF50D8CF26F73D5A008F11D7 /* CustomerProfileViewController.swift */,
+			);
+			path = CustomerProfileView;
+			sourceTree = "<group>";
+		};
+		EF50D8D126F756E9008F11D7 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				EF50D8D226F756EF008F11D7 /* Cell */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		EF50D8D226F756EF008F11D7 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				EF50D8D326F75707008F11D7 /* ContactTableViewCell */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		EF50D8D326F75707008F11D7 /* ContactTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				EF50D8D526F75742008F11D7 /* ContactHeaderTableViewCell */,
+				EF50D8D426F75733008F11D7 /* ContactItemTableViewCell */,
+			);
+			path = ContactTableViewCell;
+			sourceTree = "<group>";
+		};
+		EF50D8D426F75733008F11D7 /* ContactItemTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				EF50D8DA26F7577D008F11D7 /* ContactItemTableViewCell.swift */,
+				EF50D8DB26F7577D008F11D7 /* ContactItemTableViewCell.xib */,
+			);
+			path = ContactItemTableViewCell;
+			sourceTree = "<group>";
+		};
+		EF50D8D526F75742008F11D7 /* ContactHeaderTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				EF50D8D626F75771008F11D7 /* ContactHeaderTableViewCell.swift */,
+				EF50D8D726F75771008F11D7 /* ContactHeaderTableViewCell.xib */,
+			);
+			path = ContactHeaderTableViewCell;
+			sourceTree = "<group>";
+		};
 		EF5242C8262AADA80071572B /* ProductInfoDetail */ = {
 			isa = PBXGroup;
 			children = (
@@ -488,6 +552,7 @@
 		EF529452260D860800C3EF64 /* EsAppiOS */ = {
 			isa = PBXGroup;
 			children = (
+				EF50D8D126F756E9008F11D7 /* Components */,
 				EF29F417260E2CAD00ABE46D /* Provider */,
 				EF29F412260E2BBB00ABE46D /* Helpers */,
 				EF529480260D97DF00C3EF64 /* Classes */,
@@ -503,6 +568,7 @@
 		EF529468260D87F200C3EF64 /* Scene */ = {
 			isa = PBXGroup;
 			children = (
+				EF50D8CA26F73CB1008F11D7 /* CustomerProfileView */,
 				EFEA18A82641986900251F19 /* CustomerInfoDetail */,
 				EFEA18A72641985E00251F19 /* CustomerInfoList */,
 				EFEA18A62641984D00251F19 /* ProductInfoList */,
@@ -818,6 +884,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EF39946F26342A2900BBC189 /* ShipmentListTableViewCell.xib in Resources */,
+				EF50D8DD26F7577D008F11D7 /* ContactItemTableViewCell.xib in Resources */,
 				EF39949D26343F8200BBC189 /* ProductSpecificationTableViewCell.xib in Resources */,
 				EF529460260D860800C3EF64 /* LaunchScreen.storyboard in Resources */,
 				EFEA18C82641AD2000251F19 /* CustomerInfoList.storyboard in Resources */,
@@ -837,6 +904,7 @@
 				EF529474260D89E000C3EF64 /* Color.xcassets in Resources */,
 				EF5242E3262ADDD60071572B /* ImageCollectionViewCell.xib in Resources */,
 				EF52947B260D96BB00C3EF64 /* Login.storyboard in Resources */,
+				EF50D8CC26F73CCD008F11D7 /* CustomerProfile.storyboard in Resources */,
 				EF239BFA26384F3E00983EA8 /* SimilarRelatedHeaderTableViewCell.xib in Resources */,
 				EF39944D2634102800BBC189 /* InventoryListTableViewCell.xib in Resources */,
 				EF22CC752648140300E5438F /* PopupView.storyboard in Resources */,
@@ -848,6 +916,7 @@
 				EFEA18AE2641989C00251F19 /* ProductInfoList.storyboard in Resources */,
 				EF74ED1F262D2D7F00E420C8 /* PriceHeaderTableViewCell.xib in Resources */,
 				EF5242CA262AADC90071572B /* ProductInfo.storyboard in Resources */,
+				EF50D8D926F75771008F11D7 /* ContactHeaderTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -916,6 +985,7 @@
 				EF529454260D860800C3EF64 /* AppDelegate.swift in Sources */,
 				EFF00AD726B1CF0100A7C77D /* ProductInfoHeaderTableViewCell.swift in Sources */,
 				EF39947326342D0E00BBC189 /* ShipmentTableModel.swift in Sources */,
+				EF50D8D826F75771008F11D7 /* ContactHeaderTableViewCell.swift in Sources */,
 				EF3994542634218A00BBC189 /* InventoryFooterTableViewCell.swift in Sources */,
 				EFEA18BE2641A24600251F19 /* ProductInfoListTableViewCell.swift in Sources */,
 				EF239BF726384F3900983EA8 /* SimilarRelatedHeaderTableViewCell.swift in Sources */,
@@ -930,6 +1000,7 @@
 				EF7D56FE260EFD99004EE94A /* UIView+Extension.swift in Sources */,
 				EFED23E7261211E200BD0CD7 /* LoginRequest.swift in Sources */,
 				EF39949C26343F8200BBC189 /* ProductSpecificationTableViewCell.swift in Sources */,
+				EF50D8DC26F7577D008F11D7 /* ContactItemTableViewCell.swift in Sources */,
 				EF22CC632648073400E5438F /* CustomerInfoDetailViewController.swift in Sources */,
 				EF239BED26384DF400983EA8 /* SimilarTableModel.swift in Sources */,
 				EFEA18AA2641989600251F19 /* ProductInfoListViewController.swift in Sources */,
@@ -948,6 +1019,7 @@
 				EFED23DE261210BC00BD0CD7 /* LoginUseCase.swift in Sources */,
 				EF22CC782648141500E5438F /* PopupViewController.swift in Sources */,
 				EF3994A126343F9500BBC189 /* ProductInformationTableViewCell.swift in Sources */,
+				EF50D8D026F73D5A008F11D7 /* CustomerProfileViewController.swift in Sources */,
 				EF39944C2634102800BBC189 /* InventoryListTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1091,6 +1163,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				CODE_SIGN_STYLE = Manual;
+				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_TEAM = 2DY57Q85QG;
 				INFOPLIST_FILE = EsAppiOS/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
@@ -1115,6 +1188,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				CODE_SIGN_STYLE = Manual;
+				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_TEAM = 2DY57Q85QG;
 				INFOPLIST_FILE = EsAppiOS/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;

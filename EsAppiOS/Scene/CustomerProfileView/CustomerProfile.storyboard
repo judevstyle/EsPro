@@ -1,0 +1,1101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Ldn-nF-TUy">
+    <device id="ipad10_9rounded" orientation="portrait" layout="fullscreen" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="supermarket.ttf">
+            <string>supermarket</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Customer Profile View Controller-->
+        <scene sceneID="Tm3-2H-ejc">
+            <objects>
+                <viewController id="Ldn-nF-TUy" customClass="CustomerProfileViewController" customModule="EsAppiOS" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="wnG-5M-N6a">
+                        <rect key="frame" x="0.0" y="0.0" width="820" height="1500"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MfR-UM-IYc">
+                                <rect key="frame" x="0.0" y="0.0" width="820" height="1480"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="RWQ-Pe-iDM">
+                                        <rect key="frame" x="0.0" y="0.0" width="820" height="1354"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FNB-ds-DAo">
+                                                <rect key="frame" x="0.0" y="0.0" width="820" height="392"/>
+                                                <subviews>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="S3i-pQ-QHq">
+                                                        <rect key="frame" x="16" y="16" width="788" height="360"/>
+                                                        <subviews>
+                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Eet-vN-Fe3">
+                                                                <rect key="frame" x="0.0" y="0.0" width="788" height="30"/>
+                                                                <subviews>
+                                                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="34O-UV-LNE">
+                                                                        <rect key="frame" x="0.0" y="0.0" width="788" height="30"/>
+                                                                        <subviews>
+                                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="รหัสลูกค้า" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V2q-Ww-lUy">
+                                                                                <rect key="frame" x="0.0" y="0.0" width="175" height="30"/>
+                                                                                <constraints>
+                                                                                    <constraint firstAttribute="width" constant="175" id="0Uc-R5-bac"/>
+                                                                                </constraints>
+                                                                                <fontDescription key="fontDescription" name="supermarket" family="supermarket" pointSize="16"/>
+                                                                                <nil key="highlightedColor"/>
+                                                                            </label>
+                                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="174" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C07-Cl-9vJ">
+                                                                                <rect key="frame" x="175" y="0.0" width="613" height="30"/>
+                                                                                <fontDescription key="fontDescription" name="supermarket" family="supermarket" pointSize="16"/>
+                                                                                <color key="textColor" name="NewPrimary"/>
+                                                                                <nil key="highlightedColor"/>
+                                                                            </label>
+                                                                        </subviews>
+                                                                    </stackView>
+                                                                </subviews>
+                                                                <constraints>
+                                                                    <constraint firstItem="34O-UV-LNE" firstAttribute="top" secondItem="Eet-vN-Fe3" secondAttribute="top" id="3UG-e4-MLN"/>
+                                                                    <constraint firstAttribute="trailing" secondItem="34O-UV-LNE" secondAttribute="trailing" id="gM0-yb-V3I"/>
+                                                                    <constraint firstItem="34O-UV-LNE" firstAttribute="leading" secondItem="Eet-vN-Fe3" secondAttribute="leading" id="r0f-OJ-Iim"/>
+                                                                    <constraint firstAttribute="height" constant="30" id="vkc-ow-Chu"/>
+                                                                    <constraint firstAttribute="bottom" secondItem="34O-UV-LNE" secondAttribute="bottom" id="x3B-IF-Fis"/>
+                                                                </constraints>
+                                                            </view>
+                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="P4z-Zj-u9t">
+                                                                <rect key="frame" x="0.0" y="30" width="788" height="30"/>
+                                                                <subviews>
+                                                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="225-cR-rta">
+                                                                        <rect key="frame" x="0.0" y="0.0" width="788" height="30"/>
+                                                                        <subviews>
+                                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ชื่อลูกค้า (ไทย)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hh4-iw-48K">
+                                                                                <rect key="frame" x="0.0" y="0.0" width="175" height="30"/>
+                                                                                <constraints>
+                                                                                    <constraint firstAttribute="width" constant="175" id="dBy-CU-eQe"/>
+                                                                                </constraints>
+                                                                                <fontDescription key="fontDescription" name="supermarket" family="supermarket" pointSize="16"/>
+                                                                                <nil key="highlightedColor"/>
+                                                                            </label>
+                                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="บริษัท โปรเฟสชั่นเเนล เทเลคอม อินสเทลเลชั่น จำกัด" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iUJ-Bd-h3H">
+                                                                                <rect key="frame" x="175" y="0.0" width="613" height="30"/>
+                                                                                <fontDescription key="fontDescription" name="supermarket" family="supermarket" pointSize="16"/>
+                                                                                <color key="textColor" name="NewPrimary"/>
+                                                                                <nil key="highlightedColor"/>
+                                                                            </label>
+                                                                        </subviews>
+                                                                    </stackView>
+                                                                </subviews>
+                                                                <constraints>
+                                                                    <constraint firstItem="225-cR-rta" firstAttribute="top" secondItem="P4z-Zj-u9t" secondAttribute="top" id="28f-6D-Dbq"/>
+                                                                    <constraint firstAttribute="height" constant="30" id="2is-ZT-G4i"/>
+                                                                    <constraint firstItem="225-cR-rta" firstAttribute="leading" secondItem="P4z-Zj-u9t" secondAttribute="leading" id="8Xv-aQ-9Js"/>
+                                                                    <constraint firstAttribute="bottom" secondItem="225-cR-rta" secondAttribute="bottom" id="9xa-Eb-KqL"/>
+                                                                    <constraint firstAttribute="trailing" secondItem="225-cR-rta" secondAttribute="trailing" id="Crg-KE-KDQ"/>
+                                                                </constraints>
+                                                            </view>
+                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Zlc-rR-sSK">
+                                                                <rect key="frame" x="0.0" y="60" width="788" height="30"/>
+                                                                <subviews>
+                                                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6eU-sV-hxq">
+                                                                        <rect key="frame" x="0.0" y="0.0" width="788" height="30"/>
+                                                                        <subviews>
+                                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ชื่อลูกค้า (อังกฤษ)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z5I-1D-Uga">
+                                                                                <rect key="frame" x="0.0" y="0.0" width="175" height="30"/>
+                                                                                <constraints>
+                                                                                    <constraint firstAttribute="width" constant="175" id="uSd-Mr-tO6"/>
+                                                                                </constraints>
+                                                                                <fontDescription key="fontDescription" name="supermarket" family="supermarket" pointSize="16"/>
+                                                                                <nil key="highlightedColor"/>
+                                                                            </label>
+                                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PROFESSIONAL TELECOM INSTALLATION CO., LTD." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4jN-K1-d3k">
+                                                                                <rect key="frame" x="175" y="0.0" width="613" height="30"/>
+                                                                                <fontDescription key="fontDescription" name="supermarket" family="supermarket" pointSize="16"/>
+                                                                                <color key="textColor" name="NewPrimary"/>
+                                                                                <nil key="highlightedColor"/>
+                                                                            </label>
+                                                                        </subviews>
+                                                                    </stackView>
+                                                                </subviews>
+                                                                <constraints>
+                                                                    <constraint firstItem="6eU-sV-hxq" firstAttribute="leading" secondItem="Zlc-rR-sSK" secondAttribute="leading" id="Mji-SX-djE"/>
+                                                                    <constraint firstItem="6eU-sV-hxq" firstAttribute="top" secondItem="Zlc-rR-sSK" secondAttribute="top" id="Vj3-Ww-zAU"/>
+                                                                    <constraint firstAttribute="bottom" secondItem="6eU-sV-hxq" secondAttribute="bottom" id="qAj-zq-wk3"/>
+                                                                    <constraint firstAttribute="trailing" secondItem="6eU-sV-hxq" secondAttribute="trailing" id="yfQ-ik-T75"/>
+                                                                    <constraint firstAttribute="height" constant="30" id="yzA-sn-Z7a"/>
+                                                                </constraints>
+                                                            </view>
+                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9mg-qJ-DUB">
+                                                                <rect key="frame" x="0.0" y="90" width="788" height="30"/>
+                                                                <subviews>
+                                                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gNM-Ce-gYR">
+                                                                        <rect key="frame" x="0.0" y="0.0" width="788" height="30"/>
+                                                                        <subviews>
+                                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ชื่อย่อ (SHORT NAME)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tHe-IP-pRm">
+                                                                                <rect key="frame" x="0.0" y="0.0" width="175" height="30"/>
+                                                                                <constraints>
+                                                                                    <constraint firstAttribute="width" constant="175" id="Ph5-4L-2Kf"/>
+                                                                                </constraints>
+                                                                                <fontDescription key="fontDescription" name="supermarket" family="supermarket" pointSize="16"/>
+                                                                                <nil key="highlightedColor"/>
+                                                                            </label>
+                                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="xxxxxxxxxxx" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jgG-7V-HRb">
+                                                                                <rect key="frame" x="175" y="0.0" width="613" height="30"/>
+                                                                                <fontDescription key="fontDescription" name="supermarket" family="supermarket" pointSize="16"/>
+                                                                                <color key="textColor" name="NewPrimary"/>
+                                                                                <nil key="highlightedColor"/>
+                                                                            </label>
+                                                                        </subviews>
+                                                                    </stackView>
+                                                                </subviews>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="height" constant="30" id="Qcg-oV-C24"/>
+                                                                    <constraint firstItem="gNM-Ce-gYR" firstAttribute="top" secondItem="9mg-qJ-DUB" secondAttribute="top" id="TWb-2X-3HT"/>
+                                                                    <constraint firstItem="gNM-Ce-gYR" firstAttribute="leading" secondItem="9mg-qJ-DUB" secondAttribute="leading" id="u3a-mJ-Qjz"/>
+                                                                    <constraint firstAttribute="bottom" secondItem="gNM-Ce-gYR" secondAttribute="bottom" id="zAw-2s-idu"/>
+                                                                    <constraint firstAttribute="trailing" secondItem="gNM-Ce-gYR" secondAttribute="trailing" id="zUx-8u-nyP"/>
+                                                                </constraints>
+                                                            </view>
+                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FfK-aj-WzT">
+                                                                <rect key="frame" x="0.0" y="120" width="788" height="30"/>
+                                                                <subviews>
+                                                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mc9-SK-9T8">
+                                                                        <rect key="frame" x="0.0" y="0.0" width="788" height="30"/>
+                                                                        <subviews>
+                                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ที่อยู่" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PCa-7r-cZe">
+                                                                                <rect key="frame" x="0.0" y="0.0" width="175" height="30"/>
+                                                                                <constraints>
+                                                                                    <constraint firstAttribute="width" constant="175" id="Mti-E3-Jfg"/>
+                                                                                </constraints>
+                                                                                <fontDescription key="fontDescription" name="supermarket" family="supermarket" pointSize="16"/>
+                                                                                <nil key="highlightedColor"/>
+                                                                            </label>
+                                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="62/29 ซอยรามอินทรา 81 ถนนรามอินทรา เเขวงคันนายาว เขตคันนายาว กรุงเทพฯ 10230" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C6l-Xl-fim">
+                                                                                <rect key="frame" x="175" y="0.0" width="613" height="30"/>
+                                                                                <fontDescription key="fontDescription" name="supermarket" family="supermarket" pointSize="16"/>
+                                                                                <color key="textColor" name="NewPrimary"/>
+                                                                                <nil key="highlightedColor"/>
+                                                                            </label>
+                                                                        </subviews>
+                                                                    </stackView>
+                                                                </subviews>
+                                                                <constraints>
+                                                                    <constraint firstItem="mc9-SK-9T8" firstAttribute="top" secondItem="FfK-aj-WzT" secondAttribute="top" id="Bi1-ki-WtU"/>
+                                                                    <constraint firstAttribute="bottom" secondItem="mc9-SK-9T8" secondAttribute="bottom" id="Hay-Cf-nvp"/>
+                                                                    <constraint firstAttribute="height" constant="30" id="MBf-xB-Mzz"/>
+                                                                    <constraint firstAttribute="trailing" secondItem="mc9-SK-9T8" secondAttribute="trailing" id="N4l-bd-qd3"/>
+                                                                    <constraint firstItem="mc9-SK-9T8" firstAttribute="leading" secondItem="FfK-aj-WzT" secondAttribute="leading" id="pvf-i7-I0A"/>
+                                                                </constraints>
+                                                            </view>
+                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="no5-ut-dXJ">
+                                                                <rect key="frame" x="0.0" y="150" width="788" height="30"/>
+                                                                <subviews>
+                                                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GFn-4D-nwB">
+                                                                        <rect key="frame" x="0.0" y="0.0" width="788" height="30"/>
+                                                                        <subviews>
+                                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="รหัสไปษณีย์" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gzP-xh-VUQ">
+                                                                                <rect key="frame" x="0.0" y="0.0" width="175" height="30"/>
+                                                                                <constraints>
+                                                                                    <constraint firstAttribute="width" constant="175" id="pIB-Rf-HiZ"/>
+                                                                                </constraints>
+                                                                                <fontDescription key="fontDescription" name="supermarket" family="supermarket" pointSize="16"/>
+                                                                                <nil key="highlightedColor"/>
+                                                                            </label>
+                                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10230" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gkx-6r-zhi">
+                                                                                <rect key="frame" x="175" y="0.0" width="613" height="30"/>
+                                                                                <fontDescription key="fontDescription" name="supermarket" family="supermarket" pointSize="16"/>
+                                                                                <color key="textColor" name="NewPrimary"/>
+                                                                                <nil key="highlightedColor"/>
+                                                                            </label>
+                                                                        </subviews>
+                                                                    </stackView>
+                                                                </subviews>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="height" constant="30" id="3xS-lU-xBc"/>
+                                                                    <constraint firstAttribute="bottom" secondItem="GFn-4D-nwB" secondAttribute="bottom" id="EiV-7r-nAc"/>
+                                                                    <constraint firstItem="GFn-4D-nwB" firstAttribute="top" secondItem="no5-ut-dXJ" secondAttribute="top" id="Mfl-cT-eDm"/>
+                                                                    <constraint firstItem="GFn-4D-nwB" firstAttribute="leading" secondItem="no5-ut-dXJ" secondAttribute="leading" id="YFh-wP-S0U"/>
+                                                                    <constraint firstAttribute="trailing" secondItem="GFn-4D-nwB" secondAttribute="trailing" id="Z55-BL-UXb"/>
+                                                                </constraints>
+                                                            </view>
+                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RA6-we-8Xu">
+                                                                <rect key="frame" x="0.0" y="180" width="788" height="30"/>
+                                                                <subviews>
+                                                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="I7r-5w-272">
+                                                                        <rect key="frame" x="0.0" y="0.0" width="788" height="30"/>
+                                                                        <subviews>
+                                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="โทรศัพท์" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FPz-el-GZw">
+                                                                                <rect key="frame" x="0.0" y="0.0" width="175" height="30"/>
+                                                                                <constraints>
+                                                                                    <constraint firstAttribute="width" constant="175" id="PlE-lk-ymy"/>
+                                                                                </constraints>
+                                                                                <fontDescription key="fontDescription" name="supermarket" family="supermarket" pointSize="16"/>
+                                                                                <nil key="highlightedColor"/>
+                                                                            </label>
+                                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="02-438-7075ม 02-438-7783" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yHJ-Vn-N2G">
+                                                                                <rect key="frame" x="175" y="0.0" width="613" height="30"/>
+                                                                                <fontDescription key="fontDescription" name="supermarket" family="supermarket" pointSize="16"/>
+                                                                                <color key="textColor" name="NewPrimary"/>
+                                                                                <nil key="highlightedColor"/>
+                                                                            </label>
+                                                                        </subviews>
+                                                                    </stackView>
+                                                                </subviews>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="height" constant="30" id="20j-4u-tjy"/>
+                                                                    <constraint firstItem="I7r-5w-272" firstAttribute="top" secondItem="RA6-we-8Xu" secondAttribute="top" id="LIc-Eb-3eR"/>
+                                                                    <constraint firstAttribute="trailing" secondItem="I7r-5w-272" secondAttribute="trailing" id="ZLX-xK-E8A"/>
+                                                                    <constraint firstAttribute="bottom" secondItem="I7r-5w-272" secondAttribute="bottom" id="pg2-7Z-fBi"/>
+                                                                    <constraint firstItem="I7r-5w-272" firstAttribute="leading" secondItem="RA6-we-8Xu" secondAttribute="leading" id="yBm-yl-MX8"/>
+                                                                </constraints>
+                                                            </view>
+                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MyZ-4O-qkJ">
+                                                                <rect key="frame" x="0.0" y="210" width="788" height="30"/>
+                                                                <subviews>
+                                                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eio-pj-WGQ">
+                                                                        <rect key="frame" x="0.0" y="0.0" width="788" height="30"/>
+                                                                        <subviews>
+                                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="แฟกซ์" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="58L-AQ-faE">
+                                                                                <rect key="frame" x="0.0" y="0.0" width="175" height="30"/>
+                                                                                <constraints>
+                                                                                    <constraint firstAttribute="width" constant="175" id="jsn-Ag-wRd"/>
+                                                                                </constraints>
+                                                                                <fontDescription key="fontDescription" name="supermarket" family="supermarket" pointSize="16"/>
+                                                                                <nil key="highlightedColor"/>
+                                                                            </label>
+                                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="02-225-2979" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GBf-qv-9oq">
+                                                                                <rect key="frame" x="175" y="0.0" width="613" height="30"/>
+                                                                                <fontDescription key="fontDescription" name="supermarket" family="supermarket" pointSize="16"/>
+                                                                                <color key="textColor" name="NewPrimary"/>
+                                                                                <nil key="highlightedColor"/>
+                                                                            </label>
+                                                                        </subviews>
+                                                                    </stackView>
+                                                                </subviews>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="trailing" secondItem="eio-pj-WGQ" secondAttribute="trailing" id="CZa-Zn-3Tm"/>
+                                                                    <constraint firstItem="eio-pj-WGQ" firstAttribute="leading" secondItem="MyZ-4O-qkJ" secondAttribute="leading" id="D8J-SQ-kCj"/>
+                                                                    <constraint firstAttribute="height" constant="30" id="XF1-CF-PUJ"/>
+                                                                    <constraint firstAttribute="bottom" secondItem="eio-pj-WGQ" secondAttribute="bottom" id="hM8-ob-eU4"/>
+                                                                    <constraint firstItem="eio-pj-WGQ" firstAttribute="top" secondItem="MyZ-4O-qkJ" secondAttribute="top" id="sRI-2s-gEg"/>
+                                                                </constraints>
+                                                            </view>
+                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6dW-Gc-Lid">
+                                                                <rect key="frame" x="0.0" y="240" width="788" height="30"/>
+                                                                <subviews>
+                                                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hBR-70-3jU">
+                                                                        <rect key="frame" x="0.0" y="0.0" width="788" height="30"/>
+                                                                        <subviews>
+                                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="เลขประจำตัวผู้เสียภาษี" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NRn-fn-o7P">
+                                                                                <rect key="frame" x="0.0" y="0.0" width="175" height="30"/>
+                                                                                <constraints>
+                                                                                    <constraint firstAttribute="width" constant="175" id="h2o-9l-kFB"/>
+                                                                                </constraints>
+                                                                                <fontDescription key="fontDescription" name="supermarket" family="supermarket" pointSize="16"/>
+                                                                                <nil key="highlightedColor"/>
+                                                                            </label>
+                                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="01055360166" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I5D-oR-8oT">
+                                                                                <rect key="frame" x="175" y="0.0" width="613" height="30"/>
+                                                                                <fontDescription key="fontDescription" name="supermarket" family="supermarket" pointSize="16"/>
+                                                                                <color key="textColor" name="NewPrimary"/>
+                                                                                <nil key="highlightedColor"/>
+                                                                            </label>
+                                                                        </subviews>
+                                                                    </stackView>
+                                                                </subviews>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="height" constant="30" id="8Ui-aM-jUn"/>
+                                                                    <constraint firstAttribute="trailing" secondItem="hBR-70-3jU" secondAttribute="trailing" id="DHg-ys-TPX"/>
+                                                                    <constraint firstItem="hBR-70-3jU" firstAttribute="leading" secondItem="6dW-Gc-Lid" secondAttribute="leading" id="HGo-24-8Qt"/>
+                                                                    <constraint firstItem="hBR-70-3jU" firstAttribute="top" secondItem="6dW-Gc-Lid" secondAttribute="top" id="fEr-0v-wzL"/>
+                                                                    <constraint firstAttribute="bottom" secondItem="hBR-70-3jU" secondAttribute="bottom" id="zIN-gH-2fi"/>
+                                                                </constraints>
+                                                            </view>
+                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LXa-t4-wTW">
+                                                                <rect key="frame" x="0.0" y="270" width="788" height="30"/>
+                                                                <subviews>
+                                                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="C1t-fV-bmd">
+                                                                        <rect key="frame" x="0.0" y="0.0" width="788" height="30"/>
+                                                                        <subviews>
+                                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="สาขา" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T1I-8a-0Qq">
+                                                                                <rect key="frame" x="0.0" y="0.0" width="175" height="30"/>
+                                                                                <constraints>
+                                                                                    <constraint firstAttribute="width" constant="175" id="aH4-bm-1Ir"/>
+                                                                                </constraints>
+                                                                                <fontDescription key="fontDescription" name="supermarket" family="supermarket" pointSize="16"/>
+                                                                                <nil key="highlightedColor"/>
+                                                                            </label>
+                                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00003" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rqy-8z-GWl">
+                                                                                <rect key="frame" x="175" y="0.0" width="613" height="30"/>
+                                                                                <fontDescription key="fontDescription" name="supermarket" family="supermarket" pointSize="16"/>
+                                                                                <color key="textColor" name="NewPrimary"/>
+                                                                                <nil key="highlightedColor"/>
+                                                                            </label>
+                                                                        </subviews>
+                                                                    </stackView>
+                                                                </subviews>
+                                                                <constraints>
+                                                                    <constraint firstItem="C1t-fV-bmd" firstAttribute="leading" secondItem="LXa-t4-wTW" secondAttribute="leading" id="8An-a1-1au"/>
+                                                                    <constraint firstAttribute="bottom" secondItem="C1t-fV-bmd" secondAttribute="bottom" id="BeN-iE-Ric"/>
+                                                                    <constraint firstAttribute="trailing" secondItem="C1t-fV-bmd" secondAttribute="trailing" id="Dpg-gW-pxJ"/>
+                                                                    <constraint firstItem="C1t-fV-bmd" firstAttribute="top" secondItem="LXa-t4-wTW" secondAttribute="top" id="Vgx-NY-VXI"/>
+                                                                    <constraint firstAttribute="height" constant="30" id="ojV-xy-I41"/>
+                                                                </constraints>
+                                                            </view>
+                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nBs-6D-KHe">
+                                                                <rect key="frame" x="0.0" y="300" width="788" height="30"/>
+                                                                <subviews>
+                                                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ec2-G6-YZK">
+                                                                        <rect key="frame" x="0.0" y="0.0" width="788" height="30"/>
+                                                                        <subviews>
+                                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="พนักงานขาย" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QJg-TA-LvQ">
+                                                                                <rect key="frame" x="0.0" y="0.0" width="175" height="30"/>
+                                                                                <constraints>
+                                                                                    <constraint firstAttribute="width" constant="175" id="V6M-53-Hc5"/>
+                                                                                </constraints>
+                                                                                <fontDescription key="fontDescription" name="supermarket" family="supermarket" pointSize="16"/>
+                                                                                <nil key="highlightedColor"/>
+                                                                            </label>
+                                                                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XV3-Pq-qGf">
+                                                                                <rect key="frame" x="175" y="0.0" width="613" height="30"/>
+                                                                                <subviews>
+                                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="E1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cKG-lx-KdA">
+                                                                                        <rect key="frame" x="0.0" y="0.0" width="30" height="30"/>
+                                                                                        <constraints>
+                                                                                            <constraint firstAttribute="width" constant="30" id="GX1-dJ-nRm"/>
+                                                                                        </constraints>
+                                                                                        <fontDescription key="fontDescription" name="supermarket" family="supermarket" pointSize="16"/>
+                                                                                        <color key="textColor" name="NewPrimary"/>
+                                                                                        <nil key="highlightedColor"/>
+                                                                                    </label>
+                                                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pWk-Uw-iyI">
+                                                                                        <rect key="frame" x="30" y="0.0" width="583" height="30"/>
+                                                                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                                                    </view>
+                                                                                </subviews>
+                                                                            </stackView>
+                                                                        </subviews>
+                                                                    </stackView>
+                                                                </subviews>
+                                                                <constraints>
+                                                                    <constraint firstItem="Ec2-G6-YZK" firstAttribute="leading" secondItem="nBs-6D-KHe" secondAttribute="leading" id="G9S-B2-bdj"/>
+                                                                    <constraint firstAttribute="trailing" secondItem="Ec2-G6-YZK" secondAttribute="trailing" id="KTz-VF-dGW"/>
+                                                                    <constraint firstAttribute="bottom" secondItem="Ec2-G6-YZK" secondAttribute="bottom" id="eVC-zK-lSL"/>
+                                                                    <constraint firstItem="Ec2-G6-YZK" firstAttribute="top" secondItem="nBs-6D-KHe" secondAttribute="top" id="fsB-Be-nPU"/>
+                                                                    <constraint firstAttribute="height" constant="30" id="uHU-mP-GqS"/>
+                                                                </constraints>
+                                                            </view>
+                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kPf-Lv-8SD">
+                                                                <rect key="frame" x="0.0" y="330" width="788" height="30"/>
+                                                                <subviews>
+                                                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OtD-mA-5tc">
+                                                                        <rect key="frame" x="0.0" y="0.0" width="788" height="30"/>
+                                                                        <subviews>
+                                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SALEMAN REGISTER" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AYL-wN-JFX">
+                                                                                <rect key="frame" x="0.0" y="0.0" width="175" height="30"/>
+                                                                                <constraints>
+                                                                                    <constraint firstAttribute="width" constant="175" id="MCv-ph-LCi"/>
+                                                                                </constraints>
+                                                                                <fontDescription key="fontDescription" name="supermarket" family="supermarket" pointSize="16"/>
+                                                                                <nil key="highlightedColor"/>
+                                                                            </label>
+                                                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="dnt-qb-lis">
+                                                                                <rect key="frame" x="175" y="0.0" width="168" height="30"/>
+                                                                                <subviews>
+                                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="JK" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hLN-G2-88J">
+                                                                                        <rect key="frame" x="0.0" y="0.0" width="30" height="30"/>
+                                                                                        <constraints>
+                                                                                            <constraint firstAttribute="width" constant="30" id="Adv-lc-ul6"/>
+                                                                                        </constraints>
+                                                                                        <fontDescription key="fontDescription" name="supermarket" family="supermarket" pointSize="16"/>
+                                                                                        <color key="textColor" name="NewPrimary"/>
+                                                                                        <nil key="highlightedColor"/>
+                                                                                    </label>
+                                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="DP" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b6m-mT-5Sc">
+                                                                                        <rect key="frame" x="46" y="0.0" width="30" height="30"/>
+                                                                                        <constraints>
+                                                                                            <constraint firstAttribute="width" constant="30" id="eJo-Mw-2It"/>
+                                                                                        </constraints>
+                                                                                        <fontDescription key="fontDescription" name="supermarket" family="supermarket" pointSize="16"/>
+                                                                                        <color key="textColor" name="NewPrimary"/>
+                                                                                        <nil key="highlightedColor"/>
+                                                                                    </label>
+                                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="XX" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4nf-2N-a1B">
+                                                                                        <rect key="frame" x="92" y="0.0" width="30" height="30"/>
+                                                                                        <constraints>
+                                                                                            <constraint firstAttribute="width" constant="30" id="TE8-YU-Ueh"/>
+                                                                                        </constraints>
+                                                                                        <fontDescription key="fontDescription" name="supermarket" family="supermarket" pointSize="16"/>
+                                                                                        <color key="textColor" name="NewPrimary"/>
+                                                                                        <nil key="highlightedColor"/>
+                                                                                    </label>
+                                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="JK" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TGf-49-MDg">
+                                                                                        <rect key="frame" x="138" y="0.0" width="30" height="30"/>
+                                                                                        <constraints>
+                                                                                            <constraint firstAttribute="width" constant="30" id="w06-Rm-iRP"/>
+                                                                                        </constraints>
+                                                                                        <fontDescription key="fontDescription" name="supermarket" family="supermarket" pointSize="16"/>
+                                                                                        <color key="textColor" name="NewPrimary"/>
+                                                                                        <nil key="highlightedColor"/>
+                                                                                    </label>
+                                                                                </subviews>
+                                                                            </stackView>
+                                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HXM-rq-8ho">
+                                                                                <rect key="frame" x="343" y="0.0" width="445" height="30"/>
+                                                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                                            </view>
+                                                                        </subviews>
+                                                                    </stackView>
+                                                                </subviews>
+                                                                <constraints>
+                                                                    <constraint firstItem="OtD-mA-5tc" firstAttribute="leading" secondItem="kPf-Lv-8SD" secondAttribute="leading" id="8q4-re-5cg"/>
+                                                                    <constraint firstAttribute="bottom" secondItem="OtD-mA-5tc" secondAttribute="bottom" id="BVj-DZ-Qor"/>
+                                                                    <constraint firstAttribute="height" constant="30" id="Fu7-Oy-rNE"/>
+                                                                    <constraint firstItem="OtD-mA-5tc" firstAttribute="top" secondItem="kPf-Lv-8SD" secondAttribute="top" id="YaU-oN-WzV"/>
+                                                                    <constraint firstAttribute="trailing" secondItem="OtD-mA-5tc" secondAttribute="trailing" id="e6h-qv-bLT"/>
+                                                                </constraints>
+                                                            </view>
+                                                        </subviews>
+                                                    </stackView>
+                                                </subviews>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <constraints>
+                                                    <constraint firstItem="S3i-pQ-QHq" firstAttribute="leading" secondItem="FNB-ds-DAo" secondAttribute="leading" constant="16" id="EYh-TB-oKN"/>
+                                                    <constraint firstItem="S3i-pQ-QHq" firstAttribute="top" secondItem="FNB-ds-DAo" secondAttribute="top" constant="16" id="idB-P5-IAd"/>
+                                                    <constraint firstAttribute="bottom" secondItem="S3i-pQ-QHq" secondAttribute="bottom" constant="16" id="qFz-xy-cv0"/>
+                                                    <constraint firstAttribute="trailing" secondItem="S3i-pQ-QHq" secondAttribute="trailing" constant="16" id="yMy-Z0-Qlf"/>
+                                                </constraints>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mJ3-cx-9aR">
+                                                <rect key="frame" x="0.0" y="392" width="820" height="122"/>
+                                                <subviews>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="zbX-7b-cWG">
+                                                        <rect key="frame" x="16" y="16" width="788" height="90"/>
+                                                        <subviews>
+                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hym-v7-lRs">
+                                                                <rect key="frame" x="0.0" y="0.0" width="394" height="90"/>
+                                                                <subviews>
+                                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="uqB-jW-jJG">
+                                                                        <rect key="frame" x="0.0" y="0.0" width="378" height="90"/>
+                                                                        <subviews>
+                                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cHg-rE-OeE">
+                                                                                <rect key="frame" x="0.0" y="0.0" width="378" height="30"/>
+                                                                                <subviews>
+                                                                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aRa-Zf-1dr">
+                                                                                        <rect key="frame" x="0.0" y="0.0" width="378" height="30"/>
+                                                                                        <subviews>
+                                                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="วงเงินเครดิต" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2XO-xd-bav">
+                                                                                                <rect key="frame" x="0.0" y="0.0" width="175" height="30"/>
+                                                                                                <constraints>
+                                                                                                    <constraint firstAttribute="width" constant="175" id="XLY-56-W0Z"/>
+                                                                                                </constraints>
+                                                                                                <fontDescription key="fontDescription" name="supermarket" family="supermarket" pointSize="16"/>
+                                                                                                <nil key="highlightedColor"/>
+                                                                                            </label>
+                                                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1,000,000,000" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p62-mM-xiT">
+                                                                                                <rect key="frame" x="175" y="0.0" width="173" height="30"/>
+                                                                                                <fontDescription key="fontDescription" name="supermarket" family="supermarket" pointSize="16"/>
+                                                                                                <color key="textColor" name="NewPrimary"/>
+                                                                                                <nil key="highlightedColor"/>
+                                                                                            </label>
+                                                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="บาท" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PYq-Kf-l4V">
+                                                                                                <rect key="frame" x="348" y="0.0" width="30" height="30"/>
+                                                                                                <constraints>
+                                                                                                    <constraint firstAttribute="width" constant="30" id="mrg-y1-3ar"/>
+                                                                                                </constraints>
+                                                                                                <fontDescription key="fontDescription" name="supermarket" family="supermarket" pointSize="16"/>
+                                                                                                <nil key="highlightedColor"/>
+                                                                                            </label>
+                                                                                        </subviews>
+                                                                                    </stackView>
+                                                                                </subviews>
+                                                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                                                <constraints>
+                                                                                    <constraint firstAttribute="bottom" secondItem="aRa-Zf-1dr" secondAttribute="bottom" id="DCR-4x-IUw"/>
+                                                                                    <constraint firstItem="aRa-Zf-1dr" firstAttribute="leading" secondItem="cHg-rE-OeE" secondAttribute="leading" id="MnK-k0-uCc"/>
+                                                                                    <constraint firstAttribute="height" constant="30" id="O2e-dA-BQ2"/>
+                                                                                    <constraint firstItem="aRa-Zf-1dr" firstAttribute="top" secondItem="cHg-rE-OeE" secondAttribute="top" id="OGU-c3-BHC"/>
+                                                                                    <constraint firstAttribute="trailing" secondItem="aRa-Zf-1dr" secondAttribute="trailing" id="kVi-lJ-NkF"/>
+                                                                                </constraints>
+                                                                            </view>
+                                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MxF-S8-j87">
+                                                                                <rect key="frame" x="0.0" y="30" width="378" height="30"/>
+                                                                                <subviews>
+                                                                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="THR-xK-g5W">
+                                                                                        <rect key="frame" x="0.0" y="0.0" width="378" height="30"/>
+                                                                                        <subviews>
+                                                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="วงเงินที่ใช้" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FF1-3i-eBc">
+                                                                                                <rect key="frame" x="0.0" y="0.0" width="175" height="30"/>
+                                                                                                <constraints>
+                                                                                                    <constraint firstAttribute="width" constant="175" id="5Pl-C1-0pq"/>
+                                                                                                </constraints>
+                                                                                                <fontDescription key="fontDescription" name="supermarket" family="supermarket" pointSize="16"/>
+                                                                                                <nil key="highlightedColor"/>
+                                                                                            </label>
+                                                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="64,683.79" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ezY-VQ-HXG">
+                                                                                                <rect key="frame" x="175" y="0.0" width="173" height="30"/>
+                                                                                                <fontDescription key="fontDescription" name="supermarket" family="supermarket" pointSize="16"/>
+                                                                                                <color key="textColor" name="NewPrimary"/>
+                                                                                                <nil key="highlightedColor"/>
+                                                                                            </label>
+                                                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="บาท" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HGN-tn-GmF">
+                                                                                                <rect key="frame" x="348" y="0.0" width="30" height="30"/>
+                                                                                                <constraints>
+                                                                                                    <constraint firstAttribute="width" constant="30" id="Zt9-hf-7jx"/>
+                                                                                                </constraints>
+                                                                                                <fontDescription key="fontDescription" name="supermarket" family="supermarket" pointSize="16"/>
+                                                                                                <nil key="highlightedColor"/>
+                                                                                            </label>
+                                                                                        </subviews>
+                                                                                    </stackView>
+                                                                                </subviews>
+                                                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                                                <constraints>
+                                                                                    <constraint firstAttribute="height" constant="30" id="3uc-FX-fkY"/>
+                                                                                    <constraint firstItem="THR-xK-g5W" firstAttribute="top" secondItem="MxF-S8-j87" secondAttribute="top" id="8YL-PV-c80"/>
+                                                                                    <constraint firstItem="THR-xK-g5W" firstAttribute="leading" secondItem="MxF-S8-j87" secondAttribute="leading" id="Ytn-9z-L4G"/>
+                                                                                    <constraint firstAttribute="bottom" secondItem="THR-xK-g5W" secondAttribute="bottom" id="Zk3-Yb-qkd"/>
+                                                                                    <constraint firstAttribute="trailing" secondItem="THR-xK-g5W" secondAttribute="trailing" id="pyL-aQ-o2E"/>
+                                                                                </constraints>
+                                                                            </view>
+                                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CSw-MR-Wck">
+                                                                                <rect key="frame" x="0.0" y="60" width="378" height="30"/>
+                                                                                <subviews>
+                                                                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IEo-RV-N8W">
+                                                                                        <rect key="frame" x="0.0" y="0.0" width="378" height="30"/>
+                                                                                        <subviews>
+                                                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="วงเงินคงเหลือ" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wos-uf-YDL">
+                                                                                                <rect key="frame" x="0.0" y="0.0" width="175" height="30"/>
+                                                                                                <constraints>
+                                                                                                    <constraint firstAttribute="width" constant="175" id="mQq-9x-LwN"/>
+                                                                                                </constraints>
+                                                                                                <fontDescription key="fontDescription" name="supermarket" family="supermarket" pointSize="16"/>
+                                                                                                <nil key="highlightedColor"/>
+                                                                                            </label>
+                                                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="935,316.21" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="buD-WQ-p8j">
+                                                                                                <rect key="frame" x="175" y="0.0" width="173" height="30"/>
+                                                                                                <fontDescription key="fontDescription" name="supermarket" family="supermarket" pointSize="16"/>
+                                                                                                <color key="textColor" name="NewPrimary"/>
+                                                                                                <nil key="highlightedColor"/>
+                                                                                            </label>
+                                                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="บาท" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E4b-Hd-P8h">
+                                                                                                <rect key="frame" x="348" y="0.0" width="30" height="30"/>
+                                                                                                <constraints>
+                                                                                                    <constraint firstAttribute="width" constant="30" id="5C1-Nj-oFU"/>
+                                                                                                </constraints>
+                                                                                                <fontDescription key="fontDescription" name="supermarket" family="supermarket" pointSize="16"/>
+                                                                                                <nil key="highlightedColor"/>
+                                                                                            </label>
+                                                                                        </subviews>
+                                                                                    </stackView>
+                                                                                </subviews>
+                                                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                                                <constraints>
+                                                                                    <constraint firstAttribute="bottom" secondItem="IEo-RV-N8W" secondAttribute="bottom" id="7wg-bR-x6e"/>
+                                                                                    <constraint firstAttribute="height" constant="30" id="cfU-9Z-a2G"/>
+                                                                                    <constraint firstAttribute="trailing" secondItem="IEo-RV-N8W" secondAttribute="trailing" id="gTQ-nU-Geo"/>
+                                                                                    <constraint firstItem="IEo-RV-N8W" firstAttribute="top" secondItem="CSw-MR-Wck" secondAttribute="top" id="tWt-NR-Thh"/>
+                                                                                    <constraint firstItem="IEo-RV-N8W" firstAttribute="leading" secondItem="CSw-MR-Wck" secondAttribute="leading" id="uqX-Wn-8K0"/>
+                                                                                </constraints>
+                                                                            </view>
+                                                                        </subviews>
+                                                                    </stackView>
+                                                                </subviews>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="bottom" secondItem="uqB-jW-jJG" secondAttribute="bottom" id="7EA-L8-ahl"/>
+                                                                    <constraint firstItem="uqB-jW-jJG" firstAttribute="leading" secondItem="hym-v7-lRs" secondAttribute="leading" id="oqO-HV-m82"/>
+                                                                    <constraint firstAttribute="trailing" secondItem="uqB-jW-jJG" secondAttribute="trailing" constant="16" id="pxq-ig-HQo"/>
+                                                                    <constraint firstItem="uqB-jW-jJG" firstAttribute="top" secondItem="hym-v7-lRs" secondAttribute="top" id="w8j-zc-9U1"/>
+                                                                </constraints>
+                                                            </view>
+                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Hly-1l-aZC">
+                                                                <rect key="frame" x="394" y="0.0" width="394" height="90"/>
+                                                                <subviews>
+                                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="ane-IV-dSh">
+                                                                        <rect key="frame" x="16" y="0.0" width="378" height="90"/>
+                                                                        <subviews>
+                                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="V8R-Z5-TWF">
+                                                                                <rect key="frame" x="0.0" y="0.0" width="378" height="30"/>
+                                                                                <subviews>
+                                                                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="O3f-PO-r8a">
+                                                                                        <rect key="frame" x="0.0" y="0.0" width="378" height="30"/>
+                                                                                        <subviews>
+                                                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ยอด AR" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pNF-eq-6kx">
+                                                                                                <rect key="frame" x="0.0" y="0.0" width="175" height="30"/>
+                                                                                                <constraints>
+                                                                                                    <constraint firstAttribute="width" constant="175" id="meO-sA-xvc"/>
+                                                                                                </constraints>
+                                                                                                <fontDescription key="fontDescription" name="supermarket" family="supermarket" pointSize="16"/>
+                                                                                                <nil key="highlightedColor"/>
+                                                                                            </label>
+                                                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="407,316.21" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2vB-NC-1GO">
+                                                                                                <rect key="frame" x="175" y="0.0" width="203" height="30"/>
+                                                                                                <fontDescription key="fontDescription" name="supermarket" family="supermarket" pointSize="16"/>
+                                                                                                <color key="textColor" name="NewPrimary"/>
+                                                                                                <nil key="highlightedColor"/>
+                                                                                            </label>
+                                                                                        </subviews>
+                                                                                    </stackView>
+                                                                                </subviews>
+                                                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                                                <constraints>
+                                                                                    <constraint firstItem="O3f-PO-r8a" firstAttribute="top" secondItem="V8R-Z5-TWF" secondAttribute="top" id="AAP-mz-kbT"/>
+                                                                                    <constraint firstItem="O3f-PO-r8a" firstAttribute="leading" secondItem="V8R-Z5-TWF" secondAttribute="leading" id="DaN-qU-9k0"/>
+                                                                                    <constraint firstAttribute="bottom" secondItem="O3f-PO-r8a" secondAttribute="bottom" id="FaA-MA-GLU"/>
+                                                                                    <constraint firstAttribute="height" constant="30" id="b0C-xz-Ldi"/>
+                                                                                    <constraint firstAttribute="trailing" secondItem="O3f-PO-r8a" secondAttribute="trailing" id="sge-qd-Hl9"/>
+                                                                                </constraints>
+                                                                            </view>
+                                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Pdq-0J-S7e">
+                                                                                <rect key="frame" x="0.0" y="30" width="378" height="30"/>
+                                                                                <subviews>
+                                                                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1Do-cl-sg4">
+                                                                                        <rect key="frame" x="0.0" y="0.0" width="378" height="30"/>
+                                                                                        <subviews>
+                                                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ยอดเช็คคืน" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PG3-QU-gL5">
+                                                                                                <rect key="frame" x="0.0" y="0.0" width="175" height="30"/>
+                                                                                                <constraints>
+                                                                                                    <constraint firstAttribute="width" constant="175" id="MgP-nO-lBn"/>
+                                                                                                </constraints>
+                                                                                                <fontDescription key="fontDescription" name="supermarket" family="supermarket" pointSize="16"/>
+                                                                                                <nil key="highlightedColor"/>
+                                                                                            </label>
+                                                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0.00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pgI-il-cjz">
+                                                                                                <rect key="frame" x="175" y="0.0" width="203" height="30"/>
+                                                                                                <fontDescription key="fontDescription" name="supermarket" family="supermarket" pointSize="16"/>
+                                                                                                <color key="textColor" name="NewPrimary"/>
+                                                                                                <nil key="highlightedColor"/>
+                                                                                            </label>
+                                                                                        </subviews>
+                                                                                    </stackView>
+                                                                                </subviews>
+                                                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                                                <constraints>
+                                                                                    <constraint firstItem="1Do-cl-sg4" firstAttribute="leading" secondItem="Pdq-0J-S7e" secondAttribute="leading" id="33j-6r-IDZ"/>
+                                                                                    <constraint firstAttribute="trailing" secondItem="1Do-cl-sg4" secondAttribute="trailing" id="6ZM-tt-qce"/>
+                                                                                    <constraint firstItem="1Do-cl-sg4" firstAttribute="top" secondItem="Pdq-0J-S7e" secondAttribute="top" id="OPj-Ph-PGQ"/>
+                                                                                    <constraint firstAttribute="height" constant="30" id="hBd-JW-Kxt"/>
+                                                                                    <constraint firstAttribute="bottom" secondItem="1Do-cl-sg4" secondAttribute="bottom" id="ira-sA-hzX"/>
+                                                                                </constraints>
+                                                                            </view>
+                                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nAC-sU-1Vo">
+                                                                                <rect key="frame" x="0.0" y="60" width="378" height="30"/>
+                                                                                <subviews>
+                                                                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xH0-hr-vgb">
+                                                                                        <rect key="frame" x="0.0" y="0.0" width="378" height="30"/>
+                                                                                        <subviews>
+                                                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ระยะเวลาเครดิต" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JGY-fz-JVj">
+                                                                                                <rect key="frame" x="0.0" y="0.0" width="175" height="30"/>
+                                                                                                <constraints>
+                                                                                                    <constraint firstAttribute="width" constant="175" id="okw-RC-JFQ"/>
+                                                                                                </constraints>
+                                                                                                <fontDescription key="fontDescription" name="supermarket" family="supermarket" pointSize="16"/>
+                                                                                                <nil key="highlightedColor"/>
+                                                                                            </label>
+                                                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="90" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o1J-EN-7fF">
+                                                                                                <rect key="frame" x="175" y="0.0" width="173" height="30"/>
+                                                                                                <fontDescription key="fontDescription" name="supermarket" family="supermarket" pointSize="16"/>
+                                                                                                <color key="textColor" name="NewPrimary"/>
+                                                                                                <nil key="highlightedColor"/>
+                                                                                            </label>
+                                                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="วัน" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Ui-uN-cwQ">
+                                                                                                <rect key="frame" x="348" y="0.0" width="30" height="30"/>
+                                                                                                <constraints>
+                                                                                                    <constraint firstAttribute="width" constant="30" id="HQr-9X-eAj"/>
+                                                                                                </constraints>
+                                                                                                <fontDescription key="fontDescription" name="supermarket" family="supermarket" pointSize="16"/>
+                                                                                                <nil key="highlightedColor"/>
+                                                                                            </label>
+                                                                                        </subviews>
+                                                                                    </stackView>
+                                                                                </subviews>
+                                                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                                                <constraints>
+                                                                                    <constraint firstAttribute="trailing" secondItem="xH0-hr-vgb" secondAttribute="trailing" id="VFB-dO-Wtf"/>
+                                                                                    <constraint firstItem="xH0-hr-vgb" firstAttribute="leading" secondItem="nAC-sU-1Vo" secondAttribute="leading" id="XHq-Xu-GEq"/>
+                                                                                    <constraint firstItem="xH0-hr-vgb" firstAttribute="top" secondItem="nAC-sU-1Vo" secondAttribute="top" id="fWi-eh-qR0"/>
+                                                                                    <constraint firstAttribute="bottom" secondItem="xH0-hr-vgb" secondAttribute="bottom" id="kVL-pu-cdI"/>
+                                                                                    <constraint firstAttribute="height" constant="30" id="nfO-GN-oLp"/>
+                                                                                </constraints>
+                                                                            </view>
+                                                                        </subviews>
+                                                                    </stackView>
+                                                                </subviews>
+                                                                <constraints>
+                                                                    <constraint firstItem="ane-IV-dSh" firstAttribute="leading" secondItem="Hly-1l-aZC" secondAttribute="leading" constant="16" id="5bD-aN-Ddf"/>
+                                                                    <constraint firstItem="ane-IV-dSh" firstAttribute="top" secondItem="Hly-1l-aZC" secondAttribute="top" id="EFZ-ud-9eA"/>
+                                                                    <constraint firstAttribute="trailing" secondItem="ane-IV-dSh" secondAttribute="trailing" id="GaW-rE-jYQ"/>
+                                                                    <constraint firstAttribute="bottom" secondItem="ane-IV-dSh" secondAttribute="bottom" id="e5I-Cu-Ae5"/>
+                                                                </constraints>
+                                                            </view>
+                                                        </subviews>
+                                                    </stackView>
+                                                </subviews>
+                                                <color key="backgroundColor" name="BlueSky"/>
+                                                <constraints>
+                                                    <constraint firstItem="zbX-7b-cWG" firstAttribute="leading" secondItem="mJ3-cx-9aR" secondAttribute="leading" constant="16" id="6Gu-dO-zsl"/>
+                                                    <constraint firstItem="zbX-7b-cWG" firstAttribute="top" secondItem="mJ3-cx-9aR" secondAttribute="top" constant="16" id="npu-he-lAX"/>
+                                                    <constraint firstAttribute="bottom" secondItem="zbX-7b-cWG" secondAttribute="bottom" constant="16" id="uHo-P2-oo4"/>
+                                                    <constraint firstAttribute="trailing" secondItem="zbX-7b-cWG" secondAttribute="trailing" constant="16" id="xlN-gn-dPr"/>
+                                                </constraints>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ynD-fX-ymL">
+                                                <rect key="frame" x="0.0" y="514" width="820" height="122"/>
+                                                <subviews>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="eEY-Id-eWN">
+                                                        <rect key="frame" x="16" y="16" width="788" height="90"/>
+                                                        <subviews>
+                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tjh-zn-njW">
+                                                                <rect key="frame" x="0.0" y="0.0" width="788" height="90"/>
+                                                                <subviews>
+                                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="YDv-8A-hyw">
+                                                                        <rect key="frame" x="0.0" y="0.0" width="772" height="90"/>
+                                                                        <subviews>
+                                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vTC-gc-vLD">
+                                                                                <rect key="frame" x="0.0" y="0.0" width="772" height="30"/>
+                                                                                <subviews>
+                                                                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="unl-X1-Ewe">
+                                                                                        <rect key="frame" x="0.0" y="0.0" width="772" height="30"/>
+                                                                                        <subviews>
+                                                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="เงื่อนไขเครดิตเทอม" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qub-db-Ecb">
+                                                                                                <rect key="frame" x="0.0" y="0.0" width="175" height="30"/>
+                                                                                                <constraints>
+                                                                                                    <constraint firstAttribute="width" constant="175" id="2nX-92-UpV"/>
+                                                                                                </constraints>
+                                                                                                <fontDescription key="fontDescription" name="supermarket" family="supermarket" pointSize="16"/>
+                                                                                                <nil key="highlightedColor"/>
+                                                                                            </label>
+                                                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="90 วัน (ไม่นับเดือนส่งของ)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b7f-T4-QEL">
+                                                                                                <rect key="frame" x="175" y="0.0" width="597" height="30"/>
+                                                                                                <fontDescription key="fontDescription" name="supermarket" family="supermarket" pointSize="16"/>
+                                                                                                <color key="textColor" name="NewPrimary"/>
+                                                                                                <nil key="highlightedColor"/>
+                                                                                            </label>
+                                                                                        </subviews>
+                                                                                    </stackView>
+                                                                                </subviews>
+                                                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                                                <constraints>
+                                                                                    <constraint firstAttribute="trailing" secondItem="unl-X1-Ewe" secondAttribute="trailing" id="Blg-PO-14a"/>
+                                                                                    <constraint firstItem="unl-X1-Ewe" firstAttribute="top" secondItem="vTC-gc-vLD" secondAttribute="top" id="Cqc-UH-acP"/>
+                                                                                    <constraint firstAttribute="height" constant="30" id="GyG-pm-fKd"/>
+                                                                                    <constraint firstItem="unl-X1-Ewe" firstAttribute="leading" secondItem="vTC-gc-vLD" secondAttribute="leading" id="Qjj-X0-G7f"/>
+                                                                                    <constraint firstAttribute="bottom" secondItem="unl-X1-Ewe" secondAttribute="bottom" id="uql-Fp-jdS"/>
+                                                                                </constraints>
+                                                                            </view>
+                                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XQu-Sa-JpW">
+                                                                                <rect key="frame" x="0.0" y="30" width="772" height="30"/>
+                                                                                <subviews>
+                                                                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Pqx-TN-NJE">
+                                                                                        <rect key="frame" x="0.0" y="0.0" width="772" height="30"/>
+                                                                                        <subviews>
+                                                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="เงื่อนไขการวางบิล" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PxF-H5-gC9">
+                                                                                                <rect key="frame" x="0.0" y="0.0" width="175" height="30"/>
+                                                                                                <constraints>
+                                                                                                    <constraint firstAttribute="width" constant="175" id="XV0-jv-5RS"/>
+                                                                                                </constraints>
+                                                                                                <fontDescription key="fontDescription" name="supermarket" family="supermarket" pointSize="16"/>
+                                                                                                <nil key="highlightedColor"/>
+                                                                                            </label>
+                                                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="วางบิล รับเช็ค พุธที่ 2 เเละที่ 4 มี 5 พุธนับตั้งเเต่พุธเเรก บช.ต่อ 124*" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FHd-8a-UZT">
+                                                                                                <rect key="frame" x="175" y="0.0" width="597" height="30"/>
+                                                                                                <fontDescription key="fontDescription" name="supermarket" family="supermarket" pointSize="16"/>
+                                                                                                <color key="textColor" name="NewPrimary"/>
+                                                                                                <nil key="highlightedColor"/>
+                                                                                            </label>
+                                                                                        </subviews>
+                                                                                    </stackView>
+                                                                                </subviews>
+                                                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                                                <constraints>
+                                                                                    <constraint firstAttribute="bottom" secondItem="Pqx-TN-NJE" secondAttribute="bottom" id="AYG-JN-Rk6"/>
+                                                                                    <constraint firstItem="Pqx-TN-NJE" firstAttribute="top" secondItem="XQu-Sa-JpW" secondAttribute="top" id="K3u-lt-hxB"/>
+                                                                                    <constraint firstItem="Pqx-TN-NJE" firstAttribute="leading" secondItem="XQu-Sa-JpW" secondAttribute="leading" id="W6f-px-kfu"/>
+                                                                                    <constraint firstAttribute="height" constant="30" id="kWy-Kb-JdH"/>
+                                                                                    <constraint firstAttribute="trailing" secondItem="Pqx-TN-NJE" secondAttribute="trailing" id="unp-sS-Fd8"/>
+                                                                                </constraints>
+                                                                            </view>
+                                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uHr-gf-qbC">
+                                                                                <rect key="frame" x="0.0" y="60" width="772" height="30"/>
+                                                                                <subviews>
+                                                                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OFI-lh-e2g">
+                                                                                        <rect key="frame" x="0.0" y="0.0" width="772" height="30"/>
+                                                                                        <subviews>
+                                                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="เงื่อนไขการเก็บเงิน" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kgG-HN-2pY">
+                                                                                                <rect key="frame" x="0.0" y="0.0" width="175" height="30"/>
+                                                                                                <constraints>
+                                                                                                    <constraint firstAttribute="width" constant="175" id="96G-V2-CV0"/>
+                                                                                                </constraints>
+                                                                                                <fontDescription key="fontDescription" name="supermarket" family="supermarket" pointSize="16"/>
+                                                                                                <nil key="highlightedColor"/>
+                                                                                            </label>
+                                                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="081-4147835 บช. 0818992902 จัดซื้อ" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sng-LJ-hyv">
+                                                                                                <rect key="frame" x="175" y="0.0" width="597" height="30"/>
+                                                                                                <fontDescription key="fontDescription" name="supermarket" family="supermarket" pointSize="16"/>
+                                                                                                <color key="textColor" name="NewPrimary"/>
+                                                                                                <nil key="highlightedColor"/>
+                                                                                            </label>
+                                                                                        </subviews>
+                                                                                    </stackView>
+                                                                                </subviews>
+                                                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                                                <constraints>
+                                                                                    <constraint firstAttribute="height" constant="30" id="3lE-eg-494"/>
+                                                                                    <constraint firstAttribute="trailing" secondItem="OFI-lh-e2g" secondAttribute="trailing" id="G88-dX-JJP"/>
+                                                                                    <constraint firstAttribute="bottom" secondItem="OFI-lh-e2g" secondAttribute="bottom" id="P38-dm-PRT"/>
+                                                                                    <constraint firstItem="OFI-lh-e2g" firstAttribute="top" secondItem="uHr-gf-qbC" secondAttribute="top" id="aia-yS-yRF"/>
+                                                                                    <constraint firstItem="OFI-lh-e2g" firstAttribute="leading" secondItem="uHr-gf-qbC" secondAttribute="leading" id="vEm-s0-h4B"/>
+                                                                                </constraints>
+                                                                            </view>
+                                                                        </subviews>
+                                                                    </stackView>
+                                                                </subviews>
+                                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="bottom" secondItem="YDv-8A-hyw" secondAttribute="bottom" id="0Uc-gb-gpU"/>
+                                                                    <constraint firstItem="YDv-8A-hyw" firstAttribute="top" secondItem="tjh-zn-njW" secondAttribute="top" id="Nnc-Os-Uo1"/>
+                                                                    <constraint firstItem="YDv-8A-hyw" firstAttribute="leading" secondItem="tjh-zn-njW" secondAttribute="leading" id="QpS-83-oCF"/>
+                                                                    <constraint firstAttribute="trailing" secondItem="YDv-8A-hyw" secondAttribute="trailing" constant="16" id="ZnO-pH-eUY"/>
+                                                                </constraints>
+                                                            </view>
+                                                        </subviews>
+                                                    </stackView>
+                                                </subviews>
+                                                <color key="backgroundColor" name="BlueSky"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="bottom" secondItem="eEY-Id-eWN" secondAttribute="bottom" constant="16" id="3fU-rf-URj"/>
+                                                    <constraint firstItem="eEY-Id-eWN" firstAttribute="leading" secondItem="ynD-fX-ymL" secondAttribute="leading" constant="16" id="IHW-eq-kEj"/>
+                                                    <constraint firstAttribute="trailing" secondItem="eEY-Id-eWN" secondAttribute="trailing" constant="16" id="dVq-8d-UnL"/>
+                                                    <constraint firstItem="eEY-Id-eWN" firstAttribute="top" secondItem="ynD-fX-ymL" secondAttribute="top" constant="16" id="s5L-gr-cyL"/>
+                                                </constraints>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VvQ-pC-veM">
+                                                <rect key="frame" x="0.0" y="636" width="820" height="536"/>
+                                                <subviews>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Zqd-Y3-uaI">
+                                                        <rect key="frame" x="0.0" y="16" width="820" height="504"/>
+                                                        <subviews>
+                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="O8L-XJ-akG">
+                                                                <rect key="frame" x="0.0" y="0.0" width="820" height="168"/>
+                                                                <subviews>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rth-LG-XeZ">
+                                                                        <rect key="frame" x="16" y="0.0" width="175" height="34"/>
+                                                                        <constraints>
+                                                                            <constraint firstAttribute="width" constant="175" id="wha-k1-0xM"/>
+                                                                        </constraints>
+                                                                        <attributedString key="attributedText">
+                                                                            <fragment content="ลักษณะธุรกิจของลูกค้า">
+                                                                                <attributes>
+                                                                                    <color key="NSColor" systemColor="labelColor"/>
+                                                                                    <font key="NSFont" size="16" name="supermarket"/>
+                                                                                    <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineHeightMultiple="1.8" tighteningFactorForTruncation="0.0"/>
+                                                                                </attributes>
+                                                                            </fragment>
+                                                                        </attributedString>
+                                                                        <nil key="highlightedColor"/>
+                                                                    </label>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cXu-A3-1Va">
+                                                                        <rect key="frame" x="191" y="0.0" width="613" height="168"/>
+                                                                        <attributedString key="attributedText">
+                                                                            <fragment>
+                                                                                <mutableString key="content">ผู้จำหน่าย เครื่องนับเงิน เครื่องทำลายเอกสาร เเละผู้ผลิตตู้รับชำระค่าสินค้าเเละบริการ XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</mutableString>
+                                                                                <attributes>
+                                                                                    <color key="NSColor" name="NewPrimary"/>
+                                                                                    <font key="NSFont" size="16" name="supermarket"/>
+                                                                                    <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineHeightMultiple="1.8" tighteningFactorForTruncation="0.0"/>
+                                                                                </attributes>
+                                                                            </fragment>
+                                                                        </attributedString>
+                                                                        <nil key="highlightedColor"/>
+                                                                        <size key="shadowOffset" width="0.0" height="1"/>
+                                                                    </label>
+                                                                </subviews>
+                                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                                <constraints>
+                                                                    <constraint firstItem="cXu-A3-1Va" firstAttribute="top" secondItem="O8L-XJ-akG" secondAttribute="top" id="6NI-9C-guF"/>
+                                                                    <constraint firstItem="Rth-LG-XeZ" firstAttribute="top" secondItem="O8L-XJ-akG" secondAttribute="top" id="9rC-9T-Wi4"/>
+                                                                    <constraint firstAttribute="trailing" secondItem="cXu-A3-1Va" secondAttribute="trailing" constant="16" id="kaa-tZ-O1M"/>
+                                                                    <constraint firstItem="Rth-LG-XeZ" firstAttribute="leading" secondItem="O8L-XJ-akG" secondAttribute="leading" constant="16" id="sy3-n4-27p"/>
+                                                                    <constraint firstItem="cXu-A3-1Va" firstAttribute="leading" secondItem="Rth-LG-XeZ" secondAttribute="trailing" id="t0u-Un-zMF"/>
+                                                                    <constraint firstAttribute="bottom" secondItem="cXu-A3-1Va" secondAttribute="bottom" id="wmG-WY-0HW"/>
+                                                                    <constraint firstItem="Rth-LG-XeZ" firstAttribute="top" secondItem="O8L-XJ-akG" secondAttribute="top" id="x5I-g2-vNm"/>
+                                                                </constraints>
+                                                            </view>
+                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="o5v-KA-env">
+                                                                <rect key="frame" x="0.0" y="168" width="820" height="168"/>
+                                                                <subviews>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t6q-PU-hlD">
+                                                                        <rect key="frame" x="16" y="0.0" width="175" height="34"/>
+                                                                        <constraints>
+                                                                            <constraint firstAttribute="width" constant="175" id="zHw-cV-XuF"/>
+                                                                        </constraints>
+                                                                        <attributedString key="attributedText">
+                                                                            <fragment content="ประเภทธุรกิจ">
+                                                                                <attributes>
+                                                                                    <color key="NSColor" systemColor="labelColor"/>
+                                                                                    <font key="NSFont" size="16" name="supermarket"/>
+                                                                                    <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineHeightMultiple="1.8" tighteningFactorForTruncation="0.0"/>
+                                                                                </attributes>
+                                                                            </fragment>
+                                                                        </attributedString>
+                                                                        <nil key="highlightedColor"/>
+                                                                    </label>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PYY-Ac-9GM">
+                                                                        <rect key="frame" x="191" y="0.0" width="613" height="168"/>
+                                                                        <attributedString key="attributedText">
+                                                                            <fragment>
+                                                                                <string key="content">ผู้ผลิตสินค้าเพื่อจำหน่าย (MANUFACTURER) XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</string>
+                                                                                <attributes>
+                                                                                    <color key="NSColor" name="NewPrimary"/>
+                                                                                    <font key="NSFont" size="16" name="supermarket"/>
+                                                                                    <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineHeightMultiple="1.8" tighteningFactorForTruncation="0.0"/>
+                                                                                </attributes>
+                                                                            </fragment>
+                                                                        </attributedString>
+                                                                        <nil key="highlightedColor"/>
+                                                                        <size key="shadowOffset" width="0.0" height="1"/>
+                                                                    </label>
+                                                                </subviews>
+                                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                                <constraints>
+                                                                    <constraint firstItem="t6q-PU-hlD" firstAttribute="leading" secondItem="o5v-KA-env" secondAttribute="leading" constant="16" id="2tr-SH-kjG"/>
+                                                                    <constraint firstItem="PYY-Ac-9GM" firstAttribute="top" secondItem="o5v-KA-env" secondAttribute="top" id="3Wh-2X-ve5"/>
+                                                                    <constraint firstItem="t6q-PU-hlD" firstAttribute="top" secondItem="o5v-KA-env" secondAttribute="top" id="RSo-Pj-Odz"/>
+                                                                    <constraint firstAttribute="trailing" secondItem="PYY-Ac-9GM" secondAttribute="trailing" constant="16" id="bTp-dP-oOT"/>
+                                                                    <constraint firstItem="t6q-PU-hlD" firstAttribute="top" secondItem="o5v-KA-env" secondAttribute="top" id="dmR-83-uxj"/>
+                                                                    <constraint firstAttribute="bottom" secondItem="PYY-Ac-9GM" secondAttribute="bottom" id="uN6-PC-Tzb"/>
+                                                                    <constraint firstItem="PYY-Ac-9GM" firstAttribute="leading" secondItem="t6q-PU-hlD" secondAttribute="trailing" id="wTz-ST-Zy0"/>
+                                                                </constraints>
+                                                            </view>
+                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nLT-s8-xcm">
+                                                                <rect key="frame" x="0.0" y="336" width="820" height="168"/>
+                                                                <subviews>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G9X-ea-mZC">
+                                                                        <rect key="frame" x="16" y="0.0" width="175" height="34"/>
+                                                                        <constraints>
+                                                                            <constraint firstAttribute="width" constant="175" id="Z6n-ix-mSs"/>
+                                                                        </constraints>
+                                                                        <attributedString key="attributedText">
+                                                                            <fragment content="ประเภทสินค้า">
+                                                                                <attributes>
+                                                                                    <color key="NSColor" systemColor="labelColor"/>
+                                                                                    <font key="NSFont" size="16" name="supermarket"/>
+                                                                                    <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineHeightMultiple="1.8" tighteningFactorForTruncation="0.0"/>
+                                                                                </attributes>
+                                                                            </fragment>
+                                                                        </attributedString>
+                                                                        <nil key="highlightedColor"/>
+                                                                    </label>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5eB-Wb-2SP">
+                                                                        <rect key="frame" x="191" y="0.0" width="613" height="168"/>
+                                                                        <attributedString key="attributedText">
+                                                                            <fragment>
+                                                                                <string key="content">Automation - Others XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</string>
+                                                                                <attributes>
+                                                                                    <color key="NSColor" name="NewPrimary"/>
+                                                                                    <font key="NSFont" size="16" name="supermarket"/>
+                                                                                    <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineHeightMultiple="1.8" tighteningFactorForTruncation="0.0"/>
+                                                                                </attributes>
+                                                                            </fragment>
+                                                                        </attributedString>
+                                                                        <nil key="highlightedColor"/>
+                                                                        <size key="shadowOffset" width="0.0" height="1"/>
+                                                                    </label>
+                                                                </subviews>
+                                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                                <constraints>
+                                                                    <constraint firstItem="G9X-ea-mZC" firstAttribute="leading" secondItem="nLT-s8-xcm" secondAttribute="leading" constant="16" id="CP3-vK-fGk"/>
+                                                                    <constraint firstAttribute="trailing" secondItem="5eB-Wb-2SP" secondAttribute="trailing" constant="16" id="N0U-u8-Fcr"/>
+                                                                    <constraint firstAttribute="bottom" secondItem="5eB-Wb-2SP" secondAttribute="bottom" id="P86-XH-Tfa"/>
+                                                                    <constraint firstItem="5eB-Wb-2SP" firstAttribute="top" secondItem="nLT-s8-xcm" secondAttribute="top" id="alb-yZ-zxL"/>
+                                                                    <constraint firstItem="5eB-Wb-2SP" firstAttribute="leading" secondItem="G9X-ea-mZC" secondAttribute="trailing" id="ibo-Q0-icG"/>
+                                                                    <constraint firstItem="G9X-ea-mZC" firstAttribute="top" secondItem="nLT-s8-xcm" secondAttribute="top" id="kaf-eH-rTV"/>
+                                                                    <constraint firstItem="G9X-ea-mZC" firstAttribute="top" secondItem="nLT-s8-xcm" secondAttribute="top" id="vuK-GI-7u0"/>
+                                                                </constraints>
+                                                            </view>
+                                                        </subviews>
+                                                    </stackView>
+                                                </subviews>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="bottom" secondItem="Zqd-Y3-uaI" secondAttribute="bottom" constant="16" id="6WP-xK-Mh9"/>
+                                                    <constraint firstItem="Zqd-Y3-uaI" firstAttribute="top" secondItem="VvQ-pC-veM" secondAttribute="top" constant="16" id="E5Z-Fw-kiq"/>
+                                                    <constraint firstAttribute="trailing" secondItem="Zqd-Y3-uaI" secondAttribute="trailing" id="YaA-jH-Vij"/>
+                                                    <constraint firstItem="Zqd-Y3-uaI" firstAttribute="leading" secondItem="VvQ-pC-veM" secondAttribute="leading" id="l9c-pi-483"/>
+                                                </constraints>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="64h-xg-1z8">
+                                                <rect key="frame" x="0.0" y="1172" width="820" height="182"/>
+                                                <subviews>
+                                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" bounces="NO" alwaysBounceVertical="YES" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="zVK-VF-X49">
+                                                        <rect key="frame" x="16" y="16" width="788" height="150"/>
+                                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="150" id="Gs5-Ba-CWX"/>
+                                                        </constraints>
+                                                    </tableView>
+                                                </subviews>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <constraints>
+                                                    <constraint firstItem="zVK-VF-X49" firstAttribute="top" secondItem="64h-xg-1z8" secondAttribute="top" constant="16" id="HRn-L3-3Pp"/>
+                                                    <constraint firstItem="zVK-VF-X49" firstAttribute="leading" secondItem="64h-xg-1z8" secondAttribute="leading" constant="16" id="S1w-x2-QmF"/>
+                                                    <constraint firstAttribute="trailing" secondItem="zVK-VF-X49" secondAttribute="trailing" constant="16" id="Uu9-Hf-xZi"/>
+                                                    <constraint firstAttribute="bottom" secondItem="zVK-VF-X49" secondAttribute="bottom" constant="16" id="h6x-DW-vdU"/>
+                                                </constraints>
+                                            </view>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="RWQ-Pe-iDM" firstAttribute="bottom" secondItem="znm-9d-a85" secondAttribute="bottom" id="8HN-RV-cE9"/>
+                                    <constraint firstItem="RWQ-Pe-iDM" firstAttribute="leading" secondItem="znm-9d-a85" secondAttribute="leading" id="8Sv-rd-WvJ"/>
+                                    <constraint firstItem="RWQ-Pe-iDM" firstAttribute="width" secondItem="reQ-jP-o6k" secondAttribute="width" id="BDD-M9-BrZ"/>
+                                    <constraint firstItem="RWQ-Pe-iDM" firstAttribute="trailing" secondItem="znm-9d-a85" secondAttribute="trailing" id="Jga-2Q-CFG"/>
+                                    <constraint firstItem="RWQ-Pe-iDM" firstAttribute="top" secondItem="znm-9d-a85" secondAttribute="top" id="SjU-JZ-Q0o"/>
+                                </constraints>
+                                <viewLayoutGuide key="contentLayoutGuide" id="znm-9d-a85"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="reQ-jP-o6k"/>
+                            </scrollView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vHf-oE-zPf"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="MfR-UM-IYc" firstAttribute="top" secondItem="vHf-oE-zPf" secondAttribute="top" id="0yk-BD-qWt"/>
+                            <constraint firstItem="MfR-UM-IYc" firstAttribute="leading" secondItem="vHf-oE-zPf" secondAttribute="leading" id="Bub-HX-Xst"/>
+                            <constraint firstItem="MfR-UM-IYc" firstAttribute="bottom" secondItem="vHf-oE-zPf" secondAttribute="bottom" id="K1q-F3-z3f"/>
+                            <constraint firstItem="MfR-UM-IYc" firstAttribute="trailing" secondItem="vHf-oE-zPf" secondAttribute="trailing" id="VK9-go-uIX"/>
+                        </constraints>
+                    </view>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="820" height="1500"/>
+                    <connections>
+                        <outlet property="conditionCreditView" destination="ynD-fX-ymL" id="AhV-Nl-RiM"/>
+                        <outlet property="creditBalanceView" destination="mJ3-cx-9aR" id="pGE-hc-JD9"/>
+                        <outlet property="tableView" destination="zVK-VF-X49" id="GFv-52-Qu9"/>
+                        <outlet property="tableViewHeight" destination="Gs5-Ba-CWX" id="WmN-rp-bvZ"/>
+                        <outlet property="typeCustomer" destination="cXu-A3-1Va" id="Glq-E1-Mkf"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="oWg-Da-fDC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-254.63414634146341" y="42.711864406779661"/>
+        </scene>
+    </scenes>
+    <resources>
+        <namedColor name="BlueSky">
+            <color red="0.94509803921568625" green="0.98431372549019602" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="NewPrimary">
+            <color red="0.10588235294117647" green="0.27843137254901962" blue="0.58431372549019611" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

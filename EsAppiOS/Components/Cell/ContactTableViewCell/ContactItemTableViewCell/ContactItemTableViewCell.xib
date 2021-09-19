@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="ipad10_9rounded" orientation="portrait" layout="fullscreen" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="supermarket.ttf">
+            <string>supermarket</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="KGk-i7-Jjw" customClass="ContactItemTableViewCell" customModule="EsAppiOS" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="850" height="44"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="850" height="44"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="GIf-Iy-XUV">
+                        <rect key="frame" x="0.0" y="0.0" width="850" height="44"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sd9-Uh-b8J">
+                                <rect key="frame" x="0.0" y="0.0" width="170" height="44"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="K. Test" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O3r-38-I6t">
+                                        <rect key="frame" x="8" y="8" width="154" height="28"/>
+                                        <fontDescription key="fontDescription" name="supermarket" family="supermarket" pointSize="19"/>
+                                        <color key="textColor" name="NewPrimary"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="O3r-38-I6t" firstAttribute="top" secondItem="sd9-Uh-b8J" secondAttribute="top" constant="8" id="1IO-9j-W7x"/>
+                                    <constraint firstItem="O3r-38-I6t" firstAttribute="leading" secondItem="sd9-Uh-b8J" secondAttribute="leading" constant="8" id="6JY-IM-WTq"/>
+                                    <constraint firstAttribute="trailing" secondItem="O3r-38-I6t" secondAttribute="trailing" constant="8" id="SNT-zn-2fG"/>
+                                    <constraint firstAttribute="bottom" secondItem="O3r-38-I6t" secondAttribute="bottom" constant="8" id="bhS-AC-EkZ"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="y7v-9t-4rM">
+                                <rect key="frame" x="170" y="0.0" width="170" height="44"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ENGINEER" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sVj-A3-Moh">
+                                        <rect key="frame" x="8" y="8" width="154" height="28"/>
+                                        <fontDescription key="fontDescription" name="supermarket" family="supermarket" pointSize="19"/>
+                                        <color key="textColor" name="NewPrimary"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="sVj-A3-Moh" secondAttribute="bottom" constant="8" id="HEr-W6-MiQ"/>
+                                    <constraint firstAttribute="trailing" secondItem="sVj-A3-Moh" secondAttribute="trailing" constant="8" id="Hvw-Gl-mYL"/>
+                                    <constraint firstItem="sVj-A3-Moh" firstAttribute="top" secondItem="y7v-9t-4rM" secondAttribute="top" constant="8" id="LXH-fL-xDa"/>
+                                    <constraint firstItem="sVj-A3-Moh" firstAttribute="leading" secondItem="y7v-9t-4rM" secondAttribute="leading" constant="8" id="M6E-u9-p5k"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FLW-si-maG">
+                                <rect key="frame" x="340" y="0.0" width="170" height="44"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MANAGER" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3VT-Xy-MKX">
+                                        <rect key="frame" x="8" y="8" width="154" height="28"/>
+                                        <fontDescription key="fontDescription" name="supermarket" family="supermarket" pointSize="19"/>
+                                        <color key="textColor" name="NewPrimary"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="3VT-Xy-MKX" secondAttribute="bottom" constant="8" id="C74-TW-TSE"/>
+                                    <constraint firstItem="3VT-Xy-MKX" firstAttribute="leading" secondItem="FLW-si-maG" secondAttribute="leading" constant="8" id="aq2-CD-CqJ"/>
+                                    <constraint firstAttribute="trailing" secondItem="3VT-Xy-MKX" secondAttribute="trailing" constant="8" id="fI5-To-SUn"/>
+                                    <constraint firstItem="3VT-Xy-MKX" firstAttribute="top" secondItem="FLW-si-maG" secondAttribute="top" constant="8" id="plI-Yk-4xX"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gPc-xH-E7M">
+                                <rect key="frame" x="510" y="0.0" width="170" height="44"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0000000000" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pOc-3e-sK0">
+                                        <rect key="frame" x="8" y="8" width="154" height="28"/>
+                                        <fontDescription key="fontDescription" name="supermarket" family="supermarket" pointSize="19"/>
+                                        <color key="textColor" name="NewPrimary"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="pOc-3e-sK0" firstAttribute="top" secondItem="gPc-xH-E7M" secondAttribute="top" constant="8" id="GgT-Er-afg"/>
+                                    <constraint firstItem="pOc-3e-sK0" firstAttribute="leading" secondItem="gPc-xH-E7M" secondAttribute="leading" constant="8" id="g3T-7i-Qu1"/>
+                                    <constraint firstAttribute="bottom" secondItem="pOc-3e-sK0" secondAttribute="bottom" constant="8" id="t21-m5-r4z"/>
+                                    <constraint firstAttribute="trailing" secondItem="pOc-3e-sK0" secondAttribute="trailing" constant="8" id="wd2-aW-kec"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="omJ-rV-kfg">
+                                <rect key="frame" x="680" y="0.0" width="170" height="44"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="test@gmail.com" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XRX-EB-xxm">
+                                        <rect key="frame" x="8" y="8" width="154" height="28"/>
+                                        <fontDescription key="fontDescription" name="supermarket" family="supermarket" pointSize="19"/>
+                                        <color key="textColor" name="NewPrimary"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="XRX-EB-xxm" firstAttribute="top" secondItem="omJ-rV-kfg" secondAttribute="top" constant="8" id="5Mp-XM-C72"/>
+                                    <constraint firstAttribute="bottom" secondItem="XRX-EB-xxm" secondAttribute="bottom" constant="8" id="A9r-aH-yU6"/>
+                                    <constraint firstItem="XRX-EB-xxm" firstAttribute="leading" secondItem="omJ-rV-kfg" secondAttribute="leading" constant="8" id="vsD-vN-qbJ"/>
+                                    <constraint firstAttribute="trailing" secondItem="XRX-EB-xxm" secondAttribute="trailing" constant="8" id="ynm-2M-CbP"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </stackView>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="bottom" secondItem="GIf-Iy-XUV" secondAttribute="bottom" id="0pH-Cq-WJo"/>
+                    <constraint firstAttribute="trailing" secondItem="GIf-Iy-XUV" secondAttribute="trailing" id="HFE-yP-Bjh"/>
+                    <constraint firstItem="GIf-Iy-XUV" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="NHe-vk-TVa"/>
+                    <constraint firstItem="GIf-Iy-XUV" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="Nwn-vJ-6zJ"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <point key="canvasLocation" x="132" y="73"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <namedColor name="NewPrimary">
+            <color red="0.10588235294117647" green="0.27843137254901962" blue="0.58431372549019611" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

@@ -106,5 +106,11 @@ extension CustomerInfoDetailViewController: UITableViewDelegate, UITableViewData
         return 65
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if indexPath.item == 0 {
+            self.openScene(identifier: .SceneCustomerProfile)
+        }
+    }
+    
     
 }

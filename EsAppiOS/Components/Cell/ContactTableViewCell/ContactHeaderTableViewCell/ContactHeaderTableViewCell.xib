@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="supermarket.ttf">
+            <string>supermarket</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="KGk-i7-Jjw" customClass="ContactHeaderTableViewCell" customModule="EsAppiOS" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="850" height="60"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="850" height="60"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="7J5-qR-z2r">
+                        <rect key="frame" x="0.0" y="0.0" width="850" height="60"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lqz-2q-1yn">
+                                <rect key="frame" x="0.0" y="0.0" width="170" height="60"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ชื่อบุคคลที่ติดต่อ" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XSD-0y-RgR">
+                                        <rect key="frame" x="8" y="8" width="154" height="44"/>
+                                        <fontDescription key="fontDescription" name="supermarket" family="supermarket" pointSize="19"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemGray6Color"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="XSD-0y-RgR" secondAttribute="bottom" constant="8" id="JLy-xP-5jN"/>
+                                    <constraint firstItem="XSD-0y-RgR" firstAttribute="top" secondItem="lqz-2q-1yn" secondAttribute="top" constant="8" id="WMl-1a-f8t"/>
+                                    <constraint firstItem="XSD-0y-RgR" firstAttribute="leading" secondItem="lqz-2q-1yn" secondAttribute="leading" constant="8" id="enX-is-B65"/>
+                                    <constraint firstAttribute="trailing" secondItem="XSD-0y-RgR" secondAttribute="trailing" constant="8" id="jmh-DI-cBE"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="i3a-QT-ToS">
+                                <rect key="frame" x="170" y="0.0" width="170" height="60"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ลักษณะงาน" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c6H-oc-JAN">
+                                        <rect key="frame" x="8" y="8" width="154" height="44"/>
+                                        <fontDescription key="fontDescription" name="supermarket" family="supermarket" pointSize="19"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemGray6Color"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="c6H-oc-JAN" secondAttribute="bottom" constant="8" id="26R-ui-hBT"/>
+                                    <constraint firstItem="c6H-oc-JAN" firstAttribute="top" secondItem="i3a-QT-ToS" secondAttribute="top" constant="8" id="ebk-Yf-4Ja"/>
+                                    <constraint firstItem="c6H-oc-JAN" firstAttribute="leading" secondItem="i3a-QT-ToS" secondAttribute="leading" constant="8" id="kVv-ev-xfm"/>
+                                    <constraint firstAttribute="trailing" secondItem="c6H-oc-JAN" secondAttribute="trailing" constant="8" id="yxV-Nj-JaA"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="frg-lV-ICC">
+                                <rect key="frame" x="340" y="0.0" width="170" height="60"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ตำแหน่งเเละงานที่รับผิดชอบ" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aXK-qp-Jmc">
+                                        <rect key="frame" x="8" y="8" width="154" height="44"/>
+                                        <fontDescription key="fontDescription" name="supermarket" family="supermarket" pointSize="19"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemGray6Color"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="aXK-qp-Jmc" secondAttribute="bottom" constant="8" id="9xr-PT-Lc4"/>
+                                    <constraint firstItem="aXK-qp-Jmc" firstAttribute="top" secondItem="frg-lV-ICC" secondAttribute="top" constant="8" id="SLH-oi-8bL"/>
+                                    <constraint firstAttribute="trailing" secondItem="aXK-qp-Jmc" secondAttribute="trailing" constant="8" id="VkB-2n-Npe"/>
+                                    <constraint firstItem="aXK-qp-Jmc" firstAttribute="leading" secondItem="frg-lV-ICC" secondAttribute="leading" constant="8" id="xHw-HC-dfo"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nXt-Hs-ptu">
+                                <rect key="frame" x="510" y="0.0" width="170" height="60"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="HAND PHONE" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LzG-87-qN9">
+                                        <rect key="frame" x="8" y="8" width="154" height="44"/>
+                                        <fontDescription key="fontDescription" name="supermarket" family="supermarket" pointSize="19"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemGray6Color"/>
+                                <constraints>
+                                    <constraint firstItem="LzG-87-qN9" firstAttribute="top" secondItem="nXt-Hs-ptu" secondAttribute="top" constant="8" id="Cm7-VB-C8K"/>
+                                    <constraint firstAttribute="bottom" secondItem="LzG-87-qN9" secondAttribute="bottom" constant="8" id="Z4j-Gs-x6Z"/>
+                                    <constraint firstAttribute="trailing" secondItem="LzG-87-qN9" secondAttribute="trailing" constant="8" id="iat-er-Dzb"/>
+                                    <constraint firstItem="LzG-87-qN9" firstAttribute="leading" secondItem="nXt-Hs-ptu" secondAttribute="leading" constant="8" id="liV-dj-XNf"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="V1L-00-VLu">
+                                <rect key="frame" x="680" y="0.0" width="170" height="60"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="E-MAIL" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="enK-0I-7c0">
+                                        <rect key="frame" x="8" y="8" width="154" height="44"/>
+                                        <fontDescription key="fontDescription" name="supermarket" family="supermarket" pointSize="19"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemGray6Color"/>
+                                <constraints>
+                                    <constraint firstItem="enK-0I-7c0" firstAttribute="top" secondItem="V1L-00-VLu" secondAttribute="top" constant="8" id="GpV-Tn-wKj"/>
+                                    <constraint firstItem="enK-0I-7c0" firstAttribute="leading" secondItem="V1L-00-VLu" secondAttribute="leading" constant="8" id="XXI-Zu-MmV"/>
+                                    <constraint firstAttribute="trailing" secondItem="enK-0I-7c0" secondAttribute="trailing" constant="8" id="hUr-mb-yao"/>
+                                    <constraint firstAttribute="bottom" secondItem="enK-0I-7c0" secondAttribute="bottom" constant="8" id="lq3-oX-Hvd"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </stackView>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="bottom" secondItem="7J5-qR-z2r" secondAttribute="bottom" id="0hD-ZV-D9t"/>
+                    <constraint firstItem="7J5-qR-z2r" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="MZm-9K-MLV"/>
+                    <constraint firstItem="7J5-qR-z2r" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="WCM-xJ-XHe"/>
+                    <constraint firstAttribute="trailing" secondItem="7J5-qR-z2r" secondAttribute="trailing" id="gP6-FI-Uz7"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="box1View" destination="lqz-2q-1yn" id="EuG-8a-KZE"/>
+                <outlet property="box2View" destination="i3a-QT-ToS" id="zZy-Q2-9EC"/>
+                <outlet property="box3View" destination="frg-lV-ICC" id="yj4-pZ-fiA"/>
+                <outlet property="box4View" destination="nXt-Hs-ptu" id="4xz-gQ-X7D"/>
+                <outlet property="box5View" destination="V1L-00-VLu" id="rim-fO-I7N"/>
+            </connections>
+            <point key="canvasLocation" x="132" y="73"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <systemColor name="systemGray6Color">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
