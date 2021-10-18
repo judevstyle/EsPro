@@ -79,6 +79,7 @@
 		EF74ED1F262D2D7F00E420C8 /* PriceHeaderTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EF74ED1E262D2D7F00E420C8 /* PriceHeaderTableViewCell.xib */; };
 		EF7D56FB260EF918004EE94A /* UIFont+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF7D56FA260EF918004EE94A /* UIFont+Extension.swift */; };
 		EF7D56FE260EFD99004EE94A /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF7D56FD260EFD99004EE94A /* UIView+Extension.swift */; };
+		EF9667F6271C6900002ED4C5 /* Gradient.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF9667F5271C6900002ED4C5 /* Gradient.swift */; };
 		EFEA18AA2641989600251F19 /* ProductInfoListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFEA18A92641989600251F19 /* ProductInfoListViewController.swift */; };
 		EFEA18AE2641989C00251F19 /* ProductInfoList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EFEA18AD2641989C00251F19 /* ProductInfoList.storyboard */; };
 		EFEA18BE2641A24600251F19 /* ProductInfoListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFEA18BC2641A24600251F19 /* ProductInfoListTableViewCell.swift */; };
@@ -173,6 +174,7 @@
 		EF74ED1E262D2D7F00E420C8 /* PriceHeaderTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PriceHeaderTableViewCell.xib; sourceTree = "<group>"; };
 		EF7D56FA260EF918004EE94A /* UIFont+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+Extension.swift"; sourceTree = "<group>"; };
 		EF7D56FD260EFD99004EE94A /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
+		EF9667F5271C6900002ED4C5 /* Gradient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Gradient.swift; sourceTree = "<group>"; };
 		EFEA18A92641989600251F19 /* ProductInfoListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductInfoListViewController.swift; sourceTree = "<group>"; };
 		EFEA18AD2641989C00251F19 /* ProductInfoList.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ProductInfoList.storyboard; sourceTree = "<group>"; };
 		EFEA18BC2641A24600251F19 /* ProductInfoListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductInfoListTableViewCell.swift; sourceTree = "<group>"; };
@@ -339,6 +341,7 @@
 				EF7D56FD260EFD99004EE94A /* UIView+Extension.swift */,
 				EFED23EF261217FA00BD0CD7 /* UIColor+Extension.swift */,
 				EFED24172612461800BD0CD7 /* UserDefaults+Extension.swift */,
+				EF9667F5271C6900002ED4C5 /* Gradient.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -1014,6 +1017,7 @@
 				EF39943F26340E1D00BBC189 /* PriceTableModel.swift in Sources */,
 				EFED23EA2612127D00BD0CD7 /* LoginResponse.swift in Sources */,
 				EFED24182612461800BD0CD7 /* UserDefaults+Extension.swift in Sources */,
+				EF9667F6271C6900002ED4C5 /* Gradient.swift in Sources */,
 				EF74ED15262D2D1700E420C8 /* PriceListTableViewCell.swift in Sources */,
 				EF22CC6C26480A2000E5438F /* CustomerInfoDetailTableViewCell.swift in Sources */,
 				EFED23DE261210BC00BD0CD7 /* LoginUseCase.swift in Sources */,

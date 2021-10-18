@@ -37,6 +37,9 @@ class ProductInfoListViewController: UIViewController {
 //MARK: - SetupUI
 extension ProductInfoListViewController {
     func setupUI(){
+        
+        setNavBar()
+        
         hideKeyboardWhenTappedAround()
         navigationItem.title = "Product Information"
         
@@ -75,6 +78,16 @@ extension ProductInfoListViewController {
         inputSearch.setRounded(rounded: 8)
     
         setupRightBarDropDown()
+    }
+    
+    func setNavBar() {
+        if let navFrame = self.navigationController?.navigationBar.frame {
+
+            let newframe = CGRect(origin: .zero, size: CGSize(width: navFrame.width, height: (navFrame.height + UIApplication.shared.statusBarFrame.height) ))
+
+            self.navigationController?.navigationBar.barTintColor = UIColor.gradientColor(startColor: .NavBarTop(), endColor: .NavBarBottom(), frame: newframe)
+
+        }
     }
     
     func setupRightBarDropDown() {

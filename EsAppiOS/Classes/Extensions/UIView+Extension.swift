@@ -83,4 +83,41 @@ extension UIView {
         border.frame = CGRect(x: frame.size.width - borderWidth, y: 0, width: borderWidth, height: frame.size.height)
         addSubview(border)
     }
+    
+    
+    enum Direction: Int {
+          case topToBottom = 0
+          case bottomToTop
+          case leftToRight
+          case rightToLeft
+      }
+      
+    func applyGradient(colors: [Any]?, locations: [NSNumber]? = [0.0, 1.0], direction: Direction = .topToBottom, cornerRadius: CGFloat) {
+          
+          let gradientLayer = CAGradientLayer()
+          gradientLayer.frame = self.bounds
+          gradientLayer.colors = colors
+          gradientLayer.locations = locations
+          gradientLayer.cornerRadius = cornerRadius
+          
+          switch direction {
+          case .topToBottom:
+              gradientLayer.startPoint = CGPoint(x: 0.5, y: 0.0)
+              gradientLayer.endPoint = CGPoint(x: 0.5, y: 1.0)
+              
+          case .bottomToTop:
+              gradientLayer.startPoint = CGPoint(x: 0.5, y: 1.0)
+              gradientLayer.endPoint = CGPoint(x: 0.5, y: 0.0)
+              
+          case .leftToRight:
+              gradientLayer.startPoint = CGPoint(x: 0.0, y: 0.5)
+              gradientLayer.endPoint = CGPoint(x: 1.0, y: 0.5)
+              
+          case .rightToLeft:
+              gradientLayer.startPoint = CGPoint(x: 1.0, y: 0.5)
+              gradientLayer.endPoint = CGPoint(x: 0.0, y: 0.5)
+          }
+          
+          self.layer.addSublayer(gradientLayer)
+      }
 }

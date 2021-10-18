@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="YgO-Jj-ewm">
     <device id="ipad10_9rounded" orientation="portrait" layout="fullscreen" appearance="light"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -21,6 +22,26 @@
                         <rect key="frame" x="0.0" y="0.0" width="820" height="1180"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tZ0-gW-dA3" customClass="Gradient" customModule="EsAppiOS" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="820" height="1160"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="startColor">
+                                        <color key="value" name="BGLoginTop"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="endColor">
+                                        <color key="value" name="BGLoginBottom"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="startLocation">
+                                        <real key="value" value="0.20000000000000001"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="endLocation">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="horizontalMode" value="NO"/>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="diagonalMode" value="NO"/>
+                                </userDefinedRuntimeAttributes>
+                            </view>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="45" translatesAutoresizingMaskIntoConstraints="NO" id="Onw-zs-ptm">
                                 <rect key="frame" x="120" y="346" width="580" height="468"/>
                                 <subviews>
@@ -96,7 +117,7 @@
                                                                 <fontDescription key="fontDescription" name="supermarket" family="supermarket" pointSize="24"/>
                                                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                                             </textField>
-                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="key.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="ZNI-oQ-ZDo">
+                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="key" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="ZNI-oQ-ZDo">
                                                                 <rect key="frame" x="16" y="14.5" width="56" height="31"/>
                                                                 <color key="tintColor" red="0.63529411759999999" green="0.72156862749999995" blue="0.76470588240000004" alpha="1" colorSpace="calibratedRGB"/>
                                                                 <constraints>
@@ -192,12 +213,17 @@
                         <viewLayoutGuide key="safeArea" id="qob-1y-h0s"/>
                         <color key="backgroundColor" red="0.88228060095560734" green="0.90353814325267967" blue="0.93742313851533277" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="qob-1y-h0s" firstAttribute="trailing" secondItem="tZ0-gW-dA3" secondAttribute="trailing" id="Cbd-r3-9Uy"/>
+                            <constraint firstItem="qob-1y-h0s" firstAttribute="bottom" secondItem="tZ0-gW-dA3" secondAttribute="bottom" id="LBn-G9-VtL"/>
                             <constraint firstItem="Onw-zs-ptm" firstAttribute="leading" secondItem="qob-1y-h0s" secondAttribute="leading" constant="120" id="jOX-19-6mZ"/>
                             <constraint firstItem="Onw-zs-ptm" firstAttribute="centerY" secondItem="qob-1y-h0s" secondAttribute="centerY" id="kSs-AQ-fXu"/>
+                            <constraint firstItem="tZ0-gW-dA3" firstAttribute="top" secondItem="qob-1y-h0s" secondAttribute="top" id="mEh-d4-eZs"/>
                             <constraint firstItem="qob-1y-h0s" firstAttribute="trailing" secondItem="Onw-zs-ptm" secondAttribute="trailing" constant="120" id="qap-dV-b0x"/>
+                            <constraint firstItem="tZ0-gW-dA3" firstAttribute="leading" secondItem="qob-1y-h0s" secondAttribute="leading" id="tU1-wU-XrV"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="bgGradientView" destination="tZ0-gW-dA3" id="8vH-2g-6b6"/>
                         <outlet property="btnHidePassword" destination="cux-I4-f3z" id="uRa-Ef-iNe"/>
                         <outlet property="btnLogin" destination="Rbq-xm-tlN" id="ChE-aC-OLq"/>
                         <outlet property="inputPassword" destination="YWc-kr-cYP" id="qi4-xn-RSS"/>
@@ -213,8 +239,14 @@
     <resources>
         <image name="ESpro_logo" width="747" height="285"/>
         <image name="eye.fill" catalog="system" width="128" height="78"/>
-        <image name="key.fill" catalog="system" width="83" height="128"/>
+        <image name="key" catalog="system" width="86" height="128"/>
         <image name="person.fill" catalog="system" width="128" height="120"/>
+        <namedColor name="BGLoginBottom">
+            <color red="0.90196078431372551" green="0.90196078431372551" blue="0.90196078431372551" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="BGLoginTop">
+            <color red="0.82352941176470584" green="0.8666666666666667" blue="0.95294117647058818" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <namedColor name="PrimaryButton">
             <color red="0.43529411764705883" green="0.42745098039215684" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

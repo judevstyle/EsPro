@@ -15,6 +15,8 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var inputPassword: UITextField!
     @IBOutlet weak var btnLogin: UIButton!
     @IBOutlet weak var btnHidePassword: UIButton!
+
+    @IBOutlet weak var bgGradientView: Gradient!
     
     // ViewModel
     lazy var viewModel: LoginProtocol = {
@@ -43,7 +45,8 @@ class LoginViewController: UIViewController {
 
 //MARK: - SetupUI
 extension LoginViewController {
-    func setupUI(){
+    func setupUI() {
+        
         viewKeyboardHeight.constant = 0
         hideKeyboardWhenTappedAround()
         inputUsername.setRounded(rounded: 10)
@@ -57,12 +60,13 @@ extension LoginViewController {
         btnHidePassword.contentHorizontalAlignment = .fill
         btnHidePassword.imageEdgeInsets = UIEdgeInsets(top: 20, left: 16, bottom: 20, right: 16)
         
-//        inputUsername.text = "CHAIWAT_K"
-//        inputPassword.text = "1234"
+        inputUsername.text = "CHAIWAT_K"
+        inputPassword.text = "1234"
         
-        inputUsername.text = "test"
-        inputPassword.text = "123123"
+//        inputUsername.text = "test"
+//        inputPassword.text = "123123"
     }
+
 }
 
 // MARK: - Binding

@@ -36,6 +36,22 @@ extension UIColor {
 //        return UIColor(named: "AppPrimaryDarkGray")!
 //    }
     
+    static func BGLoginTop() -> UIColor {
+        return UIColor(named: "BGLoginTop")!
+    }
+    
+    static func BGLoginBottom() -> UIColor {
+        return UIColor(named: "BGLoginBottom")!
+    }
+    
+    static func NavBarTop() -> UIColor {
+        return UIColor(named: "NavBarTop")!
+    }
+    
+    static func NavBarBottom() -> UIColor {
+        return UIColor(named: "NavBarBottom")!
+    }
+    
     
     static func rgb(red: CGFloat, green: CGFloat, blue: CGFloat) -> UIColor {
         return UIColor(red: red/255, green: green/255, blue: blue/255, alpha: 1)
@@ -50,5 +66,19 @@ extension UIColor {
     static var emerald = UIColor.rgb(red: 0, green: 222, blue: 182)
     static var lolipop = UIColor.rgb(red: 143, green: 20, blue: 108)
     static var ruby = UIColor.rgb(red: 235, green: 42, blue: 117)
+    
+    static func gradientColor(startColor: UIColor, endColor: UIColor, frame: CGRect) -> UIColor? {
+        let gradient = CAGradientLayer(layer: frame.size)
+        gradient.frame = frame
+        gradient.colors = [startColor.cgColor, endColor.cgColor]
+        gradient.startPoint = CGPoint(x: 0.0, y: 0.2)
+        gradient.endPoint = CGPoint(x: 0.0, y: 1.0)
+        UIGraphicsBeginImageContext(frame.size)
+        guard let context = UIGraphicsGetCurrentContext() else { return nil }
+        gradient.render(in: context)
+        guard let image = UIGraphicsGetImageFromCurrentImageContext() else { return nil }
+        UIGraphicsEndImageContext()
+        return UIColor(patternImage: image)
+    }
     
 }

@@ -35,12 +35,14 @@ class CustomerInfoListViewController: UIViewController {
 //MARK: - SetupUI
 extension CustomerInfoListViewController {
     func setupUI(){
+        
+        setNavBar()
+        
         hideKeyboardWhenTappedAround()
 //        navigationItem.title = "Customer Information"
         navigationItem.title = "Customer Infomation"
         
         bgTopView.setRounded(rounded: 8)
-        
 
         menuRight.target = self
         menuRight.action = #selector(menuTapped)
@@ -74,6 +76,16 @@ extension CustomerInfoListViewController {
         
         setupRightBarDropDown()
         
+    }
+    
+    func setNavBar() {
+        if let navFrame = self.navigationController?.navigationBar.frame {
+
+            let newframe = CGRect(origin: .zero, size: CGSize(width: navFrame.width, height: (navFrame.height + UIApplication.shared.statusBarFrame.height) ))
+
+            self.navigationController?.navigationBar.barTintColor = UIColor.gradientColor(startColor: .NavBarTop(), endColor: .NavBarBottom(), frame: newframe)
+
+        }
     }
     
     func setupRightBarDropDown() {
