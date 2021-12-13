@@ -16,6 +16,7 @@ class CustomerInfoHeaderTableViewCell: UITableViewCell {
     
     @IBOutlet var customerName: UILabel!
     
+    @IBOutlet weak var stackView: UIStackView!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -33,6 +34,10 @@ class CustomerInfoHeaderTableViewCell: UITableViewCell {
         customerNoView.useUnderline()
         customerNameView.useUnderline()
         customerNoView.addRightBorder(with: UIColor.gray, andWidth: 0.5)
+        
+        let newframe = CGRect(origin: .zero, size: CGSize(width: stackView.frame.width, height: stackView.frame.height))
+
+        stackView.backgroundColor = UIColor.gradientColor(startColor: .BGTableHeaderTop(), endColor: .BGTableHeaderBottom(), frame: newframe)
     }
     
 }

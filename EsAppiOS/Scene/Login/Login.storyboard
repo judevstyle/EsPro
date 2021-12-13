@@ -117,8 +117,8 @@
                                                                 <fontDescription key="fontDescription" name="supermarket" family="supermarket" pointSize="24"/>
                                                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                                             </textField>
-                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="key" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="ZNI-oQ-ZDo">
-                                                                <rect key="frame" x="16" y="14.5" width="56" height="31"/>
+                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="key-icon" translatesAutoresizingMaskIntoConstraints="NO" id="ZNI-oQ-ZDo">
+                                                                <rect key="frame" x="16" y="16" width="56" height="28"/>
                                                                 <color key="tintColor" red="0.63529411759999999" green="0.72156862749999995" blue="0.76470588240000004" alpha="1" colorSpace="calibratedRGB"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="width" constant="56" id="xVG-SD-G71"/>
@@ -226,6 +226,7 @@
                         <outlet property="bgGradientView" destination="tZ0-gW-dA3" id="8vH-2g-6b6"/>
                         <outlet property="btnHidePassword" destination="cux-I4-f3z" id="uRa-Ef-iNe"/>
                         <outlet property="btnLogin" destination="Rbq-xm-tlN" id="ChE-aC-OLq"/>
+                        <outlet property="iconKeyImage" destination="ZNI-oQ-ZDo" id="dPL-dS-Wdn"/>
                         <outlet property="inputPassword" destination="YWc-kr-cYP" id="qi4-xn-RSS"/>
                         <outlet property="inputUsername" destination="LMD-0N-lwr" id="uCV-zx-IVF"/>
                         <outlet property="viewKeyboardHeight" destination="1Aa-iI-Zs5" id="gZm-ds-DXf"/>
@@ -239,7 +240,7 @@
     <resources>
         <image name="ESpro_logo" width="747" height="285"/>
         <image name="eye.fill" catalog="system" width="128" height="78"/>
-        <image name="key" catalog="system" width="86" height="128"/>
+        <image name="key-icon" width="512" height="448"/>
         <image name="person.fill" catalog="system" width="128" height="120"/>
         <namedColor name="BGLoginBottom">
             <color red="0.90196078431372551" green="0.90196078431372551" blue="0.90196078431372551" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

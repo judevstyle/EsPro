@@ -17,26 +17,28 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="KGk-i7-Jjw" customClass="ProductInfoListTableViewCell" customModule="EsAppiOS" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="850" height="44"/>
+            <rect key="frame" x="0.0" y="0.0" width="1400" height="44"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="850" height="44"/>
+                <rect key="frame" x="0.0" y="0.0" width="1400" height="44"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="ymg-LK-gaK">
-                        <rect key="frame" x="0.0" y="0.0" width="1105" height="44"/>
+                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="ymg-LK-gaK">
+                        <rect key="frame" x="0.0" y="0.0" width="1400" height="44"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QLd-HF-aCq">
-                                <rect key="frame" x="0.0" y="0.0" width="221" height="44"/>
+                                <rect key="frame" x="0.0" y="0.0" width="150" height="44"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1464-0001-6" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kzd-DB-k3Q">
-                                        <rect key="frame" x="8" y="0.0" width="205" height="44"/>
+                                        <rect key="frame" x="8" y="0.0" width="134" height="44"/>
                                         <fontDescription key="fontDescription" name="supermarket" family="supermarket" pointSize="19"/>
                                         <color key="textColor" name="NewPrimary"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
+                                <color key="backgroundColor" name="BGRowFAFBFF"/>
                                 <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="GBf-F4-e4S"/>
                                     <constraint firstAttribute="bottom" secondItem="kzd-DB-k3Q" secondAttribute="bottom" id="UEO-qz-9dG"/>
                                     <constraint firstItem="kzd-DB-k3Q" firstAttribute="leading" secondItem="QLd-HF-aCq" secondAttribute="leading" constant="8" id="k7d-Nr-1Ak"/>
                                     <constraint firstAttribute="trailing" secondItem="kzd-DB-k3Q" secondAttribute="trailing" constant="8" id="pUC-81-LcW"/>
@@ -44,27 +46,29 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gbI-iI-OuW">
-                                <rect key="frame" x="221" y="0.0" width="221" height="44"/>
+                                <rect key="frame" x="150" y="0.0" width="180" height="44"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="FS300-325-BAS-P1-W1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qPr-d3-LvX">
-                                        <rect key="frame" x="8" y="0.0" width="205" height="44"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="FS300-325-BAS-P1" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qPr-d3-LvX">
+                                        <rect key="frame" x="8" y="0.0" width="164" height="44"/>
                                         <fontDescription key="fontDescription" name="supermarket" family="supermarket" pointSize="19"/>
                                         <color key="textColor" name="NewPrimary"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
+                                <color key="backgroundColor" name="BGRowFAFBFF"/>
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="qPr-d3-LvX" secondAttribute="trailing" constant="8" id="4uZ-nX-yaf"/>
                                     <constraint firstItem="qPr-d3-LvX" firstAttribute="leading" secondItem="gbI-iI-OuW" secondAttribute="leading" constant="8" id="Ed6-gI-Xx0"/>
+                                    <constraint firstAttribute="width" constant="180" id="Hfb-UG-i9p"/>
                                     <constraint firstAttribute="bottom" secondItem="qPr-d3-LvX" secondAttribute="bottom" id="Pyq-QS-NnU"/>
                                     <constraint firstItem="qPr-d3-LvX" firstAttribute="top" secondItem="gbI-iI-OuW" secondAttribute="top" id="pfg-hT-ugY"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="luc-wI-6zH">
-                                <rect key="frame" x="442" y="0.0" width="221" height="44"/>
+                                <rect key="frame" x="330" y="0.0" width="890" height="44"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="DESCRIPTION" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6hU-wC-Fbw">
-                                        <rect key="frame" x="8" y="0.0" width="205" height="44"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="DESCRIPTION" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6hU-wC-Fbw">
+                                        <rect key="frame" x="8" y="0.0" width="874" height="44"/>
                                         <fontDescription key="fontDescription" name="supermarket" family="supermarket" pointSize="19"/>
                                         <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
@@ -74,15 +78,14 @@
                                     <constraint firstItem="6hU-wC-Fbw" firstAttribute="top" secondItem="luc-wI-6zH" secondAttribute="top" id="CwR-6n-aUT"/>
                                     <constraint firstItem="6hU-wC-Fbw" firstAttribute="leading" secondItem="luc-wI-6zH" secondAttribute="leading" constant="8" id="PYD-d7-LzD"/>
                                     <constraint firstAttribute="bottom" secondItem="6hU-wC-Fbw" secondAttribute="bottom" id="Sts-86-put"/>
-                                    <constraint firstAttribute="width" constant="250" id="abB-Xd-Fsm"/>
                                     <constraint firstAttribute="trailing" secondItem="6hU-wC-Fbw" secondAttribute="trailing" constant="8" id="oJy-6Q-kbp"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MHY-Sp-tmg">
-                                <rect key="frame" x="663" y="0.0" width="221" height="44"/>
+                                <rect key="frame" x="1220" y="0.0" width="80" height="44"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xVX-sN-aiU">
-                                        <rect key="frame" x="8" y="0.0" width="205" height="44"/>
+                                        <rect key="frame" x="8" y="0.0" width="64" height="44"/>
                                         <fontDescription key="fontDescription" name="supermarket" family="supermarket" pointSize="19"/>
                                         <color key="textColor" name="NewPrimary"/>
                                         <nil key="highlightedColor"/>
@@ -93,19 +96,21 @@
                                     <constraint firstAttribute="bottom" secondItem="xVX-sN-aiU" secondAttribute="bottom" id="VS1-7Z-vk6"/>
                                     <constraint firstItem="xVX-sN-aiU" firstAttribute="top" secondItem="MHY-Sp-tmg" secondAttribute="top" id="ZhO-ic-Xvu"/>
                                     <constraint firstAttribute="trailing" secondItem="xVX-sN-aiU" secondAttribute="trailing" constant="8" id="hWz-U0-Pe2"/>
+                                    <constraint firstAttribute="width" constant="80" id="r4x-hy-fkM"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="B5I-9a-kd5">
-                                <rect key="frame" x="884" y="0.0" width="221" height="44"/>
+                                <rect key="frame" x="1300" y="0.0" width="100" height="44"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2.0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="17D-7t-OOu">
-                                        <rect key="frame" x="8" y="0.0" width="205" height="44"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2.0" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="17D-7t-OOu">
+                                        <rect key="frame" x="8" y="0.0" width="84" height="44"/>
                                         <fontDescription key="fontDescription" name="supermarket" family="supermarket" pointSize="19"/>
                                         <color key="textColor" name="NewPrimary"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
                                 <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="Bw7-Op-OEc"/>
                                     <constraint firstItem="17D-7t-OOu" firstAttribute="top" secondItem="B5I-9a-kd5" secondAttribute="top" id="GJj-gR-Hjw"/>
                                     <constraint firstAttribute="trailing" secondItem="17D-7t-OOu" secondAttribute="trailing" constant="8" id="PIR-g3-Noo"/>
                                     <constraint firstItem="17D-7t-OOu" firstAttribute="leading" secondItem="B5I-9a-kd5" secondAttribute="leading" constant="8" id="TnX-J1-Cbl"/>
@@ -140,6 +145,9 @@
         </tableViewCell>
     </objects>
     <resources>
+        <namedColor name="BGRowFAFBFF">
+            <color red="0.98039215686274506" green="0.98431372549019602" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <namedColor name="NewPrimary">
             <color red="0.10588235294117647" green="0.27843137254901962" blue="0.58431372549019611" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

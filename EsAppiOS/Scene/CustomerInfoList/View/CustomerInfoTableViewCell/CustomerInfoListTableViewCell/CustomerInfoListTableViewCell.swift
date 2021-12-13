@@ -16,6 +16,9 @@ class CustomerInfoListTableViewCell: UITableViewCell {
     @IBOutlet var customerNameView: UIView!
     
     
+    @IBOutlet weak var stackView: UIStackView!
+    
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -35,6 +38,12 @@ class CustomerInfoListTableViewCell: UITableViewCell {
 //        customerNoView.addLeftBorder(with: UIColor.gray, andWidth: 0.5)
         customerNoView.addRightBorder(with: UIColor.gray, andWidth: 0.5)
 //        customerNameView.addRightBorder(with: UIColor.gray, andWidth: 0.5)
+        
+        
+        
+        let newframe = CGRect(origin: .zero, size: CGSize(width: stackView.frame.width, height: stackView.frame.height))
+
+//        stackView.backgroundColor = UIColor.gradientColor(startColor: .BGTableHeaderTop(), endColor: .BGTableHeaderBottom(), frame: newframe)
     }
     
 }

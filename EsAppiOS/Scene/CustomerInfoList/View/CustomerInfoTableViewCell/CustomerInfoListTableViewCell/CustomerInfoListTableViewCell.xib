@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="ipad10_9rounded" orientation="portrait" layout="fullscreen" appearance="light"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -16,14 +17,14 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="KGk-i7-Jjw" customClass="CustomerInfoListTableViewCell" customModule="EsAppiOS" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="850" height="44"/>
+            <rect key="frame" x="0.0" y="0.0" width="1400" height="44"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="850" height="44"/>
+                <rect key="frame" x="0.0" y="0.0" width="1400" height="44"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="s9Y-dc-Di8">
-                        <rect key="frame" x="0.0" y="0.0" width="850" height="44"/>
+                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="s9Y-dc-Di8">
+                        <rect key="frame" x="0.0" y="0.0" width="1400" height="44"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VGq-lu-LIY">
                                 <rect key="frame" x="0.0" y="0.0" width="150" height="44"/>
@@ -35,6 +36,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
+                                <color key="backgroundColor" name="BGRowFAFBFF"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="150" id="51g-hs-9qx"/>
                                     <constraint firstItem="MRQ-CS-8UL" firstAttribute="top" secondItem="VGq-lu-LIY" secondAttribute="top" id="A7P-47-7rc"/>
@@ -44,10 +46,10 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VNj-nU-joz">
-                                <rect key="frame" x="150" y="0.0" width="700" height="44"/>
+                                <rect key="frame" x="150" y="0.0" width="1250" height="44"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name Test Test" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nQA-ba-GKa">
-                                        <rect key="frame" x="8" y="0.0" width="684" height="44"/>
+                                        <rect key="frame" x="8" y="0.0" width="1234" height="44"/>
                                         <fontDescription key="fontDescription" name="supermarket" family="supermarket" pointSize="19"/>
                                         <color key="textColor" name="NewPrimary"/>
                                         <nil key="highlightedColor"/>
@@ -77,11 +79,15 @@
                 <outlet property="customerNameView" destination="VNj-nU-joz" id="76t-05-NFR"/>
                 <outlet property="customerNo" destination="MRQ-CS-8UL" id="q3O-6W-tFa"/>
                 <outlet property="customerNoView" destination="VGq-lu-LIY" id="qzl-RO-NVE"/>
+                <outlet property="stackView" destination="s9Y-dc-Di8" id="J0b-kC-x5I"/>
             </connections>
             <point key="canvasLocation" x="130" y="74"/>
         </tableViewCell>
     </objects>
     <resources>
+        <namedColor name="BGRowFAFBFF">
+            <color red="0.98039215686274506" green="0.98431372549019602" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <namedColor name="NewPrimary">
             <color red="0.10588235294117647" green="0.27843137254901962" blue="0.58431372549019611" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

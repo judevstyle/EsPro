@@ -23,7 +23,8 @@ class CustomerInfoListViewController: UIViewController {
     @IBOutlet var menuAdminTopNav: UIBarButtonItem!
     
     let rightBarDropDown = DropDown()
-    var menuRight = UIBarButtonItem()
+    var menuHamburger = UIBarButtonItem()
+    var menuLogout = UIBarButtonItem()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -44,11 +45,27 @@ extension CustomerInfoListViewController {
         
         bgTopView.setRounded(rounded: 8)
 
-        menuRight.target = self
-        menuRight.action = #selector(menuTapped)
-        menuRight.image = UIImage(named: "menu")?.withRenderingMode(.alwaysTemplate)
-        menuRight.tintColor = .black
-        navigationItem.rightBarButtonItem = menuRight
+        // menuHamburger
+        menuHamburger.target = self
+        menuHamburger.action = #selector(menuHamburgerTapped)
+        menuHamburger.image = UIImage(named: "menu")?.withRenderingMode(.alwaysTemplate)
+        menuHamburger.tintColor = .black
+        
+        // menuLogout
+        let btnLogout = UIButton.init(type: .custom)
+        btnLogout.setTitle("LOGOUT", for: .normal)
+        btnLogout.setTitleColor(.darkGray, for: .normal)
+        btnLogout.layer.borderWidth = 1
+        btnLogout.layer.cornerRadius = 16
+        btnLogout.layer.borderColor = UIColor.lightGray.cgColor
+        btnLogout.backgroundColor = .white
+        btnLogout.titleLabel?.font = UIFont.Primary(size: 21)
+        btnLogout.addBtnLogoutPadding()
+        btnLogout.addTarget(self, action: #selector(self.menuLogoutTapped), for: .touchUpInside)
+        
+        menuLogout = UIBarButtonItem(customView: btnLogout)
+        
+        navigationItem.rightBarButtonItems = [menuHamburger, menuLogout]
         
         logoTobnav.image = UIImage(named: "logo-topnav")?.withRenderingMode(.alwaysOriginal)
         logoTobnav.isEnabled = false
@@ -80,16 +97,25 @@ extension CustomerInfoListViewController {
     
     func setNavBar() {
         if let navFrame = self.navigationController?.navigationBar.frame {
+            if #available(iOS 13.0, *) {
+                let navBarAppearance = UINavigationBarAppearance()
+                navBarAppearance.configureWithOpaqueBackground()
+                navBarAppearance.titleTextAttributes = [.foregroundColor: UIColor.black]
+                navBarAppearance.largeTitleTextAttributes = [.foregroundColor: UIColor.black]
+                let newframe = CGRect(origin: .zero, size: CGSize(width: navFrame.width, height: (navFrame.height + UIApplication.shared.statusBarFrame.height) ))
+                navBarAppearance.backgroundColor =  UIColor.gradientColor(startColor: .NavBarTop(), endColor: .NavBarBottom(), frame: newframe)
+                self.navigationController?.navigationBar.standardAppearance = navBarAppearance
+                self.navigationController?.navigationBar.scrollEdgeAppearance = navBarAppearance
+            } else {
+                let newframe = CGRect(origin: .zero, size: CGSize(width: navFrame.width, height: (navFrame.height + UIApplication.shared.statusBarFrame.height) ))
 
-            let newframe = CGRect(origin: .zero, size: CGSize(width: navFrame.width, height: (navFrame.height + UIApplication.shared.statusBarFrame.height) ))
-
-            self.navigationController?.navigationBar.barTintColor = UIColor.gradientColor(startColor: .NavBarTop(), endColor: .NavBarBottom(), frame: newframe)
-
+                self.navigationController?.navigationBar.barTintColor = UIColor.gradientColor(startColor: .NavBarTop(), endColor: .NavBarBottom(), frame: newframe)
+            }
         }
     }
     
     func setupRightBarDropDown() {
-        rightBarDropDown.anchorView = menuRight
+        rightBarDropDown.anchorView = menuHamburger
         
         // You can also use localizationKeysDataSource instead. Check the docs.
         rightBarDropDown.dataSource = [
@@ -171,8 +197,27 @@ extension CustomerInfoListViewController {
 }
 //MARK:- Event
 extension CustomerInfoListViewController {
-    @objc func menuTapped() {
+    @objc func menuHamburgerTapped() {
         rightBarDropDown.show()
+    }
+    
+    @objc func menuLogoutTapped() {
+        
+        UIView.transition(
+             with: UIApplication.shared.keyWindow!,
+             duration: 0.25,
+             options: .transitionFlipFromLeft,
+             animations: {
+                let loadingStoryBoard = "Login"
+                // Override point for customization after application launch.
+                let storyboard = UIStoryboard(name: loadingStoryBoard, bundle: nil)
+                let initialViewController = storyboard.instantiateInitialViewController()
+
+                let appDelegate = UIApplication.shared.delegate as! AppDelegate
+                appDelegate.window?.rootViewController = initialViewController
+                appDelegate.window?.makeKeyAndVisible()
+         })
+        
     }
     
     @objc func selecedSearchByChange(){

@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="supermarket.ttf">
+            <string>supermarket</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="BadgeSaleManView" customModule="EsAppiOS" customModuleProvider="target">
+            <connections>
+                <outlet property="bgView" destination="PW0-id-mg2" id="ese-y2-E86"/>
+                <outlet property="titleText" destination="hXV-65-Ucn" id="wmD-M1-r6a"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="60" height="30"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PW0-id-mg2">
+                    <rect key="frame" x="0.0" y="0.0" width="60" height="30"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="JK" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hXV-65-Ucn">
+                            <rect key="frame" x="0.0" y="0.0" width="60" height="30"/>
+                            <fontDescription key="fontDescription" name="supermarket" family="supermarket" pointSize="16"/>
+                            <color key="textColor" name="NewPrimary"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstItem="hXV-65-Ucn" firstAttribute="top" secondItem="PW0-id-mg2" secondAttribute="top" id="Bc2-7Y-HVU"/>
+                        <constraint firstItem="hXV-65-Ucn" firstAttribute="leading" secondItem="PW0-id-mg2" secondAttribute="leading" id="FH6-iU-lEJ"/>
+                        <constraint firstAttribute="bottom" secondItem="hXV-65-Ucn" secondAttribute="bottom" id="dnx-jf-EAe"/>
+                        <constraint firstAttribute="trailing" secondItem="hXV-65-Ucn" secondAttribute="trailing" id="yY3-fp-dkr"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="PW0-id-mg2" secondAttribute="bottom" id="2iT-RM-irM"/>
+                <constraint firstAttribute="trailing" secondItem="PW0-id-mg2" secondAttribute="trailing" id="A46-6N-s9n"/>
+                <constraint firstItem="PW0-id-mg2" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="ACg-Zl-D1L"/>
+                <constraint firstItem="PW0-id-mg2" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="LIF-PN-7EA"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="137.68115942028987" y="80.357142857142847"/>
+        </view>
+    </objects>
+    <resources>
+        <namedColor name="NewPrimary">
+            <color red="0.10588235294117647" green="0.27843137254901962" blue="0.58431372549019611" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

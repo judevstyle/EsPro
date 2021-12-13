@@ -33,6 +33,10 @@ class ProductInfoViewController: UIViewController {
     @IBOutlet weak var relatedTableView: UITableView!
     @IBOutlet weak var relatedTableViewHeight: NSLayoutConstraint!
     
+    @IBOutlet weak var viewProduct: UIView!
+    @IBOutlet weak var viewProductHeight: NSLayoutConstraint!
+    private let viewProductConstantHeight: CGFloat = (324 - 235)
+    
     var listPriceTable: [PriceTableModel] = []
     var listInventoryTable: [InventoryTableModel] = []
     var listShipmentTable: [ShipmentTableModel] = []
@@ -45,6 +49,14 @@ class ProductInfoViewController: UIViewController {
     
     var segmentControlSelectIndex: Int = 0
     
+    var segmentedControlView: BetterSegmentedControl = BetterSegmentedControl(frame: CGRect(x: 0,
+                                                                                            y: 0,
+                                                                                                         width:0,
+                                                                                                         height:0))
+    
+    var segmentControlWidth: CGFloat = 0
+
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
@@ -54,12 +66,29 @@ class ProductInfoViewController: UIViewController {
         setupPriceTableView()
         setupInventoryTableView()
         setupShipmentTableView()
-        setupProductTableView()
         setupSimilarRelatedTableView()
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(rotated), name: UIDevice.orientationDidChangeNotification, object: nil)
+        
+        segmentControlWidth = self.headerSegmentControlProductView.frame.width
+    }
+    
+    deinit {
+       NotificationCenter.default.removeObserver(self, name: UIDevice.orientationDidChangeNotification, object: nil)
     }
     
     override func viewDidAppear(_ animated: Bool) {
         setupSegmentControlProductView()
+    }
+    
+    override func viewWillLayoutSubviews() {
+
+    }
+    
+    @objc func rotated() {
+        DispatchQueue.main.async {
+            self.setupSegmentControlProductView()
+        }
     }
     
     func mockData(){
@@ -176,6 +205,7 @@ extension ProductInfoViewController {
         inventoryTableView.backgroundView?.backgroundColor = .white
         inventoryTableView.backgroundColor = .white
         inventoryTableView.separatorInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
+        inventoryTableView.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
         inventoryTableView.separatorStyle = .none
         
         let headerNib = UINib.init(nibName: "InventoryHeaderTableViewCell", bundle: Bundle.main)
@@ -218,24 +248,38 @@ extension ProductInfoViewController {
         productTableView.register(productInfoNib, forCellReuseIdentifier: "ProductInformationTableViewCell")
         let productSpecNib = UINib.init(nibName: "ProductSpecificationTableViewCell", bundle: Bundle.main)
         productTableView.register(productSpecNib, forCellReuseIdentifier: "ProductSpecificationTableViewCell")
+        
+        viewProduct.roundCorners(corners: [.topLeft, .topRight], radius: 8.0)
     }
     
     func setupSegmentControlProductView() {
-        let control = BetterSegmentedControl(frame: CGRect(x: 0,
+        segmentedControlView = BetterSegmentedControl(frame: CGRect(x: 0,
                                                            y: 0,
-                                                           width: headerSegmentControlProductView.frame.width,
-                                                           height: headerSegmentControlProductView.frame.height))
-        control.segments = LabelSegment.segments(withTitles: ["PRODUCT INFORMATION", "PRODUCT SPECIFICATION"], numberOfLines: 1, normalBackgroundColor: .white, normalFont: UIFont.init(name: "supermarket", size: 19), normalTextColor: UIColor.init(named: "NewPrimary"), selectedBackgroundColor: UIColor.init(named: "NewPrimary"), selectedFont: UIFont.init(name: "supermarket", size: 19), selectedTextColor: .white)
-        control.cornerRadius = 8
-        control.addTarget(self, action: #selector(segmentedControlValueChanged(_:)), for: .valueChanged)
-        headerSegmentControlProductView.setRounded(rounded: 8)
-        headerSegmentControlProductView.addSubview(control)
+                                                                        width: self.headerSegmentControlProductView.frame.width,
+                                                                        height: self.headerSegmentControlProductView.frame.height))
         
+        segmentedControlView.segments = LabelSegment.segments(withTitles: ["PRODUCT INFORMATION", "PRODUCT SPECIFICATION"], numberOfLines: 1, normalBackgroundColor: .white, normalFont: UIFont.init(name: "supermarket", size: 19), normalTextColor: UIColor.init(named: "NewPrimary"), selectedBackgroundColor: UIColor.init(named: "NewPrimary"), selectedFont: UIFont.init(name: "supermarket", size: 19), selectedTextColor: .white)
+        segmentedControlView.cornerRadius = 8
+        segmentedControlView.addTarget(self, action: #selector(segmentedControlValueChanged(_:)), for: .valueChanged)
+        headerSegmentControlProductView.setRounded(rounded: 8)
+        
+        for view in self.headerSegmentControlProductView.subviews {
+            view.removeFromSuperview()
+        }
+        
+        headerSegmentControlProductView.addSubview(segmentedControlView)
+        
+        segmentedControlView.setIndex(segmentControlSelectIndex)
+        
+        setupProductTableView()
     }
     
     @objc func segmentedControlValueChanged(_ sender: BetterSegmentedControl) {
         segmentControlSelectIndex = sender.index
         productTableView.reloadData()
+        self.view.layoutIfNeeded()
+        productTableView.layoutIfNeeded()
+        viewProduct.layoutIfNeeded()
     }
     
     
@@ -351,6 +395,8 @@ extension ProductInfoViewController: UITableViewDelegate, UITableViewDataSource 
             return 0
         case similarTableView, relatedTableView:
             return 60
+        case inventoryTableView:
+            return 30
         default:
             return 30
         }
@@ -376,14 +422,21 @@ extension ProductInfoViewController: UITableViewDelegate, UITableViewDataSource 
             shipmentTableViewHeight.constant = CGFloat(((listShipmentTable.count ) * 30) + 30)
             return listShipmentTable.count
         case productTableView:
+            
             switch segmentControlSelectIndex {
             case 0:
                 productTableViewHeight.constant = CGFloat(listProductInformation.count * 30)
+                viewProductHeight.constant = viewProductConstantHeight + CGFloat(listProductInformation.count * 30)
                 return listProductInformation.count
-            default:
+            case 1:
                 productTableViewHeight.constant = CGFloat(listProductSpecification.count * 30)
+                viewProductHeight.constant = viewProductConstantHeight + CGFloat(listProductSpecification.count * 30)
+                return listProductSpecification.count
+            default:
                 return listProductSpecification.count
             }
+            
+            
         case similarTableView, relatedTableView:
             similarTableViewHeight.constant = CGFloat((listSimilarTable.count * 200) + 60)
             relatedTableViewHeight.constant = CGFloat((listSimilarTable.count * 200) + 60)

@@ -51,6 +51,8 @@
 		EF3994A126343F9500BBC189 /* ProductInformationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF39949F26343F9500BBC189 /* ProductInformationTableViewCell.swift */; };
 		EF3994A226343F9500BBC189 /* ProductInformationTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EF3994A026343F9500BBC189 /* ProductInformationTableViewCell.xib */; };
 		EF3994AC2634454C00BBC189 /* ProductTableModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF3994AB2634454C00BBC189 /* ProductTableModel.swift */; };
+		EF4788602764651400746A59 /* BadgeSaleManView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF47885F2764651400746A59 /* BadgeSaleManView.swift */; };
+		EF4788622764651F00746A59 /* BadgeSaleManView.xib in Resources */ = {isa = PBXBuildFile; fileRef = EF4788612764651F00746A59 /* BadgeSaleManView.xib */; };
 		EF50D8CC26F73CCD008F11D7 /* CustomerProfile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF50D8CB26F73CCD008F11D7 /* CustomerProfile.storyboard */; };
 		EF50D8D026F73D5A008F11D7 /* CustomerProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF50D8CF26F73D5A008F11D7 /* CustomerProfileViewController.swift */; };
 		EF50D8D826F75771008F11D7 /* ContactHeaderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF50D8D626F75771008F11D7 /* ContactHeaderTableViewCell.swift */; };
@@ -144,6 +146,8 @@
 		EF39949F26343F9500BBC189 /* ProductInformationTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductInformationTableViewCell.swift; sourceTree = "<group>"; };
 		EF3994A026343F9500BBC189 /* ProductInformationTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProductInformationTableViewCell.xib; sourceTree = "<group>"; };
 		EF3994AB2634454C00BBC189 /* ProductTableModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductTableModel.swift; sourceTree = "<group>"; };
+		EF47885F2764651400746A59 /* BadgeSaleManView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BadgeSaleManView.swift; sourceTree = "<group>"; };
+		EF4788612764651F00746A59 /* BadgeSaleManView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BadgeSaleManView.xib; sourceTree = "<group>"; };
 		EF50D8CB26F73CCD008F11D7 /* CustomerProfile.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CustomerProfile.storyboard; sourceTree = "<group>"; };
 		EF50D8CF26F73D5A008F11D7 /* CustomerProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomerProfileViewController.swift; sourceTree = "<group>"; };
 		EF50D8D626F75771008F11D7 /* ContactHeaderTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactHeaderTableViewCell.swift; sourceTree = "<group>"; };
@@ -449,6 +453,23 @@
 			path = ProductSpecificationTableViewCell;
 			sourceTree = "<group>";
 		};
+		EF47885D276464E800746A59 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				EF47885E276464ED00746A59 /* BadgeSaleManView */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		EF47885E276464ED00746A59 /* BadgeSaleManView */ = {
+			isa = PBXGroup;
+			children = (
+				EF47885F2764651400746A59 /* BadgeSaleManView.swift */,
+				EF4788612764651F00746A59 /* BadgeSaleManView.xib */,
+			);
+			path = BadgeSaleManView;
+			sourceTree = "<group>";
+		};
 		EF50D8CA26F73CB1008F11D7 /* CustomerProfileView */ = {
 			isa = PBXGroup;
 			children = (
@@ -461,6 +482,7 @@
 		EF50D8D126F756E9008F11D7 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				EF47885D276464E800746A59 /* View */,
 				EF50D8D226F756EF008F11D7 /* Cell */,
 			);
 			path = Components;
@@ -915,6 +937,7 @@
 				EF529470260D887400C3EF64 /* Splash.storyboard in Resources */,
 				EF5242D9262AC96F0071572B /* RobotoCondensed-Bold.ttf in Resources */,
 				EFF00AD826B1CF0100A7C77D /* ProductInfoHeaderTableViewCell.xib in Resources */,
+				EF4788622764651F00746A59 /* BadgeSaleManView.xib in Resources */,
 				EF22CC7B26484C9800E5438F /* supermarket.ttf in Resources */,
 				EFEA18AE2641989C00251F19 /* ProductInfoList.storyboard in Resources */,
 				EF74ED1F262D2D7F00E420C8 /* PriceHeaderTableViewCell.xib in Resources */,
@@ -1016,6 +1039,7 @@
 				EF22CC7126480F8000E5438F /* CustomerInfoDetailListModel.swift in Sources */,
 				EF39943F26340E1D00BBC189 /* PriceTableModel.swift in Sources */,
 				EFED23EA2612127D00BD0CD7 /* LoginResponse.swift in Sources */,
+				EF4788602764651400746A59 /* BadgeSaleManView.swift in Sources */,
 				EFED24182612461800BD0CD7 /* UserDefaults+Extension.swift in Sources */,
 				EF9667F6271C6900002ED4C5 /* Gradient.swift in Sources */,
 				EF74ED15262D2D1700E420C8 /* PriceListTableViewCell.swift in Sources */,

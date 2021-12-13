@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="ipad10_9rounded" orientation="portrait" layout="fullscreen" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -24,19 +24,20 @@
                 <rect key="frame" x="0.0" y="0.0" width="820" height="25"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="cOn-Dp-eVh">
+                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="cOn-Dp-eVh">
                         <rect key="frame" x="0.0" y="0.0" width="820" height="25"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RZl-Q9-oOH">
-                                <rect key="frame" x="0.0" y="0.0" width="102.5" height="25"/>
+                                <rect key="frame" x="0.0" y="0.0" width="95.5" height="25"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PO NO" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4MO-uP-0BX">
-                                        <rect key="frame" x="0.0" y="0.0" width="102.5" height="25"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="95.5" height="25"/>
                                         <fontDescription key="fontDescription" name="RobotoCondensed-Regular" family="Roboto Condensed" pointSize="16"/>
                                         <color key="textColor" name="NewPrimary"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="bottom" secondItem="4MO-uP-0BX" secondAttribute="bottom" id="7FU-gf-E70"/>
                                     <constraint firstItem="4MO-uP-0BX" firstAttribute="leading" secondItem="RZl-Q9-oOH" secondAttribute="leading" id="PFX-4W-ZGQ"/>
@@ -45,15 +46,16 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Njc-jc-gpR">
-                                <rect key="frame" x="102.5" y="0.0" width="102.5" height="25"/>
+                                <rect key="frame" x="103.5" y="0.0" width="95.5" height="25"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ITEM" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OfA-pA-nxZ">
-                                        <rect key="frame" x="0.0" y="0.0" width="102.5" height="25"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="95.5" height="25"/>
                                         <fontDescription key="fontDescription" name="RobotoCondensed-Regular" family="Roboto Condensed" pointSize="16"/>
                                         <color key="textColor" name="NewPrimary"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="bottom" secondItem="OfA-pA-nxZ" secondAttribute="bottom" id="HMW-Vo-9h5"/>
                                     <constraint firstItem="OfA-pA-nxZ" firstAttribute="top" secondItem="Njc-jc-gpR" secondAttribute="top" id="KWH-QR-Tyc"/>
@@ -62,15 +64,16 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2jO-B4-4NN">
-                                <rect key="frame" x="205" y="0.0" width="102.5" height="25"/>
+                                <rect key="frame" x="207" y="0.0" width="95.5" height="25"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PO DATE" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="olY-i0-vMc">
-                                        <rect key="frame" x="0.0" y="0.0" width="102.5" height="25"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="95.5" height="25"/>
                                         <fontDescription key="fontDescription" name="RobotoCondensed-Regular" family="Roboto Condensed" pointSize="16"/>
                                         <color key="textColor" name="NewPrimary"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="olY-i0-vMc" secondAttribute="trailing" id="8vL-Px-5TF"/>
                                     <constraint firstItem="olY-i0-vMc" firstAttribute="top" secondItem="2jO-B4-4NN" secondAttribute="top" id="jE4-9W-uu9"/>
@@ -79,15 +82,16 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BAy-Bu-F9w">
-                                <rect key="frame" x="307.5" y="0.0" width="102.5" height="25"/>
+                                <rect key="frame" x="310.5" y="0.0" width="95.5" height="25"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="QTY.AVL" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uPd-8M-pSL">
-                                        <rect key="frame" x="0.0" y="0.0" width="102.5" height="25"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="95.5" height="25"/>
                                         <fontDescription key="fontDescription" name="RobotoCondensed-Regular" family="Roboto Condensed" pointSize="16"/>
                                         <color key="textColor" name="NewPrimary"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstItem="uPd-8M-pSL" firstAttribute="top" secondItem="BAy-Bu-F9w" secondAttribute="top" id="KYf-o6-Wnc"/>
                                     <constraint firstItem="uPd-8M-pSL" firstAttribute="leading" secondItem="BAy-Bu-F9w" secondAttribute="leading" id="VcA-DB-pSZ"/>
@@ -96,15 +100,16 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YcL-AW-kEY">
-                                <rect key="frame" x="410" y="0.0" width="102.5" height="25"/>
+                                <rect key="frame" x="414" y="0.0" width="95.5" height="25"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="EST.ARR" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KjA-3V-DcP">
-                                        <rect key="frame" x="0.0" y="0.0" width="102.5" height="25"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="95.5" height="25"/>
                                         <fontDescription key="fontDescription" name="RobotoCondensed-Regular" family="Roboto Condensed" pointSize="16"/>
                                         <color key="textColor" name="NewPrimary"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstItem="KjA-3V-DcP" firstAttribute="leading" secondItem="YcL-AW-kEY" secondAttribute="leading" id="IEe-qL-pye"/>
                                     <constraint firstAttribute="trailing" secondItem="KjA-3V-DcP" secondAttribute="trailing" id="PKa-In-ZCt"/>
@@ -113,15 +118,16 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kgR-co-HBZ">
-                                <rect key="frame" x="512.5" y="0.0" width="102.5" height="25"/>
+                                <rect key="frame" x="517.5" y="0.0" width="95.5" height="25"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CON.ARR" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Cf-1A-ivG">
-                                        <rect key="frame" x="0.0" y="0.0" width="102.5" height="25"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="95.5" height="25"/>
                                         <fontDescription key="fontDescription" name="RobotoCondensed-Regular" family="Roboto Condensed" pointSize="16"/>
                                         <color key="textColor" name="NewPrimary"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="4Cf-1A-ivG" secondAttribute="trailing" id="FdJ-RU-K5m"/>
                                     <constraint firstAttribute="bottom" secondItem="4Cf-1A-ivG" secondAttribute="bottom" id="NW3-jZ-fUA"/>
@@ -130,15 +136,16 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gfO-bM-zst">
-                                <rect key="frame" x="615" y="0.0" width="102.5" height="25"/>
+                                <rect key="frame" x="621" y="0.0" width="95.5" height="25"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="INCREASE" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0rr-17-exD">
-                                        <rect key="frame" x="0.0" y="0.0" width="102.5" height="25"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="95.5" height="25"/>
                                         <fontDescription key="fontDescription" name="RobotoCondensed-Regular" family="Roboto Condensed" pointSize="16"/>
                                         <color key="textColor" name="NewPrimary"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstItem="0rr-17-exD" firstAttribute="top" secondItem="gfO-bM-zst" secondAttribute="top" id="dBJ-Mq-iB9"/>
                                     <constraint firstItem="0rr-17-exD" firstAttribute="leading" secondItem="gfO-bM-zst" secondAttribute="leading" id="gN1-7b-lxN"/>
@@ -147,15 +154,16 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OTB-Cn-9fJ">
-                                <rect key="frame" x="717.5" y="0.0" width="102.5" height="25"/>
+                                <rect key="frame" x="724.5" y="0.0" width="95.5" height="25"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="APPROVE" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Gx-Px-UAo">
-                                        <rect key="frame" x="0.0" y="0.0" width="102.5" height="25"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="95.5" height="25"/>
                                         <fontDescription key="fontDescription" name="RobotoCondensed-Regular" family="Roboto Condensed" pointSize="16"/>
                                         <color key="textColor" name="NewPrimary"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="bottom" secondItem="9Gx-Px-UAo" secondAttribute="bottom" id="HP5-7U-iM1"/>
                                     <constraint firstItem="9Gx-Px-UAo" firstAttribute="leading" secondItem="OTB-Cn-9fJ" secondAttribute="leading" id="Pin-Bi-51u"/>

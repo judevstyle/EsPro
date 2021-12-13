@@ -21,6 +21,8 @@ class ProductInfoHeaderTableViewCell: UITableViewCell {
     @IBOutlet var descView: UIView!
     @IBOutlet var qtyView: UIView!
     @IBOutlet var priceView: UIView!
+    
+    @IBOutlet weak var stackView: UIStackView!
 
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -48,6 +50,11 @@ class ProductInfoHeaderTableViewCell: UITableViewCell {
         descView.addRightBorder(with: UIColor.gray, andWidth: 0.5)
         qtyView.addRightBorder(with: UIColor.gray, andWidth: 0.5)
 //        priceView.addRightBorder(with: UIColor.gray, andWidth: 0.5)
+        
+        
+        let newframe = CGRect(origin: .zero, size: CGSize(width: stackView.frame.width, height: stackView.frame.height))
+
+        stackView.backgroundColor = UIColor.gradientColor(startColor: .BGTableHeaderTop(), endColor: .BGTableHeaderBottom(), frame: newframe)
     }
     
     func setupValue() {

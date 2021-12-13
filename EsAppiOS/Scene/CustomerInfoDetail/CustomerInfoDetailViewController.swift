@@ -59,15 +59,15 @@ extension CustomerInfoDetailViewController {
         tableView.register(customerInfoNib, forCellReuseIdentifier: "CustomerInfoDetailTableViewCell")
         tableView.layer.borderWidth = 1
         tableView.layer.borderColor = UIColor.lightGray.cgColor
-        tableView.layer.cornerRadius = 8
+        tableView.layer.cornerRadius = 20
         tableView.isScrollEnabled = false
     }
     
     func mockData() {
-        mockDataList.append(CustomerInfoDetailListModel(arrowImage: "", title: "Customer Profile", iconImage: ""))
-        mockDataList.append(CustomerInfoDetailListModel(arrowImage: "", title: "This Month Sell", iconImage: ""))
-        mockDataList.append(CustomerInfoDetailListModel(arrowImage: "", title: "Sell History", iconImage: ""))
-        mockDataList.append(CustomerInfoDetailListModel(arrowImage: "", title: "D/O Report", iconImage: ""))
+        mockDataList.append(CustomerInfoDetailListModel(arrowImage: "", title: "Customer Profile", iconImage: "user"))
+        mockDataList.append(CustomerInfoDetailListModel(arrowImage: "", title: "This Month Sell", iconImage: "sale"))
+        mockDataList.append(CustomerInfoDetailListModel(arrowImage: "", title: "Sell History", iconImage: "history"))
+        mockDataList.append(CustomerInfoDetailListModel(arrowImage: "", title: "D/O Report", iconImage: "report"))
     }
 }
 
@@ -96,6 +96,17 @@ extension CustomerInfoDetailViewController: UITableViewDelegate, UITableViewData
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "CustomerInfoDetailTableViewCell", for: indexPath) as! CustomerInfoDetailTableViewCell
         cell.data = mockDataList[indexPath.item]
+        cell.setupValue()
+        
+        
+        let newframe = CGRect(origin: .zero, size: CGSize(width: 320, height: 65))
+
+        self.navigationController?.navigationBar.barTintColor = UIColor.gradientColor(startColor: .NavBarTop(), endColor: .NavBarBottom(), frame: newframe)
+        
+        let bgColorView = UIView()
+        bgColorView.backgroundColor = UIColor.gradientColor(startColor: .NavBarTop(), endColor: .NavBarBottom(), frame: newframe)
+        cell.selectedBackgroundView = bgColorView
+        
         return cell
     }
     

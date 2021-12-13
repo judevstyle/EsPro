@@ -33,6 +33,9 @@ class CustomerInfoDetailTableViewCell: UITableViewCell {
     
     func setupValue() {
         title.text = data?.title ?? ""
+        if let icon = data?.iconImage  {
+            iconImage.image = UIImage(named: icon)
+        }
     }
     
 }

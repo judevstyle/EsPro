@@ -18,6 +18,7 @@ class LoginViewController: UIViewController {
 
     @IBOutlet weak var bgGradientView: Gradient!
     
+    @IBOutlet weak var iconKeyImage: UIImageView!
     // ViewModel
     lazy var viewModel: LoginProtocol = {
         let vm = LoginViewModel(vcLogin: self)
@@ -60,11 +61,14 @@ extension LoginViewController {
         btnHidePassword.contentHorizontalAlignment = .fill
         btnHidePassword.imageEdgeInsets = UIEdgeInsets(top: 20, left: 16, bottom: 20, right: 16)
         
-        inputUsername.text = "CHAIWAT_K"
+//        inputUsername.text = "CHAIWAT_K"
+//        inputPassword.text = "1234"
+        
+        inputUsername.text = "test"
         inputPassword.text = "1234"
         
-//        inputUsername.text = "test"
-//        inputPassword.text = "123123"
+        iconKeyImage.image = UIImage(named: "key-icon")?.withRenderingMode(.alwaysTemplate)
+        iconKeyImage.tintColor = .IconLogin()
     }
 
 }

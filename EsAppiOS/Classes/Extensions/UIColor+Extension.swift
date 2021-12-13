@@ -52,6 +52,17 @@ extension UIColor {
         return UIColor(named: "NavBarBottom")!
     }
     
+    static func BGTableHeaderTop() -> UIColor {
+        return UIColor(named: "BGTableHeaderTop")!
+    }
+    
+    static func BGTableHeaderBottom() -> UIColor {
+        return UIColor(named: "BGTableHeaderBottom")!
+    }
+    
+    static func IconLogin() -> UIColor {
+        return UIColor(named: "IconLogin")!
+    }
     
     static func rgb(red: CGFloat, green: CGFloat, blue: CGFloat) -> UIColor {
         return UIColor(red: red/255, green: green/255, blue: blue/255, alpha: 1)

@@ -17,6 +17,8 @@ class CustomerProfileViewController: UIViewController {
     @IBOutlet var tableView: UITableView!
     @IBOutlet var tableViewHeight: NSLayoutConstraint!
     
+    @IBOutlet weak var badgeSaleMan1: BadgeSaleManView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()

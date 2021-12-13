@@ -13,6 +13,13 @@ extension UIView {
         self.layer.cornerRadius = rounded
     }
     
+    func roundCorners(corners: UIRectCorner, radius: CGFloat) {
+         let path = UIBezierPath(roundedRect: bounds, byRoundingCorners: corners, cornerRadii: CGSize(width: radius, height: radius))
+         let mask = CAShapeLayer()
+         mask.path = path.cgPath
+         layer.mask = mask
+     }
+    
     enum ViewSide {
         case Left, Right, Top, Bottom
     }
@@ -120,4 +127,16 @@ extension UIView {
           
           self.layer.addSublayer(gradientLayer)
       }
+    
+    
+    func constrainHeight(constant: CGFloat) {
+        constraints.forEach {
+           if $0.firstAttribute == .height {
+                self.removeConstraint($0)
+           }
+        }
+
+        heightAnchor.constraint(equalToConstant: constant).isActive = true
+        superview!.layoutIfNeeded()
+    }
 }
