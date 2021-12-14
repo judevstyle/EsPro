@@ -38,7 +38,7 @@ extension UIViewController {
         let vc = storyBoard.instantiateViewController(withIdentifier: "PopupView") as! PopupViewController
         vc.titlePopup = title
         vc.modalTransitionStyle = .crossDissolve
-//        vc.modalPresentationStyle = .fullScreen
-        self.present(vc, animated: true, completion: nil)
+        vc.modalPresentationStyle = .overCurrentContext
+        self.present(vc, animated: false, completion: nil)
     }
 }

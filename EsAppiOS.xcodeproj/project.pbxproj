@@ -24,7 +24,6 @@
 		EF29F40C260E2B4700ABE46D /* Moya in Frameworks */ = {isa = PBXBuildFile; productRef = EF29F40B260E2B4700ABE46D /* Moya */; };
 		EF29F40E260E2B4700ABE46D /* RxMoya in Frameworks */ = {isa = PBXBuildFile; productRef = EF29F40D260E2B4700ABE46D /* RxMoya */; };
 		EF29F410260E2B4700ABE46D /* ReactiveMoya in Frameworks */ = {isa = PBXBuildFile; productRef = EF29F40F260E2B4700ABE46D /* ReactiveMoya */; };
-		EF29F424260E2D4D00ABE46D /* APIProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF29F423260E2D4D00ABE46D /* APIProvider.swift */; };
 		EF29F429260E316200ABE46D /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF29F428260E316200ABE46D /* UIViewController+Extension.swift */; };
 		EF29F42D260E31C000ABE46D /* NVActivityIndicatorView in Frameworks */ = {isa = PBXBuildFile; productRef = EF29F42C260E31C000ABE46D /* NVActivityIndicatorView */; };
 		EF29F42F260E31C000ABE46D /* NVActivityIndicatorViewExtended in Frameworks */ = {isa = PBXBuildFile; productRef = EF29F42E260E31C000ABE46D /* NVActivityIndicatorViewExtended */; };
@@ -82,6 +81,21 @@
 		EF7D56FB260EF918004EE94A /* UIFont+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF7D56FA260EF918004EE94A /* UIFont+Extension.swift */; };
 		EF7D56FE260EFD99004EE94A /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF7D56FD260EFD99004EE94A /* UIView+Extension.swift */; };
 		EF9667F6271C6900002ED4C5 /* Gradient.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF9667F5271C6900002ED4C5 /* Gradient.swift */; };
+		EFA2EFE42768E34E0008463F /* LoginAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFA2EFE32768E34E0008463F /* LoginAPI.swift */; };
+		EFA2EFE82768E37E0008463F /* ProductInfoAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFA2EFE72768E37E0008463F /* ProductInfoAPI.swift */; };
+		EFA2EFEA2768E3860008463F /* CustomerInfoAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFA2EFE92768E3860008463F /* CustomerInfoAPI.swift */; };
+		EFA2EFEE2768E3D80008463F /* DomainNameConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFA2EFED2768E3D80008463F /* DomainNameConfig.swift */; };
+		EFA2EFF62768E6E60008463F /* GetLoginRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFA2EFF52768E6E60008463F /* GetLoginRequest.swift */; };
+		EFA2EFF82768E77D0008463F /* Encodable+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFA2EFF72768E77C0008463F /* Encodable+Extension.swift */; };
+		EFA2EFFA2768E8A50008463F /* LoginRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFA2EFF92768E8A50008463F /* LoginRepository.swift */; };
+		EFA2EFFC2768E8ED0008463F /* GetLoginResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFA2EFFB2768E8ED0008463F /* GetLoginResponse.swift */; };
+		EFA2EFFF2768E9970008463F /* CodableInfixOperator.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFA2EFFE2768E9970008463F /* CodableInfixOperator.swift */; };
+		EFA2F0012768E9C70008463F /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFA2F0002768E9C70008463F /* Utils.swift */; };
+		EFA2F0082768EA370008463F /* AnyKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFA2F0072768EA370008463F /* AnyKey.swift */; };
+		EFA2F00A2768EA620008463F /* Decodable+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFA2F0092768EA620008463F /* Decodable+Extension.swift */; };
+		EFA2F00C2768EA750008463F /* Decoder+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFA2F00B2768EA750008463F /* Decoder+Extension.swift */; };
+		EFA2F00E2768EAA40008463F /* KeyedDecodingContainer+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFA2F00D2768EAA40008463F /* KeyedDecodingContainer+Extension.swift */; };
+		EFA2F0132768EEEB0008463F /* GetLoginUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFA2F0122768EEEB0008463F /* GetLoginUseCase.swift */; };
 		EFEA18AA2641989600251F19 /* ProductInfoListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFEA18A92641989600251F19 /* ProductInfoListViewController.swift */; };
 		EFEA18AE2641989C00251F19 /* ProductInfoList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EFEA18AD2641989C00251F19 /* ProductInfoList.storyboard */; };
 		EFEA18BE2641A24600251F19 /* ProductInfoListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFEA18BC2641A24600251F19 /* ProductInfoListTableViewCell.swift */; };
@@ -91,11 +105,6 @@
 		EFEA18F02641B02A00251F19 /* CustomerInfoListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFEA18EE2641B02A00251F19 /* CustomerInfoListTableViewCell.swift */; };
 		EFEA18F12641B02A00251F19 /* CustomerInfoListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EFEA18EF2641B02A00251F19 /* CustomerInfoListTableViewCell.xib */; };
 		EFED23D52612106000BD0CD7 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFED23D42612106000BD0CD7 /* LoginViewModel.swift */; };
-		EFED23D92612108C00BD0CD7 /* LoginRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFED23D82612108C00BD0CD7 /* LoginRepository.swift */; };
-		EFED23DE261210BC00BD0CD7 /* LoginUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFED23DD261210BC00BD0CD7 /* LoginUseCase.swift */; };
-		EFED23E7261211E200BD0CD7 /* LoginRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFED23E6261211E200BD0CD7 /* LoginRequest.swift */; };
-		EFED23EA2612127D00BD0CD7 /* LoginResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFED23E92612127D00BD0CD7 /* LoginResponse.swift */; };
-		EFED23ED2612145800BD0CD7 /* Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFED23EC2612145800BD0CD7 /* Helpers.swift */; };
 		EFED23F0261217FA00BD0CD7 /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFED23EF261217FA00BD0CD7 /* UIColor+Extension.swift */; };
 		EFED24182612461800BD0CD7 /* UserDefaults+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFED24172612461800BD0CD7 /* UserDefaults+Extension.swift */; };
 		EFF00AD226B1CD6200A7C77D /* CustomerInfoHeaderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFF00AD026B1CD6200A7C77D /* CustomerInfoHeaderTableViewCell.swift */; };
@@ -121,7 +130,6 @@
 		EF239BF926384F3E00983EA8 /* SimilarRelatedHeaderTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SimilarRelatedHeaderTableViewCell.xib; sourceTree = "<group>"; };
 		EF239BFD26384F5800983EA8 /* SimilarRelatedListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimilarRelatedListTableViewCell.swift; sourceTree = "<group>"; };
 		EF239BFE26384F5800983EA8 /* SimilarRelatedListTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SimilarRelatedListTableViewCell.xib; sourceTree = "<group>"; };
-		EF29F423260E2D4D00ABE46D /* APIProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIProvider.swift; sourceTree = "<group>"; };
 		EF29F428260E316200ABE46D /* UIViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
 		EF29F431260E32B200ABE46D /* UITextField+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+Extension.swift"; sourceTree = "<group>"; };
 		EF29F434260E35EA00ABE46D /* UIButton+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+Extension.swift"; sourceTree = "<group>"; };
@@ -179,6 +187,21 @@
 		EF7D56FA260EF918004EE94A /* UIFont+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+Extension.swift"; sourceTree = "<group>"; };
 		EF7D56FD260EFD99004EE94A /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
 		EF9667F5271C6900002ED4C5 /* Gradient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Gradient.swift; sourceTree = "<group>"; };
+		EFA2EFE32768E34E0008463F /* LoginAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginAPI.swift; sourceTree = "<group>"; };
+		EFA2EFE72768E37E0008463F /* ProductInfoAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductInfoAPI.swift; sourceTree = "<group>"; };
+		EFA2EFE92768E3860008463F /* CustomerInfoAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomerInfoAPI.swift; sourceTree = "<group>"; };
+		EFA2EFED2768E3D80008463F /* DomainNameConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DomainNameConfig.swift; sourceTree = "<group>"; };
+		EFA2EFF52768E6E60008463F /* GetLoginRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetLoginRequest.swift; sourceTree = "<group>"; };
+		EFA2EFF72768E77C0008463F /* Encodable+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Encodable+Extension.swift"; sourceTree = "<group>"; };
+		EFA2EFF92768E8A50008463F /* LoginRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRepository.swift; sourceTree = "<group>"; };
+		EFA2EFFB2768E8ED0008463F /* GetLoginResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetLoginResponse.swift; sourceTree = "<group>"; };
+		EFA2EFFE2768E9970008463F /* CodableInfixOperator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodableInfixOperator.swift; sourceTree = "<group>"; };
+		EFA2F0002768E9C70008463F /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
+		EFA2F0072768EA370008463F /* AnyKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnyKey.swift; sourceTree = "<group>"; };
+		EFA2F0092768EA620008463F /* Decodable+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Decodable+Extension.swift"; sourceTree = "<group>"; };
+		EFA2F00B2768EA750008463F /* Decoder+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Decoder+Extension.swift"; sourceTree = "<group>"; };
+		EFA2F00D2768EAA40008463F /* KeyedDecodingContainer+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "KeyedDecodingContainer+Extension.swift"; sourceTree = "<group>"; };
+		EFA2F0122768EEEB0008463F /* GetLoginUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetLoginUseCase.swift; sourceTree = "<group>"; };
 		EFEA18A92641989600251F19 /* ProductInfoListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductInfoListViewController.swift; sourceTree = "<group>"; };
 		EFEA18AD2641989C00251F19 /* ProductInfoList.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ProductInfoList.storyboard; sourceTree = "<group>"; };
 		EFEA18BC2641A24600251F19 /* ProductInfoListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductInfoListTableViewCell.swift; sourceTree = "<group>"; };
@@ -188,11 +211,6 @@
 		EFEA18EE2641B02A00251F19 /* CustomerInfoListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomerInfoListTableViewCell.swift; sourceTree = "<group>"; };
 		EFEA18EF2641B02A00251F19 /* CustomerInfoListTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomerInfoListTableViewCell.xib; sourceTree = "<group>"; };
 		EFED23D42612106000BD0CD7 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
-		EFED23D82612108C00BD0CD7 /* LoginRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRepository.swift; sourceTree = "<group>"; };
-		EFED23DD261210BC00BD0CD7 /* LoginUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginUseCase.swift; sourceTree = "<group>"; };
-		EFED23E6261211E200BD0CD7 /* LoginRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRequest.swift; sourceTree = "<group>"; };
-		EFED23E92612127D00BD0CD7 /* LoginResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginResponse.swift; sourceTree = "<group>"; };
-		EFED23EC2612145800BD0CD7 /* Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helpers.swift; sourceTree = "<group>"; };
 		EFED23EF261217FA00BD0CD7 /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
 		EFED24172612461800BD0CD7 /* UserDefaults+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserDefaults+Extension.swift"; sourceTree = "<group>"; };
 		EFF00AD026B1CD6200A7C77D /* CustomerInfoHeaderTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomerInfoHeaderTableViewCell.swift; sourceTree = "<group>"; };
@@ -302,17 +320,8 @@
 				EF22CC73264813E500E5438F /* PopupView */,
 				EF29F43B260E44DB00ABE46D /* SceneOpen.swift */,
 				EF29F43F260E456000ABE46D /* NavigationManager.swift */,
-				EFED23EC2612145800BD0CD7 /* Helpers.swift */,
 			);
 			path = Helpers;
-			sourceTree = "<group>";
-		};
-		EF29F417260E2CAD00ABE46D /* Provider */ = {
-			isa = PBXGroup;
-			children = (
-				EF29F422260E2D4300ABE46D /* Moya */,
-			);
-			path = Provider;
 			sourceTree = "<group>";
 		};
 		EF29F418260E2CCA00ABE46D /* Fonts */ = {
@@ -324,14 +333,6 @@
 				EF22CC7A26484C9800E5438F /* supermarket.ttf */,
 			);
 			path = Fonts;
-			sourceTree = "<group>";
-		};
-		EF29F422260E2D4300ABE46D /* Moya */ = {
-			isa = PBXGroup;
-			children = (
-				EF29F423260E2D4D00ABE46D /* APIProvider.swift */,
-			);
-			path = Moya;
 			sourceTree = "<group>";
 		};
 		EF29F427260E315900ABE46D /* Extensions */ = {
@@ -346,6 +347,10 @@
 				EFED23EF261217FA00BD0CD7 /* UIColor+Extension.swift */,
 				EFED24172612461800BD0CD7 /* UserDefaults+Extension.swift */,
 				EF9667F5271C6900002ED4C5 /* Gradient.swift */,
+				EFA2EFF72768E77C0008463F /* Encodable+Extension.swift */,
+				EFA2F0092768EA620008463F /* Decodable+Extension.swift */,
+				EFA2F00B2768EA750008463F /* Decoder+Extension.swift */,
+				EFA2F00D2768EAA40008463F /* KeyedDecodingContainer+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -577,8 +582,9 @@
 		EF529452260D860800C3EF64 /* EsAppiOS */ = {
 			isa = PBXGroup;
 			children = (
+				EFA2EFEB2768E3C30008463F /* Core */,
+				EFA2EFDF2768E2F70008463F /* Data */,
 				EF50D8D126F756E9008F11D7 /* Components */,
-				EF29F417260E2CAD00ABE46D /* Provider */,
 				EF29F412260E2BBB00ABE46D /* Helpers */,
 				EF529480260D97DF00C3EF64 /* Classes */,
 				EF529472260D89C500C3EF64 /* Resource */,
@@ -626,9 +632,6 @@
 		EF529479260D969700C3EF64 /* Login */ = {
 			isa = PBXGroup;
 			children = (
-				EFED23DC2612109F00BD0CD7 /* UseCases */,
-				EFED23DB2612109900BD0CD7 /* Model */,
-				EFED23D72612106400BD0CD7 /* Repository */,
 				EFED23D32612104F00BD0CD7 /* ViewModel */,
 				EF52947A260D96BB00C3EF64 /* Login.storyboard */,
 				EF52947D260D96C500C3EF64 /* LoginViewController.swift */,
@@ -670,6 +673,143 @@
 				EF74ED1E262D2D7F00E420C8 /* PriceHeaderTableViewCell.xib */,
 			);
 			path = PriceHeaderTableViewCell;
+			sourceTree = "<group>";
+		};
+		EFA2EFDF2768E2F70008463F /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				EFA2EFF12768E6A00008463F /* Repositories */,
+				EFA2EFF02768E6960008463F /* UseCases */,
+				EFA2EFEF2768E6900008463F /* Models */,
+				EFA2EFE02768E3090008463F /* Providers */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		EFA2EFE02768E3090008463F /* Providers */ = {
+			isa = PBXGroup;
+			children = (
+				EFA2EFE12768E3160008463F /* Moya */,
+			);
+			path = Providers;
+			sourceTree = "<group>";
+		};
+		EFA2EFE12768E3160008463F /* Moya */ = {
+			isa = PBXGroup;
+			children = (
+				EFA2EFE62768E36A0008463F /* CustomerInfo */,
+				EFA2EFE52768E35E0008463F /* ProductInfo */,
+				EFA2EFE22768E3360008463F /* Login */,
+			);
+			path = Moya;
+			sourceTree = "<group>";
+		};
+		EFA2EFE22768E3360008463F /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				EFA2EFE32768E34E0008463F /* LoginAPI.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		EFA2EFE52768E35E0008463F /* ProductInfo */ = {
+			isa = PBXGroup;
+			children = (
+				EFA2EFE72768E37E0008463F /* ProductInfoAPI.swift */,
+			);
+			path = ProductInfo;
+			sourceTree = "<group>";
+		};
+		EFA2EFE62768E36A0008463F /* CustomerInfo */ = {
+			isa = PBXGroup;
+			children = (
+				EFA2EFE92768E3860008463F /* CustomerInfoAPI.swift */,
+			);
+			path = CustomerInfo;
+			sourceTree = "<group>";
+		};
+		EFA2EFEB2768E3C30008463F /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				EFA2EFFD2768E9830008463F /* Utility */,
+				EFA2EFEC2768E3CC0008463F /* Config */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		EFA2EFEC2768E3CC0008463F /* Config */ = {
+			isa = PBXGroup;
+			children = (
+				EFA2EFED2768E3D80008463F /* DomainNameConfig.swift */,
+			);
+			path = Config;
+			sourceTree = "<group>";
+		};
+		EFA2EFEF2768E6900008463F /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				EFA2EFF22768E6BA0008463F /* Login */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		EFA2EFF02768E6960008463F /* UseCases */ = {
+			isa = PBXGroup;
+			children = (
+				EFA2F00F2768EECB0008463F /* Login */,
+			);
+			path = UseCases;
+			sourceTree = "<group>";
+		};
+		EFA2EFF12768E6A00008463F /* Repositories */ = {
+			isa = PBXGroup;
+			children = (
+				EFA2EFF92768E8A50008463F /* LoginRepository.swift */,
+			);
+			path = Repositories;
+			sourceTree = "<group>";
+		};
+		EFA2EFF22768E6BA0008463F /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				EFA2EFF42768E6C80008463F /* Request */,
+				EFA2EFF32768E6C40008463F /* Response */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		EFA2EFF32768E6C40008463F /* Response */ = {
+			isa = PBXGroup;
+			children = (
+				EFA2EFFB2768E8ED0008463F /* GetLoginResponse.swift */,
+			);
+			path = Response;
+			sourceTree = "<group>";
+		};
+		EFA2EFF42768E6C80008463F /* Request */ = {
+			isa = PBXGroup;
+			children = (
+				EFA2EFF52768E6E60008463F /* GetLoginRequest.swift */,
+			);
+			path = Request;
+			sourceTree = "<group>";
+		};
+		EFA2EFFD2768E9830008463F /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+				EFA2EFFE2768E9970008463F /* CodableInfixOperator.swift */,
+				EFA2F0002768E9C70008463F /* Utils.swift */,
+				EFA2F0072768EA370008463F /* AnyKey.swift */,
+			);
+			path = Utility;
+			sourceTree = "<group>";
+		};
+		EFA2F00F2768EECB0008463F /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				EFA2F0122768EEEB0008463F /* GetLoginUseCase.swift */,
+			);
+			path = Login;
 			sourceTree = "<group>";
 		};
 		EFEA18A62641984D00251F19 /* ProductInfoList */ = {
@@ -777,47 +917,6 @@
 				EFED23D42612106000BD0CD7 /* LoginViewModel.swift */,
 			);
 			path = ViewModel;
-			sourceTree = "<group>";
-		};
-		EFED23D72612106400BD0CD7 /* Repository */ = {
-			isa = PBXGroup;
-			children = (
-				EFED23D82612108C00BD0CD7 /* LoginRepository.swift */,
-			);
-			path = Repository;
-			sourceTree = "<group>";
-		};
-		EFED23DB2612109900BD0CD7 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-				EFED23E22612110000BD0CD7 /* Request */,
-				EFED23E1261210FB00BD0CD7 /* Response */,
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
-		EFED23DC2612109F00BD0CD7 /* UseCases */ = {
-			isa = PBXGroup;
-			children = (
-				EFED23DD261210BC00BD0CD7 /* LoginUseCase.swift */,
-			);
-			path = UseCases;
-			sourceTree = "<group>";
-		};
-		EFED23E1261210FB00BD0CD7 /* Response */ = {
-			isa = PBXGroup;
-			children = (
-				EFED23E92612127D00BD0CD7 /* LoginResponse.swift */,
-			);
-			path = Response;
-			sourceTree = "<group>";
-		};
-		EFED23E22612110000BD0CD7 /* Request */ = {
-			isa = PBXGroup;
-			children = (
-				EFED23E6261211E200BD0CD7 /* LoginRequest.swift */,
-			);
-			path = Request;
 			sourceTree = "<group>";
 		};
 		EFF00ACF26B1CD5000A7C77D /* CustomerInfoHeaderTableViewCell */ = {
@@ -998,18 +1097,23 @@
 				EF239BFF26384F5800983EA8 /* SimilarRelatedListTableViewCell.swift in Sources */,
 				EFF00AD226B1CD6200A7C77D /* CustomerInfoHeaderTableViewCell.swift in Sources */,
 				EF29F440260E456000ABE46D /* NavigationManager.swift in Sources */,
+				EFA2EFF82768E77D0008463F /* Encodable+Extension.swift in Sources */,
+				EFA2EFEA2768E3860008463F /* CustomerInfoAPI.swift in Sources */,
 				EF5242E2262ADDD60071572B /* ImageCollectionViewCell.swift in Sources */,
 				EF39946E26342A2900BBC189 /* ShipmentListTableViewCell.swift in Sources */,
 				EF3994452634100700BBC189 /* InventoryHeaderTableViewCell.swift in Sources */,
+				EFA2EFE82768E37E0008463F /* ProductInfoAPI.swift in Sources */,
 				EF52947E260D96C500C3EF64 /* LoginViewController.swift in Sources */,
 				EF74ED1B262D2D6500E420C8 /* PriceHeaderTableViewCell.swift in Sources */,
 				EF52946D260D886D00C3EF64 /* SplashViewController.swift in Sources */,
-				EFED23ED2612145800BD0CD7 /* Helpers.swift in Sources */,
 				EFEA18CB2641AD2D00251F19 /* CustomerInfoListViewController.swift in Sources */,
 				EF529482260D97FF00C3EF64 /* Extension+Notification.swift in Sources */,
+				EFA2EFE42768E34E0008463F /* LoginAPI.swift in Sources */,
 				EFEA18F02641B02A00251F19 /* CustomerInfoListTableViewCell.swift in Sources */,
 				EF529454260D860800C3EF64 /* AppDelegate.swift in Sources */,
+				EFA2EFFC2768E8ED0008463F /* GetLoginResponse.swift in Sources */,
 				EFF00AD726B1CF0100A7C77D /* ProductInfoHeaderTableViewCell.swift in Sources */,
+				EFA2F00C2768EA750008463F /* Decoder+Extension.swift in Sources */,
 				EF39947326342D0E00BBC189 /* ShipmentTableModel.swift in Sources */,
 				EF50D8D826F75771008F11D7 /* ContactHeaderTableViewCell.swift in Sources */,
 				EF3994542634218A00BBC189 /* InventoryFooterTableViewCell.swift in Sources */,
@@ -1019,32 +1123,36 @@
 				EF3994AC2634454C00BBC189 /* ProductTableModel.swift in Sources */,
 				EF399461263429ED00BBC189 /* ShipmentHeaderTableViewCell.swift in Sources */,
 				EF29F429260E316200ABE46D /* UIViewController+Extension.swift in Sources */,
-				EFED23D92612108C00BD0CD7 /* LoginRepository.swift in Sources */,
 				EF29F443260E576800ABE46D /* UIImageView+Extension.swift in Sources */,
 				EFED23D52612106000BD0CD7 /* LoginViewModel.swift in Sources */,
 				EF29F435260E35EA00ABE46D /* UIButton+Extension.swift in Sources */,
 				EF7D56FE260EFD99004EE94A /* UIView+Extension.swift in Sources */,
-				EFED23E7261211E200BD0CD7 /* LoginRequest.swift in Sources */,
+				EFA2F0082768EA370008463F /* AnyKey.swift in Sources */,
 				EF39949C26343F8200BBC189 /* ProductSpecificationTableViewCell.swift in Sources */,
+				EFA2F00E2768EAA40008463F /* KeyedDecodingContainer+Extension.swift in Sources */,
 				EF50D8DC26F7577D008F11D7 /* ContactItemTableViewCell.swift in Sources */,
 				EF22CC632648073400E5438F /* CustomerInfoDetailViewController.swift in Sources */,
 				EF239BED26384DF400983EA8 /* SimilarTableModel.swift in Sources */,
 				EFEA18AA2641989600251F19 /* ProductInfoListViewController.swift in Sources */,
+				EFA2F0012768E9C70008463F /* Utils.swift in Sources */,
 				EF5242CD262AADDA0071572B /* ProductInfoViewController.swift in Sources */,
 				EF29F432260E32B200ABE46D /* UITextField+Extension.swift in Sources */,
 				EFED23F0261217FA00BD0CD7 /* UIColor+Extension.swift in Sources */,
+				EFA2EFEE2768E3D80008463F /* DomainNameConfig.swift in Sources */,
+				EFA2F00A2768EA620008463F /* Decodable+Extension.swift in Sources */,
+				EFA2EFFA2768E8A50008463F /* LoginRepository.swift in Sources */,
 				EF7D56FB260EF918004EE94A /* UIFont+Extension.swift in Sources */,
-				EF29F424260E2D4D00ABE46D /* APIProvider.swift in Sources */,
 				EF29F43C260E44DB00ABE46D /* SceneOpen.swift in Sources */,
+				EFA2EFFF2768E9970008463F /* CodableInfixOperator.swift in Sources */,
+				EFA2F0132768EEEB0008463F /* GetLoginUseCase.swift in Sources */,
 				EF22CC7126480F8000E5438F /* CustomerInfoDetailListModel.swift in Sources */,
 				EF39943F26340E1D00BBC189 /* PriceTableModel.swift in Sources */,
-				EFED23EA2612127D00BD0CD7 /* LoginResponse.swift in Sources */,
+				EFA2EFF62768E6E60008463F /* GetLoginRequest.swift in Sources */,
 				EF4788602764651400746A59 /* BadgeSaleManView.swift in Sources */,
 				EFED24182612461800BD0CD7 /* UserDefaults+Extension.swift in Sources */,
 				EF9667F6271C6900002ED4C5 /* Gradient.swift in Sources */,
 				EF74ED15262D2D1700E420C8 /* PriceListTableViewCell.swift in Sources */,
 				EF22CC6C26480A2000E5438F /* CustomerInfoDetailTableViewCell.swift in Sources */,
-				EFED23DE261210BC00BD0CD7 /* LoginUseCase.swift in Sources */,
 				EF22CC782648141500E5438F /* PopupViewController.swift in Sources */,
 				EF3994A126343F9500BBC189 /* ProductInformationTableViewCell.swift in Sources */,
 				EF50D8D026F73D5A008F11D7 /* CustomerProfileViewController.swift in Sources */,

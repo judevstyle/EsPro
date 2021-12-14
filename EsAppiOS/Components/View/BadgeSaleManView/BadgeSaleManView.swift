@@ -41,6 +41,9 @@ class BadgeSaleManView: UIView {
     }
     
     func setupUI() {
+        bgView.setRounded(rounded: bgView.frame.height/2)
+        bgView.layer.borderColor = UIColor.gray.cgColor
+        bgView.layer.borderWidth = 0.5
     }
     
 }

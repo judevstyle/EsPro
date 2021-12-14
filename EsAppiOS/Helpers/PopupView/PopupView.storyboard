@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="ipad10_9rounded" orientation="portrait" layout="fullscreen" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -23,7 +24,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bnh-cW-luE">
-                                <rect key="frame" x="210" y="482" width="400" height="196.5"/>
+                                <rect key="frame" x="210" y="494" width="400" height="196.5"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="b80-bi-anT">
                                         <rect key="frame" x="0.0" y="0.0" width="400" height="196.5"/>
@@ -84,6 +85,7 @@
                             </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="XGc-4V-Rv1"/>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.097123698645823195" colorSpace="custom" customColorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="bnh-cW-luE" firstAttribute="centerY" secondItem="XGc-4V-Rv1" secondAttribute="centerY" id="6kb-Ro-5E6"/>
                             <constraint firstItem="bnh-cW-luE" firstAttribute="centerX" secondItem="XGc-4V-Rv1" secondAttribute="centerX" id="wqN-1E-Bd4"/>

@@ -10,15 +10,12 @@ import RxMoya
 import RxSwift
 
 protocol LoginProtocolInput {
-    func authLogin(request: LoginRequest)
+    func authLogin(userId: String?, password: String?)
 }
 
 protocol LoginProtocolOutput: class {
     var didAuthLoginSuccess: (() -> Void)? { get set }
     var didAuthLoginError: (() -> Void)? { get set }
-    
-    func getListAuthUser() -> [LoginResponse]?
-    func checkPermissionAuthUser(user_id: String) -> Bool
 }
 
 protocol LoginProtocol: LoginProtocolInput, LoginProtocolOutput {
@@ -32,59 +29,57 @@ class LoginViewModel: LoginProtocol, LoginProtocolOutput {
     var output: LoginProtocolOutput { return self }
     
     // MARK: - Properties
-    private var loginUseCase: LoginUseCase
+    private var getLoginUseCase: GetLoginUseCase
     private var vcLogin: LoginViewController
     
     fileprivate let disposeBag = DisposeBag()
     
     init(
-        loginUseCase: LoginUseCase = LoginUseCaseImpl(),
+        getLoginUseCase: GetLoginUseCase = GetLoginUseCaseImpl(),
         vcLogin: LoginViewController
     ) {
-        self.loginUseCase = loginUseCase
+        self.getLoginUseCase = getLoginUseCase
         self.vcLogin = vcLogin
     }
     
     // MARK - Data-binding OutPut
     var didAuthLoginSuccess: (() -> Void)?
     var didAuthLoginError: (() -> Void)?
-    
-    private var listAuthUser: [LoginResponse]?
-    
-    func authLogin(request: LoginRequest) {
+
+    func authLogin(userId: String?, password: String?) {
         vcLogin.startLodingCircle()
-        var newRequest = request
-        newRequest.query = "secur"
-        newRequest.subquery = "login"
-        newRequest.user_id = "CHAIWAT_K"
-        newRequest.password = "1234"
-        newRequest.database = "inv"
-        loginUseCase
-            .execute(request: newRequest)
+        getLoginUseCase
+            .execute(userid: userId)
             .subscribe(onNext: { [weak self] (response) in
                 guard let weakSelf = self else { return }
-                weakSelf.listAuthUser = response
-                weakSelf.didAuthLoginSuccess?()
+                debugPrint("Success : \(response)")
                 weakSelf.vcLogin.stopLoding()
+                
+                if response.count > 0 {
+                    var isVerifyUser: Bool = false
+                    response.forEach({ item in
+                        if item.PASSWORD == password {
+                            isVerifyUser = true
+                            return
+                        }
+                    })
+                    
+                    if isVerifyUser {
+                        weakSelf.didAuthLoginSuccess?()
+                    } else {
+                        weakSelf.vcLogin.openPopupDialog(title: "Incorrect password!")
+                    }
+                } else {
+                    weakSelf.didAuthLoginError?()
+                    weakSelf.vcLogin.openPopupDialog(title: "UserID not found!")
+                }
+
             }, onError: { [weak self] error in
                 guard let weakSelf = self else { return }
+                debugPrint("Error : \(error)")
                 weakSelf.didAuthLoginError?()
                 weakSelf.vcLogin.stopLoding()
+                weakSelf.vcLogin.openPopupDialog(title: "Error : \(error)")
             }).disposed(by: disposeBag)
-        didAuthLoginSuccess?()
-    }
-    
-    func getListAuthUser() -> [LoginResponse]? {
-        return self.listAuthUser
-    }
-    
-    func checkPermissionAuthUser(user_id: String) -> Bool{
-        guard let listAuth = listAuthUser else { return false }
-        for item in listAuth {
-            if item.ACTIVE == 1 {
-                return true
-            }
-        }
-        return false
     }
 }

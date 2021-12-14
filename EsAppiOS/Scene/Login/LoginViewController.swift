@@ -84,10 +84,6 @@ extension LoginViewController {
     func didAuthLoginSuccess() -> (() -> Void) {
         return { [weak self] in
             guard let weakSelf = self else { return }
-            
-            guard let userID = weakSelf.inputUsername.text, userID != "", weakSelf.viewModel.output.checkPermissionAuthUser(user_id: userID)
-            else { return}
-//            weakSelf.openPopupDialog(title: "Incorret")
             weakSelf.gotoProductInfomation()
         }
     }
@@ -95,8 +91,8 @@ extension LoginViewController {
     func didAuthLoginError() -> (() -> Void) {
         return { [weak self] in
             guard let weakSelf = self else { return }
-            weakSelf.stopLoding()
-            weakSelf.gotoProductInfomation()
+//            weakSelf.stopLoding()
+//            weakSelf.gotoProductInfomation()
 //            weakSelf.openScene(identifier: .SceneMain)
 //            weakSelf.openPopupDialog(title: "Incorret")
         }
@@ -124,13 +120,10 @@ extension LoginViewController {
 //MARK: - Event
 extension LoginViewController {
     @IBAction func btnTapLogin(_ sender: Any) {
-        guard let userID = inputUsername.text, userID != "", let password = inputPassword.text, password != "" else {
+        guard let userId = inputUsername.text, userId != "", let password = inputPassword.text, password != "" else {
             return
         }
-        var request = LoginRequest()
-        request.user_id = userID
-        request.password = password
-        viewModel.input.authLogin(request: request)
+        viewModel.input.authLogin(userId: userId, password: password)
     }
 }
 
