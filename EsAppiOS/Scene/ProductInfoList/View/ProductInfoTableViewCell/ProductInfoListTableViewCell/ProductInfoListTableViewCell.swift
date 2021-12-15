@@ -23,7 +23,7 @@ class ProductInfoListTableViewCell: UITableViewCell {
     @IBOutlet var priceView: UIView!
     
     
-    var data : String? {
+    var item : GetProductInfoResponse? {
         didSet {
             setupValue()
         }
@@ -58,11 +58,11 @@ class ProductInfoListTableViewCell: UITableViewCell {
     }
     
     func setupValue() {
-        esPn.text = ""
-        mfrPn.text = ""
-        desc.text = ""
-        qty.text = ""
-        price1.text = ""
+        esPn.text = item?.ES_PN ?? ""
+        mfrPn.text = item?.MFR_PN ?? ""
+        desc.text = item?.DESCRIPTION ?? ""
+        qty.text = "\(item?.QTY ?? 0)"
+        price1.text = "\(item?.PRICE1 ?? 0)"
     }
     
 }

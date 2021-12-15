@@ -23,16 +23,59 @@ class ProductInfoListViewController: UIViewController {
     @IBOutlet var menuUserTopNav: UIBarButtonItem!
     @IBOutlet var menuAdminTopNav: UIBarButtonItem!
     
-    
     let rightBarDropDown = DropDown()
     var menuHamburger = UIBarButtonItem()
     var menuLogout = UIBarButtonItem()
+    
+    //defaults
+    private var query: String = "Product_info"
+    private var searchby: String = "ES"
+    private var keyword: String = ""
+    private var sortby: String = "ES"
+    
+    lazy var viewModel: ProductInfoListProtocol = {
+        let vm = ProductInfoListViewModel(vc: self)
+        self.configure(vm)
+        self.bindToViewModel()
+        return vm
+    }()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
         setupTableView()
     }
+    
+    func configure(_ interface: ProductInfoListProtocol) {
+        self.viewModel = interface
+    }
+}
+
+// MARK: - Binding
+extension ProductInfoListViewController {
+    
+    func bindToViewModel() {
+        viewModel.output.didGetProductInfoSuccess = didGetProductInfoSuccess()
+        viewModel.output.didGetProductInfoError = didGetProductInfoError()
+    }
+    
+    func didGetProductInfoSuccess() -> (() -> Void) {
+        return { [weak self] in
+            guard let weakSelf = self else { return }
+            weakSelf.tableView.reloadData()
+        }
+    }
+    
+    func didGetProductInfoError() -> (() -> Void) {
+        return { [weak self] in
+            guard let weakSelf = self else { return }
+//            weakSelf.stopLoding()
+//            weakSelf.gotoProductInfomation()
+//            weakSelf.openScene(identifier: .SceneMain)
+//            weakSelf.openPopupDialog(title: "Incorret")
+        }
+    }
+    
 }
 
 //MARK: - SetupUI
@@ -87,6 +130,7 @@ extension ProductInfoListViewController {
         
         
         btnSearch.setRounded(rounded: 8)
+        btnSearch.addTarget(self, action: #selector(didSearchButton), for: .touchUpInside)
         setRadioSearchBy()
         setRadioSortBy()
         
@@ -95,6 +139,16 @@ extension ProductInfoListViewController {
         inputSearch.setRounded(rounded: 8)
     
         setupRightBarDropDown()
+    }
+    
+    @objc func didSearchButton() {
+        var request: GetInfoLevel1Request = GetInfoLevel1Request()
+        keyword = inputSearch.text ?? ""
+        request.query = query
+        request.searchby = searchby
+        request.keyword = keyword
+        request.sortby = sortby
+        viewModel.input.getProductInfo(request: request)
     }
     
     func setNavBar() {
@@ -223,12 +277,14 @@ extension ProductInfoListViewController {
     
     @objc func selecedSearchByChange(){
         let searchByType = SearchType(rawValue: radioSearchByGroup.titles[radioSearchByGroup.selectedIndex] ?? "") ?? SearchType.ES
-        print(searchByType.rawValue)
+        searchby = searchByType.value
+        print(searchby)
     }
     
     @objc func selecedSortByChange(){
-        let sortByType = SearchType(rawValue: radioSortByGroup.titles[radioSortByGroup.selectedIndex] ?? "") ?? SearchType.ES
-        print(sortByType.rawValue)
+        let sortByType = SortType(rawValue: radioSortByGroup.titles[radioSortByGroup.selectedIndex] ?? "") ?? SortType.ES
+        sortby = sortByType.value
+        print(sortby)
     }
 }
 
@@ -240,39 +296,19 @@ extension ProductInfoListViewController: UITableViewDelegate, UITableViewDataSou
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 5 + 1
+        return (viewModel.output.getNumberOfRowsInSection()) + 1
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
-        if indexPath.item == 0 {
-            let cell = tableView.dequeueReusableCell(withIdentifier: "ProductInfoHeaderTableViewCell", for: indexPath) as! ProductInfoHeaderTableViewCell
-            cell.backgroundColor = UIColor.clear
-            cell.selectionStyle = .none
-            cell.setupUI()
-            return cell
-        } else {
-            let cell = tableView.dequeueReusableCell(withIdentifier: "ProductInfoListTableViewCell", for: indexPath) as! ProductInfoListTableViewCell
-            cell.backgroundColor = UIColor.clear
-            cell.selectionStyle = .none
-            cell.setupUI()
-            return cell
-        }
+        return viewModel.output.getCellForRowAt(tableView, cellForRowAt: indexPath)
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        if indexPath.item == 0 {
-            return 60
-        } else {
-            return 44
-        }
+        return viewModel.output.getHeightForRowAt(tableView, heightForRowAt: indexPath)
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        if indexPath.item == 0 {
-        } else {
-            self.openScene(identifier: .SceneProductInformationDetail)
-        }
+        viewModel.input.didSelectRowAt(tableView, didSelectRowAt: indexPath)
     }
 }
 

@@ -64,7 +64,7 @@ extension LoginViewController {
 //        inputUsername.text = "CHAIWAT_K"
 //        inputPassword.text = "1234"
         
-        inputUsername.text = "test"
+        inputUsername.text = "CHAIWAT_K"
         inputPassword.text = "1234"
         
         iconKeyImage.image = UIImage(named: "key-icon")?.withRenderingMode(.alwaysTemplate)
@@ -149,6 +149,22 @@ enum SortType : String {
     case MFR = "MFR P/N"
     case CustomerNo = "Customer No."
     case CustomerName = "CustomerName"
+    
+    var value: String {
+        switch self {
+        case .ES:
+            return "ES"
+        case .MFR:
+            return "MFR"
+        case .CustomerNo:
+            return "customerno"
+        case .CustomerName:
+            return "customername"
+        default:
+            return ""
+        }
+    }
+    
 }
 
 enum SearchType : String {
@@ -160,13 +176,15 @@ enum SearchType : String {
     var value: String {
         switch self {
         case .ES:
-            return "espart"
+            return "ES"
         case .MFR:
-            return "mfrpart"
+            return "MFR"
         case .CustomerNo:
             return "customerno"
         case .CustomerName:
             return "customername"
+        default:
+            return ""
         }
     }
 }

@@ -80,10 +80,17 @@
 		EF74ED1F262D2D7F00E420C8 /* PriceHeaderTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EF74ED1E262D2D7F00E420C8 /* PriceHeaderTableViewCell.xib */; };
 		EF7D56FB260EF918004EE94A /* UIFont+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF7D56FA260EF918004EE94A /* UIFont+Extension.swift */; };
 		EF7D56FE260EFD99004EE94A /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF7D56FD260EFD99004EE94A /* UIView+Extension.swift */; };
+		EF849DDC276A40030010FEF0 /* GetInfoLevel1Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF849DDB276A40030010FEF0 /* GetInfoLevel1Request.swift */; };
+		EF849DE1276A40770010FEF0 /* InfoLevel1API.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF849DE0276A40770010FEF0 /* InfoLevel1API.swift */; };
+		EF849DE3276A409E0010FEF0 /* InfoLevel1Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF849DE2276A409E0010FEF0 /* InfoLevel1Repository.swift */; };
+		EF849DE5276A40F40010FEF0 /* GetProductInfoResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF849DE4276A40F40010FEF0 /* GetProductInfoResponse.swift */; };
+		EF849DE7276A40FE0010FEF0 /* GetCustomerInfoResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF849DE6276A40FE0010FEF0 /* GetCustomerInfoResponse.swift */; };
+		EF849DEB276A42EC0010FEF0 /* GetProductInfoUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF849DEA276A42EC0010FEF0 /* GetProductInfoUseCase.swift */; };
+		EF849DED276A42FB0010FEF0 /* GetCustomerInfoUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF849DEC276A42FB0010FEF0 /* GetCustomerInfoUseCase.swift */; };
+		EF849DF0276A43FE0010FEF0 /* ProductInfoListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF849DEF276A43FE0010FEF0 /* ProductInfoListViewModel.swift */; };
+		EF849DF2276A487A0010FEF0 /* AnyCodableValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF849DF1276A487A0010FEF0 /* AnyCodableValue.swift */; };
 		EF9667F6271C6900002ED4C5 /* Gradient.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF9667F5271C6900002ED4C5 /* Gradient.swift */; };
 		EFA2EFE42768E34E0008463F /* LoginAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFA2EFE32768E34E0008463F /* LoginAPI.swift */; };
-		EFA2EFE82768E37E0008463F /* ProductInfoAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFA2EFE72768E37E0008463F /* ProductInfoAPI.swift */; };
-		EFA2EFEA2768E3860008463F /* CustomerInfoAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFA2EFE92768E3860008463F /* CustomerInfoAPI.swift */; };
 		EFA2EFEE2768E3D80008463F /* DomainNameConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFA2EFED2768E3D80008463F /* DomainNameConfig.swift */; };
 		EFA2EFF62768E6E60008463F /* GetLoginRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFA2EFF52768E6E60008463F /* GetLoginRequest.swift */; };
 		EFA2EFF82768E77D0008463F /* Encodable+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFA2EFF72768E77C0008463F /* Encodable+Extension.swift */; };
@@ -186,10 +193,17 @@
 		EF74ED1E262D2D7F00E420C8 /* PriceHeaderTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PriceHeaderTableViewCell.xib; sourceTree = "<group>"; };
 		EF7D56FA260EF918004EE94A /* UIFont+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+Extension.swift"; sourceTree = "<group>"; };
 		EF7D56FD260EFD99004EE94A /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
+		EF849DDB276A40030010FEF0 /* GetInfoLevel1Request.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetInfoLevel1Request.swift; sourceTree = "<group>"; };
+		EF849DE0276A40770010FEF0 /* InfoLevel1API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoLevel1API.swift; sourceTree = "<group>"; };
+		EF849DE2276A409E0010FEF0 /* InfoLevel1Repository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoLevel1Repository.swift; sourceTree = "<group>"; };
+		EF849DE4276A40F40010FEF0 /* GetProductInfoResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetProductInfoResponse.swift; sourceTree = "<group>"; };
+		EF849DE6276A40FE0010FEF0 /* GetCustomerInfoResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetCustomerInfoResponse.swift; sourceTree = "<group>"; };
+		EF849DEA276A42EC0010FEF0 /* GetProductInfoUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetProductInfoUseCase.swift; sourceTree = "<group>"; };
+		EF849DEC276A42FB0010FEF0 /* GetCustomerInfoUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetCustomerInfoUseCase.swift; sourceTree = "<group>"; };
+		EF849DEF276A43FE0010FEF0 /* ProductInfoListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductInfoListViewModel.swift; sourceTree = "<group>"; };
+		EF849DF1276A487A0010FEF0 /* AnyCodableValue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnyCodableValue.swift; sourceTree = "<group>"; };
 		EF9667F5271C6900002ED4C5 /* Gradient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Gradient.swift; sourceTree = "<group>"; };
 		EFA2EFE32768E34E0008463F /* LoginAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginAPI.swift; sourceTree = "<group>"; };
-		EFA2EFE72768E37E0008463F /* ProductInfoAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductInfoAPI.swift; sourceTree = "<group>"; };
-		EFA2EFE92768E3860008463F /* CustomerInfoAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomerInfoAPI.swift; sourceTree = "<group>"; };
 		EFA2EFED2768E3D80008463F /* DomainNameConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DomainNameConfig.swift; sourceTree = "<group>"; };
 		EFA2EFF52768E6E60008463F /* GetLoginRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetLoginRequest.swift; sourceTree = "<group>"; };
 		EFA2EFF72768E77C0008463F /* Encodable+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Encodable+Extension.swift"; sourceTree = "<group>"; };
@@ -675,6 +689,64 @@
 			path = PriceHeaderTableViewCell;
 			sourceTree = "<group>";
 		};
+		EF849DD4276A3F7B0010FEF0 /* InfoLevel1 */ = {
+			isa = PBXGroup;
+			children = (
+				EF849DE0276A40770010FEF0 /* InfoLevel1API.swift */,
+			);
+			path = InfoLevel1;
+			sourceTree = "<group>";
+		};
+		EF849DD7276A3FD40010FEF0 /* InfoLevel1 */ = {
+			isa = PBXGroup;
+			children = (
+				EF849DDD276A400D0010FEF0 /* Response */,
+				EF849DD8276A3FE60010FEF0 /* Request */,
+			);
+			path = InfoLevel1;
+			sourceTree = "<group>";
+		};
+		EF849DD8276A3FE60010FEF0 /* Request */ = {
+			isa = PBXGroup;
+			children = (
+				EF849DDB276A40030010FEF0 /* GetInfoLevel1Request.swift */,
+			);
+			path = Request;
+			sourceTree = "<group>";
+		};
+		EF849DDD276A400D0010FEF0 /* Response */ = {
+			isa = PBXGroup;
+			children = (
+				EF849DE4276A40F40010FEF0 /* GetProductInfoResponse.swift */,
+				EF849DE6276A40FE0010FEF0 /* GetCustomerInfoResponse.swift */,
+			);
+			path = Response;
+			sourceTree = "<group>";
+		};
+		EF849DE8276A42C90010FEF0 /* ProductInfo */ = {
+			isa = PBXGroup;
+			children = (
+				EF849DEA276A42EC0010FEF0 /* GetProductInfoUseCase.swift */,
+			);
+			path = ProductInfo;
+			sourceTree = "<group>";
+		};
+		EF849DE9276A42DA0010FEF0 /* CustomerInfo */ = {
+			isa = PBXGroup;
+			children = (
+				EF849DEC276A42FB0010FEF0 /* GetCustomerInfoUseCase.swift */,
+			);
+			path = CustomerInfo;
+			sourceTree = "<group>";
+		};
+		EF849DEE276A43EC0010FEF0 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				EF849DEF276A43FE0010FEF0 /* ProductInfoListViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 		EFA2EFDF2768E2F70008463F /* Data */ = {
 			isa = PBXGroup;
 			children = (
@@ -697,8 +769,7 @@
 		EFA2EFE12768E3160008463F /* Moya */ = {
 			isa = PBXGroup;
 			children = (
-				EFA2EFE62768E36A0008463F /* CustomerInfo */,
-				EFA2EFE52768E35E0008463F /* ProductInfo */,
+				EF849DD4276A3F7B0010FEF0 /* InfoLevel1 */,
 				EFA2EFE22768E3360008463F /* Login */,
 			);
 			path = Moya;
@@ -710,22 +781,6 @@
 				EFA2EFE32768E34E0008463F /* LoginAPI.swift */,
 			);
 			path = Login;
-			sourceTree = "<group>";
-		};
-		EFA2EFE52768E35E0008463F /* ProductInfo */ = {
-			isa = PBXGroup;
-			children = (
-				EFA2EFE72768E37E0008463F /* ProductInfoAPI.swift */,
-			);
-			path = ProductInfo;
-			sourceTree = "<group>";
-		};
-		EFA2EFE62768E36A0008463F /* CustomerInfo */ = {
-			isa = PBXGroup;
-			children = (
-				EFA2EFE92768E3860008463F /* CustomerInfoAPI.swift */,
-			);
-			path = CustomerInfo;
 			sourceTree = "<group>";
 		};
 		EFA2EFEB2768E3C30008463F /* Core */ = {
@@ -748,6 +803,7 @@
 		EFA2EFEF2768E6900008463F /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				EF849DD7276A3FD40010FEF0 /* InfoLevel1 */,
 				EFA2EFF22768E6BA0008463F /* Login */,
 			);
 			path = Models;
@@ -756,6 +812,8 @@
 		EFA2EFF02768E6960008463F /* UseCases */ = {
 			isa = PBXGroup;
 			children = (
+				EF849DE9276A42DA0010FEF0 /* CustomerInfo */,
+				EF849DE8276A42C90010FEF0 /* ProductInfo */,
 				EFA2F00F2768EECB0008463F /* Login */,
 			);
 			path = UseCases;
@@ -765,6 +823,7 @@
 			isa = PBXGroup;
 			children = (
 				EFA2EFF92768E8A50008463F /* LoginRepository.swift */,
+				EF849DE2276A409E0010FEF0 /* InfoLevel1Repository.swift */,
 			);
 			path = Repositories;
 			sourceTree = "<group>";
@@ -800,6 +859,7 @@
 				EFA2EFFE2768E9970008463F /* CodableInfixOperator.swift */,
 				EFA2F0002768E9C70008463F /* Utils.swift */,
 				EFA2F0072768EA370008463F /* AnyKey.swift */,
+				EF849DF1276A487A0010FEF0 /* AnyCodableValue.swift */,
 			);
 			path = Utility;
 			sourceTree = "<group>";
@@ -815,7 +875,7 @@
 		EFEA18A62641984D00251F19 /* ProductInfoList */ = {
 			isa = PBXGroup;
 			children = (
-				EFEA18B1264198AB00251F19 /* Model */,
+				EF849DEE276A43EC0010FEF0 /* ViewModel */,
 				EFEA18B02641989F00251F19 /* View */,
 				EFEA18A92641989600251F19 /* ProductInfoListViewController.swift */,
 				EFEA18AD2641989C00251F19 /* ProductInfoList.storyboard */,
@@ -851,13 +911,6 @@
 				EFEA18B92641A1EC00251F19 /* ProductInfoTableViewCell */,
 			);
 			path = View;
-			sourceTree = "<group>";
-		};
-		EFEA18B1264198AB00251F19 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
 			sourceTree = "<group>";
 		};
 		EFEA18B92641A1EC00251F19 /* ProductInfoTableViewCell */ = {
@@ -1097,18 +1150,18 @@
 				EF239BFF26384F5800983EA8 /* SimilarRelatedListTableViewCell.swift in Sources */,
 				EFF00AD226B1CD6200A7C77D /* CustomerInfoHeaderTableViewCell.swift in Sources */,
 				EF29F440260E456000ABE46D /* NavigationManager.swift in Sources */,
+				EF849DE7276A40FE0010FEF0 /* GetCustomerInfoResponse.swift in Sources */,
 				EFA2EFF82768E77D0008463F /* Encodable+Extension.swift in Sources */,
-				EFA2EFEA2768E3860008463F /* CustomerInfoAPI.swift in Sources */,
 				EF5242E2262ADDD60071572B /* ImageCollectionViewCell.swift in Sources */,
 				EF39946E26342A2900BBC189 /* ShipmentListTableViewCell.swift in Sources */,
 				EF3994452634100700BBC189 /* InventoryHeaderTableViewCell.swift in Sources */,
-				EFA2EFE82768E37E0008463F /* ProductInfoAPI.swift in Sources */,
 				EF52947E260D96C500C3EF64 /* LoginViewController.swift in Sources */,
 				EF74ED1B262D2D6500E420C8 /* PriceHeaderTableViewCell.swift in Sources */,
 				EF52946D260D886D00C3EF64 /* SplashViewController.swift in Sources */,
 				EFEA18CB2641AD2D00251F19 /* CustomerInfoListViewController.swift in Sources */,
 				EF529482260D97FF00C3EF64 /* Extension+Notification.swift in Sources */,
 				EFA2EFE42768E34E0008463F /* LoginAPI.swift in Sources */,
+				EF849DED276A42FB0010FEF0 /* GetCustomerInfoUseCase.swift in Sources */,
 				EFEA18F02641B02A00251F19 /* CustomerInfoListTableViewCell.swift in Sources */,
 				EF529454260D860800C3EF64 /* AppDelegate.swift in Sources */,
 				EFA2EFFC2768E8ED0008463F /* GetLoginResponse.swift in Sources */,
@@ -1126,13 +1179,16 @@
 				EF29F443260E576800ABE46D /* UIImageView+Extension.swift in Sources */,
 				EFED23D52612106000BD0CD7 /* LoginViewModel.swift in Sources */,
 				EF29F435260E35EA00ABE46D /* UIButton+Extension.swift in Sources */,
+				EF849DE3276A409E0010FEF0 /* InfoLevel1Repository.swift in Sources */,
 				EF7D56FE260EFD99004EE94A /* UIView+Extension.swift in Sources */,
 				EFA2F0082768EA370008463F /* AnyKey.swift in Sources */,
 				EF39949C26343F8200BBC189 /* ProductSpecificationTableViewCell.swift in Sources */,
+				EF849DF0276A43FE0010FEF0 /* ProductInfoListViewModel.swift in Sources */,
 				EFA2F00E2768EAA40008463F /* KeyedDecodingContainer+Extension.swift in Sources */,
 				EF50D8DC26F7577D008F11D7 /* ContactItemTableViewCell.swift in Sources */,
 				EF22CC632648073400E5438F /* CustomerInfoDetailViewController.swift in Sources */,
 				EF239BED26384DF400983EA8 /* SimilarTableModel.swift in Sources */,
+				EF849DE5276A40F40010FEF0 /* GetProductInfoResponse.swift in Sources */,
 				EFEA18AA2641989600251F19 /* ProductInfoListViewController.swift in Sources */,
 				EFA2F0012768E9C70008463F /* Utils.swift in Sources */,
 				EF5242CD262AADDA0071572B /* ProductInfoViewController.swift in Sources */,
@@ -1141,14 +1197,18 @@
 				EFA2EFEE2768E3D80008463F /* DomainNameConfig.swift in Sources */,
 				EFA2F00A2768EA620008463F /* Decodable+Extension.swift in Sources */,
 				EFA2EFFA2768E8A50008463F /* LoginRepository.swift in Sources */,
+				EF849DE1276A40770010FEF0 /* InfoLevel1API.swift in Sources */,
 				EF7D56FB260EF918004EE94A /* UIFont+Extension.swift in Sources */,
 				EF29F43C260E44DB00ABE46D /* SceneOpen.swift in Sources */,
 				EFA2EFFF2768E9970008463F /* CodableInfixOperator.swift in Sources */,
 				EFA2F0132768EEEB0008463F /* GetLoginUseCase.swift in Sources */,
+				EF849DDC276A40030010FEF0 /* GetInfoLevel1Request.swift in Sources */,
 				EF22CC7126480F8000E5438F /* CustomerInfoDetailListModel.swift in Sources */,
+				EF849DEB276A42EC0010FEF0 /* GetProductInfoUseCase.swift in Sources */,
 				EF39943F26340E1D00BBC189 /* PriceTableModel.swift in Sources */,
 				EFA2EFF62768E6E60008463F /* GetLoginRequest.swift in Sources */,
 				EF4788602764651400746A59 /* BadgeSaleManView.swift in Sources */,
+				EF849DF2276A487A0010FEF0 /* AnyCodableValue.swift in Sources */,
 				EFED24182612461800BD0CD7 /* UserDefaults+Extension.swift in Sources */,
 				EF9667F6271C6900002ED4C5 /* Gradient.swift in Sources */,
 				EF74ED15262D2D1700E420C8 /* PriceListTableViewCell.swift in Sources */,

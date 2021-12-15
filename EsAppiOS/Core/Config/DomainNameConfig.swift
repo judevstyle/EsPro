@@ -9,6 +9,7 @@ import Foundation
 
 public enum DomainNameConfig {
     case Login
+    case InfoLevel1
 }
 
 extension DomainNameConfig {
@@ -16,11 +17,13 @@ extension DomainNameConfig {
     public var urlString: String {
         
         let HostURL5000: String = "https://apiesource.com:5000"
-        let HostURL5001: String = "https://apiesource.com:5001"
+        let HostURL5001: String = "http://apiesource.com:5001"
         
         switch self {
         case .Login:
             return "\(HostURL5000)/esprogram"
+        case .InfoLevel1:
+            return "\(HostURL5001)/esprogram"
         }
     }
     
