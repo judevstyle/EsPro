@@ -26,11 +26,55 @@ class CustomerInfoListViewController: UIViewController {
     var menuHamburger = UIBarButtonItem()
     var menuLogout = UIBarButtonItem()
     
+    //defaults
+    private var query: String = "Customer_info"
+    private var searchby: String = "NO"
+    private var keyword: String = ""
+    private var sortby: String = "NO"
+    
+    lazy var viewModel: CustomerInfoListProtocol = {
+        let vm = CustomerInfoListViewModel(vc: self)
+        self.configure(vm)
+        self.bindToViewModel()
+        return vm
+    }()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
         setupTableView()
     }
+    
+    func configure(_ interface: CustomerInfoListProtocol) {
+        self.viewModel = interface
+    }
+}
+
+// MARK: - Binding
+extension CustomerInfoListViewController {
+    
+    func bindToViewModel() {
+        viewModel.output.didGetCustomerInfoSuccess = didGetCustomerInfoSuccess()
+        viewModel.output.didGetCustomerInfoError = didGetCustomerInfoError()
+    }
+    
+    func didGetCustomerInfoSuccess() -> (() -> Void) {
+        return { [weak self] in
+            guard let weakSelf = self else { return }
+            weakSelf.tableView.reloadData()
+        }
+    }
+    
+    func didGetCustomerInfoError() -> (() -> Void) {
+        return { [weak self] in
+            guard let weakSelf = self else { return }
+//            weakSelf.stopLoding()
+//            weakSelf.gotoProductInfomation()
+//            weakSelf.openScene(identifier: .SceneMain)
+//            weakSelf.openPopupDialog(title: "Incorret")
+        }
+    }
+    
 }
 
 //MARK: - SetupUI
@@ -84,6 +128,7 @@ extension CustomerInfoListViewController {
 //        navigationItem.leftBarButtonItem = backLeft
         
         btnSearch.setRounded(rounded: 8)
+        btnSearch.addTarget(self, action: #selector(didSearchButton), for: .touchUpInside)
         setRadioSearchBy()
         setRadioSortBy()
         
@@ -93,6 +138,18 @@ extension CustomerInfoListViewController {
         
         setupRightBarDropDown()
         
+        NavigationManager.instance.setupWithNavigationController(navigationController: self.navigationController)
+        
+    }
+    
+    @objc func didSearchButton() {
+        var request: GetInfoLevel1Request = GetInfoLevel1Request()
+        keyword = inputSearch.text ?? ""
+        request.query = query
+        request.searchby = searchby
+        request.keyword = keyword
+        request.sortby = sortby
+        viewModel.input.getCustomerInfo(request: request)
     }
     
     func setNavBar() {
@@ -137,24 +194,11 @@ extension CustomerInfoListViewController {
     }
     
     private func gotoProductInfomation(){
-        UIView.transition(
-             with: UIApplication.shared.keyWindow!,
-             duration: 0.25,
-             options: .transitionFlipFromLeft,
-             animations: {
-                let loadingStoryBoard = "ProductInfoList"
-                // Override point for customization after application launch.
-                let storyboard = UIStoryboard(name: loadingStoryBoard, bundle: nil)
-                let initialViewController = storyboard.instantiateInitialViewController()
-
-                let appDelegate = UIApplication.shared.delegate as! AppDelegate
-                appDelegate.window?.rootViewController = initialViewController
-                appDelegate.window?.makeKeyAndVisible()
-         })
+        NavigationManager.instance.setRootViewController(rootView: .productInfoList)
     }
     
     func setRadioSearchBy(){
-        radioSearchByGroup.titles = [SearchType.ES.rawValue, SearchType.MFR.rawValue]
+        radioSearchByGroup.titles = [SearchType.CustomerNo.rawValue, SearchType.CustomerName.rawValue]
         radioSearchByGroup.tintColor = .white       // surrounding ring
 //        radioSearchByGroup.selectedColor = .white
         radioSearchByGroup.selectedIndex = 0
@@ -169,7 +213,7 @@ extension CustomerInfoListViewController {
     }
     
     func setRadioSortBy(){
-        radioSortByGroup.titles = [SearchType.ES.rawValue, SearchType.MFR.rawValue]
+        radioSortByGroup.titles = [SortType.CustomerNo.rawValue, SortType.CustomerName.rawValue]
         radioSortByGroup.tintColor = .white      // surrounding ring
 //        radioSortByGroup.selectedColor = .white
         radioSortByGroup.selectedIndex = 0
@@ -202,32 +246,17 @@ extension CustomerInfoListViewController {
     }
     
     @objc func menuLogoutTapped() {
-        
-        UIView.transition(
-             with: UIApplication.shared.keyWindow!,
-             duration: 0.25,
-             options: .transitionFlipFromLeft,
-             animations: {
-                let loadingStoryBoard = "Login"
-                // Override point for customization after application launch.
-                let storyboard = UIStoryboard(name: loadingStoryBoard, bundle: nil)
-                let initialViewController = storyboard.instantiateInitialViewController()
-
-                let appDelegate = UIApplication.shared.delegate as! AppDelegate
-                appDelegate.window?.rootViewController = initialViewController
-                appDelegate.window?.makeKeyAndVisible()
-         })
-        
+        NavigationManager.instance.setRootViewController(rootView: .login)
     }
     
     @objc func selecedSearchByChange(){
-        let searchByType = SearchType(rawValue: radioSearchByGroup.titles[radioSearchByGroup.selectedIndex] ?? "") ?? SearchType.ES
-        print(searchByType.rawValue)
+        let searchByType = SearchType(rawValue: radioSearchByGroup.titles[radioSearchByGroup.selectedIndex] ?? "") ?? SearchType.CustomerNo
+        searchby = searchByType.value
     }
     
     @objc func selecedSortByChange(){
-        let sortByType = SearchType(rawValue: radioSortByGroup.titles[radioSortByGroup.selectedIndex] ?? "") ?? SearchType.ES
-        print(sortByType.rawValue)
+        let sortByType = SortType(rawValue: radioSortByGroup.titles[radioSortByGroup.selectedIndex] ?? "") ?? SortType.CustomerNo
+        sortby = sortByType.value
     }
 }
 
@@ -238,49 +267,19 @@ extension CustomerInfoListViewController: UITableViewDelegate, UITableViewDataSo
         return 1
     }
     
-//    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-//        let headerView = tableView.dequeueReusableHeaderFooterView(withIdentifier: "CustomerInfoHeaderTableViewCell") as! CustomerInfoHeaderTableViewCell
-//        return headerView
-//    }
-//
-    
-//    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-//        return 60
-//    }
-    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 5 + 1
+        return (viewModel.output.getNumberOfRowsInSection()) + 1
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        //                        cell.item = listProductSpecification[indexPath.item]
-        if indexPath.item == 0 {
-            let cell = tableView.dequeueReusableCell(withIdentifier: "CustomerInfoHeaderTableViewCell", for: indexPath) as! CustomerInfoHeaderTableViewCell
-            cell.backgroundColor = UIColor.clear
-            cell.selectionStyle = .none
-            cell.setupUI()
-            return cell
-        } else {
-            let cell = tableView.dequeueReusableCell(withIdentifier: "CustomerInfoListTableViewCell", for: indexPath) as! CustomerInfoListTableViewCell
-            cell.backgroundColor = UIColor.clear
-            cell.selectionStyle = .none
-            cell.setupUI()
-            return cell
-        }
+        return viewModel.output.getCellForRowAt(tableView, cellForRowAt: indexPath)
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        if indexPath.item == 0 {
-            return 60
-        } else {
-            return 44
-        }
+        return viewModel.output.getHeightForRowAt(tableView, heightForRowAt: indexPath)
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        if indexPath.item == 0 {
-        } else {
-            self.openScene(identifier: .SceneCustomerInformationDetail)
-        }
+        viewModel.input.didSelectRowAt(tableView, didSelectRowAt: indexPath)
     }
 }

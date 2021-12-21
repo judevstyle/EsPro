@@ -31,7 +31,7 @@ class PriceListTableViewCell: UITableViewCell {
     
     func setupValue() {
         qtyLabel.text = "\(item?.qyt ?? 0)"
-        unitPriceLabel.text = item?.unitPrice ?? ""
+        unitPriceLabel.text = "\(item?.unitPrice ?? 0.0)"
     }
     
 }

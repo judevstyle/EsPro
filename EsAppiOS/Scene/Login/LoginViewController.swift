@@ -99,20 +99,22 @@ extension LoginViewController {
     }
     
     private func gotoProductInfomation(){
-        UIView.transition(
-             with: UIApplication.shared.keyWindow!,
-             duration: 0.25,
-             options: .transitionFlipFromLeft,
-             animations: {
-                let loadingStoryBoard = "ProductInfoList"
-                // Override point for customization after application launch.
-                let storyboard = UIStoryboard(name: loadingStoryBoard, bundle: nil)
-                let initialViewController = storyboard.instantiateInitialViewController()
-
-                let appDelegate = UIApplication.shared.delegate as! AppDelegate
-                appDelegate.window?.rootViewController = initialViewController
-                appDelegate.window?.makeKeyAndVisible()
-         })
+//        UIView.transition(
+//             with: UIApplication.shared.keyWindow!,
+//             duration: 0.25,
+//             options: .transitionFlipFromLeft,
+//             animations: {
+//                let loadingStoryBoard = "ProductInfoList"
+//                // Override point for customization after application launch.
+//                let storyboard = UIStoryboard(name: loadingStoryBoard, bundle: nil)
+//                let initialViewController = storyboard.instantiateInitialViewController()
+//
+//                let appDelegate = UIApplication.shared.delegate as! AppDelegate
+//                appDelegate.window?.rootViewController = initialViewController
+//                appDelegate.window?.makeKeyAndVisible()
+//         })
+        
+        NavigationManager.instance.setRootViewController(rootView: .productInfoList)
     }
     
 }
@@ -157,9 +159,9 @@ enum SortType : String {
         case .MFR:
             return "MFR"
         case .CustomerNo:
-            return "customerno"
+            return "NO"
         case .CustomerName:
-            return "customername"
+            return "NAME"
         default:
             return ""
         }
@@ -180,9 +182,9 @@ enum SearchType : String {
         case .MFR:
             return "MFR"
         case .CustomerNo:
-            return "customerno"
+            return "NO"
         case .CustomerName:
-            return "customername"
+            return "NAME"
         default:
             return ""
         }

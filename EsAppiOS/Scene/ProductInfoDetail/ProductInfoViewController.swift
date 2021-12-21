@@ -37,8 +37,6 @@ class ProductInfoViewController: UIViewController {
     @IBOutlet weak var viewProductHeight: NSLayoutConstraint!
     private let viewProductConstantHeight: CGFloat = (324 - 235)
     
-    var listPriceTable: [PriceTableModel] = []
-    var listInventoryTable: [InventoryTableModel] = []
     var listShipmentTable: [ShipmentTableModel] = []
     
     var listProductInformation: [ProductTableModel] = []
@@ -55,8 +53,29 @@ class ProductInfoViewController: UIViewController {
                                                                                                          height:0))
     
     var segmentControlWidth: CGFloat = 0
-
     
+    
+    lazy var viewModel: ProductInfoProtocol = {
+        let vm = ProductInfoViewModel(vc: self)
+        self.configure(vm)
+        self.bindToViewModel()
+        return vm
+    }()
+    
+    //Begin Value
+    
+    @IBOutlet weak var esPnValue: UILabel!
+    @IBOutlet weak var mfrPnValue: UILabel!
+    @IBOutlet weak var menufacturerValue: UILabel!
+    @IBOutlet weak var invoiceDescriptionValue: UILabel!
+    @IBOutlet weak var productDescriptionValue: UILabel!
+    
+    @IBOutlet weak var dataSheetValue: UILabel!
+    @IBOutlet weak var brochureValue: UILabel!
+    
+    @IBOutlet weak var posterImageValue: UIImageView!
+    
+    //End Value
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
@@ -71,6 +90,13 @@ class ProductInfoViewController: UIViewController {
         NotificationCenter.default.addObserver(self, selector: #selector(rotated), name: UIDevice.orientationDidChangeNotification, object: nil)
         
         segmentControlWidth = self.headerSegmentControlProductView.frame.width
+        
+        
+        viewModel.input.getProductInfo2()
+    }
+    
+    func configure(_ interface: ProductInfoProtocol) {
+        self.viewModel = interface
     }
     
     deinit {
@@ -93,29 +119,11 @@ class ProductInfoViewController: UIViewController {
     
     func mockData(){
         
-        //listPriceTable
-        listPriceTable.append(PriceTableModel(qyt: 1, unitPrice: "XXX,XXX.XX"))
-        listPriceTable.append(PriceTableModel(qyt: 10, unitPrice: "XXX,XXX.XX"))
-        listPriceTable.append(PriceTableModel(qyt: 50, unitPrice: "XXX,XXX.XX"))
-        listPriceTable.append(PriceTableModel(qyt: 100, unitPrice: "XXX,XXX.XX"))
-        listPriceTable.append(PriceTableModel(qyt: 500, unitPrice: "XXX,XXX.XX"))
-        listPriceTable.append(PriceTableModel(qyt: 1000, unitPrice: "XXX,XXX.XX"))
+        //listPriceTable Test
+//        listPriceTable.append(PriceTableModel(qyt: 1, unitPrice: "XXX,XXX.XX"))
         
-        //listInventoryTable
-        listInventoryTable.append(InventoryTableModel(key: "A", location: "RET.SHOP-BANMOH", onhand: "XXX,XXX", booking: "XXX,XXX", balance: "XXX,XXX"))
-        listInventoryTable.append(InventoryTableModel(key: "B", location: "", onhand: "", booking: "", balance: ""))
-        listInventoryTable.append(InventoryTableModel(key: "C", location: "", onhand: "", booking: "", balance: ""))
-        listInventoryTable.append(InventoryTableModel(key: "D", location: "", onhand: "", booking: "", balance: ""))
-        listInventoryTable.append(InventoryTableModel(key: "E", location: "", onhand: "", booking: "", balance: ""))
-        listInventoryTable.append(InventoryTableModel(key: "F", location: "", onhand: "", booking: "", balance: ""))
-        listInventoryTable.append(InventoryTableModel(key: "G", location: "", onhand: "", booking: "", balance: ""))
-        listInventoryTable.append(InventoryTableModel(key: "H", location: "", onhand: "", booking: "", balance: ""))
-        listInventoryTable.append(InventoryTableModel(key: "I", location: "", onhand: "", booking: "", balance: ""))
-        listInventoryTable.append(InventoryTableModel(key: "J", location: "", onhand: "", booking: "", balance: ""))
-        listInventoryTable.append(InventoryTableModel(key: "K", location: "", onhand: "", booking: "", balance: ""))
-        listInventoryTable.append(InventoryTableModel(key: "L", location: "WH-B.HARMONY", onhand: "XXX,XXX", booking: "XXX,XXX", balance: "XXX,XXX"))
-        listInventoryTable.append(InventoryTableModel(key: "M", location: "", onhand: "", booking: "", balance: ""))
-        listInventoryTable.append(InventoryTableModel(key: "N", location: "", onhand: "", booking: "", balance: ""))
+        //listInventoryTable Test
+//        listInventoryTable.append(InventoryTableModel(key: "A", location: "RET.SHOP-BANMOH", onhand: "XXX,XXX", booking: "XXX,XXX", balance: "XXX,XXX"))
         
         //listShipmentTable
         listShipmentTable.append(ShipmentTableModel(poNo: "xxxxx", item: "xx", poDate: "xx/xx/xx", qtyAvl: "xxx,xxx", estArr: "xx/xx/xx", conArr: "xx/xx/xx", increase: "xx %", approve: "Approve"))
@@ -155,6 +163,64 @@ class ProductInfoViewController: UIViewController {
         listSimilarTable.append(SimilarTableModel(image: "", title: "XXXXXXXXX", type: "XXXXXXXXXXXX", desc: "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx", price: "X,XXX"))
         listSimilarTable.append(SimilarTableModel(image: "", title: "XXXXXXXXX", type: "XXXXXXXXXXXX", desc: "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx", price: "X,XXX"))
     }
+}
+
+// MARK: - Binding
+extension ProductInfoViewController {
+    
+    func bindToViewModel() {
+        viewModel.output.didGetProductInfo2Success = didGetProductInfo2Success()
+        viewModel.output.didGetProductInfo2Error = didGetProductInfo2Error()
+    }
+    
+    func didGetProductInfo2Success() -> (() -> Void) {
+        return { [weak self] in
+            guard let weakSelf = self else { return }
+            weakSelf.setupValueInfo2()
+        }
+    }
+    
+    func didGetProductInfo2Error() -> (() -> Void) {
+        return { [weak self] in
+            guard let weakSelf = self else { return }
+        }
+    }
+    
+}
+
+extension ProductInfoViewController {
+    func setupValueInfo2() {
+        guard let item = viewModel.output.getDataProductInfo2() else { return }
+        esPnValue.text = item.ES_PN ?? ""
+        mfrPnValue.text = item.MFR_PN ?? ""
+        menufacturerValue.text = item.MANUFACTURER ?? ""
+        invoiceDescriptionValue.text = item.INVOICE_DESCRIPTION ?? ""
+        productDescriptionValue.text = "\(item.PRODUCT_DESCRIPTION1 ?? "" )\n\(item.PRODUCT_DESCRIPTION2 ?? "")\n\(item.PRODUCT_DESCRIPTION3 ?? "")"
+        
+        
+        if let urlImage = URL(string: "\(DomainNameConfig.ImagePath.urlString)\(item.PICTURE ?? "").jpg") {
+            posterImageValue.kf.setImageDefault(with: urlImage)
+        }
+        
+        //Data Sheet
+        dataSheetValue.text = item.DATASHEET ?? ""
+        let tapPDF = UITapGestureRecognizer(target: self, action: #selector(self.handleTapViewPDF(_:)))
+        dataSheetValue.addGestureRecognizer(tapPDF)
+        dataSheetValue.isUserInteractionEnabled = true
+        brochureValue.text = item.BROCHURE ?? ""
+        
+        priceTableView.reloadData()
+        inventoryTableView.reloadData()
+        
+    }
+    
+    @objc func handleTapViewPDF(_ sender: UITapGestureRecognizer? = nil) {
+        guard let item = viewModel.output.getDataProductInfo2(), let pdfName = item.DATASHEET else { return }
+        if let url = URL(string: "\(DomainNameConfig.PDFPath.urlString)\(pdfName)") {
+            UIApplication.shared.open(url)
+        }
+    }
+
 }
 
 extension ProductInfoViewController {
@@ -380,7 +446,11 @@ extension ProductInfoViewController: UITableViewDelegate, UITableViewDataSource 
         switch tableView {
         case inventoryTableView:
             let footerView = tableView.dequeueReusableHeaderFooterView(withIdentifier: "InventoryFooterTableViewCell") as! InventoryFooterTableViewCell
-            footerView.backgroundColor = .red
+//            footerView.backgroundColor = .red
+            let value = viewModel.output.getDataInventoryFooter()
+            footerView.onhand = value.0
+            footerView.booking = value.1
+            footerView.balance = value.2
             return footerView
         default:
             return nil
@@ -414,10 +484,11 @@ extension ProductInfoViewController: UITableViewDelegate, UITableViewDataSource 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         switch tableView {
         case priceTableView:
-            return listPriceTable.count
+            return viewModel.output.getDataTablePrice().count
         case inventoryTableView:
-            inventoryTableViewHeight.constant = CGFloat(((listInventoryTable.count) * 30) + 50 + 30)
-            return listInventoryTable.count
+            let count = viewModel.output.getDataInventoryTable().count
+            inventoryTableViewHeight.constant = CGFloat(((count) * 30) + 50 + 30)
+            return count
         case shipmentTableView:
             shipmentTableViewHeight.constant = CGFloat(((listShipmentTable.count ) * 30) + 30)
             return listShipmentTable.count
@@ -450,11 +521,13 @@ extension ProductInfoViewController: UITableViewDelegate, UITableViewDataSource 
             switch tableView {
             case priceTableView:
                 let cell = tableView.dequeueReusableCell(withIdentifier: "PriceListTableViewCell", for: indexPath) as! PriceListTableViewCell
-                cell.item = listPriceTable[indexPath.item]
+                let item = viewModel.output.getDataTablePrice()
+                cell.item = item[indexPath.item]
                 return cell
             case inventoryTableView:
                 let cell = tableView.dequeueReusableCell(withIdentifier: "InventoryListTableViewCell", for: indexPath) as! InventoryListTableViewCell
-                cell.item = listInventoryTable[indexPath.item]
+                let item = viewModel.output.getDataInventoryTable()
+                cell.item = item[indexPath.item]
                 if indexPath.item % 2 == 0 {
                     cell.backgroundColor = UIColor.clear
                 }else {
@@ -465,6 +538,7 @@ extension ProductInfoViewController: UITableViewDelegate, UITableViewDataSource 
                         cell.backgroundColor = UIColor(red: 229.0, green: 229.0, blue: 234.0, alpha: 1.0)
                     }
                 }
+                cell.selectionStyle = .none
                 return cell
             case shipmentTableView:
                 let cell = tableView.dequeueReusableCell(withIdentifier: "ShipmentListTableViewCell", for: indexPath) as! ShipmentListTableViewCell
@@ -506,6 +580,6 @@ extension ProductInfoViewController: UITableViewDelegate, UITableViewDataSource 
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        print(indexPath.item)
+//        print(indexPath.item)
     }
 }

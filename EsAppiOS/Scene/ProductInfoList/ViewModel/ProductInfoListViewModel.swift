@@ -112,7 +112,10 @@ extension ProductInfoListViewModel {
     func didSelectRowAt(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if indexPath.item == 0 {
         } else {
-            self.vc.openScene(identifier: .SceneProductInformationDetail)
+            let item = listProductInfo[indexPath.item-1]
+            if let prod = item.ES_PN {
+                NavigationManager.instance.pushVC(to: .produceInfoDetail(prod: prod))
+            }
         }
     }
     

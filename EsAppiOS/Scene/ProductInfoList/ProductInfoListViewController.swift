@@ -139,11 +139,14 @@ extension ProductInfoListViewController {
         inputSearch.setRounded(rounded: 8)
     
         setupRightBarDropDown()
+        
+        NavigationManager.instance.setupWithNavigationController(navigationController: self.navigationController)
     }
     
     @objc func didSearchButton() {
         var request: GetInfoLevel1Request = GetInfoLevel1Request()
         keyword = inputSearch.text ?? ""
+//        keyword = "000102172"
         request.query = query
         request.searchby = searchby
         request.keyword = keyword
@@ -193,20 +196,7 @@ extension ProductInfoListViewController {
     }
     
     private func gotoCustomerInfomation(){
-        UIView.transition(
-             with: UIApplication.shared.keyWindow!,
-             duration: 0.25,
-             options: .transitionFlipFromLeft,
-             animations: {
-                let loadingStoryBoard = "CustomerInfoList"
-                // Override point for customization after application launch.
-                let storyboard = UIStoryboard(name: loadingStoryBoard, bundle: nil)
-                let initialViewController = storyboard.instantiateInitialViewController()
-
-                let appDelegate = UIApplication.shared.delegate as! AppDelegate
-                appDelegate.window?.rootViewController = initialViewController
-                appDelegate.window?.makeKeyAndVisible()
-         })
+        NavigationManager.instance.setRootViewController(rootView: .customerInfoList)
     }
     
     func setRadioSearchBy(){
@@ -257,22 +247,7 @@ extension ProductInfoListViewController {
     }
     
     @objc func menuLogoutTapped() {
-        
-        UIView.transition(
-             with: UIApplication.shared.keyWindow!,
-             duration: 0.25,
-             options: .transitionFlipFromLeft,
-             animations: {
-                let loadingStoryBoard = "Login"
-                // Override point for customization after application launch.
-                let storyboard = UIStoryboard(name: loadingStoryBoard, bundle: nil)
-                let initialViewController = storyboard.instantiateInitialViewController()
-
-                let appDelegate = UIApplication.shared.delegate as! AppDelegate
-                appDelegate.window?.rootViewController = initialViewController
-                appDelegate.window?.makeKeyAndVisible()
-         })
-        
+        NavigationManager.instance.setRootViewController(rootView: .login)
     }
     
     @objc func selecedSearchByChange(){

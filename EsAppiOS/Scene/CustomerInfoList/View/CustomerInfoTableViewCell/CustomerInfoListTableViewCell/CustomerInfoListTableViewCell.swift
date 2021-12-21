@@ -18,6 +18,12 @@ class CustomerInfoListTableViewCell: UITableViewCell {
     
     @IBOutlet weak var stackView: UIStackView!
     
+    var item : GetCustomerInfoResponse? {
+        didSet {
+            setupValue()
+        }
+    }
+    
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -34,16 +40,14 @@ class CustomerInfoListTableViewCell: UITableViewCell {
     func setupUI()  {
         customerNoView.useUnderline()
         customerNameView.useUnderline()
-        
-//        customerNoView.addLeftBorder(with: UIColor.gray, andWidth: 0.5)
-        customerNoView.addRightBorder(with: UIColor.gray, andWidth: 0.5)
-//        customerNameView.addRightBorder(with: UIColor.gray, andWidth: 0.5)
-        
-        
-        
-        let newframe = CGRect(origin: .zero, size: CGSize(width: stackView.frame.width, height: stackView.frame.height))
 
-//        stackView.backgroundColor = UIColor.gradientColor(startColor: .BGTableHeaderTop(), endColor: .BGTableHeaderBottom(), frame: newframe)
+        customerNoView.addRightBorder(with: UIColor.gray, andWidth: 0.5)
+        let newframe = CGRect(origin: .zero, size: CGSize(width: stackView.frame.width, height: stackView.frame.height))
+    }
+    
+    func setupValue() {
+        customerNo.text = "\(item?.CUSTOMER_NO ?? 0)"
+        customerName.text = item?.CUSTOMER_NAME ?? ""
     }
     
 }

@@ -47,6 +47,8 @@ extension CustomerInfoDetailViewController {
 //        backLeft.image = UIImage(systemName: "arrow.left")?.withRenderingMode(.alwaysTemplate)
 //        backLeft.tintColor = .darkGray
 //        navigationItem.leftBarButtonItem = backLeft
+        
+        NavigationManager.instance.setupWithNavigationController(navigationController: self.navigationController)
 
     }
     
@@ -119,7 +121,7 @@ extension CustomerInfoDetailViewController: UITableViewDelegate, UITableViewData
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if indexPath.item == 0 {
-            self.openScene(identifier: .SceneCustomerProfile)
+//            self.openScene(identifier: .SceneCustomerProfile)
         }
     }
     
