@@ -30,15 +30,24 @@
                                         <rect key="frame" x="16" y="0.0" width="788" height="75"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="j2y-Hh-gUQ">
-                                                <rect key="frame" x="0.0" y="0.0" width="215" height="75"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="200" height="75"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dKS-R8-2zd">
-                                                        <rect key="frame" x="0.0" y="0.0" width="215" height="75"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="118" height="75"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="118" id="zSC-vx-DNR"/>
+                                                        </constraints>
                                                         <string key="text" base64-UTF8="YES">
-EEN1c3RvbWVyIE5vLiAxNzQ
+EEN1c3RvbWVyIE5vLg
 </string>
                                                         <fontDescription key="fontDescription" name="supermarket" family="supermarket" pointSize="24"/>
                                                         <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="174" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sYV-oM-kJg">
+                                                        <rect key="frame" x="126" y="0.0" width="74" height="75"/>
+                                                        <fontDescription key="fontDescription" name="supermarket" family="supermarket" pointSize="24"/>
+                                                        <color key="textColor" name="NewPrimary"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                 </subviews>
@@ -46,12 +55,15 @@ EEN1c3RvbWVyIE5vLiAxNzQ
                                                     <constraint firstAttribute="bottom" secondItem="dKS-R8-2zd" secondAttribute="bottom" id="3Am-h5-USI"/>
                                                     <constraint firstItem="dKS-R8-2zd" firstAttribute="top" secondItem="j2y-Hh-gUQ" secondAttribute="top" id="7yw-zJ-Zf8"/>
                                                     <constraint firstItem="dKS-R8-2zd" firstAttribute="leading" secondItem="j2y-Hh-gUQ" secondAttribute="leading" id="OtY-2A-QF3"/>
-                                                    <constraint firstAttribute="width" constant="215" id="eYQ-kk-sNY"/>
-                                                    <constraint firstAttribute="trailing" secondItem="dKS-R8-2zd" secondAttribute="trailing" id="gJy-E8-pIN"/>
+                                                    <constraint firstAttribute="width" constant="200" id="eYQ-kk-sNY"/>
+                                                    <constraint firstItem="sYV-oM-kJg" firstAttribute="leading" secondItem="dKS-R8-2zd" secondAttribute="trailing" constant="8" id="fGK-mO-Xyd"/>
+                                                    <constraint firstAttribute="trailing" secondItem="sYV-oM-kJg" secondAttribute="trailing" id="jIw-tQ-W0H"/>
+                                                    <constraint firstAttribute="bottom" secondItem="sYV-oM-kJg" secondAttribute="bottom" id="wia-FM-M16"/>
+                                                    <constraint firstItem="sYV-oM-kJg" firstAttribute="top" secondItem="j2y-Hh-gUQ" secondAttribute="top" id="yAd-rf-iHK"/>
                                                 </constraints>
                                             </view>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PROPESSIONAL TELECOM INSTALLATION CO.,LTD." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="knI-gT-NjZ">
-                                                <rect key="frame" x="215" y="0.0" width="573" height="75"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PROPESSIONAL TELECOM INSTALLATION CO.,LTD." lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="knI-gT-NjZ">
+                                                <rect key="frame" x="200" y="0.0" width="588" height="75"/>
                                                 <fontDescription key="fontDescription" name="supermarket" family="supermarket" pointSize="24"/>
                                                 <color key="textColor" name="Primary1Color"/>
                                                 <nil key="highlightedColor"/>
@@ -90,7 +102,7 @@ EEN1c3RvbWVyIE5vLiAxNzQ
                     <connections>
                         <outlet property="bgTopView" destination="Hih-Wm-7yl" id="t4t-n6-gTt"/>
                         <outlet property="customerName" destination="knI-gT-NjZ" id="AYr-h0-A21"/>
-                        <outlet property="customerNo" destination="dKS-R8-2zd" id="9KT-ea-lgV"/>
+                        <outlet property="customerNo" destination="sYV-oM-kJg" id="Tds-ZC-ARx"/>
                         <outlet property="tableView" destination="Tja-DF-mlP" id="TZm-G2-MeL"/>
                         <outlet property="tableViewHeight" destination="k6Z-OJ-q0c" id="dWM-L3-jV3"/>
                         <segue destination="15Y-zm-lUc" kind="show" identifier="SceneCustomerProfile" id="2qZ-98-NTx"/>
@@ -112,6 +124,9 @@ EEN1c3RvbWVyIE5vLiAxNzQ
         </scene>
     </scenes>
     <resources>
+        <namedColor name="NewPrimary">
+            <color red="0.10588235294117647" green="0.27843137254901962" blue="0.58431372549019611" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <namedColor name="Primary1Color">
             <color red="0.10980392156862745" green="0.27843137254901962" blue="0.58431372549019611" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

@@ -13,6 +13,7 @@ public enum DomainNameConfig {
     case ProductDetail
     case ImagePath
     case PDFPath
+    case CustomerProfile
 }
 
 extension DomainNameConfig {
@@ -35,6 +36,8 @@ extension DomainNameConfig {
             return "\(ImagePath)"
         case .PDFPath:
             return "\(PDFPath)"
+        case .CustomerProfile:
+            return "\(HostURL5001)/esprogram"
         }
     }
     

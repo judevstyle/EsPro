@@ -116,6 +116,13 @@
 		EFB0082C277AB1F800BAE2EE /* Date+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFB0082B277AB1F800BAE2EE /* Date+Extension.swift */; };
 		EFB00834277AB5FE00BAE2EE /* GetSimilarRelatedPartResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFB00833277AB5FE00BAE2EE /* GetSimilarRelatedPartResponse.swift */; };
 		EFB00836277AB61B00BAE2EE /* GetSimilarRelatedPartUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFB00835277AB61B00BAE2EE /* GetSimilarRelatedPartUseCase.swift */; };
+		EFB0083A277ADCCB00BAE2EE /* CustomerProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFB00839277ADCCB00BAE2EE /* CustomerProfileViewModel.swift */; };
+		EFB0083D277ADE0400BAE2EE /* CustomerProfileAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFB0083C277ADE0400BAE2EE /* CustomerProfileAPI.swift */; };
+		EFB00841277ADE2E00BAE2EE /* GetCustomerProfileRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFB00840277ADE2E00BAE2EE /* GetCustomerProfileRequest.swift */; };
+		EFB00844277ADE3C00BAE2EE /* GetCustomerProfileResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFB00843277ADE3C00BAE2EE /* GetCustomerProfileResponse.swift */; };
+		EFB00846277AE67500BAE2EE /* CustomerProfileRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFB00845277AE67500BAE2EE /* CustomerProfileRepository.swift */; };
+		EFB00849277AE6E700BAE2EE /* GetCustomerProfileUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFB00848277AE6E700BAE2EE /* GetCustomerProfileUseCase.swift */; };
+		EFB0084B277AF81C00BAE2EE /* UILable+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFB0084A277AF81C00BAE2EE /* UILable+Extension.swift */; };
 		EFEA18AA2641989600251F19 /* ProductInfoListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFEA18A92641989600251F19 /* ProductInfoListViewController.swift */; };
 		EFEA18AE2641989C00251F19 /* ProductInfoList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EFEA18AD2641989C00251F19 /* ProductInfoList.storyboard */; };
 		EFEA18BE2641A24600251F19 /* ProductInfoListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFEA18BC2641A24600251F19 /* ProductInfoListTableViewCell.swift */; };
@@ -241,6 +248,13 @@
 		EFB0082B277AB1F800BAE2EE /* Date+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extension.swift"; sourceTree = "<group>"; };
 		EFB00833277AB5FE00BAE2EE /* GetSimilarRelatedPartResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetSimilarRelatedPartResponse.swift; sourceTree = "<group>"; };
 		EFB00835277AB61B00BAE2EE /* GetSimilarRelatedPartUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetSimilarRelatedPartUseCase.swift; sourceTree = "<group>"; };
+		EFB00839277ADCCB00BAE2EE /* CustomerProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomerProfileViewModel.swift; sourceTree = "<group>"; };
+		EFB0083C277ADE0400BAE2EE /* CustomerProfileAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomerProfileAPI.swift; sourceTree = "<group>"; };
+		EFB00840277ADE2E00BAE2EE /* GetCustomerProfileRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetCustomerProfileRequest.swift; sourceTree = "<group>"; };
+		EFB00843277ADE3C00BAE2EE /* GetCustomerProfileResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetCustomerProfileResponse.swift; sourceTree = "<group>"; };
+		EFB00845277AE67500BAE2EE /* CustomerProfileRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomerProfileRepository.swift; sourceTree = "<group>"; };
+		EFB00848277AE6E700BAE2EE /* GetCustomerProfileUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetCustomerProfileUseCase.swift; sourceTree = "<group>"; };
+		EFB0084A277AF81C00BAE2EE /* UILable+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILable+Extension.swift"; sourceTree = "<group>"; };
 		EFEA18A92641989600251F19 /* ProductInfoListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductInfoListViewController.swift; sourceTree = "<group>"; };
 		EFEA18AD2641989C00251F19 /* ProductInfoList.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ProductInfoList.storyboard; sourceTree = "<group>"; };
 		EFEA18BC2641A24600251F19 /* ProductInfoListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductInfoListTableViewCell.swift; sourceTree = "<group>"; };
@@ -446,6 +460,7 @@
 				EFA2F00D2768EAA40008463F /* KeyedDecodingContainer+Extension.swift */,
 				EF1623E2276F10CB00A3712C /* UIImageView+Kingfisher.swift */,
 				EFB0082B277AB1F800BAE2EE /* Date+Extension.swift */,
+				EFB0084A277AF81C00BAE2EE /* UILable+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -572,6 +587,7 @@
 		EF50D8CA26F73CB1008F11D7 /* CustomerProfileView */ = {
 			isa = PBXGroup;
 			children = (
+				EFB00838277ADCB800BAE2EE /* ViewModel */,
 				EF50D8CB26F73CCD008F11D7 /* CustomerProfile.storyboard */,
 				EF50D8CF26F73D5A008F11D7 /* CustomerProfileViewController.swift */,
 			);
@@ -858,6 +874,7 @@
 		EFA2EFE12768E3160008463F /* Moya */ = {
 			isa = PBXGroup;
 			children = (
+				EFB0083B277ADDF700BAE2EE /* CustomerProfile */,
 				EF1623CB276EFE4000A3712C /* ProductDetail */,
 				EF849DD4276A3F7B0010FEF0 /* InfoLevel1 */,
 				EFA2EFE22768E3360008463F /* Login */,
@@ -893,6 +910,7 @@
 		EFA2EFEF2768E6900008463F /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				EFB0083E277ADE1B00BAE2EE /* CustomerProfile */,
 				EF1623CE276EFE8000A3712C /* ProductDetail */,
 				EF849DD7276A3FD40010FEF0 /* InfoLevel1 */,
 				EFA2EFF22768E6BA0008463F /* Login */,
@@ -903,6 +921,7 @@
 		EFA2EFF02768E6960008463F /* UseCases */ = {
 			isa = PBXGroup;
 			children = (
+				EFB00847277AE6CF00BAE2EE /* CustomerProfile */,
 				EF1623DC276F029800A3712C /* ProductDetail */,
 				EF849DE9276A42DA0010FEF0 /* CustomerInfo */,
 				EF849DE8276A42C90010FEF0 /* ProductInfo */,
@@ -917,6 +936,7 @@
 				EFA2EFF92768E8A50008463F /* LoginRepository.swift */,
 				EF849DE2276A409E0010FEF0 /* InfoLevel1Repository.swift */,
 				EF1623D8276F012800A3712C /* ProductDetailRepository.swift */,
+				EFB00845277AE67500BAE2EE /* CustomerProfileRepository.swift */,
 			);
 			path = Repositories;
 			sourceTree = "<group>";
@@ -963,6 +983,55 @@
 				EFA2F0122768EEEB0008463F /* GetLoginUseCase.swift */,
 			);
 			path = Login;
+			sourceTree = "<group>";
+		};
+		EFB00838277ADCB800BAE2EE /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				EFB00839277ADCCB00BAE2EE /* CustomerProfileViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		EFB0083B277ADDF700BAE2EE /* CustomerProfile */ = {
+			isa = PBXGroup;
+			children = (
+				EFB0083C277ADE0400BAE2EE /* CustomerProfileAPI.swift */,
+			);
+			path = CustomerProfile;
+			sourceTree = "<group>";
+		};
+		EFB0083E277ADE1B00BAE2EE /* CustomerProfile */ = {
+			isa = PBXGroup;
+			children = (
+				EFB00842277ADE3200BAE2EE /* Response */,
+				EFB0083F277ADE2000BAE2EE /* Request */,
+			);
+			path = CustomerProfile;
+			sourceTree = "<group>";
+		};
+		EFB0083F277ADE2000BAE2EE /* Request */ = {
+			isa = PBXGroup;
+			children = (
+				EFB00840277ADE2E00BAE2EE /* GetCustomerProfileRequest.swift */,
+			);
+			path = Request;
+			sourceTree = "<group>";
+		};
+		EFB00842277ADE3200BAE2EE /* Response */ = {
+			isa = PBXGroup;
+			children = (
+				EFB00843277ADE3C00BAE2EE /* GetCustomerProfileResponse.swift */,
+			);
+			path = Response;
+			sourceTree = "<group>";
+		};
+		EFB00847277AE6CF00BAE2EE /* CustomerProfile */ = {
+			isa = PBXGroup;
+			children = (
+				EFB00848277AE6E700BAE2EE /* GetCustomerProfileUseCase.swift */,
+			);
+			path = CustomerProfile;
 			sourceTree = "<group>";
 		};
 		EFEA18A62641984D00251F19 /* ProductInfoList */ = {
@@ -1243,10 +1312,14 @@
 				EFB00836277AB61B00BAE2EE /* GetSimilarRelatedPartUseCase.swift in Sources */,
 				EF5242E2262ADDD60071572B /* ImageCollectionViewCell.swift in Sources */,
 				EF39946E26342A2900BBC189 /* ShipmentListTableViewCell.swift in Sources */,
+				EFB00844277ADE3C00BAE2EE /* GetCustomerProfileResponse.swift in Sources */,
+				EFB0084B277AF81C00BAE2EE /* UILable+Extension.swift in Sources */,
 				EF3994452634100700BBC189 /* InventoryHeaderTableViewCell.swift in Sources */,
 				EF52947E260D96C500C3EF64 /* LoginViewController.swift in Sources */,
 				EF74ED1B262D2D6500E420C8 /* PriceHeaderTableViewCell.swift in Sources */,
 				EF52946D260D886D00C3EF64 /* SplashViewController.swift in Sources */,
+				EFB00846277AE67500BAE2EE /* CustomerProfileRepository.swift in Sources */,
+				EFB00849277AE6E700BAE2EE /* GetCustomerProfileUseCase.swift in Sources */,
 				EFEA18CB2641AD2D00251F19 /* CustomerInfoListViewController.swift in Sources */,
 				EF529482260D97FF00C3EF64 /* Extension+Notification.swift in Sources */,
 				EFA2EFE42768E34E0008463F /* LoginAPI.swift in Sources */,
@@ -1274,6 +1347,7 @@
 				EFB0082C277AB1F800BAE2EE /* Date+Extension.swift in Sources */,
 				EFED23D52612106000BD0CD7 /* LoginViewModel.swift in Sources */,
 				EF1623DE276F02AC00A3712C /* GetProductDetailInfo2UseCase.swift in Sources */,
+				EFB00841277ADE2E00BAE2EE /* GetCustomerProfileRequest.swift in Sources */,
 				EF29F435260E35EA00ABE46D /* UIButton+Extension.swift in Sources */,
 				EF849DE3276A409E0010FEF0 /* InfoLevel1Repository.swift in Sources */,
 				EF7D56FE260EFD99004EE94A /* UIView+Extension.swift in Sources */,
@@ -1304,6 +1378,7 @@
 				EF849DEB276A42EC0010FEF0 /* GetProductInfoUseCase.swift in Sources */,
 				EF39943F26340E1D00BBC189 /* PriceTableModel.swift in Sources */,
 				EFB00834277AB5FE00BAE2EE /* GetSimilarRelatedPartResponse.swift in Sources */,
+				EFB0083A277ADCCB00BAE2EE /* CustomerProfileViewModel.swift in Sources */,
 				EFA2EFF62768E6E60008463F /* GetLoginRequest.swift in Sources */,
 				EF4788602764651400746A59 /* BadgeSaleManView.swift in Sources */,
 				EF849DF2276A487A0010FEF0 /* AnyCodableValue.swift in Sources */,
@@ -1314,6 +1389,7 @@
 				EF1623E1276F047B00A3712C /* ProductInfoViewModel.swift in Sources */,
 				EF22CC782648141500E5438F /* PopupViewController.swift in Sources */,
 				EF3994A126343F9500BBC189 /* ProductInformationTableViewCell.swift in Sources */,
+				EFB0083D277ADE0400BAE2EE /* CustomerProfileAPI.swift in Sources */,
 				EFB0082A277AAA6800BAE2EE /* GetProductDetailInfo3UseCase.swift in Sources */,
 				EF50D8D026F73D5A008F11D7 /* CustomerProfileViewController.swift in Sources */,
 				EF39944C2634102800BBC189 /* InventoryListTableViewCell.swift in Sources */,

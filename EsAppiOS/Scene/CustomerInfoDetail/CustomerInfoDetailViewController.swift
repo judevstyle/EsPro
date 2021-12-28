@@ -17,6 +17,9 @@ class CustomerInfoDetailViewController: UIViewController {
     
     var mockDataList: [CustomerInfoDetailListModel] = []
     
+    public var passCustomerNo: String = ""
+    public var passCustomerName: String = ""
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
@@ -50,6 +53,9 @@ extension CustomerInfoDetailViewController {
         
         NavigationManager.instance.setupWithNavigationController(navigationController: self.navigationController)
 
+        
+        customerNo.text = passCustomerNo
+        customerName.text = passCustomerName
     }
     
     func setupTableView(){
@@ -121,7 +127,7 @@ extension CustomerInfoDetailViewController: UITableViewDelegate, UITableViewData
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if indexPath.item == 0 {
-//            self.openScene(identifier: .SceneCustomerProfile)
+            NavigationManager.instance.pushVC(to: .customerProfile(customerNo: self.passCustomerNo))
         }
     }
     

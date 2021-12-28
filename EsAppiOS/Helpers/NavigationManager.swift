@@ -45,8 +45,8 @@ public enum NavigationOpeningSender {
     case productInfoList
     case customerInfoList
     case produceInfoDetail(prod: String)
-    case customerInfoDetail
-    case customerProfile
+    case customerInfoDetail(customerNo: String, customerName: String)
+    case customerProfile(customerNo: String)
 
     public var storyboardName: String {
         switch self {
@@ -140,6 +140,17 @@ class NavigationManager {
         case .produceInfoDetail(let prod):
             if let className = storyboard.instantiateInitialViewController() as? ProductInfoViewController {
                 className.viewModel.input.setProdId(prod: prod)
+                viewController = className
+            }
+        case .customerInfoDetail(let customerNo, let customerName):
+            if let className = storyboard.instantiateInitialViewController() as? CustomerInfoDetailViewController {
+                className.passCustomerNo = customerNo
+                className.passCustomerName = customerName
+                viewController = className
+            }
+        case .customerProfile(let customerNo):
+            if let className = storyboard.instantiateInitialViewController() as? CustomerProfileViewController {
+                className.viewModel.input.setCustomerNo(customerNo: customerNo)
                 viewController = className
             }
         default:

@@ -112,7 +112,10 @@ extension CustomerInfoListViewModel {
     func didSelectRowAt(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if indexPath.item == 0 {
         } else {
-//            self.vc.openScene(identifier: .SceneCustomerInformationDetail)
+            let item = listCustomerInfo[indexPath.item-1]
+            if let customerNo = item.CUSTOMER_NO {
+                NavigationManager.instance.pushVC(to: .customerInfoDetail(customerNo: "\(customerNo)", customerName: item.CUSTOMER_NAME ?? ""))
+            }
         }
     }
     
