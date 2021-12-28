@@ -12,6 +12,8 @@ import RxMoya
 
 public protocol ProductDetailRepository {
     func getProductDetailInfo2(request: GetProductDetailInfoRequest) -> Observable<[GetProductDetailInfo2Response]>
+    func getProductDetailInfo3(request: GetProductDetailInfoRequest) -> Observable<[GetProductDetailInfo3Response]>
+    func getSimilarRelatedPart(request: GetProductDetailInfoRequest) -> Observable<[GetSimilarRelatedPartResponse]>
 }
 
 public struct ProductDetailRepositoryImpl: ProductDetailRepository {
@@ -25,6 +27,24 @@ public struct ProductDetailRepositoryImpl: ProductDetailRepository {
             .request(.getProductDetailInfo(request: request))
             .filterSuccessfulStatusCodes()
             .map([GetProductDetailInfo2Response].self)
+            .asObservable()
+    }
+    
+    public func getProductDetailInfo3(request: GetProductDetailInfoRequest) -> Observable<[GetProductDetailInfo3Response]> {
+        return provider
+            .rx
+            .request(.getProductDetailInfo(request: request))
+            .filterSuccessfulStatusCodes()
+            .map([GetProductDetailInfo3Response].self)
+            .asObservable()
+    }
+    
+    public func getSimilarRelatedPart(request: GetProductDetailInfoRequest) -> Observable<[GetSimilarRelatedPartResponse]> {
+        return provider
+            .rx
+            .request(.getProductDetailInfo(request: request))
+            .filterSuccessfulStatusCodes()
+            .map([GetSimilarRelatedPartResponse].self)
             .asObservable()
     }
 }

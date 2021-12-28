@@ -9,12 +9,25 @@ import UIKit
 
 class SimilarRelatedHeaderTableViewCell: UITableViewHeaderFooterView {
 
-    /*
-    // Only override draw() if you perform custom drawing.
-    // An empty implementation adversely affects performance during animation.
-    override func draw(_ rect: CGRect) {
-        // Drawing code
+    @IBOutlet weak var titleHeader: UILabel!
+    
+    var title: String? {
+        didSet {
+            titleHeader.text = title
+        }
     }
-    */
+    
+    override init(reuseIdentifier: String?) {
+        super.init(reuseIdentifier: reuseIdentifier)
+        commonInit()
+    }
 
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+        commonInit()
+    }
+
+    func commonInit() {
+    //initialize my subviews
+    }
 }

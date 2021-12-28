@@ -11,7 +11,7 @@ import RxSwift
 import UIKit
 
 protocol ProductInfoProtocolInput {
-    func getProductInfo2()
+    func fetchData()
     func setProdId(prod: String)
     
 //    func didSelectRowAt(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath)
@@ -21,12 +21,26 @@ protocol ProductInfoProtocolOutput: class {
     var didGetProductInfo2Success: (() -> Void)? { get set }
     var didGetProductInfo2Error: (() -> Void)? { get set }
     
+    var didGetProductInfo3Success: (() -> Void)? { get set }
+    var didGetProductInfo3Error: (() -> Void)? { get set }
+    
+    var didGetSimilarPartSuccess: (() -> Void)? { get set }
+    var didGetSimilarPartError: (() -> Void)? { get set }
+    
+    var didGetRelatedPartSuccess: (() -> Void)? { get set }
+    var didGetRelatedPartError: (() -> Void)? { get set }
+    
     func getDataProductInfo2() -> GetProductDetailInfo2Response?
+    func getDataProductInfo3() -> [GetProductDetailInfo3Response]
+    func getDataSimilarPart() -> [GetSimilarRelatedPartResponse]
+    func getDataRelatedPart() -> [GetSimilarRelatedPartResponse]
     
     func getDataTablePrice() -> [PriceTableModel]
     func getDataInventoryTable() -> [InventoryTableModel]
     func getDataInventoryFooter() -> (Double, Double, Double)
-//    func getNumberOfRowsInSection() -> Int
+    
+    //Auto Feed
+//    func getNumberOfRowsInSection(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int
 //    func getCellForRowAt(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell
 //    func getHeightForRowAt(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat
 }
@@ -43,6 +57,8 @@ class ProductInfoViewModel: ProductInfoProtocol, ProductInfoProtocolOutput {
     
     // MARK: - Properties
     private var getProductDetailInfo2UseCase: GetProductDetailInfo2UseCase
+    private var getProductDetailInfo3UseCase: GetProductDetailInfo3UseCase
+    private var getSimilarRelatedPartUseCase: GetSimilarRelatedPartUseCase
     private var vc: ProductInfoViewController
     
     fileprivate let disposeBag = DisposeBag()
@@ -54,9 +70,13 @@ class ProductInfoViewModel: ProductInfoProtocol, ProductInfoProtocolOutput {
     
     init(
         getProductDetailInfo2UseCase: GetProductDetailInfo2UseCase = GetProductDetailInfo2UseCaseImpl(),
+        getProductDetailInfo3UseCase: GetProductDetailInfo3UseCase = GetProductDetailInfo3UseCaseImpl(),
+        getSimilarRelatedPartUseCase: GetSimilarRelatedPartUseCase = GetSimilarRelatedPartUseCaseImpl(),
         vc: ProductInfoViewController
     ) {
         self.getProductDetailInfo2UseCase = getProductDetailInfo2UseCase
+        self.getProductDetailInfo3UseCase = getProductDetailInfo3UseCase
+        self.getSimilarRelatedPartUseCase = getSimilarRelatedPartUseCase
         self.vc = vc
     }
     
@@ -64,7 +84,19 @@ class ProductInfoViewModel: ProductInfoProtocol, ProductInfoProtocolOutput {
     var didGetProductInfo2Success: (() -> Void)?
     var didGetProductInfo2Error: (() -> Void)?
     
+    var didGetProductInfo3Success: (() -> Void)?
+    var didGetProductInfo3Error: (() -> Void)?
+    
+    var didGetSimilarPartSuccess: (() -> Void)?
+    var didGetSimilarPartError: (() -> Void)?
+    
+    var didGetRelatedPartSuccess: (() -> Void)?
+    var didGetRelatedPartError: (() -> Void)?
+    
     private var dataProductInfo2: GetProductDetailInfo2Response?
+    private var dataProductInfo3: [GetProductDetailInfo3Response] = []
+    private var dataSimilarPart: [GetSimilarRelatedPartResponse] = []
+    private var dataRelatedPart: [GetSimilarRelatedPartResponse] = []
     
     private var prodId: String?
     
@@ -72,13 +104,16 @@ class ProductInfoViewModel: ProductInfoProtocol, ProductInfoProtocolOutput {
         prodId = prod
     }
     
+    func fetchData() {
+        self.getProductInfo2()
+    }
+    
     func getProductInfo2() {
-        
         //Fetch Data
         var request = GetProductDetailInfoRequest()
         request.query = "Product_info2"
         request.prod = prodId
-        request.mfrprod = "ss"
+        request.mfrprod = "s"
         
         vc.startLodingCircle()
         getProductDetailInfo2UseCase
@@ -91,12 +126,92 @@ class ProductInfoViewModel: ProductInfoProtocol, ProductInfoProtocolOutput {
                 weakSelf.fetchDataTablePrice()
                 weakSelf.fetchDataInventoryTable()
                 weakSelf.didGetProductInfo2Success?()
+                
+                
+                weakSelf.getProductInfo3()
 
             }, onError: { [weak self] error in
                 guard let weakSelf = self else { return }
                 debugPrint("Error : \(error)")
                 weakSelf.vc.stopLoding()
                 weakSelf.didGetProductInfo2Error?()
+            }).disposed(by: disposeBag)
+    }
+    
+    func getProductInfo3() {
+        //Fetch Data
+        var request = GetProductDetailInfoRequest()
+        request.query = "Product_info3"
+        request.prod = prodId
+        request.mfrprod = "s"
+        
+        vc.startLodingCircle()
+        getProductDetailInfo3UseCase
+            .execute(request: request)
+            .subscribe(onNext: { [weak self] (response) in
+                guard let weakSelf = self else { return }
+                debugPrint("Success : \(response)")
+                weakSelf.vc.stopLoding()
+                weakSelf.dataProductInfo3 = response
+                weakSelf.didGetProductInfo3Success?()
+                
+                weakSelf.getSimilarPart()
+
+            }, onError: { [weak self] error in
+                guard let weakSelf = self else { return }
+                debugPrint("Error : \(error)")
+                weakSelf.vc.stopLoding()
+                weakSelf.didGetProductInfo3Error?()
+            }).disposed(by: disposeBag)
+    }
+    
+    func getSimilarPart() {
+        var request = GetProductDetailInfoRequest()
+        request.query = "Product_info4"
+        request.prod = prodId
+        request.prod = "000704025"
+        request.mfrprod = "s"
+        vc.startLodingCircle()
+        getSimilarRelatedPartUseCase
+            .execute(request: request)
+            .subscribe(onNext: { [weak self] (response) in
+                guard let weakSelf = self else { return }
+                debugPrint("Success : \(response)")
+                weakSelf.vc.stopLoding()
+                weakSelf.dataSimilarPart = response
+                weakSelf.didGetSimilarPartSuccess?()
+                
+                weakSelf.getRelatedPart()
+
+            }, onError: { [weak self] error in
+                guard let weakSelf = self else { return }
+                debugPrint("Error : \(error)")
+                weakSelf.vc.stopLoding()
+                weakSelf.didGetSimilarPartError?()
+            }).disposed(by: disposeBag)
+    }
+    func getRelatedPart() {
+        var request = GetProductDetailInfoRequest()
+        request.query = "Product_info5"
+        request.prod = prodId
+        request.prod = "000503604"
+        request.mfrprod = "s"
+        vc.startLodingCircle()
+        getSimilarRelatedPartUseCase
+            .execute(request: request)
+            .subscribe(onNext: { [weak self] (response) in
+                guard let weakSelf = self else { return }
+                debugPrint("Success : \(response)")
+                weakSelf.vc.stopLoding()
+                weakSelf.dataRelatedPart = response
+                
+                weakSelf.didGetRelatedPartSuccess?()
+
+            }, onError: { [weak self] error in
+                guard let weakSelf = self else { return }
+                debugPrint("Error : \(error)")
+                weakSelf.vc.stopLoding()
+                weakSelf.didGetRelatedPartError?()
             }).disposed(by: disposeBag)
     }
 
@@ -107,6 +222,19 @@ extension ProductInfoViewModel {
     func getDataProductInfo2() -> GetProductDetailInfo2Response? {
         return dataProductInfo2
     }
+    
+    func getDataProductInfo3() -> [GetProductDetailInfo3Response] {
+        return dataProductInfo3
+    }
+    
+    func getDataSimilarPart() -> [GetSimilarRelatedPartResponse] {
+        return dataSimilarPart
+    }
+    
+    func getDataRelatedPart() -> [GetSimilarRelatedPartResponse] {
+        return dataRelatedPart
+    }
+
 }
 
 // MARK: For PriceTableView
@@ -250,43 +378,3 @@ extension ProductInfoViewModel {
     }
 }
 
-//OutPut TableView
-//extension ProductInfoViewModel {
-//
-//    func getNumberOfRowsInSection() -> Int {
-//        return self.listCustomerInfo.count
-//    }
-//
-//    func getCellForRowAt(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-//        if indexPath.item == 0 {
-//            let cell = tableView.dequeueReusableCell(withIdentifier: "CustomerInfoHeaderTableViewCell", for: indexPath) as! CustomerInfoHeaderTableViewCell
-//            cell.backgroundColor = UIColor.clear
-//            cell.selectionStyle = .none
-//            cell.setupUI()
-//            return cell
-//        } else {
-//            let cell = tableView.dequeueReusableCell(withIdentifier: "ProductInfoTableViewCell", for: indexPath) as! ProductInfoTableViewCell
-//            cell.backgroundColor = UIColor.clear
-//            cell.selectionStyle = .none
-//            cell.setupUI()
-//            cell.item = self.listCustomerInfo[indexPath.item-1]
-//            return cell
-//        }
-//    }
-//
-//    func getHeightForRowAt(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-//        if indexPath.item == 0 {
-//            return 60
-//        } else {
-//            return 44
-//        }
-//    }
-//
-//    func didSelectRowAt(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-//        if indexPath.item == 0 {
-//        } else {
-//            self.vc.openScene(identifier: .SceneCustomerInformationDetail)
-//        }
-//    }
-//
-//}

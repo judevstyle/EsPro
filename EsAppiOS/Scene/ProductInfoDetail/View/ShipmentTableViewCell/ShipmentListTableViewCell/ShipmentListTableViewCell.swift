@@ -15,8 +15,6 @@ class ShipmentListTableViewCell: UITableViewCell {
     @IBOutlet weak var qtyAvl: UILabel!
     @IBOutlet weak var estArr: UILabel!
     @IBOutlet weak var conArr: UILabel!
-    @IBOutlet weak var increase: UILabel!
-    @IBOutlet weak var approve: UILabel!
     
     var data : ShipmentTableModel? {
         didSet {
@@ -42,7 +40,7 @@ class ShipmentListTableViewCell: UITableViewCell {
         qtyAvl.text = data?.qtyAvl ?? ""
         estArr.text = data?.estArr ?? ""
         conArr.text = data?.conArr ?? ""
-        increase.text = data?.increase ?? ""
-        approve.text = data?.approve ?? ""
+//        increase.text = data?.increase ?? ""
+//        approve.text = data?.approve ?? ""
     }
 }

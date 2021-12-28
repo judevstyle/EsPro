@@ -24,10 +24,10 @@
                     <rect key="frame" x="0.0" y="0.0" width="820" height="25"/>
                     <subviews>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jXw-yq-t7c">
-                            <rect key="frame" x="0.0" y="0.0" width="95.5" height="25"/>
+                            <rect key="frame" x="0.0" y="0.0" width="130" height="25"/>
                             <subviews>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PO NO" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PFc-QV-lIL">
-                                    <rect key="frame" x="0.0" y="0.0" width="95.5" height="25"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="130" height="25"/>
                                     <fontDescription key="fontDescription" name="RobotoCondensed-Regular" family="Roboto Condensed" pointSize="17"/>
                                     <nil key="textColor"/>
                                     <nil key="highlightedColor"/>
@@ -42,10 +42,10 @@
                             </constraints>
                         </view>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ixg-Uj-lhj">
-                            <rect key="frame" x="103.5" y="0.0" width="95.5" height="25"/>
+                            <rect key="frame" x="138" y="0.0" width="130" height="25"/>
                             <subviews>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ITEM" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e2e-ec-b0f">
-                                    <rect key="frame" x="0.0" y="0.0" width="95.5" height="25"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="130" height="25"/>
                                     <fontDescription key="fontDescription" name="RobotoCondensed-Regular" family="Roboto Condensed" pointSize="17"/>
                                     <nil key="textColor"/>
                                     <nil key="highlightedColor"/>
@@ -60,10 +60,10 @@
                             </constraints>
                         </view>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wrP-Ps-Nh8">
-                            <rect key="frame" x="207" y="0.0" width="95.5" height="25"/>
+                            <rect key="frame" x="276" y="0.0" width="130" height="25"/>
                             <subviews>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PO DATE" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QwJ-rD-TcM">
-                                    <rect key="frame" x="0.0" y="0.0" width="95.5" height="25"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="130" height="25"/>
                                     <fontDescription key="fontDescription" name="RobotoCondensed-Regular" family="Roboto Condensed" pointSize="17"/>
                                     <nil key="textColor"/>
                                     <nil key="highlightedColor"/>
@@ -78,10 +78,10 @@
                             </constraints>
                         </view>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="x5u-TG-U2r">
-                            <rect key="frame" x="310.5" y="0.0" width="95.5" height="25"/>
+                            <rect key="frame" x="414" y="0.0" width="130" height="25"/>
                             <subviews>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="QTY.AVL" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QHe-ay-Iz1">
-                                    <rect key="frame" x="0.0" y="0.0" width="95.5" height="25"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="130" height="25"/>
                                     <fontDescription key="fontDescription" name="RobotoCondensed-Regular" family="Roboto Condensed" pointSize="17"/>
                                     <nil key="textColor"/>
                                     <nil key="highlightedColor"/>
@@ -96,10 +96,10 @@
                             </constraints>
                         </view>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1H0-oR-kEj">
-                            <rect key="frame" x="414" y="0.0" width="95.5" height="25"/>
+                            <rect key="frame" x="552" y="0.0" width="130" height="25"/>
                             <subviews>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="EST.ARR" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PJV-jw-chy">
-                                    <rect key="frame" x="0.0" y="0.0" width="95.5" height="25"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="130" height="25"/>
                                     <fontDescription key="fontDescription" name="RobotoCondensed-Regular" family="Roboto Condensed" pointSize="17"/>
                                     <nil key="textColor"/>
                                     <nil key="highlightedColor"/>
@@ -114,10 +114,10 @@
                             </constraints>
                         </view>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cwt-E5-s1l">
-                            <rect key="frame" x="517.5" y="0.0" width="95.5" height="25"/>
+                            <rect key="frame" x="690" y="0.0" width="130" height="25"/>
                             <subviews>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CON.ARR" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jms-wH-2Pk">
-                                    <rect key="frame" x="0.0" y="0.0" width="95.5" height="25"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="130" height="25"/>
                                     <fontDescription key="fontDescription" name="RobotoCondensed-Regular" family="Roboto Condensed" pointSize="17"/>
                                     <nil key="textColor"/>
                                     <nil key="highlightedColor"/>
@@ -129,42 +129,6 @@
                                 <constraint firstAttribute="bottom" secondItem="jms-wH-2Pk" secondAttribute="bottom" id="9Xa-2h-ohU"/>
                                 <constraint firstAttribute="trailing" secondItem="jms-wH-2Pk" secondAttribute="trailing" id="Dif-BK-uFU"/>
                                 <constraint firstItem="jms-wH-2Pk" firstAttribute="leading" secondItem="cwt-E5-s1l" secondAttribute="leading" id="h4V-I3-15q"/>
-                            </constraints>
-                        </view>
-                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oeC-IV-J7G">
-                            <rect key="frame" x="621" y="0.0" width="95.5" height="25"/>
-                            <subviews>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="INCREASE" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3f5-F0-dhy">
-                                    <rect key="frame" x="0.0" y="0.0" width="95.5" height="25"/>
-                                    <fontDescription key="fontDescription" name="RobotoCondensed-Regular" family="Roboto Condensed" pointSize="17"/>
-                                    <nil key="textColor"/>
-                                    <nil key="highlightedColor"/>
-                                </label>
-                            </subviews>
-                            <color key="backgroundColor" systemColor="systemGray4Color"/>
-                            <constraints>
-                                <constraint firstItem="3f5-F0-dhy" firstAttribute="top" secondItem="oeC-IV-J7G" secondAttribute="top" id="KJs-9d-bbE"/>
-                                <constraint firstAttribute="trailing" secondItem="3f5-F0-dhy" secondAttribute="trailing" id="KeF-0i-e9g"/>
-                                <constraint firstItem="3f5-F0-dhy" firstAttribute="leading" secondItem="oeC-IV-J7G" secondAttribute="leading" id="h4Z-qU-Hr0"/>
-                                <constraint firstAttribute="bottom" secondItem="3f5-F0-dhy" secondAttribute="bottom" id="k6I-mi-pKp"/>
-                            </constraints>
-                        </view>
-                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2xH-0R-Alc">
-                            <rect key="frame" x="724.5" y="0.0" width="95.5" height="25"/>
-                            <subviews>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="APPROVE" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DFa-VO-dPJ">
-                                    <rect key="frame" x="0.0" y="0.0" width="95.5" height="25"/>
-                                    <fontDescription key="fontDescription" name="RobotoCondensed-Regular" family="Roboto Condensed" pointSize="17"/>
-                                    <nil key="textColor"/>
-                                    <nil key="highlightedColor"/>
-                                </label>
-                            </subviews>
-                            <color key="backgroundColor" systemColor="systemGray4Color"/>
-                            <constraints>
-                                <constraint firstAttribute="trailing" secondItem="DFa-VO-dPJ" secondAttribute="trailing" id="HYQ-Jf-n75"/>
-                                <constraint firstItem="DFa-VO-dPJ" firstAttribute="leading" secondItem="2xH-0R-Alc" secondAttribute="leading" id="Qsh-4Z-eQk"/>
-                                <constraint firstAttribute="bottom" secondItem="DFa-VO-dPJ" secondAttribute="bottom" id="fcQ-oc-odO"/>
-                                <constraint firstItem="DFa-VO-dPJ" firstAttribute="top" secondItem="2xH-0R-Alc" secondAttribute="top" id="xDy-sc-ogT"/>
                             </constraints>
                         </view>
                     </subviews>

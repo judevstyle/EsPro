@@ -146,7 +146,7 @@ extension ProductInfoListViewController {
     @objc func didSearchButton() {
         var request: GetInfoLevel1Request = GetInfoLevel1Request()
         keyword = inputSearch.text ?? ""
-//        keyword = "000102172"
+        keyword = "016004173"
         request.query = query
         request.searchby = searchby
         request.keyword = keyword

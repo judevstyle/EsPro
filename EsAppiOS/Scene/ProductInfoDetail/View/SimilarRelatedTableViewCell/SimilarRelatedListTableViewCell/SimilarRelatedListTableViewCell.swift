@@ -9,6 +9,12 @@ import UIKit
 
 class SimilarRelatedListTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var titleText: UILabel!
+    @IBOutlet weak var esPnText: UILabel!
+    @IBOutlet weak var desc: UILabel!
+    @IBOutlet weak var unitPrice: UILabel!
+    @IBOutlet weak var imagePicView: UIImageView!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -20,4 +26,21 @@ class SimilarRelatedListTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
+    var data : GetSimilarRelatedPartResponse? {
+        didSet {
+            setupValue()
+        }
+    }
+    
+    
+    func setupValue() {
+        if let urlImage = URL(string: "\(DomainNameConfig.ImagePath.urlString)\(data?.Picture ?? "").jpg") {
+            imagePicView.kf.setImageDefault(with: urlImage)
+        }
+        
+        titleText.text = data?.MfrPartNo ?? ""
+        esPnText.text = data?.ESPartNo ?? ""
+        desc.text = "\(data?.Desc2 ?? "")\n\(data?.Desc3 ?? "")\n\(data?.Desc4 ?? "")"
+        unitPrice.text = "\(data?.UnitPrice ?? 0.0)"
+    }
 }

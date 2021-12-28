@@ -23,7 +23,6 @@ class ProductInfoViewController: UIViewController {
     //headerSegmentControlProductView
     @IBOutlet weak var headerSegmentControlProductView: UIView!
     @IBOutlet weak var productTableView: UITableView!
-    @IBOutlet weak var productTableViewHeight: NSLayoutConstraint!
     
     
     //similar & related
@@ -33,17 +32,20 @@ class ProductInfoViewController: UIViewController {
     @IBOutlet weak var relatedTableView: UITableView!
     @IBOutlet weak var relatedTableViewHeight: NSLayoutConstraint!
     
+    @IBOutlet weak var viewTopProduct: UIView!
     @IBOutlet weak var viewProduct: UIView!
     @IBOutlet weak var viewProductHeight: NSLayoutConstraint!
+    
+    @IBOutlet weak var priceVatValue: UILabel!
+    
+    @IBOutlet weak var pricePerUnitValue: UILabel!
+    
     private let viewProductConstantHeight: CGFloat = (324 - 235)
     
     var listShipmentTable: [ShipmentTableModel] = []
     
     var listProductInformation: [ProductTableModel] = []
     var listProductSpecification: [ProductTableModel] = []
-    
-    var listSimilarTable: [SimilarTableModel] = []
-    var listRelatedTable: [SimilarTableModel] = []
     
     var segmentControlSelectIndex: Int = 0
     
@@ -53,7 +55,6 @@ class ProductInfoViewController: UIViewController {
                                                                                                          height:0))
     
     var segmentControlWidth: CGFloat = 0
-    
     
     lazy var viewModel: ProductInfoProtocol = {
         let vm = ProductInfoViewModel(vc: self)
@@ -92,7 +93,7 @@ class ProductInfoViewController: UIViewController {
         segmentControlWidth = self.headerSegmentControlProductView.frame.width
         
         
-        viewModel.input.getProductInfo2()
+        viewModel.input.fetchData()
     }
     
     func configure(_ interface: ProductInfoProtocol) {
@@ -108,7 +109,7 @@ class ProductInfoViewController: UIViewController {
     }
     
     override func viewWillLayoutSubviews() {
-
+//        productTableView.reloadData()
     }
     
     @objc func rotated() {
@@ -126,42 +127,17 @@ class ProductInfoViewController: UIViewController {
 //        listInventoryTable.append(InventoryTableModel(key: "A", location: "RET.SHOP-BANMOH", onhand: "XXX,XXX", booking: "XXX,XXX", balance: "XXX,XXX"))
         
         //listShipmentTable
-        listShipmentTable.append(ShipmentTableModel(poNo: "xxxxx", item: "xx", poDate: "xx/xx/xx", qtyAvl: "xxx,xxx", estArr: "xx/xx/xx", conArr: "xx/xx/xx", increase: "xx %", approve: "Approve"))
-        listShipmentTable.append(ShipmentTableModel(poNo: "xxxxx", item: "xx", poDate: "xx/xx/xx", qtyAvl: "xxx,xxx", estArr: "xx/xx/xx", conArr: "xx/xx/xx", increase: "xx %", approve: "Approve"))
-        listShipmentTable.append(ShipmentTableModel(poNo: "xxxxx", item: "xx", poDate: "xx/xx/xx", qtyAvl: "xxx,xxx", estArr: "xx/xx/xx", conArr: "xx/xx/xx", increase: "xx %", approve: "Approve"))
-        listShipmentTable.append(ShipmentTableModel(poNo: "xxxxx", item: "xx", poDate: "xx/xx/xx", qtyAvl: "xxx,xxx", estArr: "xx/xx/xx", conArr: "xx/xx/xx", increase: "xx %", approve: "Approve"))
-        listShipmentTable.append(ShipmentTableModel(poNo: "xxxxx", item: "xx", poDate: "xx/xx/xx", qtyAvl: "xxx,xxx", estArr: "xx/xx/xx", conArr: "xx/xx/xx", increase: "xx %", approve: "Approve"))
-        listShipmentTable.append(ShipmentTableModel(poNo: "xxxxx", item: "xx", poDate: "xx/xx/xx", qtyAvl: "xxx,xxx", estArr: "xx/xx/xx", conArr: "xx/xx/xx", increase: "xx %", approve: "Approve"))
-        
+//        listShipmentTable.append(ShipmentTableModel(poNo: "xxxxx", item: "xx", poDate: "xx/xx/xx", qtyAvl: "xxx,xxx", estArr: "xx/xx/xx", conArr: "xx/xx/xx", increase: "xx %", approve: "Approve"))
         
         //listProductInformation
-        listProductInformation.append(ProductTableModel(title: "Instrument Type", value: "Thermal Image"))
-        listProductInformation.append(ProductTableModel(title: "Measurement Methods", value: "Non Contact - Infrared Camera"))
-        listProductInformation.append(ProductTableModel(title: "Series", value: "DT9875Y"))
-        listProductInformation.append(ProductTableModel(title: "Temperature", value: "Hight Temperature"))
-        listProductInformation.append(ProductTableModel(title: "Instrument Type", value: "XXXXXX"))
-        listProductInformation.append(ProductTableModel(title: "Instrument Type", value: "XXXXXX"))
-        listProductInformation.append(ProductTableModel(title: "Instrument Type", value: "XXXXXX"))
-        listProductInformation.append(ProductTableModel(title: "Instrument Type", value: "XXXXXX"))
+//        listProductInformation.append(ProductTableModel(title: "Instrument Type", value: "Thermal Image"))
+
         
         //listProductSpecification
-        listProductSpecification.append(ProductTableModel(title: "Instrument Type", value: "XXXXXX"))
-        listProductSpecification.append(ProductTableModel(title: "Instrument Type", value: "XXXXXX"))
-        listProductSpecification.append(ProductTableModel(title: "Instrument Type", value: "XXXXXX"))
-        listProductSpecification.append(ProductTableModel(title: "Instrument Type", value: "XXXXXX"))
-        listProductSpecification.append(ProductTableModel(title: "Instrument Type", value: "XXXXXX"))
-        listProductSpecification.append(ProductTableModel(title: "Instrument Type", value: "XXXXXX"))
-        listProductSpecification.append(ProductTableModel(title: "Instrument Type", value: "XXXXXX"))
-        listProductSpecification.append(ProductTableModel(title: "Instrument Type", value: "XXXXXX"))
-        listProductSpecification.append(ProductTableModel(title: "Instrument Type", value: "XXXXXX"))
-        listProductSpecification.append(ProductTableModel(title: "Instrument Type", value: "XXXXXX"))
-        listProductSpecification.append(ProductTableModel(title: "Instrument Type", value: "XXXXXX"))
-        listProductSpecification.append(ProductTableModel(title: "Instrument Type", value: "XXXXXX"))
+//        listProductSpecification.append(ProductTableModel(title: "Instrument Type", value: "XXXXXX"))
         
         //listSimilarTable
-        listSimilarTable.append(SimilarTableModel(image: "", title: "XXXXXXXXX", type: "XXXXXXXXXXXX", desc: "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx", price: "X,XXX"))
-        listSimilarTable.append(SimilarTableModel(image: "", title: "XXXXXXXXX", type: "XXXXXXXXXXXX", desc: "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx", price: "X,XXX"))
-        listSimilarTable.append(SimilarTableModel(image: "", title: "XXXXXXXXX", type: "XXXXXXXXXXXX", desc: "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx", price: "X,XXX"))
+//        listSimilarTable.append(SimilarTableModel(image: "", title: "XXXXXXXXX", type: "XXXXXXXXXXXX", desc: "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx", price: "X,XXX"))
     }
 }
 
@@ -171,6 +147,15 @@ extension ProductInfoViewController {
     func bindToViewModel() {
         viewModel.output.didGetProductInfo2Success = didGetProductInfo2Success()
         viewModel.output.didGetProductInfo2Error = didGetProductInfo2Error()
+        
+        viewModel.output.didGetProductInfo3Success = didGetProductInfo3Success()
+        viewModel.output.didGetProductInfo3Error = didGetProductInfo3Error()
+        
+        viewModel.output.didGetSimilarPartSuccess = didGetSimilarPartSuccess()
+        viewModel.output.didGetSimilarPartError = didGetSimilarPartError()
+        
+        viewModel.output.didGetRelatedPartSuccess = didGetRelatedPartSuccess()
+        viewModel.output.didGetRelatedPartError = didGetRelatedPartError()
     }
     
     func didGetProductInfo2Success() -> (() -> Void) {
@@ -186,9 +171,49 @@ extension ProductInfoViewController {
         }
     }
     
+    func didGetProductInfo3Success() -> (() -> Void) {
+        return { [weak self] in
+            guard let weakSelf = self else { return }
+            weakSelf.setupValueInfo3()
+        }
+    }
+    
+    func didGetProductInfo3Error() -> (() -> Void) {
+        return { [weak self] in
+            guard let weakSelf = self else { return }
+        }
+    }
+    
+    func didGetSimilarPartSuccess() -> (() -> Void) {
+        return { [weak self] in
+            guard let weakSelf = self else { return }
+            weakSelf.similarTableView.reloadData()
+        }
+    }
+    
+    func didGetSimilarPartError() -> (() -> Void) {
+        return { [weak self] in
+            guard let weakSelf = self else { return }
+        }
+    }
+    
+    func didGetRelatedPartSuccess() -> (() -> Void) {
+        return { [weak self] in
+            guard let weakSelf = self else { return }
+            weakSelf.relatedTableView.reloadData()
+        }
+    }
+    
+    func didGetRelatedPartError() -> (() -> Void) {
+        return { [weak self] in
+            guard let weakSelf = self else { return }
+        }
+    }
+    
 }
 
 extension ProductInfoViewController {
+    
     func setupValueInfo2() {
         guard let item = viewModel.output.getDataProductInfo2() else { return }
         esPnValue.text = item.ES_PN ?? ""
@@ -212,6 +237,11 @@ extension ProductInfoViewController {
         priceTableView.reloadData()
         inventoryTableView.reloadData()
         
+        pricePerUnitValue.text = "Price Per unit : \(item.UNIT ?? "")"
+        priceVatValue.text = "Price not include VAT \(item.VATSTATUS ?? "0")%"
+        
+        setValueProductInfo()
+        setValueProductSpec()
     }
     
     @objc func handleTapViewPDF(_ sender: UITapGestureRecognizer? = nil) {
@@ -220,7 +250,62 @@ extension ProductInfoViewController {
             UIApplication.shared.open(url)
         }
     }
+    
+    private func setValueProductInfo() {
+        guard let item = viewModel.output.getDataProductInfo2() else { return }
+        listProductInformation.append(ProductTableModel(title: item.ProdSpecHead1 ?? "", value: item.ProdSpecDetail1 ?? ""))
+        listProductInformation.append(ProductTableModel(title: item.ProdSpecHead2 ?? "", value: item.ProdSpecDetail2 ?? ""))
+        listProductInformation.append(ProductTableModel(title: item.ProdSpecHead3 ?? "", value: item.ProdSpecDetail3 ?? ""))
+        listProductInformation.append(ProductTableModel(title: item.ProdSpecHead4 ?? "", value: item.ProdSpecDetail4 ?? ""))
+        listProductInformation.append(ProductTableModel(title: item.ProdSpecHead5 ?? "", value: item.ProdSpecDetail5 ?? ""))
+        listProductInformation.append(ProductTableModel(title: item.ProdSpecHead6 ?? "", value: item.ProdSpecDetail6 ?? ""))
+        listProductInformation.append(ProductTableModel(title: item.ProdSpecHead7 ?? "", value: item.ProdSpecDetail7 ?? ""))
+        listProductInformation.append(ProductTableModel(title: item.ProdSpecHead8 ?? "", value: item.ProdSpecDetail8 ?? ""))
+        listProductInformation.append(ProductTableModel(title: item.ProdSpecHead9 ?? "", value: item.ProdSpecDetail9 ?? ""))
+        listProductInformation.append(ProductTableModel(title: item.ProdSpecHead10 ?? "", value: item.ProdSpecDetail10 ?? ""))
+        listProductInformation.append(ProductTableModel(title: item.ProdSpecHead11 ?? "", value: item.ProdSpecDetail11 ?? ""))
+        listProductInformation.append(ProductTableModel(title: item.ProdSpecHead12 ?? "", value: item.ProdSpecDetail12 ?? ""))
+        listProductInformation.append(ProductTableModel(title: item.ProdSpecHead13 ?? "", value: item.ProdSpecDetail13 ?? ""))
+        listProductInformation.append(ProductTableModel(title: item.ProdSpecHead14 ?? "", value: item.ProdSpecDetail14 ?? ""))
+        listProductInformation.append(ProductTableModel(title: item.ProdSpecHead15 ?? "", value: item.ProdSpecDetail15 ?? ""))
+        productTableView.reloadData()
+    }
+    
+    private func setValueProductSpec() {
+        guard let item = viewModel.output.getDataProductInfo2() else { return }
 
+        listProductSpecification.append(ProductTableModel(title: "Product Category", value: "\(item.PRODUCT_CATEGORY ?? "")"))
+        listProductSpecification.append(ProductTableModel(title: "Family", value: "\(item.FAMILY ?? "")"))
+        listProductSpecification.append(ProductTableModel(title: "Product Part No.", value: "\(item.PRODUCT_PART_NO ?? "")"))
+        listProductSpecification.append(ProductTableModel(title: "ES Part No.", value: "\(item.ES_PART_NO ?? "")"))
+        listProductSpecification.append(ProductTableModel(title: "Manufacturer", value: "\(item.MANUFACTURER ?? "")"))
+        listProductSpecification.append(ProductTableModel(title: "Package/Case", value: "\(item.PACKAGE_CASE ?? "")"))
+        listProductSpecification.append(ProductTableModel(title: "Mfr Package", value: "\(item.MFR_PACKAGE ?? "")"))
+        listProductSpecification.append(ProductTableModel(title: "Packaging", value: "\(item.PACKAGING ?? "")"))
+        listProductSpecification.append(ProductTableModel(title: "Qty/Packaging", value: "\(item.QTY_PACKAGING ?? "")"))
+        listProductSpecification.append(ProductTableModel(title: "Mfr_Std_pack", value: "\(item.MFR_STD_PACK ?? 0)"))
+        listProductSpecification.append(ProductTableModel(title: "ES_Std_pack", value: "\(item.ES_STD_PACK ?? 0)"))
+        listProductSpecification.append(ProductTableModel(title: "Unit", value: "\(item.UNIT ?? "")"))
+        listProductSpecification.append(ProductTableModel(title: "Weight(Gram)", value: "\(item.WEIGHT ?? 0)"))
+        listProductSpecification.append(ProductTableModel(title: "Warranty(year)", value: "\(item.Warranty ?? 0)"))
+        listProductSpecification.append(ProductTableModel(title: "PB Free", value: "\(item.PBFREE ?? "")"))
+        listProductSpecification.append(ProductTableModel(title: "RoHS", value: "\(item.ROHS ?? "")"))
+        productTableView.reloadData()
+        
+    }
+    
+    private func setupValueInfo3() {
+        let data = viewModel.output.getDataProductInfo3()
+        listShipmentTable.removeAll()
+        data.forEach({ item in
+            let poDate = item.PO_DATE?.convertToDate()?.getFormattedDate(format: "dd/MM/yyyy") ?? ""
+            let estArr = item.EST_ARR?.convertToDate()?.getFormattedDate(format: "dd/MM/yyyy") ?? ""
+            let conArr = item.CON_ARR?.convertToDate()?.getFormattedDate(format: "dd/MM/yyyy") ?? ""
+            let model = ShipmentTableModel(poNo: "\(item.PO_NO ?? 0)", item: "\(item.ITEM ?? 0)", poDate: "\(poDate)", qtyAvl: "\(item.QTY_AVL ?? 0)", estArr: "\(estArr)", conArr: "\(conArr)")
+            listShipmentTable.append(model)
+        })
+        shipmentTableView.reloadData()
+    }
 }
 
 extension ProductInfoViewController {
@@ -307,6 +392,7 @@ extension ProductInfoViewController {
         productTableView.backgroundView?.backgroundColor = .white
         productTableView.backgroundColor = .white
         productTableView.separatorInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
+        productTableView.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
         productTableView.separatorStyle = .none
         productTableView.separatorColor = .clear
         
@@ -315,7 +401,7 @@ extension ProductInfoViewController {
         let productSpecNib = UINib.init(nibName: "ProductSpecificationTableViewCell", bundle: Bundle.main)
         productTableView.register(productSpecNib, forCellReuseIdentifier: "ProductSpecificationTableViewCell")
         
-        viewProduct.roundCorners(corners: [.topLeft, .topRight], radius: 8.0)
+        viewTopProduct.roundCorners(corners: [.topLeft, .topRight], radius: 8.0)
     }
     
     func setupSegmentControlProductView() {
@@ -342,10 +428,9 @@ extension ProductInfoViewController {
     
     @objc func segmentedControlValueChanged(_ sender: BetterSegmentedControl) {
         segmentControlSelectIndex = sender.index
-        productTableView.reloadData()
-        self.view.layoutIfNeeded()
-        productTableView.layoutIfNeeded()
-        viewProduct.layoutIfNeeded()
+        DispatchQueue.main.async {
+            self.productTableView.reloadData()
+        }
     }
     
     
@@ -393,7 +478,7 @@ extension ProductInfoViewController: UICollectionViewDelegate, UICollectionViewD
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 10
+        return 0
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
@@ -434,11 +519,16 @@ extension ProductInfoViewController: UITableViewDelegate, UITableViewDataSource 
         case shipmentTableView:
             let headerView = tableView.dequeueReusableHeaderFooterView(withIdentifier: "ShipmentHeaderTableViewCell") as! ShipmentHeaderTableViewCell
             return headerView
-        case similarTableView, relatedTableView:
+        case similarTableView:
             let headerView = tableView.dequeueReusableHeaderFooterView(withIdentifier: "SimilarRelatedHeaderTableViewCell") as! SimilarRelatedHeaderTableViewCell
+            headerView.title = "SIMILAR PART"
+            return headerView
+        case relatedTableView:
+            let headerView = tableView.dequeueReusableHeaderFooterView(withIdentifier: "SimilarRelatedHeaderTableViewCell") as! SimilarRelatedHeaderTableViewCell
+            headerView.title = "RELATED PART"
             return headerView
         default:
-            return UITableViewHeaderFooterView()
+            return UIView()
         }
     }
     
@@ -453,7 +543,7 @@ extension ProductInfoViewController: UITableViewDelegate, UITableViewDataSource 
             footerView.balance = value.2
             return footerView
         default:
-            return nil
+            return UIView()
         }
     }
     
@@ -490,28 +580,36 @@ extension ProductInfoViewController: UITableViewDelegate, UITableViewDataSource 
             inventoryTableViewHeight.constant = CGFloat(((count) * 30) + 50 + 30)
             return count
         case shipmentTableView:
-            shipmentTableViewHeight.constant = CGFloat(((listShipmentTable.count ) * 30) + 30)
-            return listShipmentTable.count
+            let count = viewModel.output.getDataProductInfo3().count
+            shipmentTableViewHeight.constant = CGFloat(((count) * 30) + 30)
+            return count
         case productTableView:
-            
             switch segmentControlSelectIndex {
             case 0:
-                productTableViewHeight.constant = CGFloat(listProductInformation.count * 30)
-                viewProductHeight.constant = viewProductConstantHeight + CGFloat(listProductInformation.count * 30)
+                viewProductHeight.constant = CGFloat(listProductInformation.count * 30) + 36
                 return listProductInformation.count
             case 1:
-                productTableViewHeight.constant = CGFloat(listProductSpecification.count * 30)
-                viewProductHeight.constant = viewProductConstantHeight + CGFloat(listProductSpecification.count * 30)
+                viewProductHeight.constant = CGFloat(listProductSpecification.count * 30) + 36
                 return listProductSpecification.count
             default:
                 return listProductSpecification.count
             }
             
             
-        case similarTableView, relatedTableView:
-            similarTableViewHeight.constant = CGFloat((listSimilarTable.count * 200) + 60)
-            relatedTableViewHeight.constant = CGFloat((listSimilarTable.count * 200) + 60)
-            return listSimilarTable.count
+        case similarTableView:
+            let count = viewModel.output.getDataSimilarPart().count
+            if viewModel.output.getDataSimilarPart().count >= viewModel.output.getDataRelatedPart().count {
+                similarTableViewHeight.constant = CGFloat((count * 200) + 60)
+                relatedTableViewHeight.constant = CGFloat((count * 200) + 60)
+            }
+            return count
+        case relatedTableView:
+            let count = viewModel.output.getDataRelatedPart().count
+            if viewModel.output.getDataRelatedPart().count >= viewModel.output.getDataSimilarPart().count {
+                similarTableViewHeight.constant = CGFloat((count * 200) + 60)
+                relatedTableViewHeight.constant = CGFloat((count * 200) + 60)
+            }
+            return count
         default:
             return 0
         }
@@ -544,6 +642,7 @@ extension ProductInfoViewController: UITableViewDelegate, UITableViewDataSource 
                 let cell = tableView.dequeueReusableCell(withIdentifier: "ShipmentListTableViewCell", for: indexPath) as! ShipmentListTableViewCell
                 cell.data = listShipmentTable[indexPath.item]
                 cell.backgroundColor = UIColor.clear
+                cell.selectionStyle = .none
                 return cell
             case productTableView:
                 switch segmentControlSelectIndex {
@@ -551,17 +650,26 @@ extension ProductInfoViewController: UITableViewDelegate, UITableViewDataSource 
                     let cell = tableView.dequeueReusableCell(withIdentifier: "ProductInformationTableViewCell", for: indexPath) as! ProductInformationTableViewCell
                     cell.item = listProductInformation[indexPath.item]
                     cell.backgroundColor = UIColor.clear
+                    cell.selectionStyle = .none
                     return cell
                 default:
                     let cell = tableView.dequeueReusableCell(withIdentifier: "ProductSpecificationTableViewCell", for: indexPath) as! ProductSpecificationTableViewCell
                     cell.item = listProductSpecification[indexPath.item]
                     cell.backgroundColor = UIColor.clear
+                    cell.selectionStyle = .none
                     return cell
                 }
             case similarTableView, relatedTableView:
                 let cell = tableView.dequeueReusableCell(withIdentifier: "SimilarRelatedListTableViewCell", for: indexPath) as! SimilarRelatedListTableViewCell
-//                cell.item = listProductSpecification[indexPath.item]
+                cell.data = viewModel.output.getDataSimilarPart()[indexPath.item]
                 cell.backgroundColor = UIColor.clear
+                cell.selectionStyle = .none
+                return cell
+            case relatedTableView:
+                let cell = tableView.dequeueReusableCell(withIdentifier: "SimilarRelatedListTableViewCell", for: indexPath) as! SimilarRelatedListTableViewCell
+                cell.data = viewModel.output.getDataRelatedPart()[indexPath.item]
+                cell.backgroundColor = UIColor.clear
+                cell.selectionStyle = .none
                 return cell
             default:
                 return UITableViewCell()

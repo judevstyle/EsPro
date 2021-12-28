@@ -31,7 +31,7 @@
                                 <rect key="frame" x="0.0" y="24" width="820" height="1456"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="fPa-A9-1Lu">
-                                        <rect key="frame" x="0.0" y="0.0" width="820" height="1990"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="820" height="2055"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zlK-hK-4TA">
                                                 <rect key="frame" x="0.0" y="0.0" width="820" height="475"/>
@@ -551,11 +551,11 @@
                                                     <constraint firstItem="YmL-vv-wpv" firstAttribute="top" secondItem="3zY-rF-a3H" secondAttribute="bottom" id="oGq-mi-efT"/>
                                                 </constraints>
                                             </view>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3oh-yA-JNN">
-                                                <rect key="frame" x="0.0" y="1302" width="820" height="372"/>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hoi-o7-bmJ">
+                                                <rect key="frame" x="0.0" y="1302" width="820" height="437"/>
                                                 <subviews>
-                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Tpw-u9-PPZ">
-                                                        <rect key="frame" x="24" y="24" width="772" height="324"/>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="R9z-uL-X0h">
+                                                        <rect key="frame" x="24" y="24" width="772" height="65"/>
                                                         <subviews>
                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bVa-py-iGX">
                                                                 <rect key="frame" x="0.0" y="0.0" width="772" height="65"/>
@@ -572,36 +572,46 @@
                                                                     </userDefinedRuntimeAttribute>
                                                                 </userDefinedRuntimeAttributes>
                                                             </view>
-                                                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" scrollEnabled="NO" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="lXj-tj-HI2">
-                                                                <rect key="frame" x="16" y="73" width="740" height="235"/>
+                                                        </subviews>
+                                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="bottom" secondItem="bVa-py-iGX" secondAttribute="bottom" id="9si-s7-VAV"/>
+                                                            <constraint firstAttribute="trailing" secondItem="bVa-py-iGX" secondAttribute="trailing" id="FAY-Df-eXc"/>
+                                                            <constraint firstItem="bVa-py-iGX" firstAttribute="top" secondItem="R9z-uL-X0h" secondAttribute="top" id="IRP-zt-hEO"/>
+                                                            <constraint firstAttribute="height" constant="65" id="T8P-AF-8pX"/>
+                                                            <constraint firstItem="bVa-py-iGX" firstAttribute="leading" secondItem="R9z-uL-X0h" secondAttribute="leading" id="i6K-R1-2VH"/>
+                                                        </constraints>
+                                                    </view>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AyE-ge-Nc0">
+                                                        <rect key="frame" x="24" y="89" width="772" height="324"/>
+                                                        <subviews>
+                                                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" scrollEnabled="NO" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="Xd4-d4-IZ4">
+                                                                <rect key="frame" x="16" y="0.0" width="740" height="316"/>
                                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                                                <constraints>
-                                                                    <constraint firstAttribute="height" constant="235" id="hwW-tz-jdZ"/>
-                                                                </constraints>
                                                             </tableView>
                                                         </subviews>
                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <constraints>
-                                                            <constraint firstAttribute="trailing" secondItem="bVa-py-iGX" secondAttribute="trailing" id="0sr-2f-PE5"/>
-                                                            <constraint firstItem="bVa-py-iGX" firstAttribute="leading" secondItem="Tpw-u9-PPZ" secondAttribute="leading" id="Ol2-bT-HMG"/>
-                                                            <constraint firstItem="lXj-tj-HI2" firstAttribute="leading" secondItem="Tpw-u9-PPZ" secondAttribute="leading" constant="16" id="R00-JN-lL8"/>
-                                                            <constraint firstAttribute="height" constant="324" id="ZrI-10-KRd"/>
-                                                            <constraint firstItem="bVa-py-iGX" firstAttribute="top" secondItem="Tpw-u9-PPZ" secondAttribute="top" id="idH-Fo-SdF"/>
-                                                            <constraint firstItem="lXj-tj-HI2" firstAttribute="top" secondItem="bVa-py-iGX" secondAttribute="bottom" constant="8" id="nLT-bx-gil"/>
-                                                            <constraint firstAttribute="trailing" secondItem="lXj-tj-HI2" secondAttribute="trailing" constant="16" id="wPG-4o-Gpi"/>
+                                                            <constraint firstAttribute="height" constant="324" id="R1Y-EH-WVj"/>
+                                                            <constraint firstAttribute="bottom" secondItem="Xd4-d4-IZ4" secondAttribute="bottom" constant="8" id="bb0-Ng-b6C"/>
+                                                            <constraint firstItem="Xd4-d4-IZ4" firstAttribute="top" secondItem="AyE-ge-Nc0" secondAttribute="top" id="iAl-MB-jqR"/>
+                                                            <constraint firstItem="Xd4-d4-IZ4" firstAttribute="leading" secondItem="AyE-ge-Nc0" secondAttribute="leading" constant="16" id="mGe-r8-6h3"/>
+                                                            <constraint firstAttribute="trailing" secondItem="Xd4-d4-IZ4" secondAttribute="trailing" constant="16" id="ykG-Wu-0M5"/>
                                                         </constraints>
                                                     </view>
                                                 </subviews>
-                                                <color key="backgroundColor" systemColor="systemGray5Color"/>
                                                 <constraints>
-                                                    <constraint firstItem="Tpw-u9-PPZ" firstAttribute="top" secondItem="3oh-yA-JNN" secondAttribute="top" constant="24" id="LsP-QF-peA"/>
-                                                    <constraint firstAttribute="trailing" secondItem="Tpw-u9-PPZ" secondAttribute="trailing" constant="24" id="VfR-Ay-VXA"/>
-                                                    <constraint firstItem="Tpw-u9-PPZ" firstAttribute="leading" secondItem="3oh-yA-JNN" secondAttribute="leading" constant="24" id="lWA-cw-34j"/>
-                                                    <constraint firstAttribute="bottom" secondItem="Tpw-u9-PPZ" secondAttribute="bottom" constant="24" id="q0z-2o-Tgy"/>
+                                                    <constraint firstItem="AyE-ge-Nc0" firstAttribute="leading" secondItem="hoi-o7-bmJ" secondAttribute="leading" constant="24" id="3LF-4O-JuA"/>
+                                                    <constraint firstAttribute="bottom" secondItem="AyE-ge-Nc0" secondAttribute="bottom" constant="24" id="4IK-xt-6jY"/>
+                                                    <constraint firstAttribute="trailing" secondItem="R9z-uL-X0h" secondAttribute="trailing" constant="24" id="8n6-hN-J6a"/>
+                                                    <constraint firstItem="R9z-uL-X0h" firstAttribute="leading" secondItem="hoi-o7-bmJ" secondAttribute="leading" constant="24" id="IAA-Ik-DAm"/>
+                                                    <constraint firstItem="AyE-ge-Nc0" firstAttribute="top" secondItem="R9z-uL-X0h" secondAttribute="bottom" id="gM4-OI-gOP"/>
+                                                    <constraint firstAttribute="trailing" secondItem="AyE-ge-Nc0" secondAttribute="trailing" constant="24" id="hvw-xS-KX9"/>
+                                                    <constraint firstItem="R9z-uL-X0h" firstAttribute="top" secondItem="hoi-o7-bmJ" secondAttribute="top" constant="24" id="q4x-Os-n3F"/>
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XUF-Ao-zMR">
-                                                <rect key="frame" x="0.0" y="1674" width="820" height="316"/>
+                                                <rect key="frame" x="0.0" y="1739" width="820" height="316"/>
                                                 <subviews>
                                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="Tqs-Uk-558">
                                                         <rect key="frame" x="24" y="0.0" width="772" height="300"/>
@@ -669,18 +679,20 @@
                         <outlet property="menufacturerValue" destination="J30-YB-Fwy" id="v7W-G2-U0r"/>
                         <outlet property="mfrPnValue" destination="pii-Pt-6wu" id="EsV-4T-QB2"/>
                         <outlet property="posterImageValue" destination="ftU-2L-ZBg" id="U86-GH-tiV"/>
+                        <outlet property="pricePerUnitValue" destination="Yrp-tC-VHB" id="xpP-KJ-yDz"/>
                         <outlet property="priceTableView" destination="ZnD-3J-O1W" id="03d-BG-7oY"/>
+                        <outlet property="priceVatValue" destination="FeN-Xl-Cp1" id="hRM-xD-LaD"/>
                         <outlet property="productDescriptionValue" destination="vQJ-vs-P1p" id="Jio-yU-toa"/>
-                        <outlet property="productTableView" destination="lXj-tj-HI2" id="rf2-wR-108"/>
-                        <outlet property="productTableViewHeight" destination="hwW-tz-jdZ" id="Tee-6u-tDa"/>
+                        <outlet property="productTableView" destination="Xd4-d4-IZ4" id="WQQ-69-epv"/>
                         <outlet property="relatedTableView" destination="5wF-PB-oRf" id="rLp-Ul-IcP"/>
                         <outlet property="relatedTableViewHeight" destination="BF1-CB-uCs" id="Ree-mh-FQU"/>
                         <outlet property="shipmentTableView" destination="YmL-vv-wpv" id="e4a-ak-P9z"/>
                         <outlet property="shipmentTableViewHeight" destination="ulh-l9-frf" id="P2h-om-jq3"/>
                         <outlet property="similarTableView" destination="abM-xO-saF" id="TEu-8e-Pf6"/>
                         <outlet property="similarTableViewHeight" destination="9iU-9E-1Ou" id="5Gl-ed-Z6h"/>
-                        <outlet property="viewProduct" destination="Tpw-u9-PPZ" id="kVn-yF-Cur"/>
-                        <outlet property="viewProductHeight" destination="ZrI-10-KRd" id="MPZ-2l-Xzk"/>
+                        <outlet property="viewProduct" destination="AyE-ge-Nc0" id="a9T-me-kae"/>
+                        <outlet property="viewProductHeight" destination="R1Y-EH-WVj" id="MXU-j0-cnD"/>
+                        <outlet property="viewTopProduct" destination="R9z-uL-X0h" id="C9K-J0-xSX"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tXw-5A-qPs" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

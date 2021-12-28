@@ -15,8 +15,8 @@ public struct ShipmentTableModel: Codable {
     public var qtyAvl: String = ""
     public var estArr: String = ""
     public var conArr: String = ""
-    public var increase: String = ""
-    public var approve: String = ""
+//    public var increase: String = ""
+//    public var approve: String = ""
     
     enum CodingKeys: String, CodingKey {
         case poNo = "poNo"
@@ -25,7 +25,7 @@ public struct ShipmentTableModel: Codable {
         case qtyAvl = "qtyAvl"
         case estArr = "estArr"
         case conArr = "conArr"
-        case increase = "increase"
-        case approve = "approve"
+//        case increase = "increase"
+//        case approve = "approve"
     }
 }
