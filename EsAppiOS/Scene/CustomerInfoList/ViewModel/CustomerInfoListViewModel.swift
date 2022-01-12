@@ -92,12 +92,17 @@ extension CustomerInfoListViewModel {
             cell.setupUI()
             return cell
         } else {
-            let cell = tableView.dequeueReusableCell(withIdentifier: "CustomerInfoListTableViewCell", for: indexPath) as! CustomerInfoListTableViewCell
-            cell.backgroundColor = UIColor.clear
-            cell.selectionStyle = .none
-            cell.setupUI()
-            cell.item = self.listCustomerInfo[indexPath.item-1]
-            return cell
+            if self.listCustomerInfo.count == 0 {
+                let cell = tableView.dequeueReusableCell(withIdentifier: "EmptyTableViewCell", for: indexPath) as! EmptyTableViewCell
+                return cell
+            } else {
+                let cell = tableView.dequeueReusableCell(withIdentifier: "CustomerInfoListTableViewCell", for: indexPath) as! CustomerInfoListTableViewCell
+                cell.backgroundColor = UIColor.clear
+                cell.selectionStyle = .none
+                cell.setupUI()
+                cell.item = self.listCustomerInfo[indexPath.item-1]
+                return cell
+            }
         }
     }
     
@@ -105,7 +110,11 @@ extension CustomerInfoListViewModel {
         if indexPath.item == 0 {
             return 60
         } else {
-            return 44
+            if self.listCustomerInfo.count == 0 {
+                return 60
+            } else {
+                return 44
+            }
         }
     }
     

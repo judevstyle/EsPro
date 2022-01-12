@@ -237,6 +237,9 @@ extension CustomerInfoListViewController {
         
         let customerHeadInfoNib = UINib.init(nibName: "CustomerInfoHeaderTableViewCell", bundle: Bundle.main)
         tableView.register(customerHeadInfoNib, forCellReuseIdentifier: "CustomerInfoHeaderTableViewCell")
+        
+        let emptyCell = UINib.init(nibName: "EmptyTableViewCell", bundle: Bundle.main)
+        tableView.register(emptyCell, forCellReuseIdentifier: "EmptyTableViewCell")
     }
 }
 //MARK:- Event
@@ -268,7 +271,7 @@ extension CustomerInfoListViewController: UITableViewDelegate, UITableViewDataSo
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return (viewModel.output.getNumberOfRowsInSection()) + 1
+        return (viewModel.output.getNumberOfRowsInSection()) + 2
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

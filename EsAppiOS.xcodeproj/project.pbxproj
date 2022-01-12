@@ -87,6 +87,8 @@
 		EF74ED1F262D2D7F00E420C8 /* PriceHeaderTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EF74ED1E262D2D7F00E420C8 /* PriceHeaderTableViewCell.xib */; };
 		EF7D56FB260EF918004EE94A /* UIFont+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF7D56FA260EF918004EE94A /* UIFont+Extension.swift */; };
 		EF7D56FE260EFD99004EE94A /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF7D56FD260EFD99004EE94A /* UIView+Extension.swift */; };
+		EF7F08C7278EC8B300FE4E9C /* EmptyTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF7F08C5278EC8B300FE4E9C /* EmptyTableViewCell.swift */; };
+		EF7F08C8278EC8B300FE4E9C /* EmptyTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EF7F08C6278EC8B300FE4E9C /* EmptyTableViewCell.xib */; };
 		EF849DDC276A40030010FEF0 /* GetInfoLevel1Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF849DDB276A40030010FEF0 /* GetInfoLevel1Request.swift */; };
 		EF849DE1276A40770010FEF0 /* InfoLevel1API.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF849DE0276A40770010FEF0 /* InfoLevel1API.swift */; };
 		EF849DE3276A409E0010FEF0 /* InfoLevel1Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF849DE2276A409E0010FEF0 /* InfoLevel1Repository.swift */; };
@@ -219,6 +221,8 @@
 		EF74ED1E262D2D7F00E420C8 /* PriceHeaderTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PriceHeaderTableViewCell.xib; sourceTree = "<group>"; };
 		EF7D56FA260EF918004EE94A /* UIFont+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+Extension.swift"; sourceTree = "<group>"; };
 		EF7D56FD260EFD99004EE94A /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
+		EF7F08C5278EC8B300FE4E9C /* EmptyTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyTableViewCell.swift; sourceTree = "<group>"; };
+		EF7F08C6278EC8B300FE4E9C /* EmptyTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EmptyTableViewCell.xib; sourceTree = "<group>"; };
 		EF849DDB276A40030010FEF0 /* GetInfoLevel1Request.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetInfoLevel1Request.swift; sourceTree = "<group>"; };
 		EF849DE0276A40770010FEF0 /* InfoLevel1API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoLevel1API.swift; sourceTree = "<group>"; };
 		EF849DE2276A409E0010FEF0 /* InfoLevel1Repository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoLevel1Repository.swift; sourceTree = "<group>"; };
@@ -606,6 +610,7 @@
 		EF50D8D226F756EF008F11D7 /* Cell */ = {
 			isa = PBXGroup;
 			children = (
+				EF7F08C4278EC88E00FE4E9C /* EmptyTableViewCell */,
 				EF50D8D326F75707008F11D7 /* ContactTableViewCell */,
 			);
 			path = Cell;
@@ -784,6 +789,15 @@
 				EF74ED1E262D2D7F00E420C8 /* PriceHeaderTableViewCell.xib */,
 			);
 			path = PriceHeaderTableViewCell;
+			sourceTree = "<group>";
+		};
+		EF7F08C4278EC88E00FE4E9C /* EmptyTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				EF7F08C5278EC8B300FE4E9C /* EmptyTableViewCell.swift */,
+				EF7F08C6278EC8B300FE4E9C /* EmptyTableViewCell.xib */,
+			);
+			path = EmptyTableViewCell;
 			sourceTree = "<group>";
 		};
 		EF849DD4276A3F7B0010FEF0 /* InfoLevel1 */ = {
@@ -1226,6 +1240,7 @@
 				EF239C0026384F5800983EA8 /* SimilarRelatedListTableViewCell.xib in Resources */,
 				EF3994572634219100BBC189 /* InventoryFooterTableViewCell.xib in Resources */,
 				EFF00AD326B1CD6200A7C77D /* CustomerInfoHeaderTableViewCell.xib in Resources */,
+				EF7F08C8278EC8B300FE4E9C /* EmptyTableViewCell.xib in Resources */,
 				EF22CC6D26480A2000E5438F /* CustomerInfoDetailTableViewCell.xib in Resources */,
 				EFEA18F12641B02A00251F19 /* CustomerInfoListTableViewCell.xib in Resources */,
 				EF5242DA262AC96F0071572B /* RobotoCondensed-Regular.ttf in Resources */,
@@ -1387,6 +1402,7 @@
 				EF74ED15262D2D1700E420C8 /* PriceListTableViewCell.swift in Sources */,
 				EF22CC6C26480A2000E5438F /* CustomerInfoDetailTableViewCell.swift in Sources */,
 				EF1623E1276F047B00A3712C /* ProductInfoViewModel.swift in Sources */,
+				EF7F08C7278EC8B300FE4E9C /* EmptyTableViewCell.swift in Sources */,
 				EF22CC782648141500E5438F /* PopupViewController.swift in Sources */,
 				EF3994A126343F9500BBC189 /* ProductInformationTableViewCell.swift in Sources */,
 				EFB0083D277ADE0400BAE2EE /* CustomerProfileAPI.swift in Sources */,

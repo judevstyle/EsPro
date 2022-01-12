@@ -13,7 +13,7 @@ public struct GetProductInfoResponse: Codable {
     public var MFR_PN: String?
     public var DESCRIPTION: String?
     public var QTY: Int?
-    public var PRICE1: Int?
+    public var PRICE1: Double?
     
     public enum CodingKeys: String, CodingKey {
         case ES_PN = "ES_PN"
@@ -29,6 +29,6 @@ public struct GetProductInfoResponse: Codable {
         MFR_PN = try values.decode(String.self, forKey: .MFR_PN)
         DESCRIPTION = try values.decode(String.self, forKey: .DESCRIPTION)
         QTY = try values.decode(Int.self, forKey: .QTY)
-        PRICE1 = try values.decode(Int.self, forKey: .PRICE1)
+        PRICE1 = try values.decode(Double.self, forKey: .PRICE1)
     }
 }

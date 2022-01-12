@@ -146,7 +146,6 @@ extension ProductInfoListViewController {
     @objc func didSearchButton() {
         var request: GetInfoLevel1Request = GetInfoLevel1Request()
         keyword = inputSearch.text ?? ""
-        keyword = "016004173"
         request.query = query
         request.searchby = searchby
         request.keyword = keyword
@@ -238,6 +237,8 @@ extension ProductInfoListViewController {
         tableView.register(productInfoNib, forCellReuseIdentifier: "ProductInfoListTableViewCell")
         let productHeaderInfoNib = UINib.init(nibName: "ProductInfoHeaderTableViewCell", bundle: Bundle.main)
         tableView.register(productHeaderInfoNib, forCellReuseIdentifier: "ProductInfoHeaderTableViewCell")
+        let emptyCell = UINib.init(nibName: "EmptyTableViewCell", bundle: Bundle.main)
+        tableView.register(emptyCell, forCellReuseIdentifier: "EmptyTableViewCell")
     }
 }
 //MARK:- Event
@@ -253,13 +254,11 @@ extension ProductInfoListViewController {
     @objc func selecedSearchByChange(){
         let searchByType = SearchType(rawValue: radioSearchByGroup.titles[radioSearchByGroup.selectedIndex] ?? "") ?? SearchType.ES
         searchby = searchByType.value
-        print(searchby)
     }
     
     @objc func selecedSortByChange(){
         let sortByType = SortType(rawValue: radioSortByGroup.titles[radioSortByGroup.selectedIndex] ?? "") ?? SortType.ES
         sortby = sortByType.value
-        print(sortby)
     }
 }
 
@@ -271,7 +270,7 @@ extension ProductInfoListViewController: UITableViewDelegate, UITableViewDataSou
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return (viewModel.output.getNumberOfRowsInSection()) + 1
+        return (viewModel.output.getNumberOfRowsInSection()) + 2
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

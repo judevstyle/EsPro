@@ -92,12 +92,17 @@ extension ProductInfoListViewModel {
             cell.setupUI()
             return cell
         } else {
-            let cell = tableView.dequeueReusableCell(withIdentifier: "ProductInfoListTableViewCell", for: indexPath) as! ProductInfoListTableViewCell
-            cell.backgroundColor = UIColor.clear
-            cell.selectionStyle = .none
-            cell.setupUI()
-            cell.item = self.listProductInfo[indexPath.item-1]
-            return cell
+            if self.listProductInfo.count == 0 {
+                let cell = tableView.dequeueReusableCell(withIdentifier: "EmptyTableViewCell", for: indexPath) as! EmptyTableViewCell
+                return cell
+            } else {
+                let cell = tableView.dequeueReusableCell(withIdentifier: "ProductInfoListTableViewCell", for: indexPath) as! ProductInfoListTableViewCell
+                cell.backgroundColor = UIColor.clear
+                cell.selectionStyle = .none
+                cell.setupUI()
+                cell.item = self.listProductInfo[indexPath.item-1]
+                return cell
+            }
         }
     }
     
@@ -105,7 +110,11 @@ extension ProductInfoListViewModel {
         if indexPath.item == 0 {
             return 60
         } else {
-            return 44
+            if self.listProductInfo.count == 0 {
+                return 60
+            } else {
+                return 44
+            }
         }
     }
     
