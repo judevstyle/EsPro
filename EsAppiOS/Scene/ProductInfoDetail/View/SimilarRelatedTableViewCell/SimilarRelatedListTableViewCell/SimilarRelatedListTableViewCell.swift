@@ -41,6 +41,6 @@ class SimilarRelatedListTableViewCell: UITableViewCell {
         titleText.text = data?.MfrPartNo ?? ""
         esPnText.text = data?.ESPartNo ?? ""
         desc.text = "\(data?.Desc2 ?? "")\n\(data?.Desc3 ?? "")\n\(data?.Desc4 ?? "")"
-        unitPrice.text = "\(data?.UnitPrice ?? 0.0)"
+        unitPrice.text =  String(format: "%.2f", data?.UnitPrice ?? 0.0)
     }
 }

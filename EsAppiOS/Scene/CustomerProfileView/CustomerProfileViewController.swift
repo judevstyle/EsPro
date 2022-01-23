@@ -123,11 +123,11 @@ extension CustomerProfileViewController {
         badgeSaleMan3.titleText.text = item.SALECODE3 ?? ""
         badgeSaleMan4.titleText.text = item.SALECODE4 ?? ""
         
-        creditValue.text = "\(item.CREDIT ?? 0)"
-        amountValue.text = "\(item.AMOUNT ?? 0)"
-        creditAmountValue.text = "\(item.CREDIT_AMOUNT ?? 0)"
-        arValue.text = "\(item.AR ?? 0)"
-        chqRetValue.text = "\(item.CHQ_RET ?? 0)"
+        creditValue.text =  String(format: "%.0f", item.CREDIT ?? 0.0)
+        amountValue.text = String(format: "%.0f", item.AMOUNT ?? 0.0)
+        creditAmountValue.text = String(format: "%.0f", item.CREDIT_AMOUNT ?? 0.0)
+        arValue.text = String(format: "%.0f", item.AR ?? 0.0)
+        chqRetValue.text = String(format: "%.0f", item.CHQ_RET ?? 0.0)
         termValue.text = "\(item.TERM ?? 0)"
         
         conditionValue.text = item.CONDITION ?? ""
@@ -137,6 +137,7 @@ extension CustomerProfileViewController {
         descValue.text = "\(item.DESCRIPTION1 ?? "")\n\(item.DESCRIPTION2 ?? "")\n\(item.DESCRIPTION3 ?? "")"
         bussCodeValue.text = "\(item.BUSS_CODE1 ?? "")\n\(item.BUSS_CODE2 ?? "")\n\(item.BUSS_CODE3 ?? "")\n\(item.BUSS_CODE4 ?? "")"
         bussProdValue.text = "\(item.BUSS_PROD1 ?? "")\n\(item.BUSS_PROD2 ?? "")\n\(item.BUSS_PROD3 ?? "")\n\(item.BUSS_PROD4 ?? "")"
+        tableView.reloadData()
     }
 }
 

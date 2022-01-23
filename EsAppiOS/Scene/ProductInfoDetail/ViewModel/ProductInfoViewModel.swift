@@ -248,25 +248,25 @@ extension ProductInfoViewModel {
         //For Price TableVirw
         listPriceTable.removeAll()
         if let price1 = item.PRICE1, price1 != 0 {
-            listPriceTable.append(PriceTableModel(qyt: item.PRODUCTPRICE1 ?? 0, unitPrice: price1))
+            listPriceTable.append(PriceTableModel(qyt: "\(item.PRODUCTPRICE1 ?? 0) - \((item.PRODUCTPRICE2 ?? 0) - 1)", unitPrice: price1))
             if let price2 = item.PRICE2, price2 != 0 {
-                listPriceTable.append(PriceTableModel(qyt: item.PRODUCTPRICE2 ?? 0, unitPrice: price2))
+                listPriceTable.append(PriceTableModel(qyt: "\(item.PRODUCTPRICE2 ?? 0) - \((item.PRODUCTPRICE3 ?? 0) - 1)", unitPrice: price2))
                 if let price3 = item.PRICE3, price3 != 0 {
-                    listPriceTable.append(PriceTableModel(qyt: item.PRODUCTPRICE3 ?? 0, unitPrice: price3))
+                    listPriceTable.append(PriceTableModel(qyt: "\(item.PRODUCTPRICE3 ?? 0) - \((item.PRODUCTPRICE4 ?? 0) - 1)", unitPrice: price3))
                     if let price4 = item.PRICE4, price4 != 0 {
-                        listPriceTable.append(PriceTableModel(qyt: item.PRODUCTPRICE4 ?? 0, unitPrice: price4))
+                        listPriceTable.append(PriceTableModel(qyt: "\(item.PRODUCTPRICE4 ?? 0) - \((item.PRODUCTPRICE5 ?? 0) - 1)", unitPrice: price4))
                         if let price5 = item.PRICE5, price5 != 0 {
-                            listPriceTable.append(PriceTableModel(qyt: item.PRODUCTPRICE5 ?? 0, unitPrice: price5))
+                            listPriceTable.append(PriceTableModel(qyt: "\(item.PRODUCTPRICE5 ?? 0) - \((item.PRODUCTPRICE6 ?? 0) - 1)", unitPrice: price5))
                             if let price6 = item.PRICE6, price6 != 0 {
-                                listPriceTable.append(PriceTableModel(qyt: item.PRODUCTPRICE6 ?? 0, unitPrice: price6))
+                                listPriceTable.append(PriceTableModel(qyt: "\(item.PRODUCTPRICE6 ?? 0) - \((item.PRODUCTPRICE7 ?? 0) - 1)", unitPrice: price6))
                                 if let price7 = item.PRICE7, price7 != 0 {
-                                    listPriceTable.append(PriceTableModel(qyt: item.PRODUCTPRICE7 ?? 0, unitPrice: price7))
+                                    listPriceTable.append(PriceTableModel(qyt: "\(item.PRODUCTPRICE7 ?? 0) - \((item.PRODUCTPRICE8 ?? 0) - 1)", unitPrice: price7))
                                     if let price8 = item.PRICE8, price8 != 0 {
-                                        listPriceTable.append(PriceTableModel(qyt: item.PRODUCTPRICE8 ?? 0, unitPrice: price8))
+                                        listPriceTable.append(PriceTableModel(qyt: "\(item.PRODUCTPRICE8 ?? 0) - \((item.PRODUCTPRICE9 ?? 0) - 1)", unitPrice: price8))
                                         if let price9 = item.PRICE9, price9 != 0 {
-                                            listPriceTable.append(PriceTableModel(qyt: item.PRODUCTPRICE9 ?? 0, unitPrice: price9))
+                                            listPriceTable.append(PriceTableModel(qyt: "\(item.PRODUCTPRICE9 ?? 0) - \((item.PRODUCTPRICE10 ?? 0) - 1)", unitPrice: price9))
                                             if let price10 = item.PRICE10, price10 != 0 {
-                                                listPriceTable.append(PriceTableModel(qyt: item.PRODUCTPRICE10 ?? 0, unitPrice: price10))
+                                                listPriceTable.append(PriceTableModel(qyt: "\(item.PRODUCTPRICE10 ?? 0)", unitPrice: price10))
                                             }
                                         }
                                     }
@@ -350,19 +350,19 @@ extension ProductInfoViewModel {
         let bookingM: Double = (item.M_BOOKING ?? 0)
         let bookingN: Double = (item.N_BOOKING ?? 0)
         
-        let balanceA: Double = (item.QTYA_ONHAND ?? 0) + (item.A_BOOKING ?? 0)
-        let balanceB: Double = (item.QTYB_ONHAND ?? 0) + (item.B_BOOKING ?? 0)
-        let balanceC: Double = (item.QTYC_ONHAND ?? 0) + (item.C_BOOKING ?? 0)
-        let balanceD: Double = (item.QTYD_ONHAND ?? 0) + (item.D_BOOKING ?? 0)
-        let balanceE: Double = (item.QTYE_ONHAND ?? 0) + (item.E_BOOKING ?? 0)
-        let balanceF: Double = (item.QTYF_ONHAND ?? 0) + (item.F_BOOKING ?? 0)
-        let balanceG: Double = (item.QTYG_ONHAND ?? 0) + (item.G_BOOKING ?? 0)
-        let balanceI: Double = (item.QTYI_ONHAND ?? 0) + (item.I_BOOKING ?? 0)
-        let balanceJ: Double = (item.QTYJ_ONHAND ?? 0) + (item.J_BOOKING ?? 0)
-        let balanceK: Double = (item.QTYK_ONHAND ?? 0) + (item.K_BOOKING ?? 0)
-        let balanceL: Double = (item.QTYL_ONHAND ?? 0) + (item.L_BOOKING ?? 0)
-        let balanceM: Double = (item.QTYM_ONHAND ?? 0) + (item.M_BOOKING ?? 0)
-        let balanceN: Double = (item.QTYN_ONHAND ?? 0) + (item.N_BOOKING ?? 0)
+        let balanceA: Double = (item.QTYA_ONHAND ?? 0) - (item.A_BOOKING ?? 0)
+        let balanceB: Double = (item.QTYB_ONHAND ?? 0) - (item.B_BOOKING ?? 0)
+        let balanceC: Double = (item.QTYC_ONHAND ?? 0) - (item.C_BOOKING ?? 0)
+        let balanceD: Double = (item.QTYD_ONHAND ?? 0) - (item.D_BOOKING ?? 0)
+        let balanceE: Double = (item.QTYE_ONHAND ?? 0) - (item.E_BOOKING ?? 0)
+        let balanceF: Double = (item.QTYF_ONHAND ?? 0) - (item.F_BOOKING ?? 0)
+        let balanceG: Double = (item.QTYG_ONHAND ?? 0) - (item.G_BOOKING ?? 0)
+        let balanceI: Double = (item.QTYI_ONHAND ?? 0) - (item.I_BOOKING ?? 0)
+        let balanceJ: Double = (item.QTYJ_ONHAND ?? 0) - (item.J_BOOKING ?? 0)
+        let balanceK: Double = (item.QTYK_ONHAND ?? 0) - (item.K_BOOKING ?? 0)
+        let balanceL: Double = (item.QTYL_ONHAND ?? 0) - (item.L_BOOKING ?? 0)
+        let balanceM: Double = (item.QTYM_ONHAND ?? 0) - (item.M_BOOKING ?? 0)
+        let balanceN: Double = (item.QTYN_ONHAND ?? 0) - (item.N_BOOKING ?? 0)
         
         let qtyAll: Double = qtyA + qtyB + qtyC + qtyD + qtyE + qtyF + qtyG + qtyI + qtyJ + qtyK + qtyL + qtyM + qtyN
         
@@ -374,7 +374,10 @@ extension ProductInfoViewModel {
     }
     
     private func setItemInventoryTable(_ key: String, _ title: String, _ onhand: Double?, _ booking: Double?, balance: Double) {
-        listInventoryTable.append(InventoryTableModel(key: key, location: title, onhand: "\(onhand ?? 0)", booking: "\(booking ?? 0)", balance: "\(balance)"))
+        let onhand = String(format: "%d", onhand ?? 0.0)
+        let booking = String(format: "%d", booking ?? 0.0)
+        let balance = String(format: "%d", balance)
+        listInventoryTable.append(InventoryTableModel(key: key, location: title, onhand: onhand, booking: booking, balance: balance))
     }
 }
 

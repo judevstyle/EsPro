@@ -64,6 +64,9 @@ class LoginViewModel: LoginProtocol, LoginProtocolOutput {
                         }
                     })
                     
+                    AppDelegate.shareDelegate.SALECODE = response[0].SALECODE ?? ""
+                    AppDelegate.shareDelegate.USERNAME = userId ?? ""
+                    
                     if isVerifyUser {
                         weakSelf.didAuthLoginSuccess?()
                     } else {

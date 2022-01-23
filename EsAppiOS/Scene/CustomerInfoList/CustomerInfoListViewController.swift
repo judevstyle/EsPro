@@ -116,16 +116,8 @@ extension CustomerInfoListViewController {
         
         let font = [NSAttributedString.Key.font: UIFont.Primary(size: 21)]
         menuUserTopNav.setTitleTextAttributes(font, for: .normal)
-        menuAdminTopNav.setTitleTextAttributes(font, for: .normal)
-        
         menuUserTopNav.tintColor = UIColor.black
-        menuAdminTopNav.tintColor = UIColor.init(named: "NewPrimary")
-        
-//        let backLeft = UIBarButtonItem()
-//        backLeft.action = #selector(menuTapped)
-//        backLeft.image = UIImage(systemName: "arrow.left")?.withRenderingMode(.alwaysTemplate)
-//        backLeft.tintColor = .darkGray
-//        navigationItem.leftBarButtonItem = backLeft
+        menuUserTopNav.title = "USER \(AppDelegate.shareDelegate.USERNAME)"
         
         btnSearch.setRounded(rounded: 8)
         btnSearch.addTarget(self, action: #selector(didSearchButton), for: .touchUpInside)
@@ -149,6 +141,7 @@ extension CustomerInfoListViewController {
         request.searchby = searchby
         request.keyword = keyword
         request.sortby = sortby
+        request.salecode = AppDelegate.shareDelegate.SALECODE
         viewModel.input.getCustomerInfo(request: request)
     }
     
@@ -271,7 +264,7 @@ extension CustomerInfoListViewController: UITableViewDelegate, UITableViewDataSo
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return (viewModel.output.getNumberOfRowsInSection()) + 2
+        return (viewModel.output.getNumberOfRowsInSection())
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

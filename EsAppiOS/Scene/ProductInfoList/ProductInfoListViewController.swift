@@ -21,7 +21,6 @@ class ProductInfoListViewController: UIViewController {
     
     @IBOutlet var logoTobnav: UIBarButtonItem!
     @IBOutlet var menuUserTopNav: UIBarButtonItem!
-    @IBOutlet var menuAdminTopNav: UIBarButtonItem!
     
     let rightBarDropDown = DropDown()
     var menuHamburger = UIBarButtonItem()
@@ -122,12 +121,10 @@ extension ProductInfoListViewController {
         logoTobnav.isEnabled = false
         
         let font = [NSAttributedString.Key.font: UIFont.Primary(size: 21)]
+        
         menuUserTopNav.setTitleTextAttributes(font, for: .normal)
-        menuAdminTopNav.setTitleTextAttributes(font, for: .normal)
-        
         menuUserTopNav.tintColor = UIColor.black
-        menuAdminTopNav.tintColor = UIColor.init(named: "NewPrimary")
-        
+        menuUserTopNav.title = "USER \(AppDelegate.shareDelegate.USERNAME)"
         
         btnSearch.setRounded(rounded: 8)
         btnSearch.addTarget(self, action: #selector(didSearchButton), for: .touchUpInside)
@@ -270,7 +267,7 @@ extension ProductInfoListViewController: UITableViewDelegate, UITableViewDataSou
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return (viewModel.output.getNumberOfRowsInSection()) + 2
+        return (viewModel.output.getNumberOfRowsInSection())
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

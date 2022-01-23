@@ -9,7 +9,7 @@ import Foundation
 
 public struct PriceTableModel: Codable {
     
-    public var qyt: Int?
+    public var qyt: String?
     public var unitPrice: Double?
     enum CodingKeys: String, CodingKey {
         case qyt = "qyt"

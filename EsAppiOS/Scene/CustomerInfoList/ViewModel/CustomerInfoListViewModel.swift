@@ -81,7 +81,11 @@ class CustomerInfoListViewModel: CustomerInfoListProtocol, CustomerInfoListProto
 extension CustomerInfoListViewModel {
     
     func getNumberOfRowsInSection() -> Int {
-        return self.listCustomerInfo.count
+        if listCustomerInfo.count == 0 {
+            return 2
+        } else {
+            return self.listCustomerInfo.count + 1
+        }
     }
     
     func getCellForRowAt(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -100,7 +104,7 @@ extension CustomerInfoListViewModel {
                 cell.backgroundColor = UIColor.clear
                 cell.selectionStyle = .none
                 cell.setupUI()
-                cell.item = self.listCustomerInfo[indexPath.item-1]
+                cell.item = self.listCustomerInfo[indexPath.item - 1]
                 return cell
             }
         }

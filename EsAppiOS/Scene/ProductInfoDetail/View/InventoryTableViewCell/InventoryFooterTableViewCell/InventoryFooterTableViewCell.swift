@@ -15,19 +15,19 @@ class InventoryFooterTableViewCell: UITableViewHeaderFooterView {
     
     var onhand: Double? {
         didSet {
-            onhandSumValue.text = "\(onhand ?? 0)"
+            onhandSumValue.text = String(format: "%d", onhand ?? 0.0)
         }
     }
     
     var booking: Double? {
         didSet {
-            bookingSumValue.text = "\(booking ?? 0)"
+            bookingSumValue.text = String(format: "%d", booking ?? 0.0)
         }
     }
     
     var balance: Double? {
         didSet {
-            balanceSumValue.text = "\(balance ?? 0)"
+            balanceSumValue.text = String(format: "%d", balance ?? 0.0)
         }
     }
     

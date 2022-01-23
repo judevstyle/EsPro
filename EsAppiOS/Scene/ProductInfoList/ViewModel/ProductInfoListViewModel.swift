@@ -81,7 +81,11 @@ class ProductInfoListViewModel: ProductInfoListProtocol, ProductInfoListProtocol
 extension ProductInfoListViewModel {
     
     func getNumberOfRowsInSection() -> Int {
-        return self.listProductInfo.count
+        if listProductInfo.count == 0 {
+            return 2
+        } else {
+            return self.listProductInfo.count + 1
+        }
     }
     
     func getCellForRowAt(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

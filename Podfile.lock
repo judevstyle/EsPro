@@ -1,16 +1,28 @@
 PODS:
+  - BetterSegmentedControl (2.0.1)
   - DropDown (2.3.13)
+  - RadioGroup (1.4.4):
+    - SweeterSwift
+  - SweeterSwift (1.1.4)
 
 DEPENDENCIES:
+  - BetterSegmentedControl
   - DropDown
+  - RadioGroup
 
 SPEC REPOS:
   trunk:
+    - BetterSegmentedControl
     - DropDown
+    - RadioGroup
+    - SweeterSwift
 
 SPEC CHECKSUMS:
+  BetterSegmentedControl: 09607b27861d49cbce48b7673b74f9150a3d371a
   DropDown: 8a2116376c1981888557f72ec2ffc9a5e0e456ec
+  RadioGroup: 8541fae4af7ee54125a9e237105982c1fbeedaa7
+  SweeterSwift: 8a90cf3156f5a1b6f39785c479369a16633b5ea9
 
-PODFILE CHECKSUM: 885776f3ac391f53a51e852764c027c7d15e20fd
+PODFILE CHECKSUM: ec33fae35330e6d2c7abac53750bdf65670d59d3
 
-COCOAPODS: 1.10.1
+COCOAPODS: 1.11.2
